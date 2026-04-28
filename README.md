@@ -1,2 +1,2 @@
 # obsidian
-For multi-devices
+For multi-devices sync
