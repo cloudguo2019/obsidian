@@ -1,0 +1,2 @@
+# obsidian
+For multi-devices
