@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "交易至简简放.md",
+                "file": "Exsitentialism is a Humanism.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "交易至简简放"
+              "title": "Exsitentialism is a Humanism"
             }
           }
         ]
@@ -183,25 +183,25 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "bases:新建数据库": false
+      "bases:新建数据库": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "2e11d51beb62198c",
   "lastOpenFiles": [
+    "README.md",
+    "交易至简简放.md",
     "assets/昇腾+信创产业研究报告/file-20260428215625198.png",
     "assets/昇腾+信创产业研究报告",
     "assets",
     "M6.md",
-    "交易至简简放.md",
     "昇腾+信创产业研究报告.md",
-    "README.md",
     "New Text Document.txt",
     "至简交易.md",
     "Exsitentialism is a Humanism.md",
