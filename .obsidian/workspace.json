@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "test ninecloud.md",
+                "file": "昇腾+信创产业研究报告.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "test ninecloud"
+              "title": "昇腾+信创产业研究报告"
             }
           }
         ]
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#OT",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -179,7 +179,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -193,11 +193,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c02745a351554b6f",
+  "active": "2e11d51beb62198c",
   "lastOpenFiles": [
-    "交易至简简放.md",
     "test ninecloud.md",
     "昇腾+信创产业研究报告.md",
+    "交易至简简放.md",
     "Exsitentialism is a Humanism.md",
     "README.md",
     "assets/昇腾+信创产业研究报告/file-20260428215625198.png",
