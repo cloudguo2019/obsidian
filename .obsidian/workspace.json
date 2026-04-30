@@ -30,8 +30,33 @@
               "icon": "lucide-file",
               "title": "Exsitentialism is a Humanism"
             }
+          },
+          {
+            "id": "b6ce82685fd41773",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "中东局势深度分析报告.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "中东局势深度分析报告"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -193,14 +218,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2e11d51beb62198c",
+  "active": "b6ce82685fd41773",
   "lastOpenFiles": [
-    "MinerU_markdown_middle_east_conflict_analysis_2049727645491720192.md",
+    "conflict-files-obsidian-git.md",
+    "如何使用Codex.md",
+    "Exsitentialism is a Humanism.md",
+    "obsidian",
+    "中东局势深度分析报告.md",
     "交易至简简放.md",
     "昇腾+信创产业研究报告.md",
-    "conflict-files-obsidian-git.md",
     "test ninecloud.md",
-    "Exsitentialism is a Humanism.md",
     "README.md",
     "assets/昇腾+信创产业研究报告/file-20260428215625198.png",
     "assets/昇腾+信创产业研究报告",
@@ -215,7 +242,6 @@
     "未命名.base",
     "未命名.canvas",
     "交易至简简放.pdf",
-    "至简交易_ocr.txt",
     "创建链接.md",
     "欢迎.md"
   ]
