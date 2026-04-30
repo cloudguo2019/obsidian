@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "middle_east_conflict_analysis.md",
+                "file": "中东局势深度分析报告2.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "middle_east_conflict_analysis"
+              "title": "中东局势深度分析报告2"
             }
           }
         ],
@@ -220,8 +220,8 @@
   },
   "active": "b6ce82685fd41773",
   "lastOpenFiles": [
-    "中东局势深度分析报告.md",
-    "middle_east_conflict_analysis.md",
+    "中东局势深度分析报告1.md",
+    "中东局势深度分析报告2.md",
     "conflict-files-obsidian-git.md",
     "如何使用Codex.md",
     "Exsitentialism is a Humanism.md",
