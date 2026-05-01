@@ -1,4 +1,4 @@
-﻿---
+---
 title: "付鹏：迎接 AI 时代生产关系的变革"
 source_youtube: "https://www.youtube.com/watch?v=EbjIyoIhtc4&t=11s"
 source_text: "https://finance.sina.com.cn/roll/2026-03-05/doc-inhpxspk3180418.shtml"
