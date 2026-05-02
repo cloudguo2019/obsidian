@@ -1,7 +1,4 @@
 {
   "cssTheme": "AnuPpuccin",
-  "enabledCssSnippets": [
-    "extended-colorschemes",
-    "graph-fix"
-  ]
+  "enabledCssSnippets": []
 }
