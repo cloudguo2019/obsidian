@@ -3,5 +3,8 @@
   "obsidian-linter",
   "obsidian-style-settings",
   "obsidian-git",
-  "obsidian-custom-attachment-location"
+  "obsidian-custom-attachment-location",
+  "obsidian-excalidraw-plugin",
+  "obsidian42-brat",
+  "agent-client"
 ]
