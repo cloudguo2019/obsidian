@@ -1,4 +1,4 @@
-﻿---
+---
 title: 交易心理与交易系统 MOC
 tags:
   - moc
