@@ -1,8 +1,11 @@
+# Obsidian workspace
 .obsidian/workspace.json
-.obsidian/cache
-.obsidian/plugins/*
 .obsidian/workspace-mobile.json
 .obsidian/cache/
 .obsidian/plugins/
+
+# Obsidian Git conflict file
 conflict-files-obsidian-git.md
-obsidian
+
+# Personal private data
+Personal/
