@@ -2094,28 +2094,28 @@ C.get_longhubang(stock_list, startTime, endTime)
 
 - 格式为 `pandas.DataFrame`:
 
-| 参数名称 | 数据类型 | 描述 |
-| --- | --- | --- |
-| `reason` | `str` | 上榜原因 |
-| `close` | `float` | 收盘价 |
-| `spreadRate` | `float` | 涨跌幅 |
-| `TurnoverVolune` | `float` | 成交量 |
-| `Turnover_Amount` | `float` | 成交金额 |
-| `buyTraderBooth` | `pandas.DataFrame` | 买方席位 |
+| 参数名称              | 数据类型               | 描述   |
+| ----------------- | ------------------ | ---- |
+| `reason`          | `str`              | 上榜原因 |
+| `close`           | `float`            | 收盘价  |
+| `spreadRate`      | `float`            | 涨跌幅  |
+| `TurnoverVolune`  | `float`            | 成交量  |
+| `Turnover_Amount` | `float`            | 成交金额 |
+| `buyTraderBooth`  | `pandas.DataFrame` | 买方席位 |
 | `sellTraderBooth` | `pandas.DataFrame` | 卖方席位 |
 
 - `buyTraderBooth` 或 `sellTraderBooth` 包含字段：
 
-| 参数名称 | 数据类型 | 描述 |
-| --- | --- | --- |
-| `traderName` | `str` | 交易营业部名称 |
-| `buyAmount` | `float` | 买入金额 |
-| `buyPercent` | `float` | 买入金额占总成交占比 |
-| `sellAmount` | `float` | 卖出金额 |
+| 参数名称          | 数据类型    | 描述         |
+| ------------- | ------- | ---------- |
+| `traderName`  | `str`   | 交易营业部名称    |
+| `buyAmount`   | `float` | 买入金额       |
+| `buyPercent`  | `float` | 买入金额占总成交占比 |
+| `sellAmount`  | `float` | 卖出金额       |
 | `sellPercent` | `float` | 卖出金额占总成交占比 |
-| `totalAmount` | `float` | 该席位总成交金额 |
-| `rank` | `int` | 席位排行 |
-| `direction` | `int` | 买卖方向 |
+| `totalAmount` | `float` | 该席位总成交金额   |
+| `rank`        | `int`   | 席位排行       |
+| `direction`   | `int`   | 买卖方向       |
 
 **示例**
 
