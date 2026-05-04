@@ -2328,17 +2328,17 @@ xtdata.get_market_data_ex(
 
 **参数**
 
-| 名称 | 类型 | 描述 |
-| --- | --- | --- |
-| `field` | `list` | 取北向数据时填写为 `[]` 空列表即可 |
-| `stock_list` | `list` | 合约代码列表 |
-| `period` | `str` | `数据周期，可选字段为:`   `"northfinancechange1m"` ：一分钟周期北向数据   `"northfinancechange1d"` ：日线周期北向数据 |
-| `start_time` | `str` | 数据起始时间，格式为 `%Y%m%d` 或 `%Y%m%d%H%M%S` ，填 `""` 为获取历史最早一天 |
-| `end_time` | `str` | 数据结束时间，格式为 `%Y%m%d` 或 `%Y%m%d%H%M%S` ，填 `""` 为截止到最新一天 |
-| `count` | `int` | 数据个数 |
-| `dividend_type` | `str` | 除权方式,可选值为   `'none'` ：不复权   `'front'`:前复权   `'back'`:后复权   `'front_ratio'`: 等比前复权   `'back_ratio'`: 等比后复权   取此数据时不生效 |
-| `fill_data` | `bool` | 是否填充数据 |
-| `subscribe` | `bool` | 订阅数据开关，默认为True，设置为False时不做数据订阅，只读取本地已有数据。 |
+| 名称              | 类型     | 描述                                                                                                                   |
+| --------------- | ------ | -------------------------------------------------------------------------------------------------------------------- |
+| `field`         | `list` | 取北向数据时填写为 `[]` 空列表即可                                                                                                 |
+| `stock_list`    | `list` | 合约代码列表                                                                                                               |
+| `period`        | `str`  | `数据周期，可选字段为:`   `"northfinancechange1m"` ：一分钟周期北向数据   `"northfinancechange1d"` ：日线周期北向数据                             |
+| `start_time`    | `str`  | 数据起始时间，格式为 `%Y%m%d` 或 `%Y%m%d%H%M%S` ，填 `""` 为获取历史最早一天                                                               |
+| `end_time`      | `str`  | 数据结束时间，格式为 `%Y%m%d` 或 `%Y%m%d%H%M%S` ，填 `""` 为截止到最新一天                                                                |
+| `count`         | `int`  | 数据个数                                                                                                                 |
+| `dividend_type` | `str`  | 除权方式,可选值为   `'none'` ：不复权   `'front'`:前复权   `'back'`:后复权   `'front_ratio'`: 等比前复权   `'back_ratio'`: 等比后复权   取此数据时不生效 |
+| `fill_data`     | `bool` | 是否填充数据                                                                                                               |
+| `subscribe`     | `bool` | 订阅数据开关，默认为True，设置为False时不做数据订阅，只读取本地已有数据。                                                                            |
 
 **返回值**
 
