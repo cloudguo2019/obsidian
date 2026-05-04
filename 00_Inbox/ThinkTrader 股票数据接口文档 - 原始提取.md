@@ -2795,13 +2795,13 @@ xtdata.get_financial_data(stock_list, table_list=[], start_time='', end_time='',
 
 **参数**
 
-| 参数名称 | 数据类型 | 描述 |
-| --- | --- | --- |
-| `stock_list` | `list` | 合约代码列表 |
-| `table_list` | `list` | 财务数据表名称列表,可选： `Balance` #资产负债表； `Income` #利润表； `CashFlow` #现金流量表 |
-| `start_time` | `string` | 起始时间 |
-| `end_time` | `string` | 结束时间 |
-| `report_type` | `string` | 报表筛选方式,可选： `report_time` #截止日期； `announce_time` #披露日期 |
+| 参数名称          | 数据类型     | 描述                                                               |
+| ------------- | -------- | ---------------------------------------------------------------- |
+| `stock_list`  | `list`   | 合约代码列表                                                           |
+| `table_list`  | `list`   | 财务数据表名称列表,可选： `Balance` #资产负债表； `Income` #利润表； `CashFlow` #现金流量表 |
+| `start_time`  | `string` | 起始时间                                                             |
+| `end_time`    | `string` | 结束时间                                                             |
+| `report_type` | `string` | 报表筛选方式,可选： `report_time` #截止日期； `announce_time` #披露日期            |
 
 **返回**
 
