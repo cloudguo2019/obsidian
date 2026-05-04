@@ -357,13 +357,13 @@ xtdata.get_his_st_data('000004.SZ')
 
 具体请查看API, 数据获取部分行情相关接口 **[数据获取函数](http://docs.thinktrader.net/pages/36f5df/)** 。
 
-| 名称 | 描述 |
-| --- | --- |
-| get\_market\_data | 获取历史数据与实时行情(包含tick数据)，可查询多个标的多个数据字段，返回数据格式为 {field：DataFrame} |
-| get\_market\_data\_ex | 获取历史数据与实时行情(包含tick数据)，可查询多个标的多个数据字段，返回数据格式为 {stock\_code：DataFrame} |
-| get\_local\_data | 获取历史数据(包含tick数据)，可查询单个或多个标的多个数据字段，返回数据格式为 {stock\_code：DataFrame} |
-| get\_full\_tick | 获取最新的 tick 数据 |
-| subscribe\_whole\_quote | 订阅多个标的实时tick数据 |
+| 名称                      | 描述                                                                  |
+| ----------------------- | ------------------------------------------------------------------- |
+| get\_market\_data       | 获取历史数据与实时行情(包含tick数据)，可查询多个标的多个数据字段，返回数据格式为 {field：DataFrame}       |
+| get\_market\_data\_ex   | 获取历史数据与实时行情(包含tick数据)，可查询多个标的多个数据字段，返回数据格式为 {stock\_code：DataFrame} |
+| get\_local\_data        | 获取历史数据(包含tick数据)，可查询单个或多个标的多个数据字段，返回数据格式为 {stock\_code：DataFrame}   |
+| get\_full\_tick         | 获取最新的 tick 数据                                                       |
+| subscribe\_whole\_quote | 订阅多个标的实时tick数据                                                      |
 
 ### 获取历史行情与实时行情
 
