@@ -119,34 +119,34 @@ xtdata.get_instrument_detail(stock_code)
 
 - 一个字典, 有如下键值，找不到指定合约时返回 `None`:
 
-| 名称 | 类型 | 描述 |
-| --- | --- | --- |
-| ExchangeID | string | 合约市场代码 |
-| InstrumentID | string | 合约代码 |
-| InstrumentName | string | 合约名称 |
-| ProductID | string | 合约的品种ID(期货) |
-| ProductName | string | 合约的品种名称(期货) |
-| ProductType | int | 合约的类型, 默认-1,枚举值可参考下方说明 |
-| ExchangeCode | string | 交易所代码 |
-| UniCode | string | 统一规则代码 |
-| CreateDate | str | 创建日期 |
-| OpenDate | str | 上市日期（特殊值情况见表末） |
-| ExpireDate | int | 退市日或者到期日（特殊值情况见表末） |
-| PreClose | float | 前收盘价格 |
-| SettlementPrice | float | 前结算价格 |
-| UpStopPrice | float | 当日涨停价 |
-| DownStopPrice | float | 当日跌停价 |
-| FloatVolume | float | 流通股本（单位：股。注意，部分低等级客户端中此字段为FloatVolumn） |
-| TotalVolume | float | 总股本（单位：股。注意，部分低等级客户端中此字段为FloatVolumn） |
-| LongMarginRatio | float | 多头保证金率 |
-| ShortMarginRatio | float | 空头保证金率 |
-| PriceTick | float | 最小价格变动单位 |
-| VolumeMultiple | int | 合约乘数(对期货以外的品种，默认是1) |
-| MainContract | int | 主力合约标记，1、2、3分别表示第一主力合约，第二主力合约，第三主力合约 |
-| LastVolume | int | 昨日持仓量 |
-| InstrumentStatus | int | 合约停牌状态(<=0:正常交易（-1:复牌）;>=1停牌天数;) |
-| IsTrading | bool | 合约是否可交易 |
-| IsRecent | bool | 是否是近月合约 |
+| 名称               | 类型     | 描述                                     |
+| ---------------- | ------ | -------------------------------------- |
+| ExchangeID       | string | 合约市场代码                                 |
+| InstrumentID     | string | 合约代码                                   |
+| InstrumentName   | string | 合约名称                                   |
+| ProductID        | string | 合约的品种ID(期货)                            |
+| ProductName      | string | 合约的品种名称(期货)                            |
+| ProductType      | int    | 合约的类型, 默认-1,枚举值可参考下方说明                 |
+| ExchangeCode     | string | 交易所代码                                  |
+| UniCode          | string | 统一规则代码                                 |
+| CreateDate       | str    | 创建日期                                   |
+| OpenDate         | str    | 上市日期（特殊值情况见表末）                         |
+| ExpireDate       | int    | 退市日或者到期日（特殊值情况见表末）                     |
+| PreClose         | float  | 前收盘价格                                  |
+| SettlementPrice  | float  | 前结算价格                                  |
+| UpStopPrice      | float  | 当日涨停价                                  |
+| DownStopPrice    | float  | 当日跌停价                                  |
+| FloatVolume      | float  | 流通股本（单位：股。注意，部分低等级客户端中此字段为FloatVolumn） |
+| TotalVolume      | float  | 总股本（单位：股。注意，部分低等级客户端中此字段为FloatVolumn）  |
+| LongMarginRatio  | float  | 多头保证金率                                 |
+| ShortMarginRatio | float  | 空头保证金率                                 |
+| PriceTick        | float  | 最小价格变动单位                               |
+| VolumeMultiple   | int    | 合约乘数(对期货以外的品种，默认是1)                    |
+| MainContract     | int    | 主力合约标记，1、2、3分别表示第一主力合约，第二主力合约，第三主力合约   |
+| LastVolume       | int    | 昨日持仓量                                  |
+| InstrumentStatus | int    | 合约停牌状态(<=0:正常交易（-1:复牌）;>=1停牌天数;)       |
+| IsTrading        | bool   | 合约是否可交易                                |
+| IsRecent         | bool   | 是否是近月合约                                |
 
 提示
 
