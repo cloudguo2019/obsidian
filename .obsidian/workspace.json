@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "27e8d73e42112b9d",
+        "id": "315e691eb658805b",
         "type": "tabs",
         "children": [
           {
-            "id": "2e11d51beb62198c",
+            "id": "0cf5431f087b1759",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ]
@@ -179,7 +179,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2e11d51beb62198c",
+  "active": "c02745a351554b6f",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "quant/量化回测中的因果边界：市场状态判断不能偷看未来.md",
