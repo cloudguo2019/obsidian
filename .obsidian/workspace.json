@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "中东局势深度分析报告2.md",
+                "file": "如何使用Codex.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "中东局势深度分析报告2"
+              "title": "如何使用Codex"
             }
           }
         ],
@@ -220,8 +220,8 @@
   },
   "active": "b6ce82685fd41773",
   "lastOpenFiles": [
-    "中东局势深度分析报告1.md",
     "中东局势深度分析报告2.md",
+    "中东局势深度分析报告1.md",
     "conflict-files-obsidian-git.md",
     "如何使用Codex.md",
     "Exsitentialism is a Humanism.md",
