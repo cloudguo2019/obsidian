@@ -1,7 +1,7 @@
 ---
 title: ThinkTrader 股票数据接口文档 - 原始提取
 source: https://dict.thinktrader.net/dictionary/stock.html
-created: 2026-05-03
+created: 2026-05-06
 tags:
   - inbox
   - thinktrader
