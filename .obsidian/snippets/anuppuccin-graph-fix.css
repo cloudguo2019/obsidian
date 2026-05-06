@@ -1,0 +1,22 @@
+/* 强制关系图谱在非悬停状态下显示主题强调色 */
+.graph-view.color-fill {
+    /* 使用你设置的 Sky 颜色变量 */
+    color: var(--text-accent) !important;
+}
+
+/* 调整未创建笔记（虚连接口）的颜色，使其不那么突兀但可见 */
+.graph-view.color-fill-unresolved {
+    color: var(--text-muted) !important;
+    opacity: 0.5 !important;
+}
+
+/* 调整连线的颜色和透明度，增加直观感 */
+.graph-view.color-line {
+    color: var(--text-faint) !important;
+    opacity: 0.4 !important;
+}
+
+/* 确保标签节点也有颜色（如果你在图谱里开启了标签） */
+.graph-view.color-fill-tag {
+    color: var(--interactive-accent) !important;
+}

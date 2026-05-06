@@ -11,52 +11,13 @@
             "id": "2e11d51beb62198c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Exsitentialism is a Humanism.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Exsitentialism is a Humanism"
-            }
-          },
-          {
-            "id": "b6ce82685fd41773",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "如何使用Codex.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "如何使用Codex"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -218,32 +179,54 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b6ce82685fd41773",
+  "active": "2e11d51beb62198c",
   "lastOpenFiles": [
-    "中东局势深度分析报告2.md",
-    "中东局势深度分析报告1.md",
     "conflict-files-obsidian-git.md",
+    "quant/量化回测中的因果边界：市场状态判断不能偷看未来.md",
+    "获取单季度/年度财务数据.md",
+    "获取股票概况.md",
     "如何使用Codex.md",
-    "Exsitentialism is a Humanism.md",
-    "obsidian",
-    "交易至简简放.md",
-    "昇腾+信创产业研究报告.md",
-    "test ninecloud.md",
-    "README.md",
-    "assets/昇腾+信创产业研究报告/file-20260428215625198.png",
-    "assets/昇腾+信创产业研究报告",
-    "assets",
-    "M6.md",
-    "New Text Document.txt",
-    "至简交易.md",
-    "fold04",
-    "fold03",
-    "fold02",
-    "fold01",
-    "未命名.base",
-    "未命名.canvas",
-    "交易至简简放.pdf",
-    "创建链接.md",
-    "欢迎.md"
+    "随笔/昇腾+信创产业研究报告.md",
+    "随笔/付鹏-迎接AI时代生产关系的变革.md",
+    "随笔/如何使用Codex.md",
+    "随笔/中东局势深度分析报告1.md",
+    "随笔/中东局势深度分析报告2.md",
+    "随笔",
+    "获取单季度",
+    "quant",
+    "books/book_media/images/00029.jpg",
+    "books/book_media/images/00027.jpg",
+    "books/book_media/images/00028.jpg",
+    "books/book_media/images/00024.jpg",
+    "books/book_media/images/00023.jpg",
+    "books/book_media/images/00022.jpg",
+    "books/book_media/images/00021.jpg",
+    "books/book_media/images/00020.jpg",
+    "books/book_media/images/00018.jpg",
+    "books/book_media/images/00019.jpg",
+    "books/book_media/images",
+    "books/一本书读懂财报.md",
+    "books/Exsitentialism is a Humanism.md",
+    "books/book_media",
+    "books",
+    "20_Atomic/达克效应.md",
+    "20_Atomic/锚定效应.md",
+    "20_Atomic/跟随思维.md",
+    "20_Atomic/证实性偏见.md",
+    "20_Atomic/知止思维.md",
+    "20_Atomic/知行合一.md",
+    "20_Atomic/沉没成本.md",
+    "20_Atomic/概率思维.md",
+    "20_Atomic/控制自己，顺应市场.md",
+    "20_Atomic/情绪化交易.md",
+    "20_Atomic/复利思维.md",
+    "20_Atomic/交易思维模式.md",
+    "20_Atomic/交易一致性.md",
+    "20_Atomic",
+    "10_Literature/迅投知识库/迅投知识库.md",
+    "10_Literature/迅投知识库",
+    "10_Literature",
+    "00_Inbox",
+    "未命名.canvas"
   ]
 }
