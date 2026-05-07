@@ -778,11 +778,11 @@ download_financial_data2(stock_list, table_list=[], start_time='', end_time='', 
 						- finished - 已完成个数
 						- stockcode - 本地下载完成的合约代码
 						- message - 本次信息
-				- ```python
-			def on_progress(data):
-			    print(data)
-			    # {'finished': 1, 'total': 50, 'stockcode': '000001.SZ', 'message': ''}
-			```
+- ```python
+def on_progress(data):
+	print(data)
+	# {'finished': 1, 'total': 50, 'stockcode': '000001.SZ', 'message': ''}
+```
 - 返回
 	- 无
 - 备注
