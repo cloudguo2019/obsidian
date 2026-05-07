@@ -43,11 +43,11 @@ MiniQMT 数据源
 
 ## 三类接口速记
 
-| 前缀 | 作用 | 典型接口 |
-|---|---|---|
-| `subscribe_` | 订阅实时推送 | `subscribe_quote`、全推订阅 |
-| `get_` | 主动查询数据 | `get_market_data_ex`、`get_trading_calendar` |
-| `download_` | 下载/补齐历史数据 | `download_history_data`、`download_financial_data` |
+| 前缀           | 作用        | 典型接口                                              |
+| ------------ | --------- | ------------------------------------------------- |
+| `subscribe_` | 订阅实时推送    | `subscribe_quote`、全推订阅                            |
+| `get_`       | 主动查询数据    | `get_market_data_ex`、`get_trading_calendar`       |
+| `download_`  | 下载/补齐历史数据 | `download_history_data`、`download_financial_data` |
 
 ## 关键参数理解
 
