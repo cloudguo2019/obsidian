@@ -3185,13 +3185,13 @@ xtdata.get_financial_data(["000001.SZ","600519.SH","430017.BJ"],["Balance","Inco
 - 内置表名：SHAREHOLDER
 - 原生表名：Holdernum
 
-| **中文字段** | **迅投字段** |
-| --- | --- |
-| `公告日期` | `declareDate` |
-| `截止日期` | `endDate` |
-| `股东总数` | `shareholder` |
-| `A股东户数` | `shareholderA` |
-| `B股东户数` | `shareholderB` |
-| `H股东户数` | `shareholderH` |
+| **中文字段**  | **迅投字段**           |
+| --------- | ------------------ |
+| `公告日期`    | `declareDate`      |
+| `截止日期`    | `endDate`          |
+| `股东总数`    | `shareholder`      |
+| `A股东户数`   | `shareholderA`     |
+| `B股东户数`   | `shareholderB`     |
+| `H股东户数`   | `shareholderH`     |
 | `已流通股东户数` | `shareholderFloat` |
 | `未流通股东户数` | `shareholderOther` |
