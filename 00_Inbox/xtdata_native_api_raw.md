@@ -406,7 +406,7 @@ generate_index_data(formula_name, formula_param = {}, stock_list = [], period = 
 - 返回 None
 - 备注 必须连接投研端使用，传入的formula\_name需要存在于投研端中
 
-#### 获取行情数据
+#### 获取行情数据（不推荐，用`get_market_data_ex`）
 
 ```python
 get_market_data(field_list=[], stock_list=[], period='1d', start_time='', end_time='', count=-1, dividend_type='none', fill_data=True)
