@@ -82,7 +82,6 @@ tags:
 
 ## Related Notes
 
-- [[课程总览]]
 - [[交易接口与回调实战]]
 - [[Xttrade 练习题]]
 
