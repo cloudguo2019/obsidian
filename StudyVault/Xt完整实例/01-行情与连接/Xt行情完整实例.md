@@ -131,12 +131,12 @@ fix_price = tick[i]["bidPrice"][0] if tick[i]["bidPrice"][0] != 0 else tick[i]["
 
 ## Exam/Test Patterns
 
-| 场景 | 答案 |
-| --- | --- |
+| 场景                           | 答案                                             |
+| ---------------------------- | ---------------------------------------------- |
 | `get_market_data_ex` 查不到历史数据 | 先确认 MiniQmt 数据是否存在，必要时 `download_history_data` |
-| callback 没触发 | 检查是否订阅成功、是否有新增 tick、主线程是否被 `xtdata.run()` 阻塞 |
-| 指定服务器连接不稳定 | 注册连接状态回调，并用 `get_quote_server_status` 验证 |
-| 盘口买一价为 0 | 用最新价或更完整的风控规则兜底 |
+| callback 没触发                 | 检查是否订阅成功、是否有新增 tick、主线程是否被 `xtdata.run()` 阻塞   |
+| 指定服务器连接不稳定                   | 注册连接状态回调，并用 `get_quote_server_status` 验证       |
+| 盘口买一价为 0                     | 用最新价或更完整的风控规则兜底                                |
 
 ## Related Notes
 

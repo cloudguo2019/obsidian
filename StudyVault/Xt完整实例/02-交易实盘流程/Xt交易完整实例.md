@@ -22,14 +22,14 @@ tags:
 
 ## Overview Table
 
-| 主题 | 关键点 |
-| --- | --- |
+| 主题  | 关键点                                                        |
+| --- | ---------------------------------------------------------- |
 | 初始化 | `XtQuantTrader(path, session_id)` 创建交易对象，`path` 要匹配券商端/投研端 |
-| 回调 | 自定义 `XtQuantTraderCallback`，接收断线、委托、成交、错误、异步响应 |
-| 账户 | `StockAccount(account_id, account_type)` 指定资金账号和账号类型 |
-| 查询 | 下单前查询资金和持仓，避免超过可用资金或可用数量 |
-| 下单 | 示例多用 `order_stock_async`，结果通过回调链确认 |
-| 保活 | `run_forever()` 阻塞交易线程，实盘脚本持续接收回调 |
+| 回调  | 自定义 `XtQuantTraderCallback`，接收断线、委托、成交、错误、异步响应             |
+| 账户  | `StockAccount(account_id, account_type)` 指定资金账号和账号类型       |
+| 查询  | 下单前查询资金和持仓，避免超过可用资金或可用数量                                   |
+| 下单  | 示例多用 `order_stock_async`，结果通过回调链确认                         |
+| 保活  | `run_forever()` 阻塞交易线程，实盘脚本持续接收回调                          |
 
 ## 标准交易启动流程
 
@@ -87,12 +87,12 @@ order_stock_async 发出委托
 
 ## 简单买卖示例的风控骨架
 
-| 操作 | 示例做法 | 可迁移规则 |
-| --- | --- | --- |
-| 买入 | `buy_amount = min(target_amount, available_cash)` | 目标金额不能超过可用资金 |
-| 买入股数 | `int(buy_amount / current_price / 100) * 100` | 股票数量按 100 股取整 |
-| 卖出 | `sell_vol = min(target_vol, available_vol)` | 卖出不能超过可用持仓 |
-| 卖出价格 | 最新价或盘口价 | 应结合涨跌停和滑点 |
+| 操作   | 示例做法                                              | 可迁移规则         |
+| ---- | ------------------------------------------------- | ------------- |
+| 买入   | `buy_amount = min(target_amount, available_cash)` | 目标金额不能超过可用资金  |
+| 买入股数 | `int(buy_amount / current_price / 100) * 100`     | 股票数量按 100 股取整 |
+| 卖出   | `sell_vol = min(target_vol, available_vol)`       | 卖出不能超过可用持仓    |
+| 卖出价格 | 最新价或盘口价                                           | 应结合涨跌停和滑点     |
 
 ## 单股、全推和定时实盘
 
