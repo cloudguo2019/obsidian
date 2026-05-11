@@ -52,15 +52,15 @@ start -> connect -> subscribe(account)
 run_forever 保持运行
 ```
 
-| 步骤 | 示例接口 | 关键检查 |
-| --- | --- | --- |
+| 步骤     | 示例接口                              | 关键检查                     |
+| ------ | --------------------------------- | ------------------------ |
 | 创建交易对象 | `XtQuantTrader(path, session_id)` | `session_id` 同时运行的策略不能重复 |
-| 注册回调 | `register_callback(callback)` | 尽量在连接前完成 |
-| 启动线程 | `start()` | 后续连接依赖交易线程 |
-| 建立连接 | `connect()` | 返回 `0` 表示成功 |
-| 订阅账户 | `subscribe(acc)` | 订阅后才能收到该账号主推 |
-| 查询资产 | `query_stock_asset(acc)` | 用 `m_dCash` 判断可用资金 |
-| 查询持仓 | `query_stock_positions(acc)` | 区分总持仓和可用持仓 |
+| 注册回调   | `register_callback(callback)`     | 尽量在连接前完成                 |
+| 启动线程   | `start()`                         | 后续连接依赖交易线程               |
+| 建立连接   | `connect()`                       | 返回 `0` 表示成功              |
+| 订阅账户   | `subscribe(acc)`                  | 订阅后才能收到该账号主推             |
+| 查询资产   | `query_stock_asset(acc)`          | 用 `m_dCash` 判断可用资金       |
+| 查询持仓   | `query_stock_positions(acc)`      | 区分总持仓和可用持仓               |
 
 > [!important]
 > 示例里的账号、路径、token 和服务器地址都只是样板。实盘前要替换成本地环境，并先在测试环境走通全流程。
