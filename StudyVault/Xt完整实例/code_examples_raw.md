@@ -781,9 +781,9 @@ def f(data):
     for stock in data:
         if stock not in A.hsa:
             continue
-        cuurent_price = data[stock][0]['close']
+        current_price = data[stock][0]['close']
         pre_price = data[stock][0]['preClose']
-        ratio = cuurent_price / pre_price - 1 if pre_price > 0 else 0
+        ratio = current_price / pre_price - 1 if pre_price > 0 else 0
         if ratio > 0.09 and stock not in A.bought_list:
             print(f"{now} 最新价 买入 {stock} 100股")
             async_seq = xt_trader.order_stock_async(acc, stock, xtconstant.STOCK_BUY, 100, xtconstant.LATEST_PRICE, -1,
