@@ -12,12 +12,12 @@ tags:
 
 ## 安装与环境
 
-| 动作 | 命令 |
-|---|---|
-| 安装基础包 | `pip install backtrader` |
-| 安装绘图依赖 | `pip install "backtrader[plotting]"` |
-| 从源码使用 | 将源码中的 `backtrader/` 目录放入项目或用 editable install |
-| CLI 入口 | `btrun` 或 `tools/bt-run.py` |
+| 动作     | 命令                                            |
+| ------ | --------------------------------------------- |
+| 安装基础包  | `pip install backtrader`                      |
+| 安装绘图依赖 | `pip install "backtrader[plotting]"`          |
+| 从源码使用  | 将源码中的 `backtrader/` 目录放入项目或用 editable install |
+| CLI 入口 | `btrun` 或 `tools/bt-run.py`                   |
 
 > [!warning]
 > `backtrader` 项目历史较长，README 中列出的 Python 版本较老。现代项目中建议先用隔离虚拟环境验证依赖，尤其是 `matplotlib`、TA-Lib、IB/Oanda 等可选集成。
