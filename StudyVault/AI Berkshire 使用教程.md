@@ -107,17 +107,17 @@ $env:PYTHONUTF8 = "1"
 
 ## Skill 选择地图
 
-| 目标 | 推荐 Skill | 典型输入 |
-|---|---|---|
-| 快速判断一家是否值得深挖 | `investment-checklist` | 使用 investment-checklist 分析腾讯 |
-| 重要公司完整深研 | `investment-team` | 使用 investment-team 研究美团 |
-| 单公司系统研究 | `investment-research` | 使用 investment-research 研究拼多多 |
-| 财报精读 | `earnings-review` | 使用 earnings-review 分析 PDD 2025 年报 |
-| 行业找标的 | `industry-funnel` | 使用 industry-funnel 筛选 AI 算力 |
-| 排除劣质公司 | `quality-screen` | 使用 quality-screen 筛选恒生指数成分股 |
-| 股价异动归因 | `news-pulse` | 使用 news-pulse 分析腾讯最近一周下跌 |
-| 组合体检 | `portfolio-review` | 使用 portfolio-review 分析当前持仓 |
-| 买入后跟踪论文 | `thesis-tracker` | 使用 thesis-tracker 跟踪拼多多 |
+| 目标           | 推荐 Skill               | 典型输入                              |
+| ------------ | ---------------------- | --------------------------------- |
+| 快速判断一家是否值得深挖 | `investment-checklist` | 使用 investment-checklist 分析腾讯      |
+| 重要公司完整深研     | `investment-team`      | 使用 investment-team 研究美团           |
+| 单公司系统研究      | `investment-research`  | 使用 investment-research 研究拼多多      |
+| 财报精读         | `earnings-review`      | 使用 earnings-review 分析 PDD 2025 年报 |
+| 行业找标的        | `industry-funnel`      | 使用 industry-funnel 筛选 AI 算力       |
+| 排除劣质公司       | `quality-screen`       | 使用 quality-screen 筛选恒生指数成分股       |
+| 股价异动归因       | `news-pulse`           | 使用 news-pulse 分析腾讯最近一周下跌          |
+| 组合体检         | `portfolio-review`     | 使用 portfolio-review 分析当前持仓        |
+| 买入后跟踪论文      | `thesis-tracker`       | 使用 thesis-tracker 跟踪拼多多           |
 
 ---
 
