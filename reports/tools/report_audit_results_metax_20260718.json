@@ -1,0 +1,36 @@
+{
+  "results": [
+    {
+      "field": "2026Q1 R&D expense",
+      "observed": [253351049.47, 253351049.47],
+      "sources": [
+        "2026Q1 report",
+        "Stockstar 688802 profit statement"
+      ]
+    },
+    {
+      "field": "total shares",
+      "observed": [400100000, 400100000],
+      "sources": [
+        "SSE listing announcement",
+        "Sina/2025 annual report disclosure"
+      ]
+    },
+    {
+      "field": "2026Q1 trading financial assets",
+      "observed": [4435426643.86, 4435426643.86],
+      "sources": [
+        "2026Q1 report",
+        "Stockstar 688802 balance sheet"
+      ]
+    },
+    {
+      "field": "2026Q1 revenue",
+      "observed": [561916460.39, 561916460.39],
+      "sources": [
+        "2026Q1 report",
+        "Sina/Stockstar 688802 financial statement"
+      ]
+    }
+  ]
+}

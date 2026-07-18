@@ -1,0 +1,20 @@
+{
+  "bear": {
+    "revenue": 12000000000,
+    "net_margin": 0.10,
+    "pe": 25,
+    "weight": 0.25
+  },
+  "base": {
+    "revenue": 25000000000,
+    "net_margin": 0.18,
+    "pe": 35,
+    "weight": 0.50
+  },
+  "bull": {
+    "revenue": 45000000000,
+    "net_margin": 0.25,
+    "pe": 45,
+    "weight": 0.25
+  }
+}
