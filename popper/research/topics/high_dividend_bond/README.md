@@ -11,7 +11,7 @@
 - `HD-ANCHOR-001`：现有股息率档位＋滞回
 - `HD-ANCHOR-002`：成交量密集价网格
 - `HD-ANCHOR-003`：股息率定库存＋HVN定执行
-- `HD-EXEC-001`：下一交易日开盘成交
+- `HD-EXEC-001`：下一交易日开盘成交（保守执行基准）
 - `HD-EXEC-002`：历史盘中数据模拟收盘竞价
 
 研究材料分别归档到本目录的 `hypotheses/`、`baselines/`、`experiments/`、`decisions/`、`datasets/` 和 `dashboards/`。
