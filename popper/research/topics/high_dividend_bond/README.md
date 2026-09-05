@@ -16,3 +16,11 @@
 
 研究材料分别归档到本目录的 `hypotheses/`、`baselines/`、`experiments/`、`decisions/`、`datasets/` 和 `dashboards/`。
 
+## 当前阶段产物
+
+- [已观察事实] 阶段0：[研究章程](hypotheses/research_charter.md)。
+- [已观察事实] 阶段1：[HD-ANCHOR-001策略规格](baselines/HD-ANCHOR-001_SPEC.md)。
+- [已观察事实] 阶段2：[理论机制、因果链与可证伪预测](hypotheses/HD-ANCHOR-001_THEORY.md)，[原始资料与检索记录](hypotheses/HD-ANCHOR-001_SOURCES.md)。
+- [方法选择] 主研究执行采用同日14:57后首个合格Tick形成代理日K，并于当日收盘集合竞价提交委托；上方初始编号清单保留为历史示例，不表示已经完成对应执行实验。
+- [方法选择] 阶段2允许通过理论审查；下一步为阶段3预注册草案，冻结需研究者确认。尚未获得正式L2/L3经济有效性证据。
+
