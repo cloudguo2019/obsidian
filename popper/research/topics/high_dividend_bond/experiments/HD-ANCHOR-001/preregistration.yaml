@@ -3,8 +3,9 @@
     "statement_type": "方法选择",
     "experiment_id": "HD-ANCHOR-001",
     "schema_version": "1.0",
-    "protocol_version": "0.1-draft",
+    "protocol_version": "0.3-draft",
     "created_date": "2026-09-05",
+    "updated_date": "2026-09-06",
     "timezone": "Asia/Shanghai",
     "serialization": "YAML 1.2的JSON兼容写法；可用标准JSON解析器无依赖校验。",
     "status": "DRAFT_AWAITING_METHOD_CONFIRMATION_AND_DATA_AUDIT",
@@ -66,6 +67,8 @@
   "primary_endpoint": {
     "statement_type": "方法选择",
     "id": "OOS_NET_CAGR_INCREMENT",
+    "confirmation_status": "PRIMARY_METRIC_AND_PASS_THRESHOLD_CONFIRMED",
+    "confirmation_date": "2026-09-06",
     "unique": true,
     "comparator": "HD-BASE-RM-001",
     "population": "预先登记且未被用于设定规则的连续滚动样本外区间，加末尾12个月锁定区间；开发、验证、受污染历史和敏感性运行不进入首要指标。",
@@ -73,18 +76,48 @@
     "cagr": "CAGR_j = (V_j,T / V_j,0)^(365.25 / elapsed_calendar_days) - 1",
     "formula": "Delta_CAGR = CAGR_dynamic - CAGR_risk_matched_static",
     "unit": "年化收益率之差；0.005为0.5个百分点/年，不是相对收益提升0.5%。",
-    "suggested_min_increment": 0.005,
+    "min_increment": 0.005,
     "confidence_interval_level": 0.95,
     "acceptance_ci_lower_strictly_above": 0.0,
     "single_final_analysis": "主样本固定后，在锁定测试批次完成时只作一次确认性判定；不因中途接近显著而延长或缩短样本。",
     "risk_benefit_branch": {
       "statement_type": "方法选择",
+      "confirmation_scope": "首要指标未通过而仅有收益相近、回撤改善时先判观察的原则已确认；下列非劣容忍值及回撤改善幅度仍属草案细节。",
       "return_noninferiority_margin": -0.005,
       "mdd_reduction_required": 0.02,
       "definition": "若Delta_CAGR的95%区间下界高于-0.005，且动态MDD至少低2个百分点，可记为收益非劣/降回撤的探索性支持。",
       "decision_if_primary_fails": "观察；不能把该次结果改称首要指标通过。若要据此接受，应另立以风险改善为主目标的预注册，并使用新的未接触数据。"
     },
-    "rationale": "给宽泛H1保留风险改善的解释，同时为本轮设置唯一确认性首要指标。0.5个百分点是建议的经济意义门槛，不来自历史最优收益或论文推荐。"
+    "rationale": "给宽泛H1保留风险改善的解释，同时为本轮设置唯一确认性首要指标。0.5个百分点是研究者于2026-09-06确认的经济意义门槛，不来自历史最优收益或论文推荐。"
+  },
+  "method_confirmation_log": {
+    "statement_type": "已观察事实",
+    "records": [
+      {
+        "id": "CONFIRM-20260906-01",
+        "date": "2026-09-06",
+        "user_quote": "同意先采用上述首要指标及通过门槛",
+        "confirmed": [
+          "唯一首要指标：相对风险匹配静态持有的样本外年化含分红净增量。",
+          "净增量至少0.005，即0.5个百分点/年；95%置信区间下界严格大于0。",
+          "接受还须同时通过回撤、修复时间、样本量与稳健性护栏，不能只凭主指标点估计。",
+          "首要指标未过、仅收益相近而回撤较低时，本轮先判观察。"
+        ],
+        "scope_limit": "逐项确认中的第一项，不视为整份草案所有细节已批准；分红方法、NORMAL条件检验、成交模型、统计实现及样本等待确认项继续保留。没有冻结整份协议、锁定样本或授权运行。"
+      },
+      {
+        "id": "CONFIRM-20260906-02",
+        "date": "2026-09-06",
+        "user_quote": "同意采用这一分红预期方法，并保留180天有效期",
+        "confirmed": [
+          "采用当时最新公告的完整年度税前每股现金分红总额，作为年度分红预期的朴素代理。",
+          "保留180自然日有效期；从估计可得日期计算，超过180日且无新的有效公告时暂停生成交易信号。",
+          "过期期间继续记录实际持仓、净值及机会统计，不删除过期月份。",
+          "不使用后来实际派发的分红结果回填过去，不通过日常刷新日期延长有效期。"
+        ],
+        "scope_limit": "仅确认分红预期方法与有效期，不代表候选数据已验收，也不额外确认草案80%覆盖门槛。NORMAL研究口径、成交模型、其余细节及最终冻结继续待确认。"
+      }
+    ]
   },
   "risk_and_sufficiency_gates": {
     "statement_type": "方法选择",
@@ -162,7 +195,9 @@
   "dividend_and_gate_inputs": {
     "statement_type": "方法选择",
     "estimate_method_id": "ANNOUNCED_ANNUAL_TOTAL_V1",
-    "estimate_method_status": "PROPOSED_NEEDS_CONFIRMATION",
+    "estimate_method_status": "CONFIRMED",
+    "estimate_method_confirmation_date": "2026-09-06",
+    "estimate_method_confirmation_record": "CONFIRM-20260906-02",
     "estimate_definition": "只使用当时正式公告中明确的最近一个完整会计年度税前每股现金分红总额，作为未来年度分红预期的朴素代理；合并同年度中期和末期时先去重。优先可得的董事会年度分配预案及其明确修订，不等待未来实施结果再回填。",
     "estimate_limit": "这不是已经实现的未来一年分红，也不是对年度分红持续不变的保证。无每股全年金额的模糊承诺、只给派息比例而缺当时可算基数的材料不推算填入。",
     "availability": "每个决策只取available_time<=decision_time且effective_time<=decision_time的最新版本；保留公告发布时间和接收/研究可用时间。",
@@ -269,8 +304,18 @@
   "sample_split_and_lock": {
     "statement_type": "方法选择",
     "status": "CONDITIONAL_ALGORITHM_NOT_EXECUTED",
-    "history_contamination_latest_date": null,
-    "history_contamination_status": "待研究者说明既往回测、调参及查看结果的范围；不能从配置start/end推断实际看过。",
+    "history_contamination_latest_date": "2026-09-04",
+    "history_contamination_status": "已知下界：2026-09-06已查看截至2026-09-04的600900.SH税前总回报波动率、最大回撤及恢复路径；没有查看动态策略或相对基准收益。更早的回测、调参和结果接触范围仍待研究者说明，不能从配置start/end推断。",
+    "history_access_log": [
+      {
+        "access_date": "2026-09-06",
+        "data_through": "2026-09-04",
+        "artifact": "datasets/600900_UNDERLYING_RISK_WINDOWS_2026-09-04.md",
+        "viewed": "标的税前总回报波动率、最大回撤、峰值/谷底/恢复日期及修复时间",
+        "not_viewed": "HD-ANCHOR-001信号、交易、净值、相对基准收益或锁定测试结果",
+        "impact": "作为风险设计接触记录保留；若后续据此修改规则或门槛，同段历史不得声称未接触。"
+      }
+    ],
     "development_months": 36,
     "validation_months": 6,
     "rolling_window_months": 6,
