@@ -3,13 +3,13 @@
     "statement_type": "方法选择",
     "experiment_id": "HD-ANCHOR-001",
     "schema_version": "1.0",
-    "protocol_version": "0.4-draft",
+    "protocol_version": "1.0-methods-frozen",
     "created_date": "2026-09-05",
     "updated_date": "2026-09-07",
     "timezone": "Asia/Shanghai",
     "serialization": "YAML 1.2的JSON兼容写法；可用标准JSON解析器无依赖校验。",
-    "status": "DRAFT_AWAITING_METHOD_CONFIRMATION_AND_DATA_AUDIT",
-    "methods_frozen": false,
+    "status": "METHODS_FROZEN_AWAITING_DATA_AUDIT_AND_SPLIT_BINDING",
+    "methods_frozen": true,
     "data_and_split_frozen": false,
     "formal_backtest_authorized": false,
     "locked_test_open_authorized": false,
@@ -82,7 +82,7 @@
     "single_final_analysis": "主样本固定后，在锁定测试批次完成时只作一次确认性判定；不因中途接近显著而延长或缩短样本。",
     "risk_benefit_branch": {
       "statement_type": "方法选择",
-      "confirmation_scope": "首要指标未通过而仅有收益相近、回撤改善时先判观察的原则已确认；下列非劣容忍值及回撤改善幅度仍属草案细节。",
+      "confirmation_scope": "首要指标未通过而仅有收益相近、回撤改善时先判观察；非劣容忍值及回撤改善幅度已随剩余方法确认包冻结。",
       "return_noninferiority_margin": -0.005,
       "mdd_reduction_required": 0.02,
       "definition": "若Delta_CAGR的95%区间下界高于-0.005，且动态MDD至少低2个百分点，可记为收益非劣/降回撤的探索性支持。",
@@ -128,11 +128,25 @@
           "即使条件检验通过，也不能据此声称完整含人工基本面闸门的策略已经通过。"
         ],
         "scope_limit": "仅确认基本面闸门的条件检验口径；成交与撮合、覆盖和样本量、统计、风险护栏操作化及整份方法冻结仍待一次性批量确认。该回复没有授权正式回测、锁定测试、仿真或实盘。"
+      },
+      {
+        "id": "CONFIRM-20260907-04",
+        "date": "2026-09-07",
+        "user_quote": "去掉0.1%竞价量上限、单边5bp摩擦，这会引入未来函数。计划就是信号有了就要买入的，不需要5bp摩擦。其他同意",
+        "confirmed": [
+          "删除主成交模型的0.1%最终竞价成交量参与率门槛；最终竞价量不决定信号、报单或P00是否成交。",
+          "P00基线执行摩擦从单边5bp改为0；佣金、最低佣金、印花税、过户费和其他实际费用仍按协议核算。",
+          "信号成立且前置风控通过时必须提交一次市价可成交方向的保护限价委托；不能因为事后竞价量或有利/不利结果选择是否报单。",
+          "其余剩余方法确认包全部同意，包括风险和样本量门槛、基准与资金、统计、24个压力配置、污染处理和判定规则。"
+        ],
+        "scope_limit": "本记录冻结阶段3研究方法，但不冻结尚未审计的数据、样本日期、历史税费表、实现或风险匹配股数；不授权正式回测、锁定测试、仿真或实盘。发出委托是策略义务，P00按协议作全额成交假设，不等于真实市场保证成交；P22/P23和L4继续检验执行失败。"
       }
     ]
   },
   "risk_and_sufficiency_gates": {
     "statement_type": "方法选择",
+    "confirmation_status": "METHODS_FROZEN",
+    "confirmation_record": "CONFIRM-20260907-04",
     "max_drawdown_absolute": 0.16,
     "max_drawdown_excess_over_comparator": 0.02,
     "recovery": {
@@ -166,6 +180,8 @@
   },
   "strategy_parameters": {
     "statement_type": "方法选择",
+    "confirmation_status": "METHODS_FROZEN",
+    "confirmation_record": "CONFIRM-20260907-04",
     "source": "保持阶段1所核验规则；下面是实验展开值，不替代原始配置快照。",
     "core_shares": 1000,
     "enhanced_shares": 300,
@@ -225,7 +241,7 @@
     "gate_mode_confirmation_date": "2026-09-07",
     "gate_mode_confirmation_record": "CONFIRM-20260907-03",
     "gate_mode_definition": "主检验先隔离股息率锚，全期输入NORMAL，保留亏损停止加仓等现有内生规则。此设置是受控实验，不声称历史基本面始终正常或人工闸门有效。",
-    "gate_claim_ceiling": "即使通过，结论也仅为全期NORMAL条件下的股息率锚；完整含人工闸门策略不得据此直接进入仿真。若要主检验完整策略，须在看结果前另行确认可追溯的历史闸门方案，更新本草案。",
+    "gate_claim_ceiling": "即使通过，结论也仅为全期NORMAL条件下的股息率锚；完整含人工闸门策略不得据此直接进入仿真。若要主检验完整策略，须在看结果前另立预注册并确认可追溯的历史闸门方案，不得覆盖本协议。",
     "gate_L0": "四态及EXIT优先级全部做L0；不得以NORMAL主输入删去失败状态测试。",
     "candidate_material": {
       "statement_type": "已知限制",
@@ -235,6 +251,8 @@
   },
   "execution_and_costs": {
     "statement_type": "方法选择",
+    "confirmation_status": "METHODS_FROZEN",
+    "confirmation_record": "CONFIRM-20260907-04",
     "signal_tick": {
       "window": "[14:57:00,15:00:00)",
       "field": "lastPrice",
@@ -244,18 +262,19 @@
     },
     "signal_order_fill_separation": ["decision_time", "tick_exchange_time", "tick_receive_time", "proxy_price", "trigger_price", "order_submit_time", "order_limit", "fill_time", "fill_price", "fill_qty", "execution_cost"],
     "submission_latency_seconds_assumption": 1,
-    "submission": "通过已有风控后在收到合格Tick的1秒后提交一次；到达时刻>=15:00则未提交，不补单。此延迟为待确认模型值，不是测量结果。",
-    "auction_fill_model_id": "AUCTION_SMALL_ORDER_CONSERVATIVE_V1",
-    "auction_fill_model": "权威最终竞价成交价在当日涨跌停区间内部、成交量>0、报单有效且按时到达、现金/可卖股数足够，并且本委托股数<=最终竞价成交量的0.001时，按最终竞价成交价全部成交；否则记录未成交。",
-    "auction_max_participation": 0.001,
-    "at_price_limit": "基线对最终竞价价等于涨停或跌停的订单均按未成交保守处理，不用价格触及作为成交保证。",
-    "volume_boundary": "最终竞价价和竞价量只供事后撮合，不供14:57信号或前置风控；不得拿全天成交量代替竞价成交量。",
-    "model_limit": "市场数据驱动的条件成交假设不是真实成交证据；无历史自身订单也可模拟，但L4须另验撮合、排队、未成交和部分成交。",
-    "base_execution_friction_bps": 5,
-    "friction_accounting": "最终竞价价保持市场实际值，另从现金扣成交额×0.0005作为单边保守执行摩擦；不把它伪装成交易所另一个成交价。实际代理价到收盘价偏移另报，不重复扣除。该5bp是新建议的模型准备金，须用户确认。",
+    "submission": "通过已有风控后在收到合格Tick的1秒后提交一次；到达时刻>=15:00则未提交，不补单。1秒是已冻结的研究延迟假设，不是实际测量结果。",
+    "auction_fill_model_id": "AUCTION_MARKETABLE_LIMIT_ASSUMED_FULL_V1",
+    "auction_fill_model": "信号成立、前置风控通过且委托在15:00前有效到达时，买入以当日涨停价、卖出以当日跌停价作保护限价；只要证券当日可交易且存在权威最终收盘集合竞价成交价，就按该竞价价假设委托股数全部成交。P00不按最终竞价成交量、参与率或事后收益选择成交与否。停牌、无有效竞价价格、现金/可卖股数不足或委托无效仍记录未成交。",
+    "auction_max_participation": null,
+    "auction_participation_limit_enabled": false,
+    "at_price_limit": "权威最终竞价价等于涨停或跌停时，P00仍按保护限价可成交并假设全额成交；这是偏乐观的研究成交假设，不证明真实队列中一定成交。",
+    "volume_boundary": "最终竞价成交量不进入P00信号、报单或成交门槛；如能取得，仅用于事后执行审计、P22/P23解释和L4可执行性研究，不得据其事后大小取消当日委托。",
+    "model_limit": "强制报单和假设全额成交保证研究规则不会根据未来竞价量选择交易，但真实市场仍可能因队列和对手盘而未成交或部分成交；P22/P23压力测试与L4须另验该乐观假设。",
+    "base_execution_friction_bps": 0,
+    "friction_accounting": "P00按权威最终竞价成交价入账，不另扣固定bp执行摩擦；代理价到最终竞价价的实际偏移完整进入成交损益并单列报告。佣金、最低佣金、印花税、过户费和其他实际费用仍扣除。P06/P07保留5bp/10bp不利偏移作为压力测试，不回写P00。",
     "commission_rate": 0.0001,
     "commission_min_cny_per_parent_order": 5,
-    "commission_partial_fill_aggregation": "同一父委托的当日成交金额合并计算一次最低佣金；多个独立父委托不合并。待交割单核验后冻结。",
+    "commission_partial_fill_aggregation": "同一父委托的当日成交金额合并计算一次最低佣金；多个独立父委托不合并。该方法已冻结，阶段4仍须用交割单核验券商实际计费语义。",
     "stamp_tax": "只在卖出按交易日适用的官方历史费率扣取；章程万五是当前研究输入，不能覆盖全历史。",
     "other_fees": "按历史生效日记录过户费及其他实际单列费用；若券商佣金已包含某项不得重复扣。未知不默认为0。",
     "tax_and_fee_schedule_version": null,
@@ -271,6 +290,8 @@
   },
   "capital_initialization_and_benchmarks": {
     "statement_type": "方法选择",
+    "confirmation_status": "METHODS_FROZEN",
+    "confirmation_record": "CONFIRM-20260907-04",
     "initialization": "在所有方案共享的初始估值时刻t0（首个可执行交易日收盘后）赋予已有持仓；第一条策略信号在下一个合格交易日生成。初始价P_ref用该t0权威收盘竞价价。",
     "base_assets_cny": 60000,
     "funding_buffer_ratio": 1.10,
@@ -312,12 +333,13 @@
     "historical_fee_and_tax_version": null,
     "gate_inputs_version": "NORMAL常数受控输入的方法口径已于2026-09-07确认；数据契约字段及实现版本仍待绑定",
     "required_outputs": ["cleaned_price.parquet", "point_in_time_dividend_estimates.parquet", "corporate_actions.parquet", "cleaning_log.csv", "data_manifest.json", "data_audit_report.md"],
-    "extra_execution_artifacts": ["历史14:57候选Tick及接收时点依据", "最终竞价价和竞价成交量", "交易状态及权威价格限制", "供应商字段映射及版本"],
+    "extra_execution_artifacts": ["历史14:57候选Tick及接收时点依据", "最终竞价价", "交易状态及权威价格限制", "供应商字段映射及版本", "可选的最终竞价成交量（仅供执行审计与L4，不是P00成交门槛）"],
     "hard_L2_gate": "没有验收通过的PIT估计或同日竞价回放关键输入，主口径L2/L3关闭；固定分红、日线收盘替代Tick均不能补过门禁。"
   },
   "sample_split_and_lock": {
     "statement_type": "方法选择",
-    "status": "CONDITIONAL_ALGORITHM_NOT_EXECUTED",
+    "status": "METHOD_CONFIRMED_ALGORITHM_NOT_EXECUTED",
+    "confirmation_record": "CONFIRM-20260907-04",
     "history_contamination_latest_date": "2026-09-04",
     "history_contamination_status": "已知下界：2026-09-06已查看截至2026-09-04的600900.SH税前总回报波动率、最大回撤及恢复路径；没有查看动态策略或相对基准收益。更早的回测、调参和结果接触范围仍待研究者说明，不能从配置start/end推断。",
     "history_access_log": [
@@ -353,6 +375,8 @@
   },
   "experiment_budget": {
     "statement_type": "方法选择",
+    "confirmation_status": "METHODS_FROZEN",
+    "confirmation_record": "CONFIRM-20260907-04",
     "primary_strategy_candidates": 1,
     "registered_economic_profiles_including_primary": 24,
     "selection_from_stress_profiles_allowed": false,
@@ -364,13 +388,13 @@
     "runs": [],
     "profiles": [
       {"id": "P00", "change": "主规则，无压力覆盖"},
-      {"id": "P01", "change": "所有交易摩擦2倍：佣金含最低佣金、卖出税、其他交易费、执行准备金；分红税不倍增"},
-      {"id": "P02", "change": "同P01的交易摩擦3倍"},
+      {"id": "P01", "change": "所有非零交易费用2倍：佣金含最低佣金、卖出税和其他交易费；P00固定执行摩擦为0，翻倍后仍为0；分红税不倍增"},
+      {"id": "P02", "change": "所有非零交易费用3倍：其余同P01"},
       {"id": "P03", "change": "原信号延迟1个交易决策时点，在次日收盘竞价执行"},
       {"id": "P04", "change": "原信号延迟2个交易决策时点，在对应收盘竞价执行"},
       {"id": "P05", "change": "保留t日14:57代理信号，t+1开盘成交；须有开盘可成交及交易状态输入"},
-      {"id": "P06", "change": "额外不利执行偏移等值5bp，单边准备金合计10bp"},
-      {"id": "P07", "change": "额外不利执行偏移等值10bp，单边准备金合计15bp"},
+      {"id": "P06", "change": "相对P00增加单边5bp不利执行偏移；P00基线为0bp"},
+      {"id": "P07", "change": "相对P00增加单边10bp不利执行偏移；P00基线为0bp"},
       {"id": "P08", "change": "OOS初始化起点顺延3自然月，终点不变，初始1000股，单列不能并回主样本"},
       {"id": "P09", "change": "OOS初始化起点顺延6自然月，终点不变，初始1000股，单列不能并回主样本"},
       {"id": "P10", "change": "PIT available_time延迟1个交易日；原as_of及有效截止时间不顺延"},
@@ -390,7 +414,7 @@
     ],
     "stress_common_rules": "除明确覆盖的因素外全部沿用P00；影响所有账户的费用、利息、成交可行性覆盖对所有基准同样适用。策略阈值/分红估计/确认变化只影响动态信号，不改已实现公司分红。",
     "delayed_order_semantics": "队列中保留原绝对目标和来源信号，等待期间不生成新的估值委托；执行时重新检查当时数据有效性、可卖数量、现金、价格限制和闸门，仅裁剪/拒绝，不利用当时估值改挑目标。到期只尝试一次，失败不顺延。",
-    "P05_fill_model": "按权威开盘集合竞价价及量采用与主模型一致的0.001参与率、非涨跌停价及交易状态条件；开盘价为事后撮合字段，另计单边5bp摩擦。缺执行输入记NOT_RUN。",
+    "P05_fill_model": "t日信号延迟至t+1开盘提交并按权威开盘集合竞价价假设全额成交，不使用开盘成交量参与率门槛，也不另扣固定bp摩擦；现金、T+1、交易状态、价格限制和委托有效性仍检查。缺关键执行输入记NOT_RUN。",
     "P08_P09_baselines": "所有账户在新起点按同一主V0重新赋予各自登记的初始股数，风险匹配静态仍用主协议已冻结股数；报告暴露偏差，不把未匹配结果用于主接受。",
     "grid_policy": "不做全因素笛卡尔积。参数邻域热图用阈值偏移/确认数分别对各窗口作图，未登记组合标未运行。",
     "unavailable_or_failed_profiles": "保留NOT_RUN、FAILED及原因；不能被替换成另一个盈利配置。",
@@ -399,6 +423,8 @@
   },
   "statistics": {
     "statement_type": "方法选择",
+    "confirmation_status": "METHODS_FROZEN",
+    "confirmation_record": "CONFIRM-20260907-04",
     "method": "成对平稳区块Bootstrap（stationary bootstrap）",
     "unit": "同一交易日的策略与全部基准收益向量，使用完全相同的重采样索引保留横向配对。",
     "replications": 5000,
@@ -416,6 +442,8 @@
   },
   "secondary_metrics_and_attribution": {
     "statement_type": "方法选择",
+    "confirmation_status": "METHODS_FROZEN",
+    "confirmation_record": "CONFIRM-20260907-04",
     "required": ["含分红总收益", "年化净收益", "最大回撤", "最长修复时间及右删失", "Calmar", "下行波动", "平均/峰值/最低股数", "平均/峰值/最低股票权重", "现金闲置比例", "年换手率", "交易成本分项", "网格已实现收益", "持仓价差损益含未完成库存", "现金分红及应收变化", "现金收益", "上涨减仓机会损失", "年度集中度", "交易贡献集中度", "信号和实际状态转换", "未成交/部分成交/废单"],
     "calmar": "年化净收益/MDD；MDD=0时记不可定义并解释，不任意赋极大值。",
     "downside_deviation": "sqrt(252*mean(min(r_t,0)^2))，最低可接受日收益固定0。",
@@ -432,6 +460,8 @@
   },
   "diagnostics_and_falsification": {
     "statement_type": "方法选择",
+    "confirmation_status": "METHODS_FROZEN",
+    "confirmation_record": "CONFIRM-20260907-04",
     "market_states": "以本标的当时可得含分红回报指数的过去126交易日收益>=10%标上涨、<=-10%标下跌、其余震荡；过去21日收益的年化波动>=30%另标高波动，可重叠。数据不足标未分类。它们是本标的状态，不冒充全市场牛熊结论。",
     "regime_inputs": "总回报指数由已审计未复权价与除息权益构建，只用t-1之前资料分类；不拿未来高低点分类。所有方案共用分类。",
     "M1_dividend_reliability": "报告估计修订次数、幅度、到期天数和买入后180日内可得下调；后续修订只作结果标签，不回填信号。",
@@ -451,6 +481,8 @@
   },
   "decision_rules": {
     "statement_type": "方法选择",
+    "confirmation_status": "METHODS_FROZEN",
+    "confirmation_record": "CONFIRM-20260907-04",
     "order": ["实现或数据缺陷检查", "有效性与样本量门禁", "合格样本的经济证伪", "个人约束不通过则修改", "接受全部条件", "其余观察"],
     "modify": "发现未来信息、信号成交错位、无法对账、成本缺项或可复现状态缺陷时，先判修改，原结果无效；合格经济实验中违反16%回撤/126日修复/24笔维护约束也判个人适配性修改，说明不等同于H0被证明。",
     "observe": "样本/事件不足、右删失、PIT覆盖不足、风险不匹配、置信区间跨零、鲁棒性门槛缺数据/不通过，或仅支持收益非劣降回撤，均观察。",
@@ -459,11 +491,11 @@
     "accept_scope": "接受仅针对该版本、该标的、该估计方法与已确认闸门范围。NORMAL_ONLY条件检验通过不能升级为完整人工闸门策略通过；完整HD-ANCHOR-001尚缺闸门有效性时整体最多观察。",
     "simulation_permission": "接受只表示研究层面具备进入仿真的资格；执行仿真仍须研究者单独确认。当前协议未授权仿真或实盘。",
     "evidence_level": "L0规则、L1固定分红机械、L2PIT经济、L3未接触样本外及稳健性、L4执行验证分别登记；完成阶段3不提升当前实证等级。",
-    "next_review": "本阶段下一门槛为方法确认与阶段4数据契约；最终观察时记录还缺多少月/转换簇或何种数据，任何新检验使用新的事前固定区间。"
+    "next_review": "阶段3方法确认已完成；下一门槛为阶段4数据契约。最终观察时记录还缺多少月、转换簇或何种数据，任何新检验使用新的事前固定区间。"
   },
   "freeze_and_reproducibility": {
     "statement_type": "方法选择",
-    "methods_freeze": "研究者确认本草案的数值、分红方法、闸门范围和模型之后，记录确认原话、日期、协议版本与哈希；不能将本轮阶段2确认当作阶段3冻结。",
+    "methods_freeze": "阶段3研究问题、指标、参数、闸门范围、成交假设、风险和样本门槛、统计、实验预算及判定规则已于2026-09-07依据CONFIRM-20260907-04冻结；后续改变任一方法字段必须登记新协议版本和偏离，不能覆盖本次冻结。",
     "execution_freeze": "阶段4/5/6完成契约、清理审计与不看绩效的样本定界后，补齐数据/代码/环境哈希、费用表、日期、资金、基准股数和接触日志；关键口径若变更须再次确认。全部完成前状态不能为FROZEN_READY_TO_RUN。",
     "prospective_collection": "若须前向收集，先冻结获取方案和未来日期；不可能预知未来文件哈希，故按预定数据模式只追加原始快照，到期生成只读清单后再计算最终结果。不得伪造未来哈希或提前放行。",
     "implementation_required": ["PIT门禁及180日失效", "历史决策日期注入", "同日竞价回放", "已有1000股初始化和固定总资产", "完整税费及股息应收到账", "T+1和实际成交状态", "逐日会计与归因", "参数和结果全登记"],
@@ -471,8 +503,10 @@
     "reproduction_commands": null,
     "implementation_hash": null,
     "environment_lock_hash": null,
+    "method_freeze_manifest": "method_freeze_manifest_v1.0.json",
     "protocol_freeze_sha256": null,
-    "confirmation_record": null,
+    "protocol_freeze_hash_note": "方法字段使用独立冻结清单逐节哈希；本字段保留给阶段4—6完成数据、日期、实现和环境绑定后的完整可执行协议哈希。",
+    "confirmation_record": "CONFIRM-20260907-04",
     "deviations": [],
     "command_status": "运行器尚未实现，阶段3不虚构可以执行的回测命令；真正的复现命令随实现验收登记。",
     "mandatory_outputs": ["完整运行登记", "逐日账户及对账", "信号/订单/成交日志", "全部配置结果表", "图表和不确定性区间", "偏离与失败日志", "数据代码版本", "正式报告", "接受/观察/修改/淘汰决策记录"]

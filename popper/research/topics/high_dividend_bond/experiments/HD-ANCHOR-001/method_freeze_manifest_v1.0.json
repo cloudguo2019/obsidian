@@ -1,0 +1,54 @@
+{
+  "statement_type": "已观察事实",
+  "experiment_id": "HD-ANCHOR-001",
+  "freeze_scope": "STAGE3_METHODS_ONLY",
+  "freeze_date": "2026-09-07",
+  "timezone": "Asia/Shanghai",
+  "protocol_path": "preregistration.yaml",
+  "protocol_version": "1.0-methods-frozen",
+  "protocol_file_sha256_at_freeze": "775e0bb63fa2ffe94cd477a53f0eb68eb5f598b6c92242a6760a3a3d1159be66",
+  "protocol_file_size_bytes_at_freeze": 50451,
+  "protocol_line_endings_at_freeze": "LF",
+  "confirmation_records": [
+    "CONFIRM-20260906-01",
+    "CONFIRM-20260906-02",
+    "CONFIRM-20260907-03",
+    "CONFIRM-20260907-04"
+  ],
+  "final_change_from_draft": {
+    "auction_participation_limit_enabled": false,
+    "auction_max_participation": null,
+    "base_execution_friction_bps": 0,
+    "p00_fill_assumption": "有效保护限价委托按权威最终收盘集合竞价价假设全额成交；不以最终竞价成交量筛选成交。",
+    "execution_stress_retained": "P06/P07分别加入单边5bp/10bp不利执行偏移；P22/P23检验未成交和部分成交。"
+  },
+  "frozen_method_scope": [
+    "研究问题、H1与H0",
+    "唯一首要指标、通过门槛和风险改善观察分支",
+    "个人风险、修复、交易频率、数据覆盖和有效样本量门槛",
+    "HD-ANCHOR-001参数、分红代理及180日有效期",
+    "固定NORMAL条件检验及L0基本面闸门范围",
+    "信号、提交、P00成交假设、费用和公司行动记账方法",
+    "初始资金、1000股主账户、1200股及0股敏感性和公平基准",
+    "样本划分算法、锁定规则、24个实验配置和失败登记",
+    "统计、不确定性、归因、稳健性、证伪和四类研究决策规则"
+  ],
+  "not_yet_frozen_or_authorized": [
+    "原始及清理后数据文件、哈希和数据版本",
+    "具体开发、验证、滚动OOS及锁定日期",
+    "历史税费表、个人股息税输入和竞价字段映射",
+    "初始参考价格、最终V0、风险匹配静态股数",
+    "研究运行器实现、环境和完整可执行协议哈希",
+    "正式回测、锁定测试、仿真和真实交易授权"
+  ],
+  "authorization_snapshot": {
+    "formal_backtest_authorized": false,
+    "locked_test_open_authorized": false,
+    "paper_trading_authorized": false,
+    "live_trading_authorized": false,
+    "dry_run": true,
+    "run_status": "NOT_STARTED",
+    "run_count": 0
+  },
+  "verification": "对冻结时preregistration.yaml原始字节执行SHA-256；后续任意字节变化都会与本清单不一致，必须保存新版本并登记偏离，不得覆盖本记录。"
+}
