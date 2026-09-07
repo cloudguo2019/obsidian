@@ -3,9 +3,9 @@
     "statement_type": "方法选择",
     "experiment_id": "HD-ANCHOR-001",
     "schema_version": "1.0",
-    "protocol_version": "0.3-draft",
+    "protocol_version": "0.4-draft",
     "created_date": "2026-09-05",
-    "updated_date": "2026-09-06",
+    "updated_date": "2026-09-07",
     "timezone": "Asia/Shanghai",
     "serialization": "YAML 1.2的JSON兼容写法；可用标准JSON解析器无依赖校验。",
     "status": "DRAFT_AWAITING_METHOD_CONFIRMATION_AND_DATA_AUDIT",
@@ -116,6 +116,18 @@
           "不使用后来实际派发的分红结果回填过去，不通过日常刷新日期延长有效期。"
         ],
         "scope_limit": "仅确认分红预期方法与有效期，不代表候选数据已验收，也不额外确认草案80%覆盖门槛。NORMAL研究口径、成交模型、其余细节及最终冻结继续待确认。"
+      },
+      {
+        "id": "CONFIRM-20260907-03",
+        "date": "2026-09-07",
+        "user_quote": "同意本轮主实验采用固定NORMAL的条件检验 ，不要一个一个输出了，一次性输出",
+        "confirmed": [
+          "主检验全期输入NORMAL，仅检验该条件下股息率锚的样本外净增量。",
+          "分红有效期、账户亏损停止加仓、核心仓保护、相邻滞回和其他原有内生规则继续保留。",
+          "REVIEW、STOP_ADD与EXIT只进入L0规则验证，不以事后人工历史切换进入本轮主收益检验。",
+          "即使条件检验通过，也不能据此声称完整含人工基本面闸门的策略已经通过。"
+        ],
+        "scope_limit": "仅确认基本面闸门的条件检验口径；成交与撮合、覆盖和样本量、统计、风险护栏操作化及整份方法冻结仍待一次性批量确认。该回复没有授权正式回测、锁定测试、仿真或实盘。"
       }
     ]
   },
@@ -209,7 +221,9 @@
     "static_one_yuan": "只供另标L0/L1；L2/L3由研究入口独立断言PIT数据来源与日期，不能仅相信未被执行的allow_static_dividend_in_backtest字段。",
     "no_unregistered_mixing": ["滚动已支付分红", "管理层模糊指引", "分析师一致预期", "未来最终分红", "事后人工判断"],
     "fundamental_gate_mode": "NORMAL_ONLY_CONDITIONAL_PRIMARY",
-    "gate_mode_status": "PROPOSED_NEEDS_CONFIRMATION",
+    "gate_mode_status": "CONFIRMED_NORMAL_ONLY_CONDITIONAL_PRIMARY",
+    "gate_mode_confirmation_date": "2026-09-07",
+    "gate_mode_confirmation_record": "CONFIRM-20260907-03",
     "gate_mode_definition": "主检验先隔离股息率锚，全期输入NORMAL，保留亏损停止加仓等现有内生规则。此设置是受控实验，不声称历史基本面始终正常或人工闸门有效。",
     "gate_claim_ceiling": "即使通过，结论也仅为全期NORMAL条件下的股息率锚；完整含人工闸门策略不得据此直接进入仿真。若要主检验完整策略，须在看结果前另行确认可追溯的历史闸门方案，更新本草案。",
     "gate_L0": "四态及EXIT优先级全部做L0；不得以NORMAL主输入删去失败状态测试。",
@@ -296,7 +310,7 @@
     "calendar_version": null,
     "auction_version": null,
     "historical_fee_and_tax_version": null,
-    "gate_inputs_version": "拟用NORMAL常数受控输入，待方法确认",
+    "gate_inputs_version": "NORMAL常数受控输入的方法口径已于2026-09-07确认；数据契约字段及实现版本仍待绑定",
     "required_outputs": ["cleaned_price.parquet", "point_in_time_dividend_estimates.parquet", "corporate_actions.parquet", "cleaning_log.csv", "data_manifest.json", "data_audit_report.md"],
     "extra_execution_artifacts": ["历史14:57候选Tick及接收时点依据", "最终竞价价和竞价成交量", "交易状态及权威价格限制", "供应商字段映射及版本"],
     "hard_L2_gate": "没有验收通过的PIT估计或同日竞价回放关键输入，主口径L2/L3关闭；固定分红、日线收盘替代Tick均不能补过门禁。"

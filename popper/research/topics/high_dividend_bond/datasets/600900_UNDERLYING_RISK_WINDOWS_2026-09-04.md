@@ -106,6 +106,8 @@ MDD = min(DD_t)
 
 [已观察事实｜A] 可复现脚本：[compute_underlying_risk_windows.py](../scripts/compute_underlying_risk_windows.py)。脚本仅向标准输出写JSON，不保存或修改原始行情，不运行策略。
 
+[已观察事实｜A] 本次计算脚本SHA-256为`acb5b2d92d9ca1a72fae52e35df8a845c44e4734d0297286ed6ca15bcaf067b3`。
+
 ```powershell
 & python research/topics/high_dividend_bond/scripts/compute_underlying_risk_windows.py --retrieved-at '2026-09-06T21:45:00+08:00'
 ```
@@ -113,6 +115,8 @@ MDD = min(DD_t)
 [已知限制｜C] 上述API会更新历史数据，查询参数和规范化哈希可以识别后续变化，但本次没有保存完整原始响应的只读副本。因此本文件属于可重算风险快照，还没有达到阶段5原始数据不可变归档的标准。
 
 [已知限制｜C] 税前分红立即再投资会略微不同于个人账户的分红税、到账时点和现金闲置。阶段10必须按实际股数、登记日权益、到账现金和税费重新完成策略账户对账，不能把本总回报指数直接作为策略净值。
+
+[计算结果｜A] 文档交付前已通过脚本AST语法解析，并以人工合成的`100→80→100`序列验证最大回撤为-20%、峰值至恢复为2个交易日；另以`100→99`且除息1元验证税前总回报指数保持100。该定向检查验证公式实现，不替代阶段5数据审计。
 
 ## 7. 对研究流程的影响
 

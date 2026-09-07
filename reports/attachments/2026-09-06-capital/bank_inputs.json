@@ -1,0 +1,22 @@
+{
+  "工商银行": {
+    "shares": "3564.06257089", "ordinary_equity": "39623.28",
+    "annual_profit": "3567.98", "capital": "1000", "mof_capital": "700",
+    "mof_shares": "1109.84806678", "reference_price": "8.13",
+    "official_roe": "0.0945", "dividend": "1105.93", "half_ordinary_profit": "1692.68",
+    "cet1": "39407.80", "rwa": "298327.80",
+    "a_shares": "2696.12212539", "h_shares": "867.94044550", "h_price": "7.70",
+    "source": "2026H1 report; 2025 annual report; 2026-09-04 closing prices",
+    "notes": "Balance sheet 2026-06-30; profit and dividends FY2025. Static scenario, not forecast."
+  },
+  "农业银行": {
+    "shares": "3499.83033873", "ordinary_equity": "28580.14",
+    "annual_profit": "2739.56", "capital": "1600", "mof_capital": "1300",
+    "mof_shares": "1235.15185240", "reference_price": "6.96",
+    "official_roe": "0.1016", "dividend": "873.21", "half_ordinary_profit": "1395.60",
+    "cet1": "28387.83", "rwa": "262816.08",
+    "a_shares": "3192.44210777", "h_shares": "307.38823096", "h_price": "6.540",
+    "source": "2026H1 report; 2025 annual report; 2026-09-04 closing prices",
+    "notes": "Balance sheet 2026-06-30; profit and dividends FY2025. Static scenario, not forecast."
+  }
+}
