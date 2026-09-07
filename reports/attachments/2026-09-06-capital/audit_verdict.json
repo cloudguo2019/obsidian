@@ -1,0 +1,48 @@
+{
+  "verdict": "PASS",
+  "tolerance_pct": "1",
+  "checks": [
+    {
+      "field": "农行财政认购计划",
+      "reported": "1300",
+      "observed": [
+        "1300",
+        "1300"
+      ],
+      "reported_to_source_gap_pct": [
+        "0.000000",
+        "0.000000"
+      ],
+      "source_pair_gap_pct": "0.000000",
+      "status": "PASS"
+    },
+    {
+      "field": "信保计划注资",
+      "reported": "100",
+      "observed": [
+        "100",
+        "100"
+      ],
+      "reported_to_source_gap_pct": [
+        "0.000000",
+        "0.000000"
+      ],
+      "source_pair_gap_pct": "0.000000",
+      "status": "PASS"
+    },
+    {
+      "field": "工行9月4日A价",
+      "reported": "8.13",
+      "observed": [
+        "8.13",
+        "8.13"
+      ],
+      "reported_to_source_gap_pct": [
+        "0.000000",
+        "0.000000"
+      ],
+      "source_pair_gap_pct": "0.000000",
+      "status": "PASS"
+    }
+  ]
+}

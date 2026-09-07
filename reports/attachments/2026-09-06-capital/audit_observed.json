@@ -1,0 +1,10 @@
+{
+  "retrieved_date": "2026-09-07",
+  "event_cutoff": "2026-09-06",
+  "note": "Re-read named sources after deterministic selection. Separate publication channels can rely on the same company announcement; this is transcription checking, not independent economic measurement.",
+  "results": [
+    {"field":"农行财政认购计划","observed":[1300,1300],"urls":["https://www.cnfin.com/zs-lb/detail/20260906/4465812_1.html","https://finance.eastmoney.com/a/202609063866094449.html"],"location":"CNFIN institution breakdown; Shanghai Securities News main paragraph"},
+    {"field":"信保计划注资","observed":[100,100],"urls":["https://www.cnfin.com/zs-lb/detail/20260906/4465812_1.html","https://www.news.cn/fortune/20260906/2247a7afb8a84de59f29551aa6cdaab7/c.html"],"location":"Policy institutions section; Xinhua third main paragraph"},
+    {"field":"工行9月4日A价","observed":[8.13,8.13],"urls":["https://www.laohu8.com/m/news/2665451365","https://m.cngold.org/bank/xw10737942.html"],"location":"Both date-specific closing quotes; first is auto-generated market recap, corroborated by second"}
+  ]
+}

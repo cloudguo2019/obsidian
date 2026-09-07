@@ -1,0 +1,73 @@
+[
+  {
+    "command": "cross-validate",
+    "field": "工行2026H1归母利润",
+    "unit": "亿元",
+    "values": {
+      "B1半年报": "1736.82",
+      "M8上海证券报": "1736.82"
+    },
+    "max_pairwise_gap_pct": "0.000000",
+    "tolerance_pct": "1",
+    "status": "PASS"
+  },
+  {
+    "command": "cross-validate",
+    "field": "农行2026H1归母利润",
+    "unit": "亿元",
+    "values": {
+      "B3半年报": "1463.81",
+      "M8上海证券报": "1463.81"
+    },
+    "max_pairwise_gap_pct": "0.000000",
+    "tolerance_pct": "1",
+    "status": "PASS"
+  },
+  {
+    "command": "cross-validate",
+    "field": "工行2025普通股利润",
+    "unit": "亿元",
+    "values": {
+      "B2年报": "3567.98",
+      "I3摊薄公告历史列": "3567.98"
+    },
+    "max_pairwise_gap_pct": "0.000000",
+    "tolerance_pct": "1",
+    "status": "PASS"
+  },
+  {
+    "command": "cross-validate",
+    "field": "农行9月4日H股价格",
+    "unit": "港元",
+    "values": {
+      "Q5日期行情": "6.54",
+      "Q6券商行情": "6.54"
+    },
+    "max_pairwise_gap_pct": "0.000000",
+    "tolerance_pct": "1",
+    "status": "PASS"
+  },
+  {
+    "command": "cross-validate",
+    "field": "农行PB口径差异_以财报普通权益重算为准",
+    "unit": "倍",
+    "values": {
+      "本文普通权益PB": "0.85229880",
+      "Q3页面自动PB": "0.73"
+    },
+    "max_pairwise_gap_pct": "14.349287",
+    "tolerance_pct": "1",
+    "status": "FLAG"
+  },
+  {
+    "command": "verify-market-cap",
+    "currency": "CNY_亿元_全股本A价等价",
+    "price": "8.13",
+    "shares": "3564.06257089",
+    "calculated_market_cap": "28975.83",
+    "reported_market_cap": "28975.83",
+    "gap_pct": "0.000004",
+    "tolerance_pct": "1",
+    "status": "PASS"
+  }
+]

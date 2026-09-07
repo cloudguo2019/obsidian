@@ -1,0 +1,30 @@
+{
+  "report": "C:\\Users\\cg\\Desktop\\Nietzsche\\obsidian\\reports\\2026-09-06-3600亿元中央金融企业增资-投资者研究.md",
+  "population": 20,
+  "sample_pct": 15.0,
+  "sample_size": 3,
+  "seed": 20260906,
+  "sample": [
+    {
+      "field": "农行财政认购计划",
+      "reported": "1300",
+      "unit": "亿元",
+      "source1": "X1 新华财经逐机构汇总；原预案PDF复取不稳定",
+      "source2": "A2 上海证券报"
+    },
+    {
+      "field": "信保计划注资",
+      "reported": "100",
+      "unit": "亿元",
+      "source1": "X1 机构汇总",
+      "source2": "F2 新华社"
+    },
+    {
+      "field": "工行9月4日A价",
+      "reported": "8.13",
+      "unit": "元",
+      "source1": "Q1 证券之星报道",
+      "source2": "Q8 金投网日期行情"
+    }
+  ]
+}

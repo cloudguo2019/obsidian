@@ -485,18 +485,7 @@
       "cash_payout_common": "0.30995970",
       "retained_2025": "2462.05000000",
       "rwa_growth_supported_2025_retention": "0.06247621",
-      "post_issue_price_for_5pct_yield": "5.99897403",
-      "newprofit_hurdle_creditcost_base": [
-        "0.80",
-        "0.125",
-        "0.75",
-        "0.029",
-        "0.012",
-        "0.0015",
-        "0.0045",
-        "0.005",
-        "0.0125"
-      ]
+      "post_issue_price_for_5pct_yield": "5.99897403"
     },
     "农业银行": {
       "input": {
@@ -756,18 +745,7 @@
       "cash_payout_common": "0.31874097",
       "retained_2025": "1866.35000000",
       "rwa_growth_supported_2025_retention": "0.06574472",
-      "post_issue_price_for_5pct_yield": "4.68244843",
-      "newprofit_hurdle_creditcost_base": [
-        "0.80",
-        "0.125",
-        "0.75",
-        "0.029",
-        "0.012",
-        "0.0015",
-        "0.0045",
-        "0.005",
-        "0.0125"
-      ]
+      "post_issue_price_for_5pct_yield": "4.68244843"
     }
   },
   "ten_year": [

@@ -107,8 +107,7 @@ if inputs_path.exists():
             'cash_payout_common':b['dividend']/N,
             'retained_2025':N-b['dividend'],
             'rwa_growth_supported_2025_retention':(N-b['dividend'])/b['cet1'],
-            'post_issue_price_for_5pct_yield':b['dividend']/s1/D('.05'),
-            'newprofit_hurdle_creditcost_base':SCENARIOS['中性']}
+            'post_issue_price_for_5pct_yield':b['dividend']/s1/D('.05')}
 
 # Stylised 10-year dividend/equity model; no share repurchase, no new issue after t=0.
 # Constant ROE on opening book and constant payout. Terminal multiple is a scenario.
