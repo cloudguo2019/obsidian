@@ -1,0 +1,27 @@
+{
+  "statement_type": "已观察事实",
+  "experiment_id": "HD-ANCHOR-001",
+  "contract_id": "HD-DATA-CONTRACT-1.0",
+  "contract_path": "data_contract_v1.md",
+  "contract_sha256": "cd05204e87f66b2162d84fb3d5705e1bdb2e21d6c58a66711ff56ee8441c230d",
+  "contract_size_bytes": 35391,
+  "contract_line_endings": "LF",
+  "created_date": "2026-09-08",
+  "timezone": "Asia/Shanghai",
+  "status": "CONTRACT_DEFINED_DATA_NOT_ACCEPTED",
+  "required_data_classes": [
+    "unadjusted_prices",
+    "point_in_time_dividend_estimates",
+    "corporate_actions_and_cash_dividends",
+    "closing_auction_execution_data",
+    "exchange_calendar",
+    "historical_fee_and_tax_schedules"
+  ],
+  "data_files_accepted": false,
+  "formal_backtest_authorized": false,
+  "locked_test_open_authorized": false,
+  "paper_trading_authorized": false,
+  "live_trading_authorized": false,
+  "evidence_ceiling_current": "L0/L1",
+  "verification": "对data_contract_v1.md冻结时原始字节执行SHA-256；任何修改必须生成新契约版本和新清单。"
+}
