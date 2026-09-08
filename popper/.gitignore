@@ -1,0 +1,4 @@
+# Keep QMTData locally; only publish generated reports.
+/research/QMTData/*
+!/research/QMTData/reports/
+!/research/QMTData/reports/**

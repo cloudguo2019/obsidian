@@ -1,0 +1,190 @@
+{
+  "status": "ALLOW",
+  "config_path": "C:\\quant\\MiniQMT\\sartre\\sartre_core\\config\\etf_rotation_config.json",
+  "report_md_path": "C:\\quant\\MiniQMT\\sartre\\reports\\risk_checks\\2026-07-27\\risk_check_report.md",
+  "report_json_path": "C:\\quant\\MiniQMT\\sartre\\reports\\risk_checks\\2026-07-27\\risk_check_report.json",
+  "generated_at": "2026-07-27T23:10:49+08:00",
+  "checks": [
+    {
+      "category": "config",
+      "name": "mode_valid",
+      "status": "PASS",
+      "message": "CLI 参数 --mode 必须是 backtest、simulate 或 live 之一",
+      "actual": "simulate",
+      "expected": null
+    },
+    {
+      "category": "environment",
+      "name": "execution.env",
+      "status": "PASS",
+      "message": "execution.env 必须是 backtest、simulate 或 live 之一",
+      "actual": "simulate",
+      "expected": null
+    },
+    {
+      "category": "environment",
+      "name": "mode_matches_config",
+      "status": "PASS",
+      "message": "CLI 参数 --mode 必须与配置中的 execution.env 一致",
+      "actual": "simulate",
+      "expected": "simulate"
+    },
+    {
+      "category": "environment",
+      "name": "execution.strategy_id_present",
+      "status": "PASS",
+      "message": "必须明确配置 execution.strategy_id",
+      "actual": "etf_rotation_core",
+      "expected": null
+    },
+    {
+      "category": "environment",
+      "name": "execution.strategy_id_expected",
+      "status": "PASS",
+      "message": "execution.strategy_id 必须与人工确认的策略 ID 一致",
+      "actual": "etf_rotation_core",
+      "expected": "etf_rotation_core"
+    },
+    {
+      "category": "environment",
+      "name": "execution.asset_type_expected",
+      "status": "PASS",
+      "message": "execution.asset_type 必须与人工确认的资产类型一致",
+      "actual": "etf",
+      "expected": "etf"
+    },
+    {
+      "category": "capital",
+      "name": "execution.max_cash_present",
+      "status": "PASS",
+      "message": "必须明确配置 execution.max_cash，不能依赖默认值",
+      "actual": 5000.0,
+      "expected": null
+    },
+    {
+      "category": "capital",
+      "name": "execution.max_cash_expected",
+      "status": "PASS",
+      "message": "execution.max_cash 必须与人工确认的最大资金一致",
+      "actual": 5000.0,
+      "expected": 5000.0
+    },
+    {
+      "category": "capital",
+      "name": "forbidden_default_cash",
+      "status": "PASS",
+      "message": "execution.max_cash 不能等于禁止使用的默认资金值",
+      "actual": 5000.0,
+      "expected": "不在 [100000.0] 中"
+    },
+    {
+      "category": "account",
+      "name": "qmt.account_id_present",
+      "status": "PASS",
+      "message": "必须明确配置 qmt.account_id",
+      "actual": "666637965217",
+      "expected": null
+    },
+    {
+      "category": "account",
+      "name": "qmt.account_id_expected",
+      "status": "PASS",
+      "message": "qmt.account_id 必须与人工确认的实盘账户一致",
+      "actual": "666637965217",
+      "expected": "666637965217"
+    },
+    {
+      "category": "account",
+      "name": "qmt.account_type_present",
+      "status": "PASS",
+      "message": "必须明确配置 qmt.account_type",
+      "actual": "STOCK",
+      "expected": null
+    },
+    {
+      "category": "account",
+      "name": "qmt.miniqmt_path_present",
+      "status": "PASS",
+      "message": "必须配置 qmt.miniqmt_path 或 qmt.trader_path",
+      "actual": "C:\\quant\\迅投极速策略交易系统交易终端 华泰证券QMT实盘\\userdata_mini",
+      "expected": null
+    },
+    {
+      "category": "account",
+      "name": "qmt.xtquant_site_packages_present",
+      "status": "PASS",
+      "message": "必须配置 qmt.xtquant_site_packages",
+      "actual": "C:\\quant\\迅投极速策略交易系统交易终端 华泰证券QMT实盘\\bin.x64\\Lib\\site-packages",
+      "expected": null
+    },
+    {
+      "category": "strategy_risk",
+      "name": "risk.max_total_position_pct_range",
+      "status": "PASS",
+      "message": "risk.max_total_position_pct 必须在 (0, 1] 范围内",
+      "actual": 0.6,
+      "expected": null
+    },
+    {
+      "category": "strategy_risk",
+      "name": "risk.max_symbol_position_pct_range",
+      "status": "PASS",
+      "message": "risk.max_symbol_position_pct 必须在 (0, 1] 范围内",
+      "actual": 0.2,
+      "expected": null
+    },
+    {
+      "category": "strategy_risk",
+      "name": "risk.symbol_not_above_total",
+      "status": "PASS",
+      "message": "risk.max_symbol_position_pct 不能超过 risk.max_total_position_pct",
+      "actual": 0.2,
+      "expected": "<= 0.6"
+    },
+    {
+      "category": "strategy_risk",
+      "name": "risk.lot_size_positive",
+      "status": "PASS",
+      "message": "risk.lot_size 必须大于 0",
+      "actual": 100.0,
+      "expected": null
+    },
+    {
+      "category": "strategy_risk",
+      "name": "risk.tick_size_positive",
+      "status": "PASS",
+      "message": "risk.tick_size 必须大于 0",
+      "actual": 0.001,
+      "expected": null
+    },
+    {
+      "category": "strategy_risk",
+      "name": "risk.price_cage_ratio_non_negative",
+      "status": "PASS",
+      "message": "risk.price_cage_ratio 不能小于 0",
+      "actual": 0.02,
+      "expected": null
+    },
+    {
+      "category": "strategy_risk",
+      "name": "risk.max_open_per_day_non_negative",
+      "status": "PASS",
+      "message": "risk.max_open_per_day 不能小于 0",
+      "actual": 3.0,
+      "expected": null
+    },
+    {
+      "category": "strategy_risk",
+      "name": "risk.max_close_per_day_non_negative",
+      "status": "PASS",
+      "message": "risk.max_close_per_day 不能小于 0",
+      "actual": 3.0,
+      "expected": null
+    }
+  ],
+  "config_hash": "sha256:0a23a086b9f46e6555f51685fe0b579dcdc9613e06f01c80ec4047a041f36a8a",
+  "loaded_files": [
+    "C:\\quant\\MiniQMT\\sartre\\sartre_core\\config\\etf_rotation_config.json",
+    "C:\\quant\\MiniQMT\\sartre\\sartre_core\\config\\base_config.json"
+  ]
+}
