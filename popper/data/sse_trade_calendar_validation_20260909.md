@@ -3,12 +3,12 @@
 - 数据截止：2026-09-09（Asia/Shanghai）
 - 覆盖：1990-12-19 至 2026-09-09，共 8,722 个开市日。
 - 主数据：新浪财经 A 股交易日历，由 AKShare 的公开解析器读取；该解析器补入新浪遗漏的 1992-05-04。
-- 源文件 SHA-256：`0d6b02a84bb3b2e8503a89b4abcb353a5a63b9fa643bc4eb31c6bdcdeb909b4d`
+- 源文件 SHA-256：`0ebc62ccb8c4c744827079e304d5be762ca751363160d5a485d0cf8b4f283ee8`
 
 - 主数据地址：https://finance.sina.com.cn/realstock/company/klc_td_sh.txt
 - 解析器：https://github.com/akfamily/akshare/blob/master/akshare/tool/trade_date_hist.py
 
-- 源文件 SHA-256：`0d6b02a84bb3b2e8503a89b4abcb353a5a63b9fa643bc4eb31c6bdcdeb909b4d`
+- 源文件 SHA-256：`0ebc62ccb8c4c744827079e304d5be762ca751363160d5a485d0cf8b4f283ee8`
 
 ## 交叉验证
 
@@ -21,4 +21,4 @@
 
 ## 可复现
 
-运行 `node scripts/build_sse_trade_calendar.mjs`。构建依赖 AKShare 仓库中的 `akshare/file_fold/calendar.json`；更新时应重新拉取其上游并复核当年上交所休市公告。
+运行 `node scripts/build_sse_trade_calendar.mjs`。构建使用随文件保存的新浪日历快照；更新时应重新拉取 AKShare 的上游解析结果并复核当年上交所休市公告。

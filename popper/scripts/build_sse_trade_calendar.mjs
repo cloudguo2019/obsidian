@@ -3,7 +3,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 
 const root = resolve(import.meta.dirname, "..");
-const sourcePath = resolve(root, ".tmp-akshare/akshare/file_fold/calendar.json");
+const sourcePath = resolve(root, "data/sse_trade_calendar_sina_snapshot_20260909.json");
 const outputPath = resolve(root, "data/sse_trade_calendar_19901219_20260909.csv");
 const reportPath = resolve(root, "data/sse_trade_calendar_validation_20260909.md");
 const cutoff = "20260909";
@@ -74,7 +74,7 @@ const report = `# 上交所交易日历：验证报告\n\n` +
   `4. **完整性检查**：首日、去重、周末排除、相邻前序交易日字段及 AKShare 明示的 1992-05-04 修正均通过。\n\n` +
   `说明：这是交易日（开市日）清单，而不是自然日状态表；未列出的日期不能在没有另行查核的情况下被解释为某单一原因（周末、法定假日或临时休市）。\n\n` +
   `## 可复现\n\n` +
-  `运行 \`node scripts/build_sse_trade_calendar.mjs\`。构建依赖 AKShare 仓库中的 \`akshare/file_fold/calendar.json\`；更新时应重新拉取其上游并复核当年上交所休市公告。\n`;
+  `运行 \`node scripts/build_sse_trade_calendar.mjs\`。构建使用随文件保存的新浪日历快照；更新时应重新拉取 AKShare 的上游解析结果并复核当年上交所休市公告。\n`;
 await writeFile(reportPath, report, "utf8");
 
 console.log(JSON.stringify({ outputPath, reportPath, tradeDayCount: dates.length, sourceSha256 }, null, 2));
