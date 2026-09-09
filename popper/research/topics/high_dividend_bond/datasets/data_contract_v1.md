@@ -253,7 +253,7 @@ amount >= 0
 
 ### 5.3 当前候选材料的处理
 
-[已观察事实｜B] 当前候选文件[`600900_expected_annual_dividend_per_share_2021_2026.md`](600900_expected_annual_dividend_per_share_2021_2026.md)列出六个完整年度DPS及多源核验，但逐条`available_time`仍为空，且正文按“持续使用至下一年度公告”描述。
+[已观察事实｜B] 当前候选文件[`600900_expected_annual_dividend_per_share_2021_2026.md`](600900_expected_annual_dividend_per_share_2021_2026.md)已补齐2003—2025共23个完整年度DPS及多源核验，但逐条`available_time`仍为空，且正文按“持续使用至下一年度公告”描述。
 
 [方法选择｜C] 该文件不能直接作为正式PIT表。阶段5必须从原公告重新生成记录：日期级公告采用下一交易日09:30可用，逐条计算180日到期，并把到期后至下一条合格公告之间的时段保留为`STALE_ESTIMATE`，不得无限期前向填充。
 
@@ -556,4 +556,3 @@ research/topics/high_dividend_bond/datasets/
 - [已观察事实｜A] 上海证券交易所收费一览表及2023年经手费调整资料，检索日期2026-09-08；用于费用表必须按生效日版本化的要求。[收费一览表](https://www.sse.com.cn/services/tradingservice/charge/ssecharge/)
 - [已观察事实｜A] 财政部、税务总局，证券交易印花税减半资料，检索日期2026-09-08；用于历史印花税版本要求。[财政部页面](https://www.mof.gov.cn/caizhengshipin/caizhengxinwen2/202308/t20230828_3904230.htm)
 - [已观察事实｜A] 国家税务总局，上市公司股息红利差别化个人所得税政策，检索日期2026-09-08；用于逐批持有期和递延扣税字段。[官方政策](https://www.chinatax.gov.cn/chinatax/n810341/n810765/n1465977/n1466017/c1967339/content.html)
-
