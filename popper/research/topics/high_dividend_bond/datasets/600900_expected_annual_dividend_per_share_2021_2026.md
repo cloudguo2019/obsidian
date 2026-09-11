@@ -6,6 +6,8 @@
 > 用途：为 `HD-ANCHOR-001` 后续日线机械回测准备无未来信息的 `expected_annual_dividend_per_share` 输入  
 > 覆盖：2004-03-31 至 2026-09-09，约22年5个月；包含2003—2025共23个完整分红年度的首次完整年度分红公告
 
+> [方法选择｜C] 2026-09-10协议v1.3已更正为`SHAREHOLDER_MEETING_CONFIRMED_ANNUAL_DPS_V1`：只在股东大会审议通过并公开披露后启用完整年度DPS，单条记录年龄0—365自然日有效。本文主表保留的“首次方案公告日”只作为候选金额和历史来源记录，不得直接冒充正式`available_time`。23条正式记录见[`600900_point_in_time_dividend_estimates_v1.csv`](600900_point_in_time_dividend_estimates_v1.csv)。
+
 ## 1. 结论
 
 按“最新一次已公开披露的完整年度税前每股现金分红，持续使用至下一次完整年度分红公告”定义，`expected_annual_dividend_per_share` 应采用以下阶梯序列：

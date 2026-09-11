@@ -1,0 +1,88 @@
+{
+  "statement_type": "计算结果",
+  "manifest_version": "HD-STAGE5-DATA-MANIFEST-1.1",
+  "generated_at": "2026-09-10T17:30:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "amendment_type": "NON_BACKTEST_DATA_SOURCE_AND_COST_SCHEDULE_SUPPLEMENT",
+  "parent_stage5_manifest": {
+    "path": "research/topics/high_dividend_bond/datasets/cleaned/data_manifest.json",
+    "sha256": "c6e9bace1d3d8ee7d778d6a46a0a9e5d63cfb0f3cd51623682b2cdc7b7d4bcf4",
+    "size_bytes": 5579
+  },
+  "supplemental_inputs_and_artifacts": [
+    {
+      "path": "research/topics/high_dividend_bond/datasets/akshare_price_source_manifest_v1.json",
+      "sha256": "20c15f6bf0851b2dcb6830baa12d1314911055a0f1f841f30e55f9870d3e6ee5",
+      "size_bytes": 3699,
+      "role": "independent_price_source_manifest"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/schedules/a_share_transaction_cost_schedule_v2_pre2012.csv",
+      "sha256": "cbc173bfc008098ae9b350118e2575adc0a4a9ec0fe7e05b88e9c9d17e88a462",
+      "size_bytes": 5323,
+      "role": "machine_readable_transaction_cost_schedule"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/schedules/a_share_transaction_cost_schedule_v2_pre2012_note.md",
+      "sha256": "0916ab23c1b303ceb7b9792d060d3a3e38cacfea55b29400b5db9cf10c1471fe",
+      "size_bytes": 1649,
+      "role": "transaction_cost_schedule_evidence_note"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/data_contract_v1_4_akshare_secondary_and_fee_v2.md",
+      "sha256": "a6d80541529a8bef87ed36a9c4578ebf023a4fb9d613a0192487899c7cbe4614",
+      "size_bytes": 1932,
+      "role": "data_contract_amendment"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/data_contract_v1_4_manifest.json",
+      "sha256": "42429767b7e3d43a280c09b9b329a6a64286e4f487dc9aa3e47e75bd6825c79a",
+      "size_bytes": 2131,
+      "role": "data_contract_manifest"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/STAGE5_SUPPLEMENT_AKSHARE_AND_PRE2012_FEES.md",
+      "sha256": "9af92c1b8bd90ec728853d9ee0cbae0be3b77a9bd131882b885a800a761297c6",
+      "size_bytes": 3348,
+      "role": "stage5_supplement_report"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/requirements-akshare-python311.lock.txt",
+      "sha256": "b348ae2c02c22cf91183fb2d3c7cd97d42888de77b939d38ebc461f83d114b2d",
+      "size_bytes": 507,
+      "role": "secondary_source_runtime_lock"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/runtime_python311_akshare.md",
+      "sha256": "f22073ad5d39fc5fa6c792f29029c7d39f0f2373d4b024ecad6127d8744b73b0",
+      "size_bytes": 1522,
+      "role": "secondary_source_runtime_record"
+    }
+  ],
+  "independent_price_crosscheck": {
+    "xtquant_rows": 5118,
+    "akshare_rows": 5118,
+    "overlap_rows": 5118,
+    "date_mismatch_rows": 0,
+    "ohlc_difference_rows_over_1pct": 0,
+    "maximum_ohlc_relative_difference": 0.0007710100231302842,
+    "status": "PASS"
+  },
+  "fee_schedule_audit": {
+    "rows": 22,
+    "duplicate_fee_type_effective_start_keys": 0,
+    "pre_2012_handling_fee_machine_readable": true,
+    "post_2012_rule_values_changed_from_v1": false,
+    "early_transfer_fee_exact_start_resolved": false,
+    "status": "PASS_WITH_DOCUMENTED_C_GRADE_LIMITATION"
+  },
+  "gates": {
+    "stage4_closeout_status": "PASS",
+    "stage5_internal_status": "PASS",
+    "stage5_data_gate_status": "PASS",
+    "independent_price_gate": "PASS",
+    "formal_l2_gate": "CLOSED_PENDING_STAGE6_STAGE7_AND_EXPLICIT_RUN_AUTHORIZATION"
+  },
+  "formal_backtest_run_count": 0,
+  "locked_test_open_count": 0
+}

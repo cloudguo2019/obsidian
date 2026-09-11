@@ -1,0 +1,20 @@
+fee_type,market,effective_start,effective_end,charge_side,rate_basis,rate_decimal,minimum_cny_per_parent_order,commission_interaction,source_kind,evidence_level,source_document,version,note
+STAMP_TAX,SSE_A_SHARE,2001-11-16,2005-01-23,BOTH,transaction_amount,0.002,,ADD_SEPARATELY,official_history,A,research/topics/A股交易税费历史版本表_截至2026-09-09.md,A_SHARE_COST_SCHEDULE_V1_20260910,
+STAMP_TAX,SSE_A_SHARE,2005-01-24,2007-05-29,BOTH,transaction_amount,0.001,,ADD_SEPARATELY,official,A,research/topics/A股交易税费历史版本表_截至2026-09-09.md,A_SHARE_COST_SCHEDULE_V1_20260910,
+STAMP_TAX,SSE_A_SHARE,2007-05-30,2008-04-23,BOTH,transaction_amount,0.003,,ADD_SEPARATELY,official_history,A,research/topics/A股交易税费历史版本表_截至2026-09-09.md,A_SHARE_COST_SCHEDULE_V1_20260910,
+STAMP_TAX,SSE_A_SHARE,2008-04-24,2008-09-18,BOTH,transaction_amount,0.001,,ADD_SEPARATELY,official,A,research/topics/A股交易税费历史版本表_截至2026-09-09.md,A_SHARE_COST_SCHEDULE_V1_20260910,
+STAMP_TAX,SSE_A_SHARE,2008-09-19,2023-08-27,SELL,transaction_amount,0.001,,ADD_SEPARATELY,official,A,research/topics/A股交易税费历史版本表_截至2026-09-09.md,A_SHARE_COST_SCHEDULE_V1_20260910,
+STAMP_TAX,SSE_A_SHARE,2023-08-28,,SELL,transaction_amount,0.0005,,ADD_SEPARATELY,official,A,research/topics/A股交易税费历史版本表_截至2026-09-09.md,A_SHARE_COST_SCHEDULE_V1_20260910,
+TRANSFER_FEE,SSE_A_SHARE,,2012-05-31,BOTH,nominal_value,0.001,,ADD_SEPARATELY,historical_archive_start_unknown,C,research/topics/A股交易税费历史版本表_截至2026-09-09.md,A_SHARE_COST_SCHEDULE_V1_20260910,Exact early effective start unresolved
+TRANSFER_FEE,SSE_A_SHARE,2012-06-01,2012-08-31,BOTH,nominal_value,0.00075,,ADD_SEPARATELY,official,A,research/topics/A股交易税费历史版本表_截至2026-09-09.md,A_SHARE_COST_SCHEDULE_V1_20260910,Shanghai investor total
+TRANSFER_FEE,SSE_A_SHARE,2012-09-01,2015-07-31,BOTH,nominal_value,0.0006,,ADD_SEPARATELY,official,A,research/topics/A股交易税费历史版本表_截至2026-09-09.md,A_SHARE_COST_SCHEDULE_V1_20260910,Shanghai investor total
+TRANSFER_FEE,SSE_A_SHARE,2015-08-01,2022-04-28,BOTH,transaction_amount,0.00002,,ADD_SEPARATELY,official,A,research/topics/A股交易税费历史版本表_截至2026-09-09.md,A_SHARE_COST_SCHEDULE_V1_20260910,
+TRANSFER_FEE,SSE_A_SHARE,2022-04-29,,BOTH,transaction_amount,0.00001,,ADD_SEPARATELY,official,A,research/topics/A股交易税费历史版本表_截至2026-09-09.md,A_SHARE_COST_SCHEDULE_V1_20260910,
+HANDLING_FEE,SSE_A_SHARE,,2012-05-31,BOTH,transaction_amount,,,ADD_SEPARATELY,incomplete_history,C,research/topics/A股交易税费历史版本表_截至2026-09-09.md,A_SHARE_COST_SCHEDULE_V1_20260910,No continuous verified rate in source document
+HANDLING_FEE,SSE_A_SHARE,2012-06-01,2012-08-31,BOTH,transaction_amount,0.000087,,ADD_SEPARATELY,official,A,research/topics/A股交易税费历史版本表_截至2026-09-09.md,A_SHARE_COST_SCHEDULE_V1_20260910,
+HANDLING_FEE,SSE_A_SHARE,2012-09-01,2015-07-31,BOTH,transaction_amount,0.0000696,,ADD_SEPARATELY,official,A,research/topics/A股交易税费历史版本表_截至2026-09-09.md,A_SHARE_COST_SCHEDULE_V1_20260910,
+HANDLING_FEE,SSE_A_SHARE,2015-08-01,2023-08-27,BOTH,transaction_amount,0.0000487,,ADD_SEPARATELY,official,A,research/topics/A股交易税费历史版本表_截至2026-09-09.md,A_SHARE_COST_SCHEDULE_V1_20260910,SSE 2023 adjustment notice explicitly identifies this prior standard
+HANDLING_FEE,SSE_A_SHARE,2023-08-28,,BOTH,transaction_amount,0.0000341,,ADD_SEPARATELY,official,A,research/topics/A股交易税费历史版本表_截至2026-09-09.md,A_SHARE_COST_SCHEDULE_V1_20260910,
+REGULATORY_FEE,SSE_A_SHARE,2003-01-01,2011-12-31,BOTH,transaction_amount,0.00004,,ADD_SEPARATELY,official_history,A,research/topics/A股交易税费历史版本表_截至2026-09-09.md,A_SHARE_COST_SCHEDULE_V1_20260910,
+REGULATORY_FEE,SSE_A_SHARE,2012-01-01,,BOTH,transaction_amount,0.00002,,ADD_SEPARATELY,official,A,research/topics/A股交易税费历史版本表_截至2026-09-09.md,A_SHARE_COST_SCHEDULE_V1_20260910,
+BROKER_COMMISSION,SSE_A_SHARE,2003-11-18,,BOTH,transaction_amount,0.0001,5,BROKER_BASE,preregistered_assumption,C,research/topics/A股交易税费历史版本表_截至2026-09-09.md,A_SHARE_COST_SCHEDULE_V1_20260910,Minimum CNY 5 per parent order; modeled separately from statutory fees

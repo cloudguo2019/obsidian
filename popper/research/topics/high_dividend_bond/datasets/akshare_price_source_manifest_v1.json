@@ -1,0 +1,95 @@
+{
+  "statement_type": "计算结果",
+  "manifest_version": "HD-AKSHARE-PRICE-SOURCE-MANIFEST-1.0",
+  "generated_at": "2026-09-10T16:57:39+08:00",
+  "timezone": "Asia/Shanghai",
+  "source": {
+    "library": "AKShare",
+    "library_version": "1.18.94",
+    "interface": "stock_zh_a_daily",
+    "upstream_source": "sina",
+    "symbol": "600900",
+    "period": "daily",
+    "start_date": "20031118",
+    "end_date": "20260909",
+    "adjust_parameter": "",
+    "adjust_meaning": "unadjusted",
+    "documentation": "https://akshare.akfamily.xyz/data/stock/stock.html"
+  },
+  "runtime": {
+    "python_version": "3.11.9",
+    "python_executable": "C:/Users/cg/AppData/Local/venvs/high-dividend-bond-py311/Scripts/python.exe",
+    "pandas_version": "3.0.5",
+    "pyarrow_version": "25.0.1",
+    "pipeline_version": "HD-AKSHARE-PRICE-CROSSCHECK-1.0.0",
+    "path": "research/topics/high_dividend_bond/scripts/fetch_akshare_price_and_crosscheck.py",
+    "sha256": "c0aac5f70da6d08538a795db8846697bb092ef1fa1595328cc7b5e8ca56cf1ee",
+    "size_bytes": 17313
+  },
+  "inputs": [
+    {
+      "path": "research/QMTData/data/market_kline/csv/1d/none/600900.SH.csv",
+      "sha256": "ff4f0f932180e46f978c889059198b712b7681f4f755a88dd3f22dbb4bad87fc",
+      "size_bytes": 493240
+    }
+  ],
+  "outputs": [
+    {
+      "path": "research/topics/high_dividend_bond/datasets/raw/akshare/600900_akshare_stock_zh_a_daily_sina_bfq_20031118_20260909.csv",
+      "sha256": "e4f20b8c7f4fc0eb8dd9daec2951f9547dae2ed3a06cb50d68e9784416e25591",
+      "size_bytes": 470370
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/derived/600900_akshare_daily_unadjusted_v1.csv",
+      "sha256": "723844853391cd2699d1f882de8bb6a64746512de68b53bae6b780fd152183af",
+      "size_bytes": 2040091
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/derived/600900_akshare_daily_unadjusted_v1.parquet",
+      "sha256": "835c82f3d3017767535b63225664223e58bedf108458f200811f4f5c862838a5",
+      "size_bytes": 375180
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/derived/600900_xtquant_akshare_price_crosscheck_v1.csv",
+      "sha256": "6c65d51fbb8c9255f20b68b8288b49b3330908967220b452c530d189c8a85cc6",
+      "size_bytes": 1351697
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/akshare_price_crosscheck_2026-09-10.md",
+      "sha256": "cec9251d88a42b7dc27ce47f494f612c1a150c83479373449c221a815ff1bad8",
+      "size_bytes": 3193
+    }
+  ],
+  "statistics": {
+    "xtquant_rows": 5118,
+    "akshare_rows": 5118,
+    "overlap_rows": 5118,
+    "xtquant_only_rows": 0,
+    "akshare_only_rows": 0,
+    "ohlc_equal_to_cent_rows": 5114,
+    "ohlc_price_difference_rows": 4,
+    "material_price_difference_over_1pct_rows": 0,
+    "maximum_ohlc_absolute_difference_cny": 0.010000000000001563,
+    "maximum_ohlc_relative_difference": 0.0007710100231302842,
+    "volume_exact_match_rows": 65,
+    "volume_difference_rows": 5053,
+    "maximum_volume_absolute_difference_lots": 1.040000000037253,
+    "maximum_volume_relative_difference": 2.7284753610350642e-05,
+    "amount_exact_match_rows": 2856,
+    "amount_difference_rows": 2262,
+    "maximum_amount_absolute_difference_cny": 172.0,
+    "maximum_amount_relative_difference": 6.596143621239781e-08,
+    "first_date": "2003-11-18",
+    "last_date": "2026-09-09"
+  },
+  "checks": {
+    "ak_unique": true,
+    "ak_ohlc": true,
+    "ak_positive": true,
+    "same_dates": true,
+    "no_material_price_difference": true
+  },
+  "independent_price_gate": "PASS",
+  "formal_backtest_run_count": 0,
+  "locked_test_open_count": 0
+}

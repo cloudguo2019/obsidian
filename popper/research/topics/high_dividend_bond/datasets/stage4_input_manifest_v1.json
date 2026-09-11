@@ -1,0 +1,74 @@
+{
+  "manifest_version": "HD-STAGE4-INPUT-MANIFEST-1.0",
+  "generated_at": "2026-09-10T11:00:46+08:00",
+  "timezone": "Asia/Shanghai",
+  "pipeline_version": "HD-STAGE4-PREP-1.0.0",
+  "pipeline": {
+    "path": "research/topics/high_dividend_bond/scripts/prepare_stage4_inputs.py",
+    "sha256": "242f454c57c9f803fbac38f92b6ca3c18bc78a7df0fabbb6721a069fe7cb1995",
+    "python_version": "3.12.14",
+    "pandas_version": "3.0.1"
+  },
+  "formal_backtest_run_count": 0,
+  "inputs": [
+    {
+      "path": "research/QMTData/data/market_kline/csv/1d/none/600900.SH.csv",
+      "sha256": "ff4f0f932180e46f978c889059198b712b7681f4f755a88dd3f22dbb4bad87fc",
+      "size_bytes": 493240
+    },
+    {
+      "path": "research/topics/trade_calendar/sse_trade_calendar_19901219_20260909.csv",
+      "sha256": "b2c5ed92a0a6032e0f8b3ca01afdd1e1d1775d11e59a2fc368bdd8045a6beeb8",
+      "size_bytes": 322761
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/600900_cash_dividend_actions_2004_2026.csv",
+      "sha256": "3eb33c35a30bce0a827c2d34901badc9627a18ff00655bd0ea27d1e0198cd91b",
+      "size_bytes": 16638
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/600900_expected_annual_dividend_per_share_2021_2026.md",
+      "sha256": "d4a53b1ace29563a5b4dde86728d0b720ef8b6055d840f92dad926c0a3624b24",
+      "size_bytes": 20761
+    },
+    {
+      "path": "research/topics/A股交易税费历史版本表_截至2026-09-09.md",
+      "sha256": "bf4c731d549505875306c8c553a4193fe19fadaaea7b987266523d993637987f",
+      "size_bytes": 11079
+    }
+  ],
+  "outputs": [
+    {
+      "path": "research/topics/high_dividend_bond/datasets/derived/600900_daily_enriched_v1.csv",
+      "sha256": "5417315a7fe5af02937bfbae16bf2c7882698ec51183dd88ffc8e266fe6c53ea",
+      "size_bytes": 3191912
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/schedules/a_share_transaction_cost_schedule_v1.csv",
+      "sha256": "876ad0fbd234f0eb3afc2e795f421a21a2a143070c9060ba8f9949d3d02e8135",
+      "size_bytes": 4412
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/schedules/prc_listed_dividend_tax_schedule_v1.csv",
+      "sha256": "3a353a26f48482fd9cea4cd3f3077102a02ff933b2f4c770b0388d1eac5f528e",
+      "size_bytes": 3179
+    }
+  ],
+  "daily_audit": {
+    "calendar_session_count": 5543,
+    "trading_bar_count": 5118,
+    "suspended_or_missing_count": 425,
+    "action_adjusted_reference_rows": 26,
+    "price_limit_validation_violations": 0,
+    "first_session": "2003-11-18",
+    "last_session": "2026-09-09"
+  },
+  "limitations": [
+    "trade_status=TRADING is inferred from a valid nonzero Xtquant daily bar, not a historical exchange status file.",
+    "SUSPENDED_OR_MISSING intentionally combines suspension and absent vendor data and fails closed for trading.",
+    "limit_up/limit_down are rule-derived evidence level B, not direct historical Xtquant fields.",
+    "Handling-fee history before 2012 remains incomplete; this does not affect the preregistered primary period beginning in 2018.",
+    "The research cost model treats the 0.01% broker commission as separate from statutory fees; broker-statement all-in semantics remain a later external-validity check.",
+    "The stage-4 enriched table is CSV; cleaned_price.parquet remains a stage-5 output because no parquet engine is bundled in the current runtime."
+  ]
+}

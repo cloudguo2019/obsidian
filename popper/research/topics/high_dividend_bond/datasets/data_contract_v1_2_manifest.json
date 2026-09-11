@@ -1,0 +1,28 @@
+{
+  "statement_type": "已观察事实",
+  "contract_version": "HD-DATA-CONTRACT-1.2",
+  "freeze_date": "2026-09-10",
+  "timezone": "Asia/Shanghai",
+  "base_contract_snapshot": {
+    "path": "data_contract_v1.md",
+    "sha256": "3b9e34ddbee2f695074f29e391d2e00ac396083bbabe3db5cb2519d7bcd97e8e",
+    "size_bytes": 35406,
+    "note": "该值冻结当前可见正文；旧data_contract_v1_manifest.json记录另一哈希，原差异原因仍未知，旧清单保持不改。"
+  },
+  "execution_amendment": {
+    "path": "data_contract_v1_1_daily_close_lagged.md",
+    "sha256": "862dc243c20b5476692239ac0bb9baca479af58031b7cdbb5ef25e7243cd7c6c",
+    "size_bytes": 3649
+  },
+  "dividend_validity_amendment": {
+    "path": "data_contract_v1_2_full_year_dividend_validity.md",
+    "sha256": "4f14ab0ab2a84568bc652009afa8960d1b0b464e0f4f342f4bb06f42638be3f6",
+    "size_bytes": 5290
+  },
+  "stage4_inputs": {
+    "path": "stage4_input_manifest_v1.json",
+    "sha256": "c8329175a8899548107d05ec620cffa9dc4993e984b890691576528b442852ec",
+    "size_bytes": 3451
+  },
+  "rule": "读取顺序为base_contract_snapshot，再依次应用execution_amendment和dividend_validity_amendment。后续修改必须新建版本，不能覆盖本清单。"
+}

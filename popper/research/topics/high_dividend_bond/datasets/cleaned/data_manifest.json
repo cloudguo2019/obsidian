@@ -1,0 +1,143 @@
+{
+  "statement_type": "计算结果",
+  "manifest_version": "HD-STAGE5-DATA-MANIFEST-1.0",
+  "generated_at": "2026-09-10T12:26:29+08:00",
+  "timezone": "Asia/Shanghai",
+  "pipeline_version": "HD-STAGE5-CLEAN-1.0.0",
+  "pipeline": {
+    "path": "research/topics/high_dividend_bond/scripts/prepare_stage5_clean_data.py",
+    "sha256": "1132f9dadb049f2c90cd99fba3ae33302451f1da1ff8500babca005860cbca5b",
+    "size_bytes": 28573,
+    "python_version": "3.12.14",
+    "pandas_version": "3.0.1",
+    "pyarrow_version": "25.0.1"
+  },
+  "formal_backtest_run_count": 0,
+  "locked_test_open_count": 0,
+  "inputs": [
+    {
+      "path": "research/topics/high_dividend_bond/datasets/derived/600900_daily_enriched_v1.csv",
+      "sha256": "5417315a7fe5af02937bfbae16bf2c7882698ec51183dd88ffc8e266fe6c53ea",
+      "size_bytes": 3191912
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/600900_point_in_time_dividend_estimates_v1.csv",
+      "sha256": "284f3ea5b889dfb951299974b8c33abf3416b3f60c8f2bd2e4c1eaab0ba75116",
+      "size_bytes": 13943
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/600900_cash_dividend_actions_2004_2026.csv",
+      "sha256": "3eb33c35a30bce0a827c2d34901badc9627a18ff00655bd0ea27d1e0198cd91b",
+      "size_bytes": 16638
+    },
+    {
+      "path": "research/topics/trade_calendar/sse_trade_calendar_19901219_20260909.csv",
+      "sha256": "b2c5ed92a0a6032e0f8b3ca01afdd1e1d1775d11e59a2fc368bdd8045a6beeb8",
+      "size_bytes": 322761
+    },
+    {
+      "path": "research/QMTData/data/market_kline/csv/1d/none/600900.SH.csv",
+      "sha256": "ff4f0f932180e46f978c889059198b712b7681f4f755a88dd3f22dbb4bad87fc",
+      "size_bytes": 493240
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/schedules/a_share_transaction_cost_schedule_v1.csv",
+      "sha256": "876ad0fbd234f0eb3afc2e795f421a21a2a143070c9060ba8f9949d3d02e8135",
+      "size_bytes": 4412
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/schedules/prc_listed_dividend_tax_schedule_v1.csv",
+      "sha256": "3a353a26f48482fd9cea4cd3f3077102a02ff933b2f4c770b0388d1eac5f528e",
+      "size_bytes": 3179
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/preregistration_v1.3_shareholder_meeting_confirmed.yaml",
+      "sha256": "32f08bdfbb26b2087fb92d666d1046e4f29a878f99fbe148812361a7cb514aec",
+      "size_bytes": 2293
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/data_contract_v1_3_shareholder_meeting_confirmed.md",
+      "sha256": "61a81bef01612fe5f4418565123776a2df6c8dc0d3906fa76e7de0eececbb244",
+      "size_bytes": 2745
+    }
+  ],
+  "outputs": [
+    {
+      "path": "research/topics/high_dividend_bond/datasets/cleaned/cleaned_price.csv",
+      "sha256": "31bdc266b8d022c67bed3b1b271dee04195942142f598ffc91c819f73758e7bd",
+      "size_bytes": 3019568
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/cleaned/cleaned_price.parquet",
+      "sha256": "2eeb8b000ac45b1fc4d20d14290a6d8c0d3991417d3bf56e851a2d7a1cefefb6",
+      "size_bytes": 350631
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/cleaned/point_in_time_dividend_estimates.csv",
+      "sha256": "73cd1faf9e3aa097d82685ed801ed32a60448ee436528e34f943374a2ef4d679",
+      "size_bytes": 13937
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/cleaned/point_in_time_dividend_estimates.parquet",
+      "sha256": "deba8c650d072b7061c3653be793301f6a09157396b45d1ead351bff6cb0aabd",
+      "size_bytes": 23036
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/cleaned/corporate_actions.csv",
+      "sha256": "40370f96bfaa001ff7d338cf115bcc6a15c31ff294f574a83cd8f3ab37035d8e",
+      "size_bytes": 16569
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/cleaned/corporate_actions.parquet",
+      "sha256": "3c4ccac073090a4982c95e57fc105749575cb2021f44c17a7b56b1134404e59c",
+      "size_bytes": 22535
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/cleaned/cleaning_log.csv",
+      "sha256": "032031c625f916e25564812c3a5eb1ccba31ceba2398dc8490da26994fdac7f0",
+      "size_bytes": 1630
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/cleaned/data_audit_report.md",
+      "sha256": "9e32c35bbbe872617653d764289d9a75a6eed95e49029c1200f08ad35f173581",
+      "size_bytes": 7691
+    }
+  ],
+  "row_counts": {
+    "cleaned_price": 5543,
+    "point_in_time_dividend_estimates": 23,
+    "corporate_actions": 30,
+    "cleaning_log": 10
+  },
+  "audit": {
+    "checks_total": 41,
+    "errors": [],
+    "warnings": [],
+    "pit_coverage": {
+      "window_start": "2018-01-01",
+      "window_end": "2026-09-09",
+      "trading_sessions": 2098,
+      "covered_sessions": 2087,
+      "uncovered_sessions": 11,
+      "coverage_ratio": 0.99475691,
+      "first_uncovered_session": "2019-05-21",
+      "last_uncovered_session": "2024-05-24",
+      "uncovered_session_list": [
+        "2019-05-21",
+        "2019-05-22",
+        "2019-05-23",
+        "2019-05-24",
+        "2021-05-25",
+        "2021-05-26",
+        "2021-05-27",
+        "2021-05-28",
+        "2021-05-31",
+        "2021-06-01",
+        "2024-05-24"
+      ]
+    },
+    "stage5_internal_status": "PASS",
+    "stage4_closeout_status": "PASS",
+    "formal_l2_gate": "CLOSED_PENDING_INDEPENDENT_PRICE_CROSS_CHECK_AND_LATER_ACCOUNT_RECONCILIATION"
+  }
+}

@@ -1,0 +1,48 @@
+metadata:
+  statement_type: 方法选择
+  experiment_id: HD-ANCHOR-001
+  protocol_version: 1.3-shareholder-meeting-confirmed-methods-frozen
+  amendment_date: '2026-09-10'
+  timezone: Asia/Shanghai
+  status: METHODS_FROZEN_STAGE4_CLOSED_STAGE5_AUDIT_STARTED
+  parent_protocol_path: preregistration_v1.2_full_year_dividend_validity.yaml
+  amendment_record: CONFIRM-20260910-03
+  formal_backtest_authorized: false
+  locked_test_open_authorized: false
+  paper_trading_authorized: false
+  live_trading_authorized: false
+  dry_run: true
+  run_status: NOT_STARTED
+  run_count: 0
+
+inheritance:
+  statement_type: 方法选择
+  rule: 除本文件明确更正的确认会议类型和方法标识外，完全继承v1.2、v1.1及v1.0。
+  immutability: 不得覆盖旧版本；后续变化必须新建版本与清单。
+
+dividend_estimate_correction:
+  statement_type: 方法选择
+  previous_method_id: AGM_CONFIRMED_ANNUAL_DPS_V1
+  estimate_method_id: SHAREHOLDER_MEETING_CONFIRMED_ANNUAL_DPS_V1
+  qualifying_event: 公司股东大会审议通过完整年度利润分配方案且决议已公开披露；会议可为年度股东大会或临时股东大会。
+  estimate_definition: 最近一次合格股东大会确认的完整年度、普通二级市场持有人税前每股现金分红总额。
+  availability: 精确披露时间可得时使用精确时间；只有日期时取公告日期之后首个上交所交易日09:30+08:00。
+  valid_days: 365
+  validity: available_time与decision_time同为Asia/Shanghai；年龄0至365自然日有效；新记录可得后旧记录立即停止使用。
+  missing_or_stale: 无合格记录、来源不可核验、尚未可得或年龄大于365日时不产生有效调仓信号，账户继续估值。
+  source_table: ../../datasets/600900_point_in_time_dividend_estimates_v1.csv
+  non_performance_correction: true
+
+unchanged_execution:
+  statement_type: 方法选择
+  model_id: DAILY_CLOSE_LAGGED_AUCTION_V1
+  rule: T日完成日线收盘后形成信号，T+1收盘集合竞价按T+1官方收盘价成交；禁止同日close信号和同日close成交。
+
+authorization:
+  statement_type: 方法选择
+  formal_backtest_authorized: false
+  locked_test_open_authorized: false
+  paper_trading_authorized: false
+  live_trading_authorized: false
+  dry_run: true
+

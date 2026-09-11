@@ -1,0 +1,49 @@
+{
+  "statement_type": "已观察事实",
+  "contract_version": "HD-DATA-CONTRACT-1.4",
+  "freeze_date": "2026-09-10",
+  "timezone": "Asia/Shanghai",
+  "parent_contract_manifest": {
+    "path": "data_contract_v1_3_manifest.json",
+    "sha256": "2d1f9ebca3b839cbc8c9330c5f80e2643d19c56a6a67d928997227ee51fe98ce",
+    "size_bytes": 1586
+  },
+  "contract_amendment": {
+    "path": "data_contract_v1_4_akshare_secondary_and_fee_v2.md",
+    "sha256": "a6d80541529a8bef87ed36a9c4578ebf023a4fb9d613a0192487899c7cbe4614",
+    "size_bytes": 1932
+  },
+  "independent_price_source": {
+    "manifest_path": "akshare_price_source_manifest_v1.json",
+    "manifest_sha256": "20c15f6bf0851b2dcb6830baa12d1314911055a0f1f841f30e55f9870d3e6ee5",
+    "manifest_size_bytes": 3699,
+    "source_library": "AKShare 1.18.94",
+    "interface": "stock_zh_a_daily",
+    "upstream_source": "sina",
+    "adjustment": "unadjusted",
+    "rows": 5118,
+    "first_date": "2003-11-18",
+    "last_date": "2026-09-09",
+    "material_price_difference_over_1pct_rows": 0,
+    "status": "PASS"
+  },
+  "transaction_cost_schedule": {
+    "path": "schedules/a_share_transaction_cost_schedule_v2_pre2012.csv",
+    "sha256": "cbc173bfc008098ae9b350118e2575adc0a4a9ec0fe7e05b88e9c9d17e88a462",
+    "size_bytes": 5323,
+    "method_note_path": "schedules/a_share_transaction_cost_schedule_v2_pre2012_note.md",
+    "method_note_sha256": "0916ab23c1b303ceb7b9792d060d3a3e38cacfea55b29400b5db9cf10c1471fe",
+    "method_note_size_bytes": 1649,
+    "pre_2012_handling_fee_status": "FILLED_WITH_A_AND_B_GRADE_EVIDENCE",
+    "early_transfer_fee_status": "C_GRADE_EFFECTIVE_START_UNRESOLVED"
+  },
+  "gates": {
+    "stage4_closeout_status": "PASS",
+    "stage5_data_gate_status": "PASS",
+    "independent_price_gate": "PASS",
+    "formal_l2_gate": "CLOSED_PENDING_STAGE6_STAGE7_AND_EXPLICIT_RUN_AUTHORIZATION"
+  },
+  "formal_backtest_run_count": 0,
+  "locked_test_open_count": 0,
+  "rule": "读取顺序为v1.0基础合同、v1.1执行修订、v1.2全年有效期修订、v1.3股东大会确认修订，再应用v1.4独立价格副源与税费表修订；所有旧版本只读保留。"
+}

@@ -1,0 +1,38 @@
+{
+  "statement_type": "已观察事实",
+  "contract_version": "HD-DATA-CONTRACT-1.3",
+  "freeze_date": "2026-09-10",
+  "timezone": "Asia/Shanghai",
+  "parent_contract": {
+    "path": "data_contract_v1_2_full_year_dividend_validity.md",
+    "sha256": "4f14ab0ab2a84568bc652009afa8960d1b0b464e0f4f342f4bb06f42638be3f6",
+    "size_bytes": 5290
+  },
+  "contract_amendment": {
+    "path": "data_contract_v1_3_shareholder_meeting_confirmed.md",
+    "sha256": "61a81bef01612fe5f4418565123776a2df6c8dc0d3906fa76e7de0eececbb244",
+    "size_bytes": 2745
+  },
+  "formal_pit_source": {
+    "path": "600900_point_in_time_dividend_estimates_v1.csv",
+    "sha256": "284f3ea5b889dfb951299974b8c33abf3416b3f60c8f2bd2e4c1eaab0ba75116",
+    "size_bytes": 13943,
+    "rows": 23,
+    "fiscal_year_start": 2003,
+    "fiscal_year_end": 2025,
+    "method": "SHAREHOLDER_MEETING_CONFIRMED_ANNUAL_DPS_V1"
+  },
+  "stage5_audit_snapshot": {
+    "manifest_path": "cleaned/data_manifest.json",
+    "manifest_sha256": "c6e9bace1d3d8ee7d778d6a46a0a9e5d63cfb0f3cd51623682b2cdc7b7d4bcf4",
+    "report_path": "cleaned/data_audit_report.md",
+    "report_sha256": "9e32c35bbbe872617653d764289d9a75a6eed95e49029c1200f08ad35f173581",
+    "checks": 41,
+    "errors": 0,
+    "pit_coverage_ratio_2018_to_cutoff": 0.99475691
+  },
+  "stage4_closeout_status": "PASS",
+  "formal_l2_gate": "CLOSED_PENDING_INDEPENDENT_PRICE_CROSS_CHECK_AND_LATER_ACCOUNT_RECONCILIATION",
+  "rule": "读取顺序为v1.0基础合同、v1.1执行修订、v1.2全年有效期修订，再应用v1.3股东大会确认修订。旧版本不得覆盖。"
+}
+

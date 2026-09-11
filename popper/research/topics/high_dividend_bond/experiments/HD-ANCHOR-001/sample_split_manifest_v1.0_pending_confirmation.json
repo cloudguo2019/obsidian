@@ -1,0 +1,56 @@
+{
+  "statement_type": "已观察事实",
+  "manifest_version": "HD-STAGE6-SPLIT-MANIFEST-1.0-PENDING-CONFIRMATION",
+  "generated_at": "2026-09-10T22:30:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "status": "PENDING_RESEARCHER_CONTAMINATION_DECLARATION",
+  "files": [
+    {
+      "path": "research/topics/high_dividend_bond/scripts/prepare_stage6_sample_split.py",
+      "sha256": "b9c86fd7463726187a3f2281a55b92a639764264ea8d542aa773727e95d4908e",
+      "size_bytes": 9982,
+      "role": "date_only_split_diagnostic"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/sample_split_v1.0_pending_confirmation.json",
+      "sha256": "c0fd89f451c8f559f2c4c797b54cb421fe387bc77c80b6511a4dff2badead36d",
+      "size_bytes": 9431,
+      "role": "machine_readable_pending_split"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/PHASE6_SAMPLE_SPLIT.md",
+      "sha256": "d17f243317a85c5ce730bcb77f6baa738b2ab0ef60fe9fbca86f945db3fa5721",
+      "size_bytes": 6431,
+      "role": "stage6_review_report"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/LOCK_ACCESS_LOG.md",
+      "sha256": "7cbcc2ce533d3063e9df31c7060ba6bb2aa5b94edb81a1d321b5669d0a6f550b",
+      "size_bytes": 1141,
+      "role": "lock_access_log"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/preregistration_v1.3_shareholder_meeting_confirmed.yaml",
+      "sha256": "32f08bdfbb26b2087fb92d666d1046e4f29a878f99fbe148812361a7cb514aec",
+      "size_bytes": 2293,
+      "role": "inherited_protocol"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/cleaned/data_manifest_v1_1_akshare_and_fee_v2.json",
+      "sha256": "56b83c889a91328c2491cfe915ebe9ee20146122ed0cae5ff461212241ce333f",
+      "size_bytes": 3639,
+      "role": "inherited_stage5_data_manifest"
+    }
+  ],
+  "gates": {
+    "date_partition": "PASS",
+    "calendar_month_sufficiency": "PASS_FOR_HISTORICAL_DIAGNOSTIC",
+    "pit_coverage": "PASS",
+    "transition_event_sufficiency": "NOT_YET_EVALUATED",
+    "historical_lock_identity": "PENDING",
+    "stage7_freeze": "CLOSED"
+  },
+  "formal_backtest_run_count": 0,
+  "performance_calculation_count": 0,
+  "locked_result_open_count": 0
+}

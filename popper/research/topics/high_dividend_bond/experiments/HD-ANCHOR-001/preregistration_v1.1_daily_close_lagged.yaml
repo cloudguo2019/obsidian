@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "statement_type": "方法选择",
+    "experiment_id": "HD-ANCHOR-001",
+    "protocol_version": "1.1-daily-close-lagged-methods-frozen",
+    "amendment_date": "2026-09-10",
+    "timezone": "Asia/Shanghai",
+    "status": "METHODS_AMENDED_AWAITING_DATA_AUDIT_AND_SPLIT_BINDING",
+    "parent_protocol_path": "preregistration.yaml",
+    "parent_protocol_version": "1.0-methods-frozen",
+    "parent_protocol_sha256": "775e0bb63fa2ffe94cd477a53f0eb68eb5f598b6c92242a6760a3a3d1159be66",
+    "amendment_record": "CONFIRM-20260910-01",
+    "amendment_reason": "Xtquant历史Tick最多约一个月；研究者选择日线保守执行，保留尾盘集合竞价作为成交时段。",
+    "formal_backtest_authorized": false,
+    "locked_test_open_authorized": false,
+    "paper_trading_authorized": false,
+    "live_trading_authorized": false,
+    "dry_run": true,
+    "run_status": "NOT_STARTED",
+    "run_count": 0
+  },
+  "inheritance": {
+    "statement_type": "方法选择",
+    "rule": "除本文件明确覆盖的字段外，完全继承preregistration.yaml的研究问题、H1/H0、首要指标、通过/证伪规则、参数、NORMAL_ONLY范围、账户初始化、基准、费用、样本划分、24个配置、统计、报告与授权限制。",
+    "immutability": "不得修改或覆盖v1.0文件；任何后续变化都必须再建版本和冻结清单。"
+  },
+  "execution_and_costs_override": {
+    "statement_type": "方法选择",
+    "model_id": "DAILY_CLOSE_LAGGED_AUCTION_V1",
+    "main_execution": "T日最终未复权日线收盘价形成信号，T+1日收盘集合竞价成交。",
+    "signal_price": "P_signal_t = close_t；close_t是T日收盘集合竞价完成后的已完成日K，不是14:57虚拟参考价。",
+    "decision_time": "T日15:00收盘集合竞价完成后；只有close_t、Dhat_t及确认所需前序日K都已可用后才生成指令。",
+    "pit_dividend_cutoff": "只取available_time <= T日15:00:00+08:00且未超过180自然日有效期的最新合格估计。",
+    "confirmation": "confirmation_bars=2时，只对T-1和T两个已完成日K的同向合格信号确认；绝不使用T+1任何价格、成交或状态。",
+    "order_instruction": "T日形成一次性绝对目标仓位指令，原目标和来源信号不可被T+1行情、收益或成交量事后改写。",
+    "submission": "T+1日14:57后提交一次收盘集合竞价保护限价委托；历史研究不将日线数据伪装成T+1精确报单毫秒。",
+    "fill_time": "T+1日15:00收盘集合竞价完成时。",
+    "fill_price": "P_fill_t_plus_1 = close_t_plus_1；只作为已提交委托的实现成交价格。",
+    "fill_model": "继承AUCTION_MARKETABLE_LIMIT_ASSUMED_FULL_V1：满足交易状态、有效收盘价、保护限价、现金/可卖股和订单有效性时假设全额成交；P00无固定bp摩擦，不用最终竞价量或参与率事后筛选。",
+    "unfilled": "若T+1无法交易、价格缺失、没有有效最终收盘价、资金/可卖股不足、触及订单有效性限制或其他预登记失败条件，则记UNFILLED并取消；不顺延补单。",
+    "next_state": "T+1成交/失败记账结束后，再使用T+1的已完成日K及实际状态形成最早在T+2日收盘竞价执行的新指令。",
+    "forbidden_same_day_model": "禁止使用close_t形成信号并声称以同一T日close_t成交。",
+    "data_requirement_change": "P00不要求历史14:57 Tick；最终收盘价、日线状态、价格限制、PIT分红、公司行动、交易日历、历史费用及版本追溯仍为L2必需输入。",
+    "L4_scope": "历史14:57 Tick、receive_time、盘口、未成交/部分成交和真实成交回报继续仅服务L4及HD-EXEC-002，不作为P00的替代数据。"
+  },
+  "experiment_budget_override": {
+    "statement_type": "方法选择",
+    "profile_count": 24,
+    "P00": "T日收盘信号，T+1日收盘集合竞价成交；其他P00规则不变。",
+    "P03": "T日收盘信号，额外延迟1个完整决策日，于T+2日收盘集合竞价成交。",
+    "P04": "T日收盘信号，额外延迟2个完整决策日，于T+3日收盘集合竞价成交。",
+    "P05": "T日收盘信号，T+1日开盘集合竞价成交；缺权威开盘价、交易状态或价格限制输入则NOT_RUN。",
+    "P06_P07": "分别相对v1.1 P00加入单边5bp和10bp不利执行偏移。",
+    "L1_names": ["固定分红假设机械回测：日线收盘信号至下一交易日收盘集合竞价", "固定分红假设机械回测：日线收盘信号至下一交易日开盘"],
+    "delayed_order_semantics": "所有延迟配置保留原绝对目标；执行时只检查可交易性、现金、可卖股、价格限制和订单有效性，仅裁剪/拒绝，不按执行日估值重新择优。"
+  },
+  "data_contract_override": {
+    "statement_type": "方法选择",
+    "contract_amendment_path": "../../datasets/data_contract_v1_1_daily_close_lagged.md",
+    "hard_L2_gate": "没有验收通过的PIT估计、真实公司行动、未复权日线及最终收盘价、交易状态/价格限制、权威交易日历、历史费税表、数据版本和逐日账户对账，L2/L3关闭。P00不再以历史14:57 Tick缺失为关闭理由；日线收盘不得被倒用为同日信号和成交。",
+    "required_outputs_addition": ["daily_close_signal_and_lagged_orders.parquet", "auction_outcomes_daily_close_lagged.parquet", "execution_timing_audit.md"],
+    "data_evidence_ceiling": "本修订不改变当前L0/L1证据上限。"
+  },
+  "freeze_and_reproducibility_override": {
+    "statement_type": "方法选择",
+    "amendment_is_pre_result": "本修订发生在任何正式策略结果、锁定测试、仿真或实盘运行之前。",
+    "method_freeze_manifest": "method_freeze_manifest_v1.1.json",
+    "implementation_required_change": ["日线T信号与T+1收盘竞价成交强制错位", "禁止同日close信号/成交", "队列、UNFILLED及T+1可卖状态对账", "执行日close仅作为成交价、不得参与前日信号"],
+    "authorization": "本文件不授权正式回测、锁定测试、仿真或真实交易。"
+  }
+}

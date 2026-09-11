@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "statement_type": "方法选择",
+    "experiment_id": "HD-ANCHOR-001",
+    "artifact_version": "HD-STAGE6-SPLIT-1.0-PENDING-CONFIRMATION",
+    "prepared_at": "2026-09-10T22:17:48+08:00",
+    "timezone": "Asia/Shanghai",
+    "data_cutoff": "2026-09-09",
+    "status": "DATES_RESOLVED_LOCK_IDENTITY_PENDING_RESEARCHER_CONTAMINATION_DECLARATION",
+    "formal_backtest_authorized": false,
+    "locked_test_open_authorized": false,
+    "paper_trading_authorized": false,
+    "live_trading_authorized": false,
+    "dry_run": true
+  },
+  "inheritance": {
+    "statement_type": "方法选择",
+    "protocol": "preregistration_v1.3_shareholder_meeting_confirmed.yaml",
+    "protocol_sha256": "32f08bdfbb26b2087fb92d666d1046e4f29a878f99fbe148812361a7cb514aec",
+    "rule": "继承v1.3及其上游全部已冻结方法；本文件只绑定样本日期、访问状态和样本量待验项，不修改策略参数、指标、基准、成本或判定门槛。"
+  },
+  "inputs": {
+    "statement_type": "已观察事实",
+    "cleaned_price": {
+      "path": "../../datasets/cleaned/cleaned_price.csv",
+      "sha256": "31bdc266b8d022c67bed3b1b271dee04195942142f598ffc91c819f73758e7bd",
+      "fields_accessed_for_split": ["session_date", "trade_status"]
+    },
+    "pit_dividend": {
+      "path": "../../datasets/cleaned/point_in_time_dividend_estimates.csv",
+      "sha256": "73cd1faf9e3aa097d82685ed801ed32a60448ee436528e34f943374a2ef4d679",
+      "fields_accessed_for_split": ["record_id", "available_time", "effective_time", "expiry_time", "superseded_time"]
+    },
+    "stage5_manifest": {
+      "path": "../../datasets/cleaned/data_manifest_v1_1_akshare_and_fee_v2.json",
+      "sha256": "56b83c889a91328c2491cfe915ebe9ee20146122ed0cae5ff461212241ce333f"
+    },
+    "data_contract_manifest": {
+      "path": "../../datasets/data_contract_v1_4_manifest.json",
+      "sha256": "42429767b7e3d43a280c09b9b329a6a64286e4f487dc9aa3e47e75bd6825c79a"
+    },
+    "sse_calendar": {
+      "path": "../../../trade_calendar/sse_trade_calendar_19901219_20260909.csv",
+      "sha256": "b2c5ed92a0a6032e0f8b3ca01afdd1e1d1775d11e59a2fc368bdd8045a6beeb8"
+    }
+  },
+  "non_peeking_audit": {
+    "statement_type": "已观察事实",
+    "fields_not_accessed": ["open", "high", "low", "close", "return", "signal", "order", "position", "nav", "benchmark_result"],
+    "strategy_run_count": 0,
+    "performance_calculation_count": 0,
+    "locked_result_open_count": 0,
+    "date_split_pipeline": "../../scripts/prepare_stage6_sample_split.py",
+    "date_split_pipeline_sha256": "b9c86fd7463726187a3f2281a55b92a639764264ea8d542aa773727e95d4908e"
+  },
+  "boundary_method": {
+    "statement_type": "方法选择",
+    "mechanism_eligibility_lower_bound": "2018-08-20",
+    "master_sample_start": "2018-09-10",
+    "master_sample_end_exclusive": "2026-09-10",
+    "rationale": "从2026-09-10数据边界按完整12个月锁定期、完整6个月滚动窗、6个月验证和36个月开发反向对齐；日期选择未使用价格或策略表现。",
+    "interval_convention": "左闭右开；自然月锚点若非已观察TRADING日，顺延到首个已观察TRADING日；报告窗口之间无重叠。",
+    "account_continuity": "账户仅在滚动OOS起点初始化一次；跨半年窗口和候选锁定边界不得重置现金、持仓、成本、确认状态或高水位。"
+  },
+  "warmup": {
+    "statement_type": "计算结果",
+    "start_inclusive": "2017-06-23",
+    "end_exclusive": "2018-09-10",
+    "last_session": "2018-09-07",
+    "trading_sessions": 300,
+    "produces_signals_trades_or_returns": false
+  },
+  "historical_windows": [
+    {"id": "DEV", "role": "development", "start_inclusive": "2018-09-10", "end_exclusive": "2021-09-10", "trading_sessions": 730, "suspended_or_missing_rows": 0, "valid_pit_sessions": 720, "pit_coverage_ratio": 0.986301370},
+    {"id": "VAL", "role": "validation", "start_inclusive": "2021-09-10", "end_exclusive": "2022-03-10", "trading_sessions": 106, "suspended_or_missing_rows": 10, "valid_pit_sessions": 106, "pit_coverage_ratio": 1.000000000},
+    {"id": "ROOS-01", "role": "retrospective_rolling_oos", "start_inclusive": "2022-03-10", "end_exclusive": "2022-09-13", "trading_sessions": 126, "suspended_or_missing_rows": 0, "valid_pit_sessions": 126, "pit_coverage_ratio": 1.000000000},
+    {"id": "ROOS-02", "role": "retrospective_rolling_oos", "start_inclusive": "2022-09-13", "end_exclusive": "2023-03-10", "trading_sessions": 116, "suspended_or_missing_rows": 1, "valid_pit_sessions": 116, "pit_coverage_ratio": 1.000000000},
+    {"id": "ROOS-03", "role": "retrospective_rolling_oos", "start_inclusive": "2023-03-10", "end_exclusive": "2023-09-11", "trading_sessions": 125, "suspended_or_missing_rows": 0, "valid_pit_sessions": 125, "pit_coverage_ratio": 1.000000000},
+    {"id": "ROOS-04", "role": "retrospective_rolling_oos", "start_inclusive": "2023-09-11", "end_exclusive": "2024-03-11", "trading_sessions": 117, "suspended_or_missing_rows": 0, "valid_pit_sessions": 117, "pit_coverage_ratio": 1.000000000},
+    {"id": "ROOS-05", "role": "retrospective_rolling_oos", "start_inclusive": "2024-03-11", "end_exclusive": "2024-09-10", "trading_sessions": 125, "suspended_or_missing_rows": 0, "valid_pit_sessions": 124, "pit_coverage_ratio": 0.992000000},
+    {"id": "ROOS-06", "role": "retrospective_rolling_oos", "start_inclusive": "2024-09-10", "end_exclusive": "2025-03-10", "trading_sessions": 115, "suspended_or_missing_rows": 0, "valid_pit_sessions": 115, "pit_coverage_ratio": 1.000000000},
+    {"id": "ROOS-07", "role": "retrospective_rolling_oos", "start_inclusive": "2025-03-10", "end_exclusive": "2025-09-10", "trading_sessions": 127, "suspended_or_missing_rows": 0, "valid_pit_sessions": 127, "pit_coverage_ratio": 1.000000000},
+    {"id": "PLOCK-01", "role": "retrospective_pseudo_lock", "start_inclusive": "2025-09-10", "end_exclusive": "2026-03-10", "trading_sessions": 115, "suspended_or_missing_rows": 0, "valid_pit_sessions": 115, "pit_coverage_ratio": 1.000000000},
+    {"id": "PLOCK-02", "role": "retrospective_pseudo_lock", "start_inclusive": "2026-03-10", "end_exclusive": "2026-09-10", "trading_sessions": 127, "suspended_or_missing_rows": 0, "valid_pit_sessions": 127, "pit_coverage_ratio": 1.000000000}
+  ],
+  "historical_aggregates": {
+    "statement_type": "计算结果",
+    "prelock_rolling_months": 42,
+    "prelock_complete_six_month_windows": 7,
+    "prelock_trading_sessions": 851,
+    "prelock_valid_pit_sessions": 850,
+    "prelock_pit_coverage_ratio": 0.998824912,
+    "candidate_lock_months": 12,
+    "candidate_lock_complete_six_month_windows": 2,
+    "candidate_lock_trading_sessions": 242,
+    "candidate_lock_valid_pit_sessions": 242,
+    "candidate_lock_pit_coverage_ratio": 1.000000000,
+    "combined_oos_months": 54,
+    "combined_complete_six_month_windows": 9,
+    "combined_trading_sessions": 1093,
+    "combined_valid_pit_sessions": 1092,
+    "combined_pit_coverage_ratio": 0.999085087
+  },
+  "contamination_and_lock_identity": {
+    "statement_type": "已知限制",
+    "known_access": "截至2026-09-04的600900标的税前总回报风险窗口已经查看，但没有在本研究记录中查看HD-ANCHOR-001相对基准结果。",
+    "unresolved": "研究者尚未声明在2026-09-10前是否看过当前或相近规则的历史回测、交易清单、净值或相对基准结果。",
+    "current_historical_lock_status": "PSEUDO_LOCK_ONLY",
+    "upgrade_rule": "只有完成既往结果接触声明并证明候选区间未被用于选择规则、参数、起点或判定门槛，才能在运行前另行冻结为历史锁定集；否则保持伪锁定标签。",
+    "default_if_unknown_or_exposed": "全部既有历史最多支持回顾性L2；干净L3采用前向收集。"
+  },
+  "prospective_clean_oos": {
+    "statement_type": "方法选择",
+    "collection_start": "阶段6最终冻结时间之后首个合格上交所交易日",
+    "prelock_months": 24,
+    "lock_months": 12,
+    "lock_start": "collection_start向后24个自然月之日或之后首个合格上交所交易日",
+    "lock_end_exclusive": "collection_start向后36个自然月之日或之后首个合格上交所交易日",
+    "status": "NOT_YET_COLLECTED",
+    "access_rule": "前24个月仅按预注册规则形成连续OOS记录；最后12个月结果一次性封存，达到end_exclusive后最多开启一个完整冻结批次。"
+  },
+  "sufficiency_gates": {
+    "statement_type": "方法选择",
+    "calendar_month_gate": "PASS_FOR_HISTORICAL_DIAGNOSTIC",
+    "six_month_window_gate": "PASS_FOR_HISTORICAL_DIAGNOSTIC",
+    "pit_coverage_gate": "PASS",
+    "filled_state_transition_days_minimum": 20,
+    "locked_filled_state_transition_days_minimum": 4,
+    "transition_clusters_minimum": 10,
+    "transition_cluster_gap_trading_days": 20,
+    "transition_count_status": "NOT_EVALUATED_REQUIRES_AUTHORIZED_STRATEGY_RUN",
+    "failure_policy": "运行后若事件数不足，只能降级为观察；禁止移动边界、延长候选锁定期或用日线行数代替独立状态转换。"
+  },
+  "stage6_gate": {
+    "statement_type": "待办事项",
+    "date_partition_status": "PASS",
+    "lock_freeze_status": "PENDING_RESEARCHER_CONTAMINATION_DECLARATION",
+    "allow_stage7_design": false,
+    "reason": "阶段7基准可以先设计，但在锁定身份和访问规则确认前不得把候选锁定期接入可运行配置。"
+  }
+}

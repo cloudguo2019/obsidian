@@ -1,0 +1,52 @@
+{
+  "statement_type": "已观察事实",
+  "experiment_id": "HD-ANCHOR-001",
+  "freeze_scope": "STAGE3_METHOD_AMENDMENT_DAILY_CLOSE_LAGGED",
+  "freeze_date": "2026-09-10",
+  "timezone": "Asia/Shanghai",
+  "protocol_version": "1.1-daily-close-lagged-methods-frozen",
+  "parent_protocol": {
+    "path": "preregistration.yaml",
+    "protocol_version": "1.0-methods-frozen",
+    "sha256": "775e0bb63fa2ffe94cd477a53f0eb68eb5f598b6c92242a6760a3a3d1159be66"
+  },
+  "amended_protocol": {
+    "path": "preregistration_v1.1_daily_close_lagged.yaml",
+    "sha256": "b336005a23d4cd80251d06f81456c0c1c5d73abeeb3f33b15864c5fe9c427bd6",
+    "size_bytes": 6131
+  },
+  "human_readable_amendment": {
+    "path": "PROTOCOL_AMENDMENT_2026-09-10_DAILY_CLOSE_LAGGED.md",
+    "sha256": "ea901f911f044dfd235d4d04bc6a82c883832169f0f3e87540162907a649eb37",
+    "size_bytes": 8420
+  },
+  "data_contract_amendment": {
+    "path": "../../datasets/data_contract_v1_1_daily_close_lagged.md",
+    "sha256": "862dc243c20b5476692239ac0bb9baca479af58031b7cdbb5ef25e7243cd7c6c",
+    "size_bytes": 3649
+  },
+  "confirmation_record": "CONFIRM-20260910-01",
+  "user_confirmed_method": "T日已完成未复权日线收盘价形成信号；T+1日收盘集合竞价成交。禁止T日close信号与同一T日close成交。",
+  "method_changes_from_v1_0": [
+    "P00不再依赖历史14:57 Tick或接收时点。",
+    "P00信号由T日已完成日线close生成，成交滞后至T+1最终收盘集合竞价价。",
+    "P03、P04和P05相对新的P00重定义为已登记的延迟/开盘压力测试。",
+    "L2仍要求PIT分红、公司行动、日线可交易状态、权威日历、历史费税、双源价格和账户对账。"
+  ],
+  "unchanged_method_scope": [
+    "研究问题、H1/H0、唯一首要指标和通过/证伪门槛",
+    "股息率阈值、仓位、核心仓保护、确认数和固定NORMAL条件检验",
+    "账户初始化、静态基准、费用和分红税记账原则",
+    "样本划分、锁定规则、24个配置、统计、报告和研究决策规则"
+  ],
+  "authorization_snapshot": {
+    "formal_backtest_authorized": false,
+    "locked_test_open_authorized": false,
+    "paper_trading_authorized": false,
+    "live_trading_authorized": false,
+    "dry_run": true,
+    "run_status": "NOT_STARTED",
+    "run_count": 0
+  },
+  "verification": "各文件SHA-256按2026-09-10创建后原始字节计算。后续变更须创建新版本和新清单；不得覆盖v1.0或本清单。"
+}

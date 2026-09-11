@@ -1,0 +1,57 @@
+{
+  "statement_type": "已观察事实",
+  "experiment_id": "HD-ANCHOR-001",
+  "freeze_scope": "STAGE3_METHOD_AMENDMENT_FULL_YEAR_DIVIDEND_VALIDITY",
+  "freeze_date": "2026-09-10",
+  "timezone": "Asia/Shanghai",
+  "protocol_version": "1.2-full-year-dividend-validity-methods-frozen",
+  "parent_protocol": {
+    "path": "preregistration_v1.1_daily_close_lagged.yaml",
+    "protocol_version": "1.1-daily-close-lagged-methods-frozen",
+    "sha256": "b336005a23d4cd80251d06f81456c0c1c5d73abeeb3f33b15864c5fe9c427bd6"
+  },
+  "amended_protocol": {
+    "path": "preregistration_v1.2_full_year_dividend_validity.yaml",
+    "sha256": "b744d1201339c1d7cdaacd04d034dc2e0d2598551121fb77fb427b6ee6f243eb",
+    "size_bytes": 4518
+  },
+  "human_readable_amendment": {
+    "path": "PROTOCOL_AMENDMENT_2026-09-10_FULL_YEAR_DIVIDEND_VALIDITY.md",
+    "sha256": "95a7a0bb285a83b5c6cce6582a0c4902e33bbbd733c8244af91daf3bef31bd51",
+    "size_bytes": 3675
+  },
+  "data_contract_amendment": {
+    "path": "../../datasets/data_contract_v1_2_full_year_dividend_validity.md",
+    "sha256": "4f14ab0ab2a84568bc652009afa8960d1b0b464e0f4f342f4bb06f42638be3f6",
+    "size_bytes": 5290
+  },
+  "stage4_input_manifest_snapshot": {
+    "path": "../../datasets/stage4_input_manifest_v1.json",
+    "sha256": "c8329175a8899548107d05ec620cffa9dc4993e984b890691576528b442852ec",
+    "size_bytes": 3451
+  },
+  "confirmation_record": "CONFIRM-20260910-02",
+  "user_confirmed_method": "年度股东大会确认的完整年度税前DPS作为代理；单条记录全年有效，年龄0至365自然日有效；一年通常更新一次。",
+  "method_changes_from_v1_1": [
+    "分红代理确认点改为年度股东大会审议通过并公开披露。",
+    "有效期由180自然日改为365自然日。",
+    "中期分红和董事会预案不单独刷新可得时间。",
+    "明确券商佣金与印花税、过户费、经手费和证管费分别计收。"
+  ],
+  "unchanged_method_scope": [
+    "T日收盘信号、T+1收盘集合竞价成交",
+    "首要指标、通过与证伪门槛、固定NORMAL条件检验",
+    "股息率阈值、仓位、确认数、核心仓保护",
+    "账户、基准、24项实验、统计、报告和授权限制"
+  ],
+  "authorization_snapshot": {
+    "formal_backtest_authorized": false,
+    "locked_test_open_authorized": false,
+    "paper_trading_authorized": false,
+    "live_trading_authorized": false,
+    "dry_run": true,
+    "run_status": "NOT_STARTED",
+    "run_count": 0
+  },
+  "verification": "各文件SHA-256按2026-09-10冻结时原始字节计算。任何后续修改均须创建新版本与新清单。"
+}

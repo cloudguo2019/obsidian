@@ -1,0 +1,11 @@
+﻿log_id,dataset,record_id,field,action,old_value,new_value,reason,before_rows,after_rows,evidence_level,status
+S5-PRICE-001,cleaned_price,ALL,MULTIPLE,COPY_TO_NEW_DATASET,,,保留阶段4增强表为只读输入；不在原文件上修改,5543,5543,A,APPLIED
+S5-PRICE-002,cleaned_price,ALL,MULTIPLE,TYPE_NORMALIZE,,,日期、时区时间戳和数值字段转换为显式类型,5543,5543,A,APPLIED
+S5-PRICE-003,cleaned_price,ALL,MULTIPLE,FILL_PROVENANCE_ID,,,为425条无Xtquant日K的市场开市日填入交易日历稳定行标识；不伪造行情,5543,5543,A,APPLIED
+S5-PRICE-004,cleaned_price,ALL,MULTIPLE,STABLE_SORT,,,按symbol与session_date稳定排序；不删除、不填补行情,5543,5543,A,APPLIED
+S5-PIT-001,point_in_time_dividend_estimates,ALL,MULTIPLE,COPY_TO_NEW_DATASET,,,保留正式PIT源表为只读输入；不在原文件上修改,23,23,A,APPLIED
+S5-PIT-002,point_in_time_dividend_estimates,ALL,MULTIPLE,TYPE_NORMALIZE,,,日期、带时区时间戳、财年和DPS转换为显式类型,23,23,A,APPLIED
+S5-PIT-003,point_in_time_dividend_estimates,ALL,MULTIPLE,STABLE_SORT,,,按symbol与available_time稳定排序；不填补未知公告时分秒,23,23,A,APPLIED
+S5-ACTION-001,corporate_actions,ALL,MULTIPLE,COPY_TO_NEW_DATASET,,,保留公司行动源表为只读输入；不在原文件上修改,30,30,A,APPLIED
+S5-ACTION-002,corporate_actions,ALL,MULTIPLE,TYPE_NORMALIZE,,,日期与数值字段转换为显式类型,30,30,A,APPLIED
+S5-ACTION-003,corporate_actions,ALL,MULTIPLE,RETAIN_QUARANTINED,,,保留1条隔离记录并依赖record_status禁止进入年度现金分红逻辑,30,30,A,APPLIED
