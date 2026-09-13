@@ -1,0 +1,194 @@
+{
+  "statement_type": "已观察事实",
+  "experiment_id": "HD-ANCHOR-001",
+  "manifest_version": "HD-STAGE8-FORMAL-BATCH-IMPLEMENTATION-MANIFEST-1.0",
+  "generated_at": "2026-09-13T18:15:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "status": "FROZEN_READY_FOR_AUTHORIZED_PRELOCK_PREFLIGHT",
+  "parent_frozen_inputs": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/preregistration.yaml",
+      "sha256": "775e0bb63fa2ffe94cd477a53f0eb68eb5f598b6c92242a6760a3a3d1159be66",
+      "size_bytes": 50451,
+      "role": "base_frozen_protocol"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/preregistration_v1.1_daily_close_lagged.yaml",
+      "sha256": "b336005a23d4cd80251d06f81456c0c1c5d73abeeb3f33b15864c5fe9c427bd6",
+      "size_bytes": 6131,
+      "role": "daily_close_lagged_execution_override"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/preregistration_v1.2_full_year_dividend_validity.yaml",
+      "sha256": "b744d1201339c1d7cdaacd04d034dc2e0d2598551121fb77fb427b6ee6f243eb",
+      "size_bytes": 4518,
+      "role": "365_day_dividend_validity_override"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/preregistration_v1.3_shareholder_meeting_confirmed.yaml",
+      "sha256": "32f08bdfbb26b2087fb92d666d1046e4f29a878f99fbe148812361a7cb514aec",
+      "size_bytes": 2293,
+      "role": "shareholder_meeting_confirmed_PIT_override"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/preregistration_v1.4_sample_split_frozen.yaml",
+      "sha256": "546f513034336301651804aa371fe4de021fe1ad2758af7c769b916d94ba110f",
+      "size_bytes": 3089,
+      "role": "sample_and_evidence_identity_override"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/preregistration_v1.5_baseline_design_frozen.yaml",
+      "sha256": "d24c685daa413f57562ec8fda5ca339e2aa5e4fcc7266f27ce7c03eeb0bda82a",
+      "size_bytes": 3834,
+      "role": "latest_protocol_and_baseline_override"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/method_freeze_manifest_v1.0.json",
+      "sha256": "39d91c85421c56d0e297083ff8e9958e4614aadd58460773ad84af1820188ac0",
+      "size_bytes": 2588,
+      "role": "method_manifest_v1_0"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/method_freeze_manifest_v1.1.json",
+      "sha256": "02f46d7f6714fa8172e3a0d6c3aa685253aaba1f95f71eb337b3dc94f03d482c",
+      "size_bytes": 2477,
+      "role": "method_manifest_v1_1"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/method_freeze_manifest_v1.2.json",
+      "sha256": "d63c32a0fea0ab36fc681cde9810daa77d84f5a1715139d1f0da5dc698917b5c",
+      "size_bytes": 2619,
+      "role": "method_manifest_v1_2"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/method_freeze_manifest_v1.3.json",
+      "sha256": "50a15547374e9ae31093e742a28062363215329c5defce28a50b05fe7e1e80c5",
+      "size_bytes": 1885,
+      "role": "method_manifest_v1_3"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/method_freeze_manifest_v1.4.json",
+      "sha256": "f22c6aa4c0eea1812d4dd43d19b069f8072d24ded1f242418c44a8fcee9f4772",
+      "size_bytes": 1812,
+      "role": "method_manifest_v1_4"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/method_freeze_manifest_v1.5.json",
+      "sha256": "418d6dbe4145a46ed2c9b5a940c168241660c207693dad61c87e8f76471ba9da",
+      "size_bytes": 1912,
+      "role": "latest_method_manifest"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/sample_split_v1.0_pending_confirmation.json",
+      "sha256": "c0fd89f451c8f559f2c4c797b54cb421fe387bc77c80b6511a4dff2badead36d",
+      "size_bytes": 9431,
+      "role": "frozen_window_counts_parent"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/sample_split_v1.1_frozen_with_exposure_classification.json",
+      "sha256": "a7c9c572a6c0f32913854c7c74948ca5225d3cfe516f0c5ad4cfb735f3bc592b",
+      "size_bytes": 4859,
+      "role": "frozen_sample_and_evidence_identity"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/sample_split_manifest_v1.1_frozen.json",
+      "sha256": "d0450de9e9b4471c32549e02c2f655a583edc504916fc5d65d7b0644bad6aec0",
+      "size_bytes": 4030,
+      "role": "frozen_sample_manifest"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/cleaned/data_manifest_v1_1_akshare_and_fee_v2.json",
+      "sha256": "56b83c889a91328c2491cfe915ebe9ee20146122ed0cae5ff461212241ce333f",
+      "size_bytes": 3639,
+      "role": "current_frozen_data_manifest"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/baseline_design_v1.0_frozen.json",
+      "sha256": "629a2ed6afa330844fde69c2d5f93aa6c29bb5253aa57ea60476afded89a31f6",
+      "size_bytes": 12727,
+      "role": "frozen_baseline_design"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/baseline_manifest_v1.0_frozen.json",
+      "sha256": "e49195e190b7e77010b87fbd903059ee8229be05273be8c5f1736e3d5f1121e0",
+      "size_bytes": 3304,
+      "role": "frozen_baseline_manifest"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage8_implementation_manifest_v1.0.json",
+      "sha256": "679537f2700eef34076033fab2ffb08df37ebed5b43dfc25415bf3b925e42244",
+      "size_bytes": 4625,
+      "role": "frozen_common_account_engine_and_L0"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/baseline_calibration_manifest_v1.0_pre_oos.json",
+      "sha256": "4c7db42c34de9a5a4acbdf4521d4bbb6034b4a3d99319aa1632ddceef4c3d53d",
+      "size_bytes": 3889,
+      "role": "frozen_pre_oos_exposure_calibration_manifest"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/baseline_calibration_v1.0_pre_oos.json",
+      "sha256": "af529032af63523c02e7faaa59267eb588dc485b4c976dde968dffb15989c930",
+      "size_bytes": 8145,
+      "role": "frozen_q_RM_900_result"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/FORMAL_L2_AUTHORIZATION_2026-09-13.md",
+      "sha256": "f804bf4ae7911e0c134efed4c405331134a57fa5e85b41697e6dcf3f68917cd3",
+      "size_bytes": 1563,
+      "role": "explicit_user_authorization_for_exact_prelock_scope"
+    }
+  ],
+  "implementation_files": [
+    {
+      "path": "research/topics/high_dividend_bond/engine/stage8_batch.py",
+      "sha256": "4ce8f0ee09102d8eed40db8cfbbce900f8bdd3489fbda875bfdc919a9df23009",
+      "size_bytes": 40917,
+      "role": "registered_profile_and_formal_path_engine"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/tests/test_stage8_batch.py",
+      "sha256": "c8b8acfa0dd8d3bdefaea49bca10b8508196b146c103b255dacd8e119713c7f1",
+      "size_bytes": 12352,
+      "role": "registered_profile_synthetic_tests"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/scripts/run_stage8_formal_l2_batch.py",
+      "sha256": "d078a902a11d00de1960699c007c8bbbac8fbf99de18e38fd9e2dba7350875ef",
+      "size_bytes": 54655,
+      "role": "one_shot_bounded_formal_L2_runner"
+    }
+  ],
+  "synthetic_validation": {
+    "status": "PASS",
+    "tests_passed": 31,
+    "tests_failed": 0,
+    "formal_sample_read": false,
+    "performance_calculated": false
+  },
+  "execution_guards": {
+    "authorized_interval": "[2022-03-10, 2025-09-10)",
+    "price_loader_stops_before_end_exclusive": true,
+    "historical_pseudo_lock_status": "NOT_OPENED_NOT_READ",
+    "one_shot_attempt_lock": "formal_l2_attempt_v1.0_prelock.json",
+    "P21": "NOT_RUN_NO_AUDITABLE_EXECUTABLE_BROKER_CASH_RATE_INPUT",
+    "registered_profiles": 24,
+    "registered_paths": 96,
+    "dry_run": true
+  },
+  "authorization_snapshot": {
+    "one_formal_prelock_batch_authorized": true,
+    "historical_pseudo_lock_open_authorized": false,
+    "prospective_lock_open_authorized": false,
+    "paper_trading_authorized": false,
+    "live_trading_authorized": false
+  },
+  "counters_before_execution": {
+    "exposure_calibration_run_count": 1,
+    "formal_backtest_run_count": 0,
+    "performance_calculation_count": 0,
+    "historical_pseudo_lock_open_count": 0,
+    "prospective_lock_open_count": 0
+  },
+  "next_gate": "RUN_PREFLIGHT_THEN_CONSUME_THE_SINGLE_AUTHORIZED_FORMAL_L2_PRELOCK_BATCH"
+}
