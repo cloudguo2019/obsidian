@@ -1,0 +1,49 @@
+{
+  "statement_type": "已观察事实",
+  "experiment_id": "HD-ANCHOR-001",
+  "freeze_scope": "STAGE6_SAMPLE_SPLIT_AND_EXPOSURE_CLASSIFICATION",
+  "freeze_date": "2026-09-13",
+  "timezone": "Asia/Shanghai",
+  "protocol_version": "1.4-sample-split-frozen-with-exposure-classification",
+  "parent_method_manifest": {
+    "path": "method_freeze_manifest_v1.3.json",
+    "sha256": "50a15547374e9ae31093e742a28062363215329c5defce28a50b05fe7e1e80c5",
+    "size_bytes": 1885
+  },
+  "amended_protocol": {
+    "path": "preregistration_v1.4_sample_split_frozen.yaml",
+    "sha256": "546f513034336301651804aa371fe4de021fe1ad2758af7c769b916d94ba110f",
+    "size_bytes": 3089
+  },
+  "sample_split_manifest": {
+    "path": "sample_split_manifest_v1.1_frozen.json",
+    "sha256": "d0450de9e9b4471c32549e02c2f655a583edc504916fc5d65d7b0644bad6aec0",
+    "size_bytes": 4030
+  },
+  "stage6_closeout": {
+    "path": "PHASE6_CLOSEOUT_2026-09-13.md",
+    "sha256": "dcb98c292bc6bfa09b6b18fdc7efdbefe34e2ab0ec315205c7b6859fc3998dff",
+    "size_bytes": 5210
+  },
+  "freeze_effect": {
+    "methods_changed": false,
+    "historical_dates_changed_from_candidate": false,
+    "sample_dates_frozen": true,
+    "history_exposure_classified": true,
+    "historical_final_12_month_role": "SEALED_RETROSPECTIVE_PSEUDO_LOCK_WITH_UNDERLYING_EXPOSURE",
+    "maximum_existing_history_evidence_level": "L2",
+    "prospective_clean_l3_rule_frozen": true,
+    "stage6_status": "PASS",
+    "stage7_design_allowed": true
+  },
+  "authorization_snapshot": {
+    "formal_backtest_authorized": false,
+    "historical_pseudo_lock_open_authorized": false,
+    "prospective_lock_open_authorized": false,
+    "paper_trading_authorized": false,
+    "live_trading_authorized": false,
+    "dry_run": true,
+    "run_status": "NOT_STARTED",
+    "run_count": 0
+  }
+}

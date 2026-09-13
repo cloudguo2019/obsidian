@@ -43,7 +43,8 @@
 - [计算结果] 阶段5[数据质量审计](datasets/cleaned/data_audit_report.md)通过41项检查、结构错误0项；已生成清洁价格、PIT分红和公司行动Parquet、CSV镜像、[清理日志](datasets/cleaned/cleaning_log.csv)及[SHA-256数据清单](datasets/cleaned/data_manifest.json)。未运行策略，正式回测次数和锁定集开启次数均为0。
 - [计算结果] 2026-09-10通过[AkShare/Sina独立未复权价格核验](datasets/akshare_price_crosscheck_2026-09-10.md)：两源各5,118行、日期完全一致，4行OHLC相差0.01元，最大相对差异0.077101%，超过1%的重大差异0行；独立价格副源门禁通过。版本、接口、上游来源和文件哈希见[AkShare副源清单](datasets/akshare_price_source_manifest_v1.json)。
 - [计算结果] [阶段5补充记录](datasets/STAGE5_SUPPLEMENT_AKSHARE_AND_PRE2012_FEES.md)确认原始税费MD含2012年前费率，已生成[税费机器表v2](datasets/schedules/a_share_transaction_cost_schedule_v2_pre2012.csv)；2003—2012经手费0.110‰按B级连续性证据入表，早期过户费未知起点继续保留C级。当前读取规则与版本关系见[数据契约v1.4](datasets/data_contract_v1_4_akshare_secondary_and_fee_v2.md)、[契约清单](datasets/data_contract_v1_4_manifest.json)和[阶段5补充清单](datasets/cleaned/data_manifest_v1_1_akshare_and_fee_v2.json)。
-- [方法选择] 阶段5数据门禁已通过；正式L2仍因阶段6样本划分、阶段7公平基准及明确运行授权尚未完成而关闭。
-- [计算结果] 2026-09-10完成[阶段6候选样本定界](experiments/HD-ANCHOR-001/PHASE6_SAMPLE_SPLIT.md)：36个月开发、6个月验证、42个月/7个半年滚动历史OOS和12个月候选伪锁定期均已按日期元数据确定；历史OOS合计54个月、9个半年窗、1,093个交易日，PIT覆盖率99.9085087%。本次未读取策略绩效，正式运行和锁定结果开启均为0。
-- [待办事项] 阶段6日期切分通过，但[机器可读切分](experiments/HD-ANCHOR-001/sample_split_v1.0_pending_confirmation.json)及[清单](experiments/HD-ANCHOR-001/sample_split_manifest_v1.0_pending_confirmation.json)仍待研究者声明既往策略结果接触范围；在声明完成前，2025-09-10至2026-09-10只能标记为伪锁定诊断，阶段7正式冻结继续关闭。
+- [已观察事实] 2026-09-10阶段5数据门禁通过；在当时的阶段状态下，正式L2仍等待阶段6样本划分、阶段7公平基准及明确运行授权。阶段6后续状态以下方2026-09-13闭环记录为准。
+- [计算结果] 2026-09-10完成[阶段6候选样本定界](experiments/HD-ANCHOR-001/PHASE6_SAMPLE_SPLIT.md)：36个月开发、6个月验证、42个月/7个半年滚动历史OOS和12个月候选封存期均已按日期元数据确定；历史OOS合计54个月、9个半年窗、1,093个交易日，PIT覆盖率99.9085087%。
+- [已观察事实] 研究者于2026-09-13声明此前没有看过当前或相近策略的历史回测、交易清单、净值或相对基准结果，见[既往结果接触声明](experiments/HD-ANCHOR-001/HISTORY_ACCESS_DECLARATION_2026-09-13.md)。但标的风险路径曾在完整方法冻结前查看，因此末尾12个月冻结为“无策略结果泄露、存在标的路径暴露的历史伪锁定期”，现有历史最高归入回顾性L2，不能包装为完全未接触L3。
+- [计算结果] [阶段6闭环](experiments/HD-ANCHOR-001/PHASE6_CLOSEOUT_2026-09-13.md)通过；当前读取[冻结样本覆盖](experiments/HD-ANCHOR-001/sample_split_v1.1_frozen_with_exposure_classification.json)、[预注册v1.4覆盖](experiments/HD-ANCHOR-001/preregistration_v1.4_sample_split_frozen.yaml)、[最终样本清单](experiments/HD-ANCHOR-001/sample_split_manifest_v1.1_frozen.json)及[方法冻结清单v1.4](experiments/HD-ANCHOR-001/method_freeze_manifest_v1.4.json)。阶段7公平基准设计已放行，正式回测和封存结果开启仍未授权。
 

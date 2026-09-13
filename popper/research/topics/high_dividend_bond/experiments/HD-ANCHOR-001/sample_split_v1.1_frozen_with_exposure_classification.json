@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "statement_type": "方法选择",
+    "experiment_id": "HD-ANCHOR-001",
+    "artifact_version": "HD-STAGE6-SPLIT-1.1-FROZEN-WITH-EXPOSURE-CLASSIFICATION",
+    "frozen_at": "2026-09-13T14:49:29+08:00",
+    "timezone": "Asia/Shanghai",
+    "data_cutoff": "2026-09-09",
+    "status": "STAGE6_PASS_SPLIT_FROZEN_STAGE7_DESIGN_ALLOWED",
+    "formal_backtest_authorized": false,
+    "historical_pseudo_lock_open_authorized": false,
+    "prospective_lock_open_authorized": false,
+    "paper_trading_authorized": false,
+    "live_trading_authorized": false,
+    "dry_run": true
+  },
+  "inheritance": {
+    "statement_type": "方法选择",
+    "parent_candidate_split": {
+      "path": "sample_split_v1.0_pending_confirmation.json",
+      "sha256": "c0fd89f451c8f559f2c4c797b54cb421fe387bc77c80b6511a4dff2badead36d",
+      "size_bytes": 9431
+    },
+    "rule": "完全继承父文件的输入、日期、窗口、交易日数、PIT覆盖、暖机、账户连续性和事件数门槛；本文件只冻结接触声明、历史证据身份、前向L3规则和阶段门禁。"
+  },
+  "researcher_declaration": {
+    "statement_type": "已观察事实",
+    "path": "HISTORY_ACCESS_DECLARATION_2026-09-13.md",
+    "sha256": "fa7227bd1ffadf5e5f49a5967fa7fa257fefe8ffb9e0fc9d4f43cb73b8400d63",
+    "size_bytes": 2171,
+    "declared_at": "2026-09-13",
+    "declaration": "2026-09-10以前没有看过600900当前策略或相近股息率阈值、仓位规则的历史回测、交易清单、净值或相对基准结果。",
+    "evidence_level": "B_SELF_REPORTED"
+  },
+  "historical_evidence_identity": {
+    "statement_type": "方法选择",
+    "strategy_result_exposure": "NONE_DECLARED",
+    "known_underlying_path_exposure": {
+      "access_date": "2026-09-06",
+      "data_through": "2026-09-04",
+      "content": "600900.SH税前总回报波动率、最大回撤、峰谷和修复路径",
+      "occurred_before_full_method_freeze": true,
+      "full_method_freeze_date": "2026-09-07"
+    },
+    "rolling_oos_role": "RETROSPECTIVE_OOS_L2",
+    "window_role_overrides": {
+      "PLOCK-01": "SEALED_RETROSPECTIVE_PSEUDO_LOCK_WITH_UNDERLYING_EXPOSURE",
+      "PLOCK-02": "SEALED_RETROSPECTIVE_PSEUDO_LOCK_WITH_UNDERLYING_EXPOSURE"
+    },
+    "historical_sealed_period_start_inclusive": "2025-09-10",
+    "historical_sealed_period_end_exclusive": "2026-09-10",
+    "historical_sealed_period_months": 12,
+    "historical_sealed_period_trading_sessions": 242,
+    "historical_sealed_period_pit_coverage_ratio": 1.0,
+    "maximum_evidence_level_from_existing_history": "L2",
+    "reason": "策略结果未泄露，但标的风险路径在完整方法冻结前已被查看；不得声称完全未接触的L3。",
+    "open_rule": "只有阶段7基准冻结、阶段8实现与对账验收且研究者单独授权后，才可在一次完整批次中开启；不得先看P00再决定是否运行压力配置或基准。"
+  },
+  "prospective_clean_l3": {
+    "statement_type": "方法选择",
+    "collection_start": "本阶段6最终冻结时间之后首个合格上交所交易日",
+    "prelock_months": 24,
+    "lock_months": 12,
+    "lock_start": "collection_start向后24个自然月之日或之后首个合格上交所交易日",
+    "lock_end_exclusive": "collection_start向后36个自然月之日或之后首个合格上交所交易日",
+    "status": "FROZEN_RULE_NOT_YET_COLLECTED",
+    "future_date_policy": "不提前虚构交易日、数据哈希或结果；交易日历与原始数据按既定模式只追加，到期生成只读清单。",
+    "evidence_role": "ONLY_ROUTE_TO_CLEAN_L3_CONFIRMATION_UNDER_CURRENT_PROTOCOL"
+  },
+  "sufficiency_and_failure_policy": {
+    "statement_type": "方法选择",
+    "calendar_and_pit_gates": "PASS",
+    "transition_event_gate": "NOT_EVALUATED_REQUIRES_AUTHORIZED_STRATEGY_RUN",
+    "oos_filled_state_transition_days_minimum": 20,
+    "historical_sealed_period_transition_days_minimum": 4,
+    "transition_clusters_minimum": 10,
+    "cluster_gap_trading_days": 20,
+    "failure": "事件数不足时判观察；禁止移动日期、延长封存期或用日线行数替代独立事件。"
+  },
+  "stage6_gate": {
+    "statement_type": "计算结果",
+    "date_partition": "PASS",
+    "researcher_declaration": "PASS",
+    "historical_identity_classified": "PASS_WITH_KNOWN_UNDERLYING_EXPOSURE",
+    "prospective_l3_rule": "FROZEN",
+    "stage6_status": "PASS",
+    "allow_stage7_design": true,
+    "formal_l2_gate": "CLOSED_PENDING_STAGE7_BASELINE_FREEZE_STAGE8_IMPLEMENTATION_AND_EXPLICIT_RUN_AUTHORIZATION",
+    "formal_l3_gate": "CLOSED_PENDING_36_MONTH_PROSPECTIVE_COLLECTION_AND_EXPLICIT_LOCK_OPEN_AUTHORIZATION"
+  },
+  "counters": {
+    "formal_backtest_run_count": 0,
+    "performance_calculation_count": 0,
+    "historical_pseudo_lock_open_count": 0,
+    "prospective_lock_open_count": 0
+  }
+}

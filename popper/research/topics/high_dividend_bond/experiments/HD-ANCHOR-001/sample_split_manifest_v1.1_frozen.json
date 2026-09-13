@@ -1,0 +1,91 @@
+{
+  "statement_type": "已观察事实",
+  "manifest_version": "HD-STAGE6-SPLIT-MANIFEST-1.1-FROZEN",
+  "generated_at": "2026-09-13T14:49:29+08:00",
+  "timezone": "Asia/Shanghai",
+  "status": "STAGE6_PASS_STAGE7_DESIGN_ALLOWED",
+  "files": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/sample_split_v1.0_pending_confirmation.json",
+      "sha256": "c0fd89f451c8f559f2c4c797b54cb421fe387bc77c80b6511a4dff2badead36d",
+      "size_bytes": 9431,
+      "role": "immutable_parent_candidate_split"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/sample_split_manifest_v1.0_pending_confirmation.json",
+      "sha256": "e5675c33ec26340c019189a16b997922d550d3cd3f05789e0ef5bacf5e26fc9e",
+      "size_bytes": 2287,
+      "role": "immutable_parent_candidate_manifest"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/sample_split_v1.1_frozen_with_exposure_classification.json",
+      "sha256": "a7c9c572a6c0f32913854c7c74948ca5225d3cfe516f0c5ad4cfb735f3bc592b",
+      "size_bytes": 4859,
+      "role": "frozen_split_and_evidence_identity_overlay"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/preregistration_v1.4_sample_split_frozen.yaml",
+      "sha256": "546f513034336301651804aa371fe4de021fe1ad2758af7c769b916d94ba110f",
+      "size_bytes": 3089,
+      "role": "latest_protocol_amendment"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/HISTORY_ACCESS_DECLARATION_2026-09-13.md",
+      "sha256": "fa7227bd1ffadf5e5f49a5967fa7fa257fefe8ffb9e0fc9d4f43cb73b8400d63",
+      "size_bytes": 2171,
+      "role": "researcher_self_reported_strategy_result_access_declaration"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/LOCK_ACCESS_LOG.md",
+      "sha256": "adbbf965d6cae7095ae6bf9e207aeac43d919463455f987eedb1250cd99996ba",
+      "size_bytes": 2158,
+      "role": "cumulative_lock_access_log"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/PHASE6_SAMPLE_SPLIT.md",
+      "sha256": "d17f243317a85c5ce730bcb77f6baa738b2ab0ef60fe9fbca86f945db3fa5721",
+      "size_bytes": 6431,
+      "role": "pre_declaration_stage6_review"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/PHASE6_CLOSEOUT_2026-09-13.md",
+      "sha256": "dcb98c292bc6bfa09b6b18fdc7efdbefe34e2ab0ec315205c7b6859fc3998dff",
+      "size_bytes": 5210,
+      "role": "stage6_closeout"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/preregistration_v1.3_shareholder_meeting_confirmed.yaml",
+      "sha256": "32f08bdfbb26b2087fb92d666d1046e4f29a878f99fbe148812361a7cb514aec",
+      "size_bytes": 2293,
+      "role": "parent_protocol"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/cleaned/data_manifest_v1_1_akshare_and_fee_v2.json",
+      "sha256": "56b83c889a91328c2491cfe915ebe9ee20146122ed0cae5ff461212241ce333f",
+      "size_bytes": 3639,
+      "role": "stage5_data_manifest"
+    }
+  ],
+  "evidence_identity": {
+    "strategy_result_exposure_before_2026_09_10": "NONE_DECLARED",
+    "underlying_path_exposure_before_full_method_freeze": true,
+    "historical_final_12_month_role": "SEALED_RETROSPECTIVE_PSEUDO_LOCK_WITH_UNDERLYING_EXPOSURE",
+    "maximum_existing_history_evidence_level": "L2",
+    "clean_l3_route": "36_MONTH_PROSPECTIVE_COLLECTION_24_MONTH_PRELOCK_PLUS_12_MONTH_LOCK"
+  },
+  "gates": {
+    "date_partition": "PASS",
+    "pit_coverage": "PASS",
+    "researcher_declaration": "PASS",
+    "exposure_classification": "PASS_WITH_KNOWN_UNDERLYING_EXPOSURE",
+    "transition_event_sufficiency": "NOT_YET_EVALUATED",
+    "stage6": "PASS",
+    "stage7_design": "OPEN",
+    "formal_l2": "CLOSED",
+    "formal_l3": "CLOSED"
+  },
+  "formal_backtest_run_count": 0,
+  "performance_calculation_count": 0,
+  "historical_pseudo_lock_open_count": 0,
+  "prospective_lock_open_count": 0
+}

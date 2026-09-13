@@ -1,0 +1,66 @@
+metadata:
+  statement_type: 方法选择
+  experiment_id: HD-ANCHOR-001
+  protocol_version: 1.4-sample-split-frozen-with-exposure-classification
+  amendment_date: '2026-09-13'
+  timezone: Asia/Shanghai
+  status: STAGE6_PASS_STAGE7_DESIGN_ALLOWED
+  parent_protocol_path: preregistration_v1.3_shareholder_meeting_confirmed.yaml
+  formal_backtest_authorized: false
+  historical_pseudo_lock_open_authorized: false
+  prospective_lock_open_authorized: false
+  paper_trading_authorized: false
+  live_trading_authorized: false
+  dry_run: true
+  run_status: NOT_STARTED
+  run_count: 0
+
+inheritance:
+  statement_type: 方法选择
+  rule: 除本文件绑定的样本日期、历史证据身份和前向L3规则外，完全继承v1.3、v1.2、v1.1及v1.0。
+  immutability: 不得覆盖旧协议、候选切分或访问日志；后续变化必须新建版本并说明是否接触结果。
+
+sample_split_freeze:
+  statement_type: 方法选择
+  split_overlay_path: sample_split_v1.1_frozen_with_exposure_classification.json
+  development: '[2018-09-10, 2021-09-10)'
+  validation: '[2021-09-10, 2022-03-10)'
+  retrospective_rolling_oos: '[2022-03-10, 2025-09-10)'
+  sealed_retrospective_pseudo_lock: '[2025-09-10, 2026-09-10)'
+  interval_convention: 左闭右开；跨窗口账户、持仓、现金、成本、确认状态和高水位连续，不重置。
+  boundary_selection: 仅依据日历、数据截止和PIT覆盖，不使用策略结果。
+
+history_exposure_classification:
+  statement_type: 已知限制
+  researcher_declaration_path: HISTORY_ACCESS_DECLARATION_2026-09-13.md
+  strategy_result_exposure: 研究者声明2026-09-10以前未看过当前或相近策略的回测、交易、净值或相对基准结果。
+  known_underlying_exposure: 2026-09-06已查看截至2026-09-04的标的税前总回报风险路径，早于2026-09-07完整方法冻结。
+  consequence: 历史末尾12个月可一次性封存检验但最高归入回顾性L2，不得称为完全未接触L3。
+
+prospective_clean_l3:
+  statement_type: 方法选择
+  collection_start: 阶段6最终冻结后首个合格上交所交易日
+  prelock_months: 24
+  locked_months: 12
+  lock_start: collection_start加24个自然月后的首个合格交易日
+  lock_end_exclusive: collection_start加36个自然月后的首个合格交易日
+  status: FROZEN_RULE_NOT_YET_COLLECTED
+  no_future_fabrication: 不预填未来交易日、数据哈希、事件数或结果。
+
+stage_gates:
+  statement_type: 计算结果
+  stage6_status: PASS
+  stage7_design_allowed: true
+  historical_calendar_and_pit_gate: PASS
+  transition_event_gate: NOT_EVALUATED_REQUIRES_AUTHORIZED_RUN
+  formal_l2_gate: CLOSED_PENDING_STAGE7_BASELINE_FREEZE_STAGE8_IMPLEMENTATION_AND_EXPLICIT_RUN_AUTHORIZATION
+  formal_l3_gate: CLOSED_PENDING_PROSPECTIVE_COLLECTION_AND_EXPLICIT_LOCK_OPEN_AUTHORIZATION
+
+authorization:
+  statement_type: 方法选择
+  formal_backtest_authorized: false
+  historical_pseudo_lock_open_authorized: false
+  prospective_lock_open_authorized: false
+  paper_trading_authorized: false
+  live_trading_authorized: false
+  dry_run: true
