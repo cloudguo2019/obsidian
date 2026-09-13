@@ -1,0 +1,245 @@
+{
+  "metadata": {
+    "statement_type": "方法选择",
+    "experiment_id": "HD-ANCHOR-001",
+    "artifact_version": "HD-STAGE7-BASELINE-DESIGN-1.0-FROZEN",
+    "frozen_at": "2026-09-13T16:10:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "data_cutoff": "2026-09-09",
+    "status": "STAGE7_BASELINE_FUNCTIONS_FROZEN_STAGE8_IMPLEMENTATION_ALLOWED",
+    "formal_backtest_authorized": false,
+    "historical_pseudo_lock_open_authorized": false,
+    "prospective_lock_open_authorized": false,
+    "paper_trading_authorized": false,
+    "live_trading_authorized": false,
+    "dry_run": true
+  },
+  "inheritance": {
+    "statement_type": "方法选择",
+    "latest_parent_protocol": "preregistration_v1.4_sample_split_frozen.yaml",
+    "latest_parent_protocol_sha256": "546f513034336301651804aa371fe4de021fe1ad2758af7c769b916d94ba110f",
+    "rule": "完全继承v1.4及其上游方法；本文件只把已预注册的三类公平基准、共同账户初始化、风险匹配派生规则和阶段7门禁绑定为可实现规格，不改变首要指标或策略行为。"
+  },
+  "inputs": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/preregistration_v1.4_sample_split_frozen.yaml",
+      "sha256": "546f513034336301651804aa371fe4de021fe1ad2758af7c769b916d94ba110f",
+      "role": "latest_parent_protocol"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/sample_split_v1.1_frozen_with_exposure_classification.json",
+      "sha256": "a7c9c572a6c0f32913854c7c74948ca5225d3cfe516f0c5ad4cfb735f3bc592b",
+      "role": "frozen_sample_and_exposure_identity"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/sample_split_manifest_v1.1_frozen.json",
+      "sha256": "d0450de9e9b4471c32549e02c2f655a583edc504916fc5d65d7b0644bad6aec0",
+      "role": "frozen_sample_manifest"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/cleaned/data_manifest_v1_1_akshare_and_fee_v2.json",
+      "sha256": "56b83c889a91328c2491cfe915ebe9ee20146122ed0cae5ff461212241ce333f",
+      "role": "current_stage5_data_manifest"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/data_contract_v1_4_manifest.json",
+      "sha256": "42429767b7e3d43a280c09b9b329a6a64286e4f487dc9aa3e47e75bd6825c79a",
+      "role": "current_data_contract_manifest"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/cleaned/cleaned_price.csv",
+      "sha256": "31bdc266b8d022c67bed3b1b271dee04195942142f598ffc91c819f73758e7bd",
+      "role": "unadjusted_execution_and_valuation_price"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/cleaned/point_in_time_dividend_estimates.csv",
+      "sha256": "73cd1faf9e3aa097d82685ed801ed32a60448ee436528e34f943374a2ef4d679",
+      "role": "point_in_time_signal_dividend_proxy"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/cleaned/corporate_actions.csv",
+      "sha256": "40370f96bfaa001ff7d338cf115bcc6a15c31ff294f574a83cd8f3ab37035d8e",
+      "role": "real_cash_dividend_actions"
+    },
+    {
+      "path": "research/topics/trade_calendar/sse_trade_calendar_19901219_20260909.csv",
+      "sha256": "b2c5ed92a0a6032e0f8b3ca01afdd1e1d1775d11e59a2fc368bdd8045a6beeb8",
+      "role": "authoritative_session_calendar"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/schedules/a_share_transaction_cost_schedule_v2_pre2012.csv",
+      "sha256": "cbc173bfc008098ae9b350118e2575adc0a4a9ec0fe7e05b88e9c9d17e88a462",
+      "role": "transaction_cost_schedule"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/schedules/prc_listed_dividend_tax_schedule_v1.csv",
+      "sha256": "3a353a26f48482fd9cea4cd3f3077102a02ff933b2f4c770b0388d1eac5f528e",
+      "role": "dividend_tax_schedule"
+    }
+  ],
+  "non_performance_audit": {
+    "statement_type": "已观察事实",
+    "price_fields_accessed": ["session_date", "close", "trade_status"],
+    "corporate_action_fields_accessed": ["action_id", "record_date", "pay_date"],
+    "fields_not_generated_or_read": ["return", "signal", "order", "position", "nav", "drawdown", "cagr", "benchmark_result", "oos_result", "locked_result"],
+    "strategy_run_count": 0,
+    "exposure_calibration_run_count": 0,
+    "performance_calculation_count": 0,
+    "historical_pseudo_lock_open_count": 0,
+    "prospective_lock_open_count": 0
+  },
+  "initialization": {
+    "statement_type": "计算结果",
+    "formal_oos_start_inclusive": "2022-03-10",
+    "formal_oos_initialization_time": "2022-03-10T15:00:00+08:00",
+    "main_oos_price_ref_cny": 22.71,
+    "price_adjustment": "none",
+    "base_assets_cny": 60000,
+    "maximum_registered_shares": 1500,
+    "funding_buffer_ratio": 1.1,
+    "raw_buffer_requirement_cny": 37471.5,
+    "rounded_buffer_requirement_cny": 38000,
+    "common_initial_assets_cny": 60000,
+    "funding_formula": "V0=max(60000,ceil(1.10*1500*22.71/1000)*1000)=60000",
+    "first_dynamic_signal_session": "2022-03-11",
+    "first_possible_dynamic_fill_session": "2022-03-14",
+    "initial_inventory_semantics": "各方案在t0按登记股数视为研究期前已经持有的库存，不生成t0买单，不扣研究期前建仓费用。",
+    "initial_cost_basis": "各方案初始批次avg_price=P_ref，持有起日固定为各自t0前2个自然年；只用于研究账户税务与亏损指标，不冒充用户真实成本。",
+    "initial_dividend_receivable_cny": 0,
+    "initial_tax_liability_cny": 0,
+    "entitlement_check": "清洁公司行动表不存在record_date<t0<=pay_date的跨期现金分红；P08、P09和校准起点同样为0。",
+    "initial_cash_formula": "Cash_0=V0-Q0*P_ref-DividendReceivable_0+TaxLiability_0",
+    "terminal_rule": "共同终点按未复权收盘价估值，不强制卖出；应收股息和按冻结税务口径估计的潜在税负继续进入净资产。"
+  },
+  "registered_start_scenarios": [
+    {
+      "profile_scope": "P00-P07_P10-P23",
+      "anchor_date": "2022-03-10",
+      "resolved_t0": "2022-03-10",
+      "price_ref_cny": 22.71,
+      "common_initial_assets_cny": 60000,
+      "HD-BASE-000_initial_cash_cny": 37290,
+      "HD-BASE-001_initial_cash_cny": 25935
+    },
+    {
+      "profile_scope": "P08",
+      "anchor_date": "2022-06-10",
+      "resolved_t0": "2022-06-10",
+      "price_ref_cny": 24.02,
+      "common_initial_assets_cny": 60000,
+      "HD-BASE-000_initial_cash_cny": 35980,
+      "HD-BASE-001_initial_cash_cny": 23970
+    },
+    {
+      "profile_scope": "P09",
+      "anchor_date": "2022-09-10",
+      "resolved_t0": "2022-09-13",
+      "price_ref_cny": 23.79,
+      "common_initial_assets_cny": 60000,
+      "HD-BASE-000_initial_cash_cny": 36210,
+      "HD-BASE-001_initial_cash_cny": 24315
+    }
+  ],
+  "common_account_controls": {
+    "statement_type": "方法选择",
+    "same_for_dynamic_and_all_baselines": [
+      "symbol_and_interval",
+      "common_initial_assets",
+      "unadjusted_price_and_marking",
+      "cash_dividend_entitlement_and_receivable_timing",
+      "dividend_tax_lot_rules",
+      "cash_yield",
+      "transaction_cost_schedule",
+      "tradability_and_price_limits",
+      "T_plus_1_inventory",
+      "corporate_actions",
+      "daily_accounting_identity",
+      "terminal_valuation",
+      "data_versions"
+    ],
+    "cash_yield_P00": 0,
+    "cash_dividend_policy": "所有基准的真实现金分红留在现金账户，不自动再投资；动态策略相同。",
+    "dividend_signal_separation": "PIT分红代理只驱动动态策略信号；基准和动态账户的真实分红现金流都只取公司行动表，不把PIT代理当现金流。",
+    "static_trade_policy": "静态基准初始化后不再主动交易；因此不存在为制造可比性而虚构的调仓订单。若压力配置改变共同费用、利息或公司行动口径，对所有实际受影响账户对称应用。",
+    "daily_accounting_identity": "V_t=Cash_t+Q_t*RawClose_t+DividendReceivable_t-TaxLiability_t",
+    "reconciliation_tolerance_cny": 0.01,
+    "failure": "任一账户逐日或最终对账差额超过0.01元，整批正式经济结果不得发布。"
+  },
+  "baselines": [
+    {
+      "id": "HD-BASE-000",
+      "role": "core_inventory_cash_control",
+      "initial_shares": 1000,
+      "position_policy": "从t0至共同终点固定1000股；无再平衡、无分红再投资。",
+      "main_initial_cash_cny": 37290,
+      "comparison_use": "分离动态层级交易相对只持有核心仓的增量；不是首要指标比较对象。"
+    },
+    {
+      "id": "HD-BASE-001",
+      "role": "maximum_inventory_static_control",
+      "initial_shares": 1500,
+      "position_policy": "从t0至共同终点固定1500股；无再平衡、无分红再投资。",
+      "main_initial_cash_cny": 25935,
+      "comparison_use": "展示满配静态持有的绝对机会成本；不是首要指标比较对象。"
+    },
+    {
+      "id": "HD-BASE-RM-001",
+      "role": "primary_risk_matched_static_comparator",
+      "initial_shares": null,
+      "allowed_share_grid": [0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500],
+      "position_policy": "股数经事前暴露校准一次派生并冻结后，从主OOS t0连续持有至历史封存终点；不按半年窗重置或重选。",
+      "main_initial_cash_formula": "60000-q_RM*22.71",
+      "comparison_use": "唯一首要指标比较对象。",
+      "shares_status": "DETERMINISTIC_DERIVED_VALUE_PENDING_STAGE8_EXPOSURE_ONLY_CALIBRATION_BEFORE_ANY_OOS_OUTPUT"
+    }
+  ],
+  "risk_matching_derivation": {
+    "statement_type": "方法选择",
+    "calibration_anchor": "2019-03-10",
+    "calibration_start_inclusive": "2019-03-11",
+    "calibration_end_exclusive": "2022-03-10",
+    "calibration_length": "首个OOS前最近36个自然月；非交易日左端锚点顺延到首个TRADING日。",
+    "calibration_calendar_sessions": 729,
+    "calibration_trading_sessions": 719,
+    "calibration_suspended_or_missing_sessions": 10,
+    "calibration_last_session": "2022-03-09",
+    "allowed_data_roles": ["development", "validation"],
+    "calibration_initialization_time": "2019-03-11T15:00:00+08:00",
+    "calibration_price_ref_cny": 16.47,
+    "calibration_initial_shares": 1000,
+    "calibration_initial_cash_cny": 43530,
+    "calibration_common_assets_cny": 60000,
+    "calibration_initial_entitlements_cny": 0,
+    "calibration_first_signal_session": "2019-03-12",
+    "calibration_first_possible_fill_session": "2019-03-13",
+    "weight_observation_rule": "对[2019-03-11,2022-03-10)内729个上交所会话取日终、公司行动和当日成交记账后的股票权重；其中719个TRADING、10个SUSPENDED_OR_MISSING，后者按最后可验证标记价估值且仍进入均值。",
+    "daily_equity_weight_formula": "w_t=Q_t*RawMark_t/(Cash_t+Q_t*RawMark_t+DividendReceivable_t-TaxLiability_t)",
+    "mean_weight_formula": "w_bar=arithmetic_mean(w_t)",
+    "raw_share_formula": "q_raw=w_bar*60000/22.71",
+    "selection_rule": "在现金非负的0至1500整百股网格中选择与q_raw绝对距离最近者；等距时选择较低股数。",
+    "freeze_rule": "阶段8先完成并验收P00账户实现，再运行一次只输出w_bar、q_raw和q_RM的暴露校准；在生成任何OOS信号、净值或收益前写入baseline_calibration_v1.0_pre_oos.json并生成哈希。该派生值不构成方法变更。",
+    "forbidden_outputs_during_calibration": ["CAGR", "return", "drawdown", "Sharpe", "Calmar", "relative_performance", "OOS_result", "locked_result"],
+    "post_oos_guard": "动态策略与HD-BASE-RM-001在全历史OOS及封存子期的平均股票权重绝对差均须<=0.05；失败只报告风险不匹配，不得回看测试期重选q_RM。",
+    "current_calibration_status": "NOT_RUN_NOT_AUTHORIZED_IN_STAGE7"
+  },
+  "stage7_gate": {
+    "statement_type": "计算结果",
+    "baseline_functional_definitions": "PASS_FROZEN",
+    "common_initial_assets_and_price_refs": "PASS",
+    "static_initial_cash": "PASS",
+    "cross_period_entitlements": "PASS_NONE",
+    "risk_matching_algorithm": "PASS_FROZEN",
+    "risk_matched_share_value": "PENDING_STAGE8_PRE_OOS_DERIVATION",
+    "baseline_configuration_hash": "BOUND_BY_STAGE7_BASELINE_MANIFEST",
+    "stage7_status": "PASS_BASELINE_DESIGN_FROZEN",
+    "allow_stage8_implementation": true,
+    "formal_l2_gate": "CLOSED_PENDING_STAGE8_IMPLEMENTATION_RECONCILIATION_RISK_MATCHED_SHARE_FREEZE_AND_EXPLICIT_RUN_AUTHORIZATION"
+  },
+  "counters": {
+    "formal_backtest_run_count": 0,
+    "exposure_calibration_run_count": 0,
+    "performance_calculation_count": 0,
+    "historical_pseudo_lock_open_count": 0,
+    "prospective_lock_open_count": 0
+  }
+}
