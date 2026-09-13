@@ -1,0 +1,88 @@
+{
+  "statement_type": "计算结果",
+  "experiment_id": "HD-ANCHOR-001",
+  "artifact_version": "HD-STAGE8-L0-RESULT-1.0",
+  "completed_at": "2026-09-13T16:55:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "status": "PASS_SYNTHETIC_L0_AND_NON_PERFORMANCE_INPUT_VALIDATION",
+  "runtime": {
+    "python_version": "3.12.14",
+    "test_framework": "stdlib_unittest",
+    "third_party_runtime_dependencies": []
+  },
+  "final_l0_suite": {
+    "tests_run": 20,
+    "passed": 20,
+    "failed": 0,
+    "errors": 0,
+    "scope": [
+      "adjacent_hysteresis_and_inclusive_boundaries",
+      "core_build_and_1400_auto_add_ceiling",
+      "1500_terminal_and_excess_position_behavior",
+      "illegal_non_lot_state",
+      "NORMAL_REVIEW_STOP_ADD_EXIT_gates",
+      "account_loss_stop_add",
+      "PIT_availability_expiry_supersession_and_method_gate",
+      "dated_transaction_fees_and_minimum_commission",
+      "missing_fee_rule_fail_closed",
+      "T_plus_1_inventory",
+      "cash_and_protection_limit_failures",
+      "record_ex_pay_dividend_separation",
+      "current_and_2013_dividend_tax_regimes",
+      "tax_reserve_remeasurement_and_sale_settlement",
+      "T_close_signal_to_T_plus_1_close_fill",
+      "suspension_cancel_without_order_carry",
+      "record_date_post_fill_entitlement",
+      "daily_CNY_0_01_reconciliation",
+      "static_baseline_initialization_without_fictitious_order"
+    ]
+  },
+  "non_performance_validator": {
+    "version": "HD-STAGE8-NON-PERFORMANCE-VALIDATOR-1.0",
+    "status": "PASS",
+    "frozen_input_hashes_checked": 11,
+    "price_sessions_loaded": 5543,
+    "pit_records_loaded": 23,
+    "ordinary_share_cash_dividend_actions_loaded": 25,
+    "transaction_fee_date_coverage": "PASS_ALL_TRADING_SESSIONS",
+    "dividend_tax_rule_coverage": "PASS_STAGE8_ECONOMIC_WINDOW",
+    "frozen_static_initializations": "PASS"
+  },
+  "preserved_failed_checks": [
+    {
+      "sequence": 1,
+      "suite_size": 18,
+      "result": "17_PASS_1_FAIL",
+      "failure": "卖出100股、价格30元的测试期望费用写成6.74元；费用表逐项重算值为6.69元。",
+      "classification": "TEST_ORACLE_ARITHMETIC_ERROR",
+      "resolution": "修正测试期望值；未修改费用引擎以迎合错误断言。"
+    },
+    {
+      "sequence": 2,
+      "validator_result": "FAIL",
+      "failure": "公司行动加载器逐行读取差异化分红，包含非普通股份类别及2022年不参与分配的0元行。",
+      "classification": "IMPLEMENTATION_BUG_MUTUALLY_EXCLUSIVE_ENTITLEMENT_ROWS",
+      "resolution": "按action_group_id分组并唯一选择ORDINARY或PARTICIPATING普通交易股份；最终25次分配，差异化DPS不相加。"
+    },
+    {
+      "sequence": 3,
+      "review_finding": "税制版本若按卖出日再次过滤effective_end，会丢失跨制度持有的历史分红税负。",
+      "classification": "IMPLEMENTATION_BUG_POLICY_VERSION_RESELECTION",
+      "resolution": "公司行动已冻结tax_rule_version；卖出日只更新持有期档位，不重新选择税制版本，并新增跨制度边界测试。"
+    }
+  ],
+  "run_counters": {
+    "synthetic_l0_test_invocations": 5,
+    "stage8_non_performance_validator_invocations": 3,
+    "stage7_validator_rechecks": 1,
+    "formal_backtest_run_count": 0,
+    "exposure_calibration_run_count": 0,
+    "performance_calculation_count": 0,
+    "historical_pseudo_lock_open_count": 0,
+    "prospective_lock_open_count": 0
+  },
+  "forbidden_outputs_generated": [],
+  "evidence_ceiling": "L0",
+  "economic_conclusion": "NOT_AVAILABLE"
+}
+

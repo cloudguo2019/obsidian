@@ -1,0 +1,11 @@
+{
+  "statement_type": "已观察事实",
+  "experiment_id": "HD-ANCHOR-001",
+  "attempt_version": "HD-STAGE8-EXPOSURE-CALIBRATION-ATTEMPT-1.0-PRE-OOS",
+  "started_at": "2026-09-13T17:29:14+08:00",
+  "timezone": "Asia/Shanghai",
+  "authorization_path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/EXPOSURE_CALIBRATION_AUTHORIZATION_2026-09-13.md",
+  "authorization_sha256": "0e9fac3ac5f0de565584612a8278e5fa5a554ca5af0b56f2e9da1a788f5467e7",
+  "scope": "ONE_EXPOSURE_ONLY_DEVELOPMENT_VALIDATION_CALIBRATION",
+  "maximum_attempts": 1
+}

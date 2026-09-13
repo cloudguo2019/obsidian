@@ -1,0 +1,90 @@
+{
+  "statement_type": "已观察事实",
+  "experiment_id": "HD-ANCHOR-001",
+  "manifest_version": "HD-STAGE8-EXPOSURE-CALIBRATION-MANIFEST-1.0-PRE-OOS",
+  "generated_at": "2026-09-13T17:29:14+08:00",
+  "timezone": "Asia/Shanghai",
+  "status": "PASS_FROZEN_PRE_OOS_EXPOSURE_ONLY",
+  "parent_bindings": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/baseline_design_v1.0_frozen.json",
+      "sha256": "629a2ed6afa330844fde69c2d5f93aa6c29bb5253aa57ea60476afded89a31f6",
+      "size_bytes": 12727,
+      "role": "frozen_risk_matching_function"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage8_implementation_manifest_v1.0.json",
+      "sha256": "679537f2700eef34076033fab2ffb08df37ebed5b43dfc25415bf3b925e42244",
+      "size_bytes": 4625,
+      "role": "frozen_stage8_engine_and_L0_gate"
+    }
+  ],
+  "calibration_files": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/EXPOSURE_CALIBRATION_AUTHORIZATION_2026-09-13.md",
+      "sha256": "0e9fac3ac5f0de565584612a8278e5fa5a554ca5af0b56f2e9da1a788f5467e7",
+      "size_bytes": 1230,
+      "role": "explicit_user_authorization_record"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/scripts/run_stage8_exposure_calibration.py",
+      "sha256": "2b4594cbfd9430a1f44c98b71c87a68f207a47688ad46cac8541419610367e1e",
+      "size_bytes": 14260,
+      "role": "one_shot_exposure_only_calibration_runner"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/baseline_calibration_attempt_v1.0_pre_oos.json",
+      "sha256": "76459217b7849012d6a7372006f425568fe413dc022a4b20523519346d0a4cbe",
+      "size_bytes": 552,
+      "role": "one_shot_attempt_lock"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/baseline_calibration_v1.0_pre_oos.json",
+      "sha256": "af529032af63523c02e7faaa59267eb588dc485b4c976dde968dffb15989c930",
+      "size_bytes": 8145,
+      "role": "frozen_machine_readable_calibration"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/PHASE8_EXPOSURE_CALIBRATION_2026-09-13.md",
+      "sha256": "0abc48cbc16e1eb2c9ea0eb78a952da425ac28554383420a47dc78e0ef616b8e",
+      "size_bytes": 2754,
+      "role": "calibration_closeout"
+    }
+  ],
+  "calibrated_values": {
+    "w_bar": "0.3584569078136153552612904866",
+    "q_raw": "947.0459915815465132398691854",
+    "q_RM": 900
+  },
+  "gates": {
+    "explicit_calibration_authorization": "PASS",
+    "frozen_baseline_input_hashes": "PASS_11_OF_11",
+    "stage8_implementation_hashes": "PASS_10_OF_10",
+    "calibration_window": "PASS_729_SESSIONS_WITHOUT_OOS_ACCESS",
+    "daily_reconciliation_CNY_0_01": "PASS_ALL_CALIBRATION_OBSERVATIONS",
+    "risk_matched_share_value": "PASS_FROZEN_900_SHARES",
+    "performance_output_exclusion": "PASS",
+    "formal_L2": "CLOSED"
+  },
+  "authorization_snapshot": {
+    "completed_exposure_calibration_was_authorized": true,
+    "additional_exposure_calibration_authorized": false,
+    "formal_backtest_authorized": false,
+    "historical_pseudo_lock_open_authorized": false,
+    "prospective_lock_open_authorized": false,
+    "paper_trading_authorized": false,
+    "live_trading_authorized": false,
+    "dry_run": true
+  },
+  "counters": {
+    "exposure_calibration_run_count": 1,
+    "formal_backtest_run_count": 0,
+    "performance_calculation_count": 0,
+    "historical_pseudo_lock_open_count": 0,
+    "prospective_lock_open_count": 0
+  },
+  "immutability": "不得覆盖本清单或所绑定文件；后续修订必须新建版本并说明是否接触任何经济结果。q_RM不得使用OOS或封存结果重选。",
+  "evidence_ceiling": "L0",
+  "economic_conclusion": "NOT_AVAILABLE",
+  "next_gate": "RESEARCHER_SEPARATE_EXPLICIT_AUTHORIZATION_FOR_FORMAL_HISTORICAL_BATCH_WITH_EXACT_SCOPE"
+}

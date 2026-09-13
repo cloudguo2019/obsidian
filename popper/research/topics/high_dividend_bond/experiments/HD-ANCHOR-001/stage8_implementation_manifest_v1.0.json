@@ -1,0 +1,106 @@
+{
+  "statement_type": "已观察事实",
+  "experiment_id": "HD-ANCHOR-001",
+  "manifest_version": "HD-STAGE8-IMPLEMENTATION-MANIFEST-1.0",
+  "generated_at": "2026-09-13T16:55:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "status": "STAGE8A_IMPLEMENTATION_AND_SYNTHETIC_L0_PASS_EXPOSURE_CALIBRATION_PENDING_AUTHORIZATION",
+  "parent_frozen_inputs": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/baseline_design_v1.0_frozen.json",
+      "sha256": "629a2ed6afa330844fde69c2d5f93aa6c29bb5253aa57ea60476afded89a31f6",
+      "role": "stage7_frozen_implementation_spec"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/baseline_manifest_v1.0_frozen.json",
+      "sha256": "e49195e190b7e77010b87fbd903059ee8229be05273be8c5f1736e3d5f1121e0",
+      "role": "stage7_frozen_manifest"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/preregistration_v1.5_baseline_design_frozen.yaml",
+      "sha256": "d24c685daa413f57562ec8fda5ca339e2aa5e4fcc7266f27ce7c03eeb0bda82a",
+      "role": "latest_protocol_amendment"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/cleaned/data_manifest_v1_1_akshare_and_fee_v2.json",
+      "sha256": "56b83c889a91328c2491cfe915ebe9ee20146122ed0cae5ff461212241ce333f",
+      "role": "current_data_manifest"
+    }
+  ],
+  "implementation_files": [
+    {
+      "path": "research/topics/high_dividend_bond/engine/stage8_engine.py",
+      "sha256": "22c969a11e524e1a262e9af5899014fdb11fad9aa9221e9e5ef08b939d0f7aca",
+      "size_bytes": 40937,
+      "role": "account_strategy_execution_and_loader_engine"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/engine/__init__.py",
+      "sha256": "69fc1ff0aadc4b8c539fe67f71e850ea050f8ad3996ac109ba6fb190d8137b7b",
+      "size_bytes": 332,
+      "role": "engine_package"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/tests/test_stage8_engine.py",
+      "sha256": "1b0dbfbf6d4fcf1b50bf117ea86b7a6b3565816a7f4de81964e8d48fdf70ea31",
+      "size_bytes": 17096,
+      "role": "synthetic_L0_suite"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/scripts/validate_stage8_implementation.py",
+      "sha256": "03b0e799976b00f4ad7d22255ac69f799733817ce17aa780391f822a0f73d48e",
+      "size_bytes": 5822,
+      "role": "non_performance_input_and_initialization_validator"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage8_l0_result_v1.0.json",
+      "sha256": "d645797b7fe53014e5f4bece34f6aef69dc5f96b51e5739a231a7633c5df471d",
+      "size_bytes": 3547,
+      "role": "machine_readable_L0_result"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/PHASE8_IMPLEMENTATION_L0_2026-09-13.md",
+      "sha256": "8226d3759887da737f8cb7dc921bdb15ebfee4ab36c3c721d6b34ab88613b33f",
+      "size_bytes": 6691,
+      "role": "stage8A_closeout"
+    }
+  ],
+  "gates": {
+    "common_account_implementation": "PASS",
+    "dynamic_state_machine": "PASS_SYNTHETIC_L0",
+    "static_baseline_initialization": "PASS",
+    "PIT_dividend_selection": "PASS_SYNTHETIC_L0",
+    "T_close_to_T_plus_1_close_execution": "PASS_SYNTHETIC_L0",
+    "T_plus_1_inventory": "PASS_SYNTHETIC_L0",
+    "transaction_cost_schedule": "PASS_ALL_TRADING_SESSIONS",
+    "ordinary_share_dividend_entitlement": "PASS_25_DISTRIBUTIONS",
+    "dividend_tax_schedule": "PASS_STAGE8_ECONOMIC_WINDOW",
+    "daily_reconciliation_CNY_0_01": "PASS_SYNTHETIC_L0",
+    "stage8A": "PASS",
+    "risk_matched_share_value": "PENDING_AUTHORIZED_PRE_OOS_EXPOSURE_CALIBRATION",
+    "formal_L2": "CLOSED"
+  },
+  "limitations": [
+    "pre_2011_share_transfer_events_fail_closed_and_are_outside_the_frozen_stage8_economic_window",
+    "pre_2005_06_dividend_tax_is_unresolved_and_outside_the_frozen_stage8_economic_window",
+    "synthetic_L0_does_not_establish_economic_performance_or_L4_execution"
+  ],
+  "authorization_snapshot": {
+    "formal_backtest_authorized": false,
+    "exposure_calibration_authorized": false,
+    "historical_pseudo_lock_open_authorized": false,
+    "prospective_lock_open_authorized": false,
+    "paper_trading_authorized": false,
+    "live_trading_authorized": false,
+    "dry_run": true
+  },
+  "counters": {
+    "formal_backtest_run_count": 0,
+    "exposure_calibration_run_count": 0,
+    "performance_calculation_count": 0,
+    "historical_pseudo_lock_open_count": 0,
+    "prospective_lock_open_count": 0
+  },
+  "evidence_ceiling": "L0",
+  "next_gate": "RESEARCHER_EXPLICIT_AUTHORIZATION_FOR_ONE_EXPOSURE_ONLY_DEVELOPMENT_VALIDATION_CALIBRATION"
+}
