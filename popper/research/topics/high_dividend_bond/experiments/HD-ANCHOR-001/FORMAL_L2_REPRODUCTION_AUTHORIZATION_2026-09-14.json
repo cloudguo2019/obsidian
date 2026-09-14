@@ -1,0 +1,43 @@
+{
+  "statement_type": "已观察事实",
+  "experiment_id": "HD-ANCHOR-001",
+  "artifact_version": "HD-STAGE8-FORMAL-L2-REPRODUCTION-AUTHORIZATION-1.0",
+  "authorized_at": "2026-09-14T20:53:59+08:00",
+  "timezone": "Asia/Shanghai",
+  "status": "AUTHORIZED_ONE_VERSIONED_FORMAL_L2_REPRODUCTION",
+  "authorization_context": {
+    "assistant_exact_question": "是否授权使用冻结的Python 3.11.9环境，对[2022-03-10, 2025-09-10)执行一次P00—P23×4账户的版本化复现回测，将正式回测和绩效计算计数分别从1增至2，并保持历史伪锁定NOT_OPENED_NOT_READ？",
+    "researcher_reply": "授权"
+  },
+  "interval": "[2022-03-10, 2025-09-10)",
+  "maximum_result_date": "2025-09-09",
+  "profiles": "P00-P23_ALL_24_REGISTERED_PROFILES",
+  "accounts_per_profile": [
+    "HD-ANCHOR-001",
+    "HD-BASE-000",
+    "HD-BASE-001",
+    "HD-BASE-RM-001"
+  ],
+  "registered_paths": 96,
+  "q_RM": 900,
+  "environment": "Python_3.11.9_AkShare_1.18.94_pandas_3.0.5_PyArrow_25.0.1",
+  "plan_path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_plan_v1.0_pre_results.json",
+  "plan_sha256": "033923a4b43afd7de0fed8984fdb87bae6793191e45c87902a1a3c803f4a6738",
+  "runner_path": "research/topics/high_dividend_bond/scripts/run_stage8_formal_l2_reproduction.py",
+  "runner_sha256": "d022ca0bdf5e75c56f2cd8582091fcc83d76137637357597d5efe38848037066",
+  "authorized_counter_effect": {
+    "formal_backtest_run_count_before": 1,
+    "formal_backtest_run_count_after_success_or_consumed_attempt": 2,
+    "performance_calculation_count_before": 1,
+    "performance_calculation_count_after_success": 2,
+    "formal_l2_reproduction_run_count_after_success_or_consumed_attempt": 1
+  },
+  "historical_pseudo_lock_open_authorized": false,
+  "prospective_lock_open_authorized": false,
+  "paper_trading_authorized": false,
+  "live_trading_authorized": false,
+  "dry_run": true,
+  "retry_policy": "本授权只允许一次版本化复现尝试。失败产物必须保留；任何重试需要新的明确授权。",
+  "evidence_effect": "NO_UPGRADE_SAME_RETROSPECTIVE_SAMPLE",
+  "evidence_ceiling": "L2_RETROSPECTIVE"
+}

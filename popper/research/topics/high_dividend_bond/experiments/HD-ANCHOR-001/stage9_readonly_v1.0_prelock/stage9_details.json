@@ -1,0 +1,199 @@
+{
+  "statement_type": "计算结果",
+  "experiment_id": "HD-ANCHOR-001",
+  "artifact_version": "HD-STAGE9-READONLY-DETAILS-1.0-PRELOCK",
+  "authorized_scope": "[2022-03-10, 2025-09-10)",
+  "profile_robustness": {
+    "registered_profiles": 24,
+    "completed_profiles": 23,
+    "not_run_profiles": 1,
+    "completed_point_estimates_nonnegative": 23,
+    "completed_ci_60_excludes_zero_positive": 1,
+    "required_profiles": [
+      "P01",
+      "P03",
+      "P05",
+      "P06",
+      "P10"
+    ],
+    "required_profiles_nonnegative_gate": "PASS",
+    "local_neighbors": [
+      "P15",
+      "P16",
+      "P17",
+      "P18"
+    ],
+    "local_neighbors_nonnegative": 4,
+    "local_neighbor_gate": "PASS",
+    "minimum_delta_cagr_profile": "P14",
+    "minimum_delta_cagr": 0.0037886822721962,
+    "maximum_delta_cagr_profile": "P13",
+    "maximum_delta_cagr": 0.0147580793654798,
+    "P21_status": "NOT_RUN",
+    "P22_P23_activation": "NOT_ACTIVATED_FEWER_THAN_10_OTHERWISE_FILLABLE_PARENT_ORDERS"
+  },
+  "market_regimes": {
+    "classified_trading_sessions": 851,
+    "trend_state_counts": {
+      "SIDEWAYS": 469,
+      "UP": 324,
+      "DOWN": 58
+    },
+    "trend_episode_counts": {
+      "DOWN": 10,
+      "SIDEWAYS": 43,
+      "UP": 33
+    },
+    "high_vol_sessions": 20,
+    "high_vol_fraction": 0.023501762632197415,
+    "trend_dynamic_minus_risk_matched_compounded_return": {
+      "DOWN": 0.002882473847676037,
+      "SIDEWAYS": 0.03748725022691435,
+      "UP": -0.0025017032435549202
+    },
+    "inference_status": "DESCRIPTIVE_CASE_STUDY_NO_NEW_CONFIRMATORY_INTERVAL"
+  },
+  "dividend_reliability": {
+    "relevant_pit_records": 5,
+    "revisions_after_first": 4,
+    "upward_revisions": 3,
+    "downward_revisions": 1,
+    "expired_before_superseded_records": 1,
+    "buy_fills": 5,
+    "buy_fills_followed_by_downward_revision_within_180_days": 0,
+    "buy_fill_revision_checks": [
+      {
+        "order_id": "ORDER-000001",
+        "fill_date": "2022-05-30",
+        "selected_pit_record_id": "600900-PIT-FY2021",
+        "selected_dps_cny": 0.8153,
+        "downward_revision_within_180_calendar_days": false,
+        "first_downward_revision_record_id": null,
+        "first_downward_revision_available_time": null
+      },
+      {
+        "order_id": "ORDER-000002",
+        "fill_date": "2022-06-22",
+        "selected_pit_record_id": "600900-PIT-FY2021",
+        "selected_dps_cny": 0.8153,
+        "downward_revision_within_180_calendar_days": false,
+        "first_downward_revision_record_id": null,
+        "first_downward_revision_available_time": null
+      },
+      {
+        "order_id": "ORDER-000004",
+        "fill_date": "2022-08-25",
+        "selected_pit_record_id": "600900-PIT-FY2021",
+        "selected_dps_cny": 0.8153,
+        "downward_revision_within_180_calendar_days": false,
+        "first_downward_revision_record_id": null,
+        "first_downward_revision_available_time": null
+      },
+      {
+        "order_id": "ORDER-000005",
+        "fill_date": "2022-11-02",
+        "selected_pit_record_id": "600900-PIT-FY2021",
+        "selected_dps_cny": 0.8153,
+        "downward_revision_within_180_calendar_days": false,
+        "first_downward_revision_record_id": null,
+        "first_downward_revision_available_time": null
+      },
+      {
+        "order_id": "ORDER-000009",
+        "fill_date": "2025-08-04",
+        "selected_pit_record_id": "600900-PIT-FY2024",
+        "selected_dps_cny": 0.943,
+        "downward_revision_within_180_calendar_days": false,
+        "first_downward_revision_record_id": null,
+        "first_downward_revision_available_time": null
+      }
+    ]
+  },
+  "anchor_repair": {
+    "buy_signals": 5,
+    "mature_63_session_events": 4,
+    "right_censored_events": 1,
+    "overlapping_events": 3,
+    "anchor_gap_repaired_events": 2,
+    "positive_underlying_total_return_events": 3,
+    "inference_status": "CASE_STUDY_OVERLAPPING_LOW_EVENT_COUNT"
+  },
+  "signal_to_fill": {
+    "generated_parent_orders": 9,
+    "filled_parent_orders": 9,
+    "partial_parent_orders": 0,
+    "unfilled_parent_orders": 0,
+    "mean_adverse_bps_signal_close_to_fill": 42.508611349355206,
+    "median_adverse_bps_signal_close_to_fill": 21.59827213823018,
+    "worst_adverse_bps_signal_close_to_fill": 185.6649395509491,
+    "model_reference_minus_fill_bps": 0.0,
+    "model_note": "P00 fill equals the frozen T+1 official close reference by construction; signal-close-to-fill movement remains real next-session price movement."
+  },
+  "trade_batch_attribution_stress": {
+    "dynamic_buy_batches": 5,
+    "closed_logical_batches": 4,
+    "terminal_open_logical_batches": 1,
+    "largest_positive_batch_id": "BATCH-04",
+    "largest_positive_batch_contribution_cny": 696.67,
+    "frozen_terminal_asset_increment_vs_rm_cny": 2260.74,
+    "remaining_terminal_asset_increment_after_subtraction_cny": 1564.0699999999997,
+    "remaining_total_return_increment_after_subtraction": 0.02606783333333333,
+    "exclude_best_trade_gate": "PASS",
+    "attribution_scope": "Logical dynamic 100-share layers only; the initial structural 100-share difference versus the 900-share comparator and all residual interaction terms remain fixed and are not allocated here.",
+    "reconciliation_claim": "NOT_A_COMPLETE_STAGE10_RETURN_ATTRIBUTION"
+  },
+  "exclude_largest_relative_year": {
+    "calendar_years": [
+      {
+        "year": 2022,
+        "paired_sessions": 199,
+        "dynamic_total_return": "-0.0195143333333333333333333400",
+        "comparator_total_return": "-0.0134205000000000000000000011",
+        "increment": "-0.0060938333333333333333333389"
+      },
+      {
+        "year": 2023,
+        "paired_sessions": 242,
+        "dynamic_total_return": "0.070842273063995156142007176",
+        "comparator_total_return": "0.048551079765999597599585232",
+        "increment": "0.022291193297995558542421944"
+      },
+      {
+        "year": 2024,
+        "paired_sessions": 242,
+        "dynamic_total_return": "0.122826057796968191841068578",
+        "comparator_total_return": "0.101935370365178993483676326",
+        "increment": "0.020890687431789198357392252"
+      },
+      {
+        "year": 2025,
+        "paired_sessions": 168,
+        "dynamic_total_return": "-0.0086971863890213484618580749",
+        "comparator_total_return": "-0.0078557524196682424958045573",
+        "increment": "-0.0008414339693531059660535176"
+      }
+    ],
+    "largest_positive_relative_year": 2023,
+    "exclude_largest_relative_year_remaining_total_return_increment": "0.012733503874690256844515521",
+    "exclude_largest_relative_year_status": "DESCRIPTIVE_NONCONTIGUOUS_DIAGNOSTIC"
+  },
+  "gates": {
+    "required_registered_stress_profiles_nonnegative": "PASS",
+    "local_parameter_neighbors_at_least_3_of_4_nonnegative": "PASS",
+    "exclude_largest_relative_year_remaining_increment_nonnegative": "PASS",
+    "exclude_largest_dynamic_batch_remaining_increment_nonnegative": "PASS",
+    "P21_cash_yield": "NOT_RUN_NO_AUDITABLE_EXECUTABLE_BROKER_CASH_RATE_INPUT",
+    "P22_P23_execution_interruption": "NOT_ACTIVATED_FEWER_THAN_10_OTHERWISE_FILLABLE_PARENT_ORDERS",
+    "market_state_analysis": "COMPLETE_DESCRIPTIVE_CASE_STUDY",
+    "M1_dividend_reliability": "COMPLETE_LOW_EVENT_COUNT",
+    "M2_anchor_repair": "COMPLETE_OVERLAPPING_LOW_EVENT_COUNT",
+    "historical_pseudo_lock": "NOT_OPENED_NOT_READ",
+    "prospective_clean_L3": "NOT_YET_AVAILABLE"
+  },
+  "limitations": [
+    "All outputs are derived from already-viewed retrospective L2 paths; no L3 upgrade is possible.",
+    "Market-state returns are descriptive conditional subsets, not new executable strategy paths or confirmatory tests.",
+    "Regime episodes and state transitions are sparse; no new state-conditioned confidence interval is asserted.",
+    "The best-batch subtraction is a fixed-path attribution stress and does not replace Stage 10 full accounting attribution."
+  ]
+}

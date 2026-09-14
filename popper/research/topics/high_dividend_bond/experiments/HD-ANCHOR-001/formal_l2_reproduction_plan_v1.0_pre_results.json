@@ -1,0 +1,84 @@
+{
+  "statement_type": "方法选择",
+  "experiment_id": "HD-ANCHOR-001",
+  "artifact_version": "HD-STAGE8-FORMAL-L2-REPRODUCTION-PLAN-1.0-PRE-RESULTS",
+  "created_at": "2026-09-14T17:49:37+08:00",
+  "timezone": "Asia/Shanghai",
+  "status": "READY_FOR_READ_ONLY_PREFLIGHT_PENDING_EXACT_EXECUTION_AUTHORIZATION",
+  "researcher_request": "修复python3.11环境，然后重新回测",
+  "purpose": "在不覆盖原阶段8冻结批次的前提下，使用同一Python 3.11.9环境、同一冻结代码、同一数据和同一协议执行一次确定性复现，并逐项比较新旧输出。该批次不构成新样本、调参、确认性证据或L3升级。",
+  "proposed_exact_scope": {
+    "interval": "[2022-03-10, 2025-09-10)",
+    "maximum_result_date": "2025-09-09",
+    "profiles": "P00-P23_ALL_24_REGISTERED_PROFILES",
+    "accounts_per_profile": [
+      "HD-ANCHOR-001",
+      "HD-BASE-000",
+      "HD-BASE-001",
+      "HD-BASE-RM-001"
+    ],
+    "registered_paths": 96,
+    "expected_completed_paths": 92,
+    "expected_not_run_paths": 4,
+    "expected_not_run_profile": "P21_NO_AUDITABLE_EXECUTABLE_BROKER_CASH_RATE_INPUT",
+    "q_RM": 900,
+    "bootstrap_replications": 5000,
+    "bootstrap_seed": 20260905,
+    "bootstrap_block_lengths_sessions": [20, 60, 120],
+    "historical_pseudo_lock": "MUST_REMAIN_NOT_OPENED_NOT_READ",
+    "prospective_lock": "MUST_REMAIN_NOT_OPENED",
+    "paper_trading": false,
+    "live_trading": false,
+    "dry_run": true
+  },
+  "immutability": {
+    "original_outputs": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_v1.0_prelock/",
+    "original_result": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_result_v1.0_prelock.json",
+    "original_manifest": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_manifest_v1.0_prelock.json",
+    "rule": "原批次、旧协议、旧清单、旧授权和旧结果全部只读；复现只写入下列新版本路径。"
+  },
+  "new_output_paths": {
+    "authorization": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/FORMAL_L2_REPRODUCTION_AUTHORIZATION_2026-09-14.json",
+    "attempt": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_attempt_v1.0.json",
+    "raw_producer_result": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_raw_result_v1.0.json",
+    "comparison_result": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_result_v1.0.json",
+    "failure": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_failure_v1.0.json",
+    "output_directory": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/"
+  },
+  "acceptance_criteria": {
+    "input_and_implementation_hashes": "ALL_PASS",
+    "environment": "Python_3.11.9_AkShare_1.18.94_pandas_3.0.5_PyArrow_25.0.1",
+    "synthetic_tests": "31_OF_31_PASS",
+    "profile_window_and_bootstrap_json": "EXACT_VALUE_EQUALITY",
+    "daily_signal_and_auction_parquet": "EXACT_TABLE_VALUE_EQUALITY",
+    "run_ledger": "EXACT_AFTER_REMOVING_RUN_TIMESTAMPS_AND_VERSIONED_OUTPUT_PATHS",
+    "primary_result_evaluation_integrity_and_bootstrap_method": "EXACT_VALUE_EQUALITY",
+    "daily_reconciliation": "ALL_COMPLETED_PATHS_WITHIN_CNY_0.01",
+    "historical_pseudo_lock": "NOT_OPENED_NOT_READ"
+  },
+  "bindings": [
+    {
+      "path": "research/topics/high_dividend_bond/scripts/run_stage8_formal_l2_batch.py",
+      "sha256": "d078a902a11d00de1960699c007c8bbbac8fbf99de18e38fd9e2dba7350875ef",
+      "role": "unchanged_frozen_stage8_producer"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_manifest_v1.0_prelock.json",
+      "sha256": "6f17406e61a46d034fe6a9f1cc031ee0b614aa927756f0b53e7d49ea54f46196",
+      "role": "original_frozen_result_identity"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage11_environment_correction_manifest_v1.0.json",
+      "sha256": "35d6d47054c1aeb59f5ba2f8182c06a721700106f967606b420f469a459fac49",
+      "role": "verified_python311_environment_correction"
+    }
+  ],
+  "authorization_gate": {
+    "status": "PENDING_EXACT_CONFIRMATION",
+    "required_confirmation": "是否授权：使用上述完全冻结的输入与Python 3.11.9环境，对[2022-03-10,2025-09-10)执行一次P00-P23×4账户的版本化复现回测；正式回测计数由1增至2、绩效计算计数由1增至2，不开启历史伪锁定？",
+    "execution_before_confirmation": "FORBIDDEN"
+  },
+  "evidence_effect": "NO_UPGRADE_SAME_RETROSPECTIVE_SAMPLE",
+  "evidence_ceiling": "L2_RETROSPECTIVE"
+}
+

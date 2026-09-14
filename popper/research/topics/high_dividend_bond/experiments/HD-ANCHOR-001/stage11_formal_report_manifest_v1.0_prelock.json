@@ -1,0 +1,101 @@
+{
+  "statement_type": "已观察事实",
+  "experiment_id": "HD-ANCHOR-001",
+  "manifest_version": "HD-STAGE11-FORMAL-REPORT-MANIFEST-1.0-PRELOCK",
+  "generated_at": "2026-09-14T15:33:48+08:00",
+  "timezone": "Asia/Shanghai",
+  "status": "PASS_FROZEN_STAGE11_FORMAL_REPORT_RETROSPECTIVE_L2_PRELOCK",
+  "authorized_scope": "FORMAL_REPORT_FROM_FROZEN_STAGE8_STAGE9_STAGE10_ARTIFACTS_ONLY",
+  "parent_bindings": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_manifest_v1.0_prelock.json",
+      "sha256": "6f17406e61a46d034fe6a9f1cc031ee0b614aa927756f0b53e7d49ea54f46196",
+      "size_bytes": 6743,
+      "role": "frozen_stage8_formal_L2_paths_results_and_authorization_counters"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage9_readonly_manifest_v1.0_prelock.json",
+      "sha256": "1eb1a6e979825ff62e38017bf2b105ac09853b7ad70d61e649da45fb4b7b41f7",
+      "size_bytes": 7938,
+      "role": "frozen_stage9_readonly_robustness_falsification_results"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_manifest_v1.0_prelock.json",
+      "sha256": "db282b6f8368f8d32cc845bac2127b329fe0b8f694fbdfd5fed47c71f49ed744",
+      "size_bytes": 8901,
+      "role": "frozen_stage10_full_return_attribution_results"
+    }
+  ],
+  "report_files": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/STAGE11_FORMAL_REPORT_AUTHORIZATION_2026-09-14.md",
+      "sha256": "6204c8d508ed3b73364bee6580c5510416aab517661adc30b38d3651692b7c66",
+      "size_bytes": 1205,
+      "role": "researcher_stage11_formal_report_authorization"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/PHASE11_FORMAL_REPORT_2026-09-14.md",
+      "sha256": "82acc02c50118805d869891622d83b62c97a2fa888bf9b9ba02c14e5c7b5fecf",
+      "size_bytes": 20346,
+      "role": "stage11_formal_research_report"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/scripts/validate_stage11_formal_report.py",
+      "sha256": "3a0222880f89daef0f41fb013e900cb7167d9f2b88c51cf441a764614ba1a0c0",
+      "size_bytes": 3763,
+      "role": "read_only_stage11_and_parent_manifest_integrity_validator"
+    }
+  ],
+  "report_coverage": {
+    "research_question_theory_and_protocol": true,
+    "data_implementation_and_accounting_integrity": true,
+    "primary_account_and_three_baselines": true,
+    "primary_bootstrap_and_all_preregistered_gates": true,
+    "all_24_registered_profiles_status": true,
+    "seven_six_month_windows": true,
+    "market_regimes_mechanisms_and_falsification": true,
+    "full_return_attribution": true,
+    "supporting_and_adverse_evidence": true,
+    "preserved_failure_cases": true,
+    "limitations_reversal_conditions_and_permissions": true,
+    "reproduction_and_read_only_validation_commands": true
+  },
+  "integrity_audit": {
+    "formal_l2_manifest_members_checked": 12,
+    "stage9_manifest_members_checked": 17,
+    "stage10_manifest_members_checked": 18,
+    "prior_manifest_member_hash_mismatches": 0,
+    "stage11_hash_bindings_checked": 6,
+    "stage11_hash_mismatches": 0,
+    "maximum_authorized_result_date": "2025-09-09",
+    "historical_pseudo_lock": "NOT_OPENED_NOT_READ"
+  },
+  "stage11_environment_check": {
+    "recorded_frozen_runtime": "Python_3.11.9_AkShare_1.18.94_pandas_3.0.5_PyArrow_25.0.1",
+    "recorded_virtual_environment_currently_launchable": false,
+    "current_issue": "VENV_LAUNCHER_TARGETS_MISSING_BASE_PYTHON_3.11.9_AND_PYTHON_IS_NOT_ON_PATH",
+    "fallback_runtime": "Codex_bundled_Python_3.12.14_without_PyArrow",
+    "synthetic_stage8_tests_on_fallback_runtime": "PASS_31_OF_31",
+    "parquet_content_validator_rerun_in_stage11": false,
+    "effect": "REPRODUCTION_ENVIRONMENT_REPAIR_REQUIRED_FOR_FROM_SCRATCH_RECALCULATION;_FROZEN_PRIOR_VALIDATION_AND_HASH_IDENTITIES_UNCHANGED"
+  },
+  "authorization_and_counters": {
+    "stage11_formal_report_authorized": true,
+    "stage11_formal_report_run_count": 1,
+    "formal_backtest_run_count": 1,
+    "performance_calculation_count": 1,
+    "exposure_calibration_run_count": 1,
+    "stage9_readonly_analysis_run_count": 1,
+    "stage10_readonly_attribution_run_count": 1,
+    "historical_pseudo_lock_open_count": 0,
+    "prospective_lock_open_count": 0,
+    "paper_trading_authorized": false,
+    "live_trading_authorized": false,
+    "dry_run": true
+  },
+  "research_decision_carried_forward": "修改",
+  "stage12_final_decision_signed": false,
+  "evidence_ceiling": "L2_RETROSPECTIVE",
+  "immutability": "不得覆盖本清单或其绑定的阶段11授权、正式报告和只读验证器。阶段11没有授权重跑策略、重算绩效路径、修改参数、重选q_RM、打开历史伪锁定、仿真或实盘。",
+  "next_gate": "RESEARCHER_SEPARATE_AUTHORIZATION_FOR_STAGE12_FINAL_RESEARCH_DECISION_FROM_THE_FROZEN_STAGE11_REPORT_WITHOUT_STRATEGY_RERUN_OR_HISTORICAL_PSEUDO_LOCK_ACCESS"
+}

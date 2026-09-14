@@ -1,0 +1,178 @@
+{
+  "statement_type": "已观察事实",
+  "experiment_id": "HD-ANCHOR-001",
+  "manifest_version": "HD-STAGE8-FORMAL-L2-REPRODUCTION-MANIFEST-1.0",
+  "generated_at": "2026-09-14T20:57:41+08:00",
+  "timezone": "Asia/Shanghai",
+  "status": "PASS_FROZEN_EXACT_VALUE_REPRODUCTION_RETROSPECTIVE_L2",
+  "authorized_scope": "[2022-03-10, 2025-09-10)",
+  "parent_bindings": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_manifest_v1.0_prelock.json",
+      "sha256": "6f17406e61a46d034fe6a9f1cc031ee0b614aa927756f0b53e7d49ea54f46196",
+      "size_bytes": 6743,
+      "role": "original_frozen_formal_L2_identity_and_results"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage11_environment_correction_manifest_v1.0.json",
+      "sha256": "35d6d47054c1aeb59f5ba2f8182c06a721700106f967606b420f469a459fac49",
+      "size_bytes": 3231,
+      "role": "verified_frozen_Python_3_11_environment"
+    }
+  ],
+  "plan_authorization_and_implementation": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_plan_v1.0_pre_results.json",
+      "sha256": "033923a4b43afd7de0fed8984fdb87bae6793191e45c87902a1a3c803f4a6738",
+      "size_bytes": 4702,
+      "role": "pre_result_exact_reproduction_plan"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/FORMAL_L2_REPRODUCTION_AUTHORIZATION_2026-09-14.json",
+      "sha256": "a3fd537b777d3ceaec344b25317224bb17a0c084cfd7229e911d893a8119635f",
+      "size_bytes": 2155,
+      "role": "researcher_exact_scope_authorization"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/scripts/run_stage8_formal_l2_reproduction.py",
+      "sha256": "d022ca0bdf5e75c56f2cd8582091fcc83d76137637357597d5efe38848037066",
+      "size_bytes": 12535,
+      "role": "versioned_one_shot_reproduction_and_exact_comparator"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/scripts/validate_stage8_formal_l2_reproduction.py",
+      "sha256": "39dd28c2c809b35550f84710c8fcad59fb5f5168549b7312560fc34d7cb56e1e",
+      "size_bytes": 7916,
+      "role": "independent_reproduction_validator"
+    }
+  ],
+  "result_files": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_attempt_v1.0.json",
+      "sha256": "940376dfcd8a230aaae6e0bce9bcc41ae10999838dae46b4fb8ea821b45801f9",
+      "size_bytes": 636,
+      "role": "one_shot_reproduction_attempt_lock"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_raw_result_v1.0.json",
+      "sha256": "8f7b3cb64bbb0a2ea0fa55dca5b5e5a4ff19b748645256362534da8eff14662a",
+      "size_bytes": 12184,
+      "role": "raw_output_from_unchanged_frozen_stage8_producer"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_result_v1.0.json",
+      "sha256": "e5ed9443379cbd4aba63518a749e95f4715d12bd0bf5ae89f9ededbdfb320067",
+      "size_bytes": 6805,
+      "role": "machine_readable_exact_reproduction_comparison"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_validation_v1.0.json",
+      "sha256": "1808f27f519ef79e791798925a02e28a7fde1877e0cad5012de8aea0b567796b",
+      "size_bytes": 3976,
+      "role": "independent_34_check_validation"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/PHASE8_FORMAL_L2_REPRODUCTION_2026-09-14.md",
+      "sha256": "2b22e07ce962863361733310ba77e31e936d2ac739e6c8c9db6f7e533b3d84d2",
+      "size_bytes": 6099,
+      "role": "reproduction_closeout"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/auction_outcomes_daily_close_lagged.parquet",
+      "sha256": "89fb67a7aa9344af90aaba2e39bc9d96f2fb2a42db0561bec83ecf8c3f9bb4a9",
+      "size_bytes": 9125,
+      "role": "exact_hash_match_to_original_auction_outcomes"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/bootstrap_intervals.json",
+      "sha256": "e810c8f303b4daa69caf139f3091d12e70c4561a277fe583ec27fcc8eb12c533",
+      "size_bytes": 87287,
+      "role": "exact_hash_match_to_original_bootstrap_intervals"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/daily_accounts.parquet",
+      "sha256": "acb313eaffec00af9885861f9a237626dab448cbf1d3d53d2c2476915236c930",
+      "size_bytes": 1460496,
+      "role": "exact_hash_match_to_original_daily_accounts"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/daily_close_signal_and_lagged_orders.parquet",
+      "sha256": "4743ece023d313ae148ab2047c244b1e85b0c97f195957e3e9ce3df049ba84e7",
+      "size_bytes": 26678,
+      "role": "exact_hash_match_to_original_signal_and_order_ledger"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/profile_results.json",
+      "sha256": "bf855df05115bcd3fcb4a0521042a1c34e6e122b3dd8f1ba401ca2c3a7e3b7fd",
+      "size_bytes": 423786,
+      "role": "exact_hash_match_to_original_profile_results"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/run_ledger.json",
+      "sha256": "eba02420290cb148803ce35a6a29f34796b057a7d2ae37432e88f0aa6f48c244",
+      "size_bytes": 149595,
+      "role": "ledger_equal_after_removing_run_timestamps_and_versioned_output_paths"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/window_results.json",
+      "sha256": "1bff4fe6b27698123ae7f2868124c348927925423ae01620325209f551721254",
+      "size_bytes": 193335,
+      "role": "exact_hash_match_to_original_window_results"
+    }
+  ],
+  "integrity_validation": {
+    "status": "PASS_INDEPENDENT_EXACT_VALUE_REPRODUCTION_VALIDATION",
+    "checks_passed": 34,
+    "registered_paths": 96,
+    "completed_paths": 92,
+    "not_run_paths": 4,
+    "daily_account_rows": 77640,
+    "p00_session_observations": 852,
+    "maximum_authorized_date": "2025-09-09",
+    "daily_reconciliation": "PASS_ALL_COMPLETED_PATHS_WITHIN_CNY_0.01",
+    "historical_pseudo_lock": "NOT_OPENED_NOT_READ"
+  },
+  "comparison_to_original": {
+    "all_registered_numeric_and_state_outputs_equal": true,
+    "profile_results_exact": true,
+    "window_results_exact": true,
+    "bootstrap_intervals_exact": true,
+    "daily_accounts_table_and_file_hash_exact": true,
+    "signal_order_table_and_file_hash_exact": true,
+    "auction_outcomes_table_and_file_hash_exact": true,
+    "normalized_run_ledger_exact": true,
+    "primary_result_evaluation_integrity_bootstrap_runtime_and_decision_exact": true
+  },
+  "primary_result_reproduced": {
+    "p00_final_nav_cny": "70119.1800",
+    "p00_total_return": "0.168653",
+    "p00_cagr": "0.0455126371569008",
+    "p00_max_drawdown": "-0.0816974733686847192423379824",
+    "risk_matched_final_nav_cny": "67858.4400",
+    "risk_matched_cagr": "0.0357733067657722",
+    "delta_cagr": "0.0097393303911286",
+    "primary_60_session_bootstrap_ci_95": [
+      "-0.00367601357822724",
+      "0.0244694483130419"
+    ]
+  },
+  "authorization_and_counters": {
+    "completed_reproduction_was_authorized": true,
+    "additional_reproduction_authorized": false,
+    "formal_backtest_run_count": 2,
+    "performance_calculation_count": 2,
+    "exposure_calibration_run_count": 1,
+    "formal_l2_reproduction_run_count": 1,
+    "historical_pseudo_lock_open_count": 0,
+    "prospective_lock_open_count": 0,
+    "paper_trading_authorized": false,
+    "live_trading_authorized": false,
+    "dry_run": true
+  },
+  "research_decision": "修改",
+  "decision_effect": "REPRODUCTION_ONLY_NO_CHANGE_TO_ECONOMIC_DECISION",
+  "evidence_effect": "COMPUTATIONAL_REPRODUCIBILITY_CONFIRMED_NO_NEW_MARKET_INFORMATION",
+  "evidence_ceiling": "L2_RETROSPECTIVE",
+  "immutability": "不得覆盖本清单或其绑定的计划、授权、尝试、运行器、原始结果、比较结果、验证、复现输出和关闭单。任何重试或新增正式回测均需新版本和新的明确授权。",
+  "next_gate": "RESEARCHER_SEPARATE_AUTHORIZATION_FOR_STAGE12_FINAL_RESEARCH_DECISION_FROM_STAGE11_AND_THE_EXACT_REPRODUCTION_EVIDENCE_WITHOUT_RERUN_OR_HISTORICAL_PSEUDO_LOCK_ACCESS"
+}

@@ -1,0 +1,132 @@
+{
+  "statement_type": "计算结果",
+  "experiment_id": "HD-ANCHOR-001",
+  "artifact_version": "HD-STAGE10-READONLY-DETAILS-1.0-PRELOCK",
+  "authorized_scope": "[2022-03-10, 2025-09-10)",
+  "accounting_identity": {
+    "maximum_daily_account_reconciliation_cny": 0.0,
+    "maximum_period_account_identity_difference_cny": 0.0,
+    "maximum_relative_identity_difference_cny": 0.0,
+    "maximum_annual_relative_identity_difference_cny": 0.0,
+    "maximum_segment_relative_identity_difference_cny": 0.0,
+    "dynamic_overlay_batch_difference_cny": 0.0
+  },
+  "relative_attribution": {
+    "HD-BASE-000": {
+      "profile_id": "P00",
+      "strategy_account_id": "HD-ANCHOR-001",
+      "terminal_nav_difference_cny": 1387.58,
+      "relative_price_pnl_cny": 1103.0,
+      "relative_execution_price_pnl_cny": 0.0,
+      "relative_gross_dividend_entitlement_cny": 337.52,
+      "relative_tax_effect_cny": 0.0,
+      "relative_fee_effect_cny": -52.94,
+      "relative_cash_yield_cny": 0.0,
+      "relative_attributed_nav_change_cny": 1387.58,
+      "relative_period_identity_difference_cny": 0.0,
+      "overweight_up_gain_cny": 10499.0,
+      "overweight_down_loss_cny": 9396.0,
+      "underweight_up_opportunity_loss_cny": 0.0,
+      "underweight_down_avoided_loss_cny": 0.0,
+      "flat_price_component_cny": 0.0,
+      "average_relative_opening_shares": 141.66666666666666,
+      "minimum_relative_opening_shares": 0,
+      "maximum_relative_opening_shares": 300
+    },
+    "HD-BASE-001": {
+      "profile_id": "P00",
+      "strategy_account_id": "HD-ANCHOR-001",
+      "terminal_nav_difference_cny": -2978.22,
+      "relative_price_pnl_cny": -1547.0,
+      "relative_execution_price_pnl_cny": 0.0,
+      "relative_gross_dividend_entitlement_cny": -1378.28,
+      "relative_tax_effect_cny": 0.0,
+      "relative_fee_effect_cny": -52.94,
+      "relative_cash_yield_cny": 0.0,
+      "relative_attributed_nav_change_cny": -2978.22,
+      "relative_period_identity_difference_cny": 0.0,
+      "overweight_up_gain_cny": 0.0,
+      "overweight_down_loss_cny": 0.0,
+      "underweight_up_opportunity_loss_cny": 32816.0,
+      "underweight_down_avoided_loss_cny": 31269.0,
+      "flat_price_component_cny": 0.0,
+      "average_relative_opening_shares": -358.3333333333333,
+      "minimum_relative_opening_shares": -500,
+      "maximum_relative_opening_shares": -200
+    },
+    "HD-BASE-RM-001": {
+      "profile_id": "P00",
+      "strategy_account_id": "HD-ANCHOR-001",
+      "terminal_nav_difference_cny": 2260.74,
+      "relative_price_pnl_cny": 1633.0,
+      "relative_execution_price_pnl_cny": 0.0,
+      "relative_gross_dividend_entitlement_cny": 680.68,
+      "relative_tax_effect_cny": 0.0,
+      "relative_fee_effect_cny": -52.94,
+      "relative_cash_yield_cny": 0.0,
+      "relative_attributed_nav_change_cny": 2260.74,
+      "relative_period_identity_difference_cny": 0.0,
+      "overweight_up_gain_cny": 19162.0,
+      "overweight_down_loss_cny": 17529.0,
+      "underweight_up_opportunity_loss_cny": 0.0,
+      "underweight_down_avoided_loss_cny": 0.0,
+      "flat_price_component_cny": 0.0,
+      "average_relative_opening_shares": 241.66666666666666,
+      "minimum_relative_opening_shares": 100,
+      "maximum_relative_opening_shares": 400
+    }
+  },
+  "dynamic_grid_batches": {
+    "dynamic_buy_batches": 5,
+    "closed_logical_batches": 4,
+    "terminal_open_logical_batches": 1,
+    "total_net_contribution_cny": 1387.58,
+    "closed_net_contribution_cny": 1405.77,
+    "terminal_open_net_contribution_cny": -18.19,
+    "realized_price_spread_cny": 1116.0,
+    "terminal_unrealized_price_spread_cny": -13.0,
+    "gross_dividend_entitlements_cny": 337.52,
+    "transaction_fees_cny": 52.94,
+    "deferred_tax_paid_cny": 0.0,
+    "largest_positive_batch_id": "BATCH-04",
+    "largest_positive_batch_contribution_cny": 696.67,
+    "negative_batch_contribution_cny": -18.19,
+    "absolute_batch_contribution_cny": 1423.96,
+    "largest_absolute_contribution_fraction": 0.48924829349139015,
+    "top3_absolute_contribution_fraction": 0.9176100452259894
+  },
+  "fee_breakdown": {
+    "filled_parent_orders": 9,
+    "fee_subcomponents_cny": {
+      "BROKER_COMMISSION": 45.0,
+      "HANDLING_FEE": 0.92,
+      "REGULATORY_FEE": 0.45,
+      "STAMP_TAX": 6.36,
+      "TRANSFER_FEE": 0.21
+    },
+    "total_transaction_fees_cny": 52.94,
+    "deferred_dividend_tax_paid_cny": 0.0
+  },
+  "annual_concentration_vs_risk_matched": {
+    "calendar_years": 4,
+    "relative_nav_change_by_year_cny": {
+      "2022": -365.63,
+      "2023": 1293.62,
+      "2024": 1410.64,
+      "2025": -77.89
+    },
+    "maximum_positive_year": 2024,
+    "maximum_positive_year_contribution_cny": 1410.64,
+    "maximum_absolute_year": 2024,
+    "maximum_absolute_year_contribution_cny": 1410.64,
+    "absolute_annual_contribution_cny": 3147.78,
+    "largest_absolute_year_fraction": 0.44813805284994507,
+    "top3_absolute_year_fraction": 0.9752555769462924
+  },
+  "interpretation_boundaries": [
+    "Dividend payment is a receivable-to-cash transfer and is not added again after ex-date entitlement recognition.",
+    "Cash yield is exactly zero under P00 and every P00 static comparator; cash opportunity cost is expressed through relative stock price and dividend exposure.",
+    "Dynamic batch, benchmark opportunity-cost, and total component views overlap and must not be added together.",
+    "All results remain retrospective L2 and do not open or weaken the historical pseudo-lock."
+  ]
+}

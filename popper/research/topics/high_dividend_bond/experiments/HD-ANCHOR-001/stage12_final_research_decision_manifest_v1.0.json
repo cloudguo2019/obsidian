@@ -1,0 +1,135 @@
+{
+  "statement_type": "已观察事实",
+  "experiment_id": "HD-ANCHOR-001",
+  "manifest_version": "HD-STAGE12-FINAL-RESEARCH-DECISION-MANIFEST-1.0",
+  "generated_at": "2026-09-14T21:17:23+08:00",
+  "timezone": "Asia/Shanghai",
+  "status": "PASS_FROZEN_STAGE12_FINAL_DECISION_MODIFY_RETROSPECTIVE_L2",
+  "authorized_scope": "FINAL_DECISION_ONLY_FROM_FROZEN_STAGE11_REPORT_ENVIRONMENT_CORRECTION_AND_EXACT_REPRODUCTION",
+  "protocol_bindings": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/preregistration.yaml",
+      "sha256": "775e0bb63fa2ffe94cd477a53f0eb68eb5f598b6c92242a6760a3a3d1159be66",
+      "size_bytes": 50451,
+      "role": "frozen_primary_endpoint_personal_gates_and_four_way_decision_rules"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/preregistration_v1.5_baseline_design_frozen.yaml",
+      "sha256": "d24c685daa413f57562ec8fda5ca339e2aa5e4fcc7266f27ce7c03eeb0bda82a",
+      "size_bytes": 3834,
+      "role": "latest_baseline_design_and_risk_matching_protocol_overlay"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/sample_split_v1.1_frozen_with_exposure_classification.json",
+      "sha256": "a7c9c572a6c0f32913854c7c74948ca5225d3cfe516f0c5ad4cfb735f3bc592b",
+      "size_bytes": 4859,
+      "role": "historical_L2_identity_and_only_route_to_clean_L3"
+    }
+  ],
+  "evidence_bindings": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage11_formal_report_manifest_v1.0_prelock.json",
+      "sha256": "914e3da62c27074bedb5d4bf6b77801855cdf63e120620208108436bdf0a4521",
+      "size_bytes": 4976,
+      "role": "frozen_stage11_report_and_stage8_to_stage10_evidence_chain"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage11_environment_correction_manifest_v1.0.json",
+      "sha256": "35d6d47054c1aeb59f5ba2f8182c06a721700106f967606b420f469a459fac49",
+      "size_bytes": 3231,
+      "role": "authoritative_override_of_stage11_environment_field_only"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_manifest_v1.0.json",
+      "sha256": "4e448f29ac8966217560450bc3d797046226f895e7fda54266f21b6808349047",
+      "size_bytes": 8507,
+      "role": "latest_exact_value_reproduction_and_authorization_counters"
+    }
+  ],
+  "decision_files": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/STAGE12_FINAL_DECISION_AUTHORIZATION_2026-09-14.md",
+      "sha256": "0b1dc047a9b0d7a460687bc1fd72bb654c3d5e077b1f6906fb63f258912b1434",
+      "size_bytes": 944,
+      "role": "researcher_stage12_final_decision_authorization"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/PHASE12_FINAL_RESEARCH_DECISION_2026-09-14.md",
+      "sha256": "541c3efd8ffd0821a179a74294434f51748c0331c57c591b506fb3e3de7f57db",
+      "size_bytes": 8165,
+      "role": "signed_four_way_final_research_decision"
+    }
+  ],
+  "source_integrity": {
+    "all_bound_files_present": true,
+    "all_bound_sha256_and_sizes_match": true,
+    "stage11_environment_precedence_applied": true,
+    "exact_reproduction_status": "PASS_FROZEN_EXACT_VALUE_REPRODUCTION_RETROSPECTIVE_L2",
+    "historical_pseudo_lock": "NOT_OPENED_NOT_READ"
+  },
+  "final_research_decision": "修改",
+  "decision_rule_order_applied": [
+    "implementation_and_data_defect_check",
+    "validity_and_sample_sufficiency",
+    "economic_falsification_on_eligible_sample",
+    "personal_constraint_failure_means_modify",
+    "accept_only_if_all_conditions_pass",
+    "otherwise_observe"
+  ],
+  "decisive_modify_gates": {
+    "relative_max_drawdown": "FAIL_0.020041_GT_0.02",
+    "recovery": "FAIL_344_GT_126_SESSIONS"
+  },
+  "additional_nonacceptance_gates": {
+    "primary_confidence_interval": "FAIL_CROSSES_ZERO",
+    "risk_matching": "FAIL_0.084846_GT_0.05",
+    "event_sufficiency": "FAIL_9_TRANSITIONS_6_CLUSTERS",
+    "clean_L3": "NOT_AVAILABLE",
+    "locked_period": "NOT_OPENED_NOT_READ"
+  },
+  "why_not_eliminate": {
+    "primary_point_estimate": "POSITIVE_AND_ABOVE_0.005",
+    "primary_95_interval_upper": "0.0244694483130419_NOT_BELOW_MINUS_0.005",
+    "risk_matching_and_sample_sufficiency": "NOT_ELIGIBLE_FOR_ELIMINATION_RULE",
+    "locked_period_increment": "NOT_AVAILABLE"
+  },
+  "evidence_ceiling": "L2_RETROSPECTIVE",
+  "decision_scope": "ONLY_600900_SH_HD_ANCHOR_001_CURRENT_VERSION_PIT_DIVIDEND_METHOD_NORMAL_ONLY_AND_FROZEN_EXECUTION_COST_MODEL",
+  "reversal_requirements": {
+    "clean_forward_collection_months": 24,
+    "subsequent_locked_months": 12,
+    "primary_delta_cagr_min": "0.005",
+    "primary_95_ci_lower_strictly_above": "0",
+    "mean_equity_weight_absolute_difference_max": "0.05",
+    "absolute_max_drawdown_max": "0.16",
+    "max_drawdown_excess_over_comparator_max": "0.02",
+    "maximum_underwater_sessions": 126,
+    "oos_transition_days_minimum": 20,
+    "transition_clusters_minimum": 10,
+    "locked_transition_days_minimum": 4,
+    "positive_six_month_window_fraction_minimum": "0.60",
+    "locked_cumulative_increment_minimum": "0",
+    "all_registered_robustness_data_implementation_and_accounting_gates": "PASS"
+  },
+  "authorization_and_counters": {
+    "stage12_final_decision_authorized": true,
+    "stage12_final_decision_sign_count": 1,
+    "formal_backtest_run_count": 2,
+    "performance_calculation_count": 2,
+    "exposure_calibration_run_count": 1,
+    "formal_l2_reproduction_run_count": 1,
+    "stage9_readonly_analysis_run_count": 1,
+    "stage10_readonly_attribution_run_count": 1,
+    "stage11_formal_report_run_count": 1,
+    "historical_pseudo_lock_open_count": 0,
+    "prospective_lock_open_count": 0,
+    "additional_formal_backtest_authorized": false,
+    "historical_pseudo_lock_open_authorized": false,
+    "prospective_lock_open_authorized": false,
+    "paper_trading_authorized": false,
+    "live_trading_authorized": false,
+    "dry_run": true
+  },
+  "immutability": "不得覆盖本清单或其绑定的授权、决策、协议和证据清单。任何策略行为修改必须建立新版本并记录结果暴露；任何新增绩效试验、历史伪锁定、未来锁定、仿真或实盘均需新的明确授权。",
+  "next_gate": "RESEARCHER_CHOICE_BETWEEN_UNCHANGED_PROSPECTIVE_COLLECTION_UNDER_FROZEN_STAGE6_RULE_OR_SEPARATELY_AUTHORIZED_NEW_VERSION_PREREGISTRATION_TO_ADDRESS_DRAWDOWN_RECOVERY_AND_EXPOSURE_WITHOUT_REUSING_EXPOSED_HISTORY_AS_CONFIRMATORY_DATA"
+}

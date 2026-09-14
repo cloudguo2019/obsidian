@@ -1,0 +1,8 @@
+item,amount_cny,classification,included_in_nav_fee_effect,note
+BROKER_COMMISSION,45.0,TRANSACTION_FEE_SUBCOMPONENT,True,Subcomponent of TOTAL_TRANSACTION_FEES; do not add both views.
+HANDLING_FEE,0.92,TRANSACTION_FEE_SUBCOMPONENT,True,Subcomponent of TOTAL_TRANSACTION_FEES; do not add both views.
+REGULATORY_FEE,0.45,TRANSACTION_FEE_SUBCOMPONENT,True,Subcomponent of TOTAL_TRANSACTION_FEES; do not add both views.
+STAMP_TAX,6.36,TRANSACTION_FEE_SUBCOMPONENT,True,Subcomponent of TOTAL_TRANSACTION_FEES; do not add both views.
+TRANSFER_FEE,0.21,TRANSACTION_FEE_SUBCOMPONENT,True,Subcomponent of TOTAL_TRANSACTION_FEES; do not add both views.
+TOTAL_TRANSACTION_FEES,52.94,NAV_ATTRIBUTION_TOTAL,True,Used once as the negative fee contribution in the NAV identity.
+DEFERRED_DIVIDEND_TAX_PAID,0.0,LIABILITY_SETTLEMENT_NOT_NEW_EXPENSE,False,Cash and an already recognized tax liability decline together; do not expense twice.

@@ -1,0 +1,178 @@
+{
+  "statement_type": "已观察事实",
+  "experiment_id": "HD-ANCHOR-001",
+  "manifest_version": "HD-STAGE10-READONLY-ATTRIBUTION-MANIFEST-1.0-PRELOCK",
+  "generated_at": "2026-09-14T11:37:05+08:00",
+  "timezone": "Asia/Shanghai",
+  "status": "PASS_FROZEN_STAGE10_FULL_RETURN_ATTRIBUTION_RETROSPECTIVE_L2_PRELOCK",
+  "authorized_scope": "[2022-03-10, 2025-09-10)",
+  "parent_bindings": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_manifest_v1.0_prelock.json",
+      "sha256": "6f17406e61a46d034fe6a9f1cc031ee0b614aa927756f0b53e7d49ea54f46196",
+      "size_bytes": 6743,
+      "role": "frozen_stage8_paths_results_and_authorization_counters"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage9_readonly_manifest_v1.0_prelock.json",
+      "sha256": "1eb1a6e979825ff62e38017bf2b105ac09853b7ad70d61e649da45fb4b7b41f7",
+      "size_bytes": 7938,
+      "role": "frozen_stage9_results_and_dynamic_batch_attribution"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/STAGE10_READONLY_ATTRIBUTION_AUTHORIZATION_2026-09-14.md",
+      "sha256": "5e5fbb62233466c7229c0856fcaa2c8d320cafafa778281079eb4fa453bed354",
+      "size_bytes": 1275,
+      "role": "researcher_stage10_readonly_authorization"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_attribution_plan_v1.0_pre_results.json",
+      "sha256": "61733dd752c9a40ef31853ae3cd24b9324a909a8cd090d5313ce89c2fb974a76",
+      "size_bytes": 6659,
+      "role": "operational_attribution_definitions_frozen_before_stage10_results"
+    }
+  ],
+  "implementation_and_validation": [
+    {
+      "path": "research/topics/high_dividend_bond/scripts/run_stage10_readonly_attribution.py",
+      "sha256": "33b2099f23ec89e87bc0013868aa286ecb7b327da2e39b687d15e6e73ceb6299",
+      "size_bytes": 34121,
+      "role": "read_only_frozen_ledger_attribution_runner"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/scripts/validate_stage10_readonly_attribution.py",
+      "sha256": "db3744163f5e5bea178b415a2318c6a61270f0055c73239fd00d50defa4297a4",
+      "size_bytes": 11086,
+      "role": "independent_attribution_identity_and_output_validator"
+    }
+  ],
+  "result_files": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_attribution_attempt_v1.0_prelock.json",
+      "sha256": "38fe01366f614e67a358d6c9c2065e1ba8585dec20734ca91370f7b3c49d4a91",
+      "size_bytes": 564,
+      "role": "one_authorized_readonly_attribution_attempt_lock"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_result_v1.0_prelock.json",
+      "sha256": "0148208df494d9c56ec50f0cb74a447f23b92553fe349b9725932c9cf00e0d75",
+      "size_bytes": 6567,
+      "role": "machine_readable_stage10_result"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_validation_v1.0_prelock.json",
+      "sha256": "6be4081f14c0ff52471d4a66d55eedf376de70abbd7cdd3a0bb16988790b460c",
+      "size_bytes": 2956,
+      "role": "independent_output_integrity_validation"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/PHASE10_READONLY_ATTRIBUTION_2026-09-14.md",
+      "sha256": "fca5ee962fde1d132a760562856a2c1d1f6ffd98faea08fe2ab5cccd7abec0d2",
+      "size_bytes": 11182,
+      "role": "stage10_closeout"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_v1.0_prelock/account_component_summary.csv",
+      "sha256": "2859bb18267ab85066b88b2bdf6bf28aa35c8be80f120994b9a7f4963757f86f",
+      "size_bytes": 1267,
+      "role": "P00_strategy_and_three_static_accounts_absolute_component_summary"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_v1.0_prelock/relative_component_summary.csv",
+      "sha256": "f35606af5bc133dde25045f9061a66fcd5b232ccdd55d9e9ccebdce2cb897e94",
+      "size_bytes": 986,
+      "role": "strategy_relative_to_each_static_baseline_component_summary"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_v1.0_prelock/annual_relative_attribution.csv",
+      "sha256": "6ec106439c0de7cef26f01bfba405559029ac831be08aacdf5169e88b16c856f",
+      "size_bytes": 1259,
+      "role": "calendar_year_relative_component_attribution"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_v1.0_prelock/daily_attribution.parquet",
+      "sha256": "4864a55305e4a08891a9b8bd935b3c135139e295ab381322e3b1d6a4d197455e",
+      "size_bytes": 45066,
+      "role": "daily_relative_components_and_price_direction_buckets"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_v1.0_prelock/inventory_opportunity_segments.csv",
+      "sha256": "a46d5019e31aaee2dc4693f464607d40fbe8c8edf995039071cf77993e47e9ab",
+      "size_bytes": 4873,
+      "role": "constant_opening_inventory_segments_and_opportunity_cost"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_v1.0_prelock/dynamic_batch_attribution.csv",
+      "sha256": "401ef4245272863a27b21c9de5d4eba7caeb467534313e3bdbb17fd09f3fec5b",
+      "size_bytes": 1516,
+      "role": "five_dynamic_FIFO_batches_with_realized_and_terminal_marked_components"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_v1.0_prelock/fee_breakdown.csv",
+      "sha256": "bf5a008f13bf64653936dd131ff3cd05b0cd4cdb86fca05bc0a06a843e8adfc4",
+      "size_bytes": 929,
+      "role": "transaction_fee_subcomponents_and_tax_settlement_treatment"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_v1.0_prelock/stage10_details.json",
+      "sha256": "8992224482b68c3a8a819811f3b3e6265146c1c13aa76d760f9507979dc4d5dd",
+      "size_bytes": 5472,
+      "role": "complete_stage10_summary_and_interpretation_boundaries"
+    }
+  ],
+  "integrity_validation": {
+    "status": "PASS_STAGE10_READONLY_ATTRIBUTION_OUTPUT_INTEGRITY",
+    "checks_passed": 24,
+    "daily_attribution_rows": 2556,
+    "account_summary_rows": 4,
+    "relative_summary_rows": 3,
+    "annual_rows": 12,
+    "inventory_segment_rows": 30,
+    "dynamic_batch_rows": 5,
+    "maximum_authorized_date": "2025-09-09",
+    "maximum_identity_difference_cny": "0.00",
+    "absolute_account_identities_reconciled": true,
+    "relative_benchmark_identities_reconciled": true,
+    "annual_and_inventory_partitions_reconciled": true,
+    "dynamic_overlay_batches_reconciled": true,
+    "fee_breakdown_reconciled": true,
+    "cash_yield_confirmed_zero": true,
+    "historical_pseudo_lock": "NOT_OPENED_NOT_READ"
+  },
+  "primary_findings": {
+    "p00_absolute_nav_gain_cny": "10119.18",
+    "p00_absolute_price_pnl_cny": "6403.00",
+    "p00_absolute_gross_dividend_entitlement_cny": "3769.12",
+    "p00_absolute_transaction_fee_drag_cny": "52.94",
+    "p00_vs_risk_matched_terminal_difference_cny": "2260.74",
+    "p00_vs_risk_matched_price_exposure_cny": "1633.00",
+    "p00_vs_risk_matched_gross_dividend_cny": "680.68",
+    "p00_vs_risk_matched_fee_drag_cny": "52.94",
+    "structural_100_share_increment_vs_risk_matched_cny": "873.16",
+    "dynamic_overlay_vs_1000_share_core_cny": "1387.58",
+    "dynamic_closed_batches_net_cny": "1405.77",
+    "dynamic_terminal_open_batch_net_cny": "-18.19",
+    "p00_vs_1500_share_static_terminal_difference_cny": "-2978.22",
+    "underweight_up_opportunity_loss_vs_1500_cny": "32816.00",
+    "underweight_down_avoided_loss_vs_1500_cny": "31269.00",
+    "largest_dynamic_batch": "BATCH-04_696.67_CNY_50.21_PERCENT_OF_DYNAMIC_OVERLAY",
+    "annual_relative_cny": "2022_-365.63;2023_1293.62;2024_1410.64;2025_YTD_-77.89"
+  },
+  "authorization_and_counters": {
+    "stage10_readonly_attribution_authorized": true,
+    "stage10_readonly_attribution_run_count": 1,
+    "formal_backtest_run_count": 1,
+    "performance_calculation_count": 1,
+    "exposure_calibration_run_count": 1,
+    "stage9_readonly_analysis_run_count": 1,
+    "historical_pseudo_lock_open_count": 0,
+    "prospective_lock_open_count": 0,
+    "paper_trading_authorized": false,
+    "live_trading_authorized": false,
+    "dry_run": true
+  },
+  "research_decision": "修改",
+  "evidence_ceiling": "L2_RETROSPECTIVE",
+  "immutability": "不得覆盖本清单或其绑定的阶段10授权、事前计划、尝试记录、脚本、派生结果、验证和关闭单。阶段10没有授权重跑策略、重算绩效路径、修改参数、重选q_RM或开启历史伪锁定。",
+  "next_gate": "RESEARCHER_SEPARATE_AUTHORIZATION_FOR_STAGE11_FORMAL_REPORT_FROM_THE_FROZEN_STAGE8_STAGE9_AND_STAGE10_ARTIFACTS"
+}

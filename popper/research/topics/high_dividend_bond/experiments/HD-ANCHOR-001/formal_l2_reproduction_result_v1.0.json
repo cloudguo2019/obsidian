@@ -1,0 +1,151 @@
+{
+  "statement_type": "计算结果",
+  "experiment_id": "HD-ANCHOR-001",
+  "artifact_version": "HD-STAGE8-FORMAL-L2-REPRODUCTION-RESULT-1.0",
+  "completed_at": "2026-09-14T20:54:55+08:00",
+  "timezone": "Asia/Shanghai",
+  "status": "PASS_EXACT_VALUE_REPRODUCTION",
+  "authorized_scope": {
+    "statement_type": "已观察事实",
+    "experiment_id": "HD-ANCHOR-001",
+    "artifact_version": "HD-STAGE8-FORMAL-L2-REPRODUCTION-AUTHORIZATION-1.0",
+    "authorized_at": "2026-09-14T20:53:59+08:00",
+    "timezone": "Asia/Shanghai",
+    "status": "AUTHORIZED_ONE_VERSIONED_FORMAL_L2_REPRODUCTION",
+    "authorization_context": {
+      "assistant_exact_question": "是否授权使用冻结的Python 3.11.9环境，对[2022-03-10, 2025-09-10)执行一次P00—P23×4账户的版本化复现回测，将正式回测和绩效计算计数分别从1增至2，并保持历史伪锁定NOT_OPENED_NOT_READ？",
+      "researcher_reply": "授权"
+    },
+    "interval": "[2022-03-10, 2025-09-10)",
+    "maximum_result_date": "2025-09-09",
+    "profiles": "P00-P23_ALL_24_REGISTERED_PROFILES",
+    "accounts_per_profile": [
+      "HD-ANCHOR-001",
+      "HD-BASE-000",
+      "HD-BASE-001",
+      "HD-BASE-RM-001"
+    ],
+    "registered_paths": 96,
+    "q_RM": 900,
+    "environment": "Python_3.11.9_AkShare_1.18.94_pandas_3.0.5_PyArrow_25.0.1",
+    "plan_path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_plan_v1.0_pre_results.json",
+    "plan_sha256": "033923a4b43afd7de0fed8984fdb87bae6793191e45c87902a1a3c803f4a6738",
+    "runner_path": "research/topics/high_dividend_bond/scripts/run_stage8_formal_l2_reproduction.py",
+    "runner_sha256": "d022ca0bdf5e75c56f2cd8582091fcc83d76137637357597d5efe38848037066",
+    "authorized_counter_effect": {
+      "formal_backtest_run_count_before": 1,
+      "formal_backtest_run_count_after_success_or_consumed_attempt": 2,
+      "performance_calculation_count_before": 1,
+      "performance_calculation_count_after_success": 2,
+      "formal_l2_reproduction_run_count_after_success_or_consumed_attempt": 1
+    },
+    "historical_pseudo_lock_open_authorized": false,
+    "prospective_lock_open_authorized": false,
+    "paper_trading_authorized": false,
+    "live_trading_authorized": false,
+    "dry_run": true,
+    "retry_policy": "本授权只允许一次版本化复现尝试。失败产物必须保留；任何重试需要新的明确授权。",
+    "evidence_effect": "NO_UPGRADE_SAME_RETROSPECTIVE_SAMPLE",
+    "evidence_ceiling": "L2_RETROSPECTIVE"
+  },
+  "environment": {
+    "python": "3.11.9",
+    "implementation": "CPython",
+    "akshare": "1.18.94",
+    "pandas": "3.0.5",
+    "pyarrow": "25.0.1"
+  },
+  "plan_bindings_checked": 3,
+  "comparison_to_original_frozen_batch": {
+    "all_registered_numeric_and_state_outputs_equal": true,
+    "json_value_equal": {
+      "profile_results.json": true,
+      "window_results.json": true,
+      "bootstrap_intervals.json": true
+    },
+    "parquet_table_value_equal": {
+      "daily_accounts.parquet": true,
+      "daily_close_signal_and_lagged_orders.parquet": true,
+      "auction_outcomes_daily_close_lagged.parquet": true
+    },
+    "parquet_file_hash_equal": {
+      "daily_accounts.parquet": true,
+      "daily_close_signal_and_lagged_orders.parquet": true,
+      "auction_outcomes_daily_close_lagged.parquet": true
+    },
+    "run_ledger_equal_after_removing_run_times_and_output_paths": true,
+    "raw_result_field_equal": {
+      "primary_result": true,
+      "evaluation": true,
+      "integrity": true,
+      "bootstrap_method": true,
+      "runtime": true,
+      "locked_period_status": true,
+      "evidence_ceiling": true,
+      "research_decision": true
+    }
+  },
+  "raw_producer_result_path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_raw_result_v1.0.json",
+  "raw_producer_result_sha256": "8f7b3cb64bbb0a2ea0fa55dca5b5e5a4ff19b748645256362534da8eff14662a",
+  "output_hashes": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_attempt_v1.0.json",
+      "sha256": "940376dfcd8a230aaae6e0bce9bcc41ae10999838dae46b4fb8ea821b45801f9",
+      "size_bytes": 636
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_raw_result_v1.0.json",
+      "sha256": "8f7b3cb64bbb0a2ea0fa55dca5b5e5a4ff19b748645256362534da8eff14662a",
+      "size_bytes": 12184
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/auction_outcomes_daily_close_lagged.parquet",
+      "sha256": "89fb67a7aa9344af90aaba2e39bc9d96f2fb2a42db0561bec83ecf8c3f9bb4a9",
+      "size_bytes": 9125
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/bootstrap_intervals.json",
+      "sha256": "e810c8f303b4daa69caf139f3091d12e70c4561a277fe583ec27fcc8eb12c533",
+      "size_bytes": 87287
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/daily_accounts.parquet",
+      "sha256": "acb313eaffec00af9885861f9a237626dab448cbf1d3d53d2c2476915236c930",
+      "size_bytes": 1460496
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/daily_close_signal_and_lagged_orders.parquet",
+      "sha256": "4743ece023d313ae148ab2047c244b1e85b0c97f195957e3e9ce3df049ba84e7",
+      "size_bytes": 26678
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/profile_results.json",
+      "sha256": "bf855df05115bcd3fcb4a0521042a1c34e6e122b3dd8f1ba401ca2c3a7e3b7fd",
+      "size_bytes": 423786
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/run_ledger.json",
+      "sha256": "eba02420290cb148803ce35a6a29f34796b057a7d2ae37432e88f0aa6f48c244",
+      "size_bytes": 149595
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/window_results.json",
+      "sha256": "1bff4fe6b27698123ae7f2868124c348927925423ae01620325209f551721254",
+      "size_bytes": 193335
+    }
+  ],
+  "authorization_and_counters": {
+    "formal_backtest_run_count": 2,
+    "performance_calculation_count": 2,
+    "exposure_calibration_run_count": 1,
+    "formal_l2_reproduction_run_count": 1,
+    "historical_pseudo_lock_open_count": 0,
+    "prospective_lock_open_count": 0,
+    "paper_trading_authorized": false,
+    "live_trading_authorized": false,
+    "dry_run": true
+  },
+  "evidence_effect": "NO_UPGRADE_SAME_RETROSPECTIVE_SAMPLE",
+  "evidence_ceiling": "L2_RETROSPECTIVE",
+  "research_decision_effect": "REPRODUCTION_ONLY_NO_AUTOMATIC_CHANGE"
+}

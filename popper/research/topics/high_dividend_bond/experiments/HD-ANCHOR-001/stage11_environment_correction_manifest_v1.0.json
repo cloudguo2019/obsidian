@@ -1,0 +1,72 @@
+{
+  "statement_type": "已观察事实",
+  "experiment_id": "HD-ANCHOR-001",
+  "manifest_version": "HD-STAGE11-ENVIRONMENT-CORRECTION-MANIFEST-1.0",
+  "generated_at": "2026-09-14T16:00:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "status": "PASS_ENVIRONMENT_AVAILABLE_PREVIOUS_SANDBOX_DIAGNOSIS_CORRECTED",
+  "supersedes_only": "stage11_environment_check_and_corresponding_environment_paragraph_in_stage11_v1.0_report",
+  "does_not_change": [
+    "protocol",
+    "data",
+    "sample",
+    "strategy",
+    "accounting",
+    "performance",
+    "research_decision",
+    "evidence_ceiling",
+    "historical_pseudo_lock_status"
+  ],
+  "bindings": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/PHASE11_FORMAL_REPORT_2026-09-14.md",
+      "sha256": "82acc02c50118805d869891622d83b62c97a2fa888bf9b9ba02c14e5c7b5fecf",
+      "size_bytes": 20346,
+      "role": "frozen_report_containing_the_superseded_environment_statement"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage11_formal_report_manifest_v1.0_prelock.json",
+      "sha256": "914e3da62c27074bedb5d4bf6b77801855cdf63e120620208108436bdf0a4521",
+      "size_bytes": 4976,
+      "role": "frozen_manifest_containing_the_superseded_environment_field"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/STAGE11_ENVIRONMENT_CORRECTION_2026-09-14.md",
+      "sha256": "b8f86ddba3af87a02d3d942ea0a41e94bd1e2076fd994f99de15ceb294287aba",
+      "size_bytes": 2719,
+      "role": "authoritative_environment_correction"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/runtime_python311_akshare.md",
+      "sha256": "f22073ad5d39fc5fa6c792f29029c7d39f0f2373d4b024ecad6127d8744b73b0",
+      "size_bytes": 1522,
+      "role": "original_frozen_runtime_record"
+    },
+    {
+      "path": "research/topics/high_dividend_bond/requirements-akshare-python311.lock.txt",
+      "sha256": "b348ae2c02c22cf91183fb2d3c7cd97d42888de77b939d38ebc461f83d114b2d",
+      "size_bytes": 507,
+      "role": "frozen_dependency_lock"
+    }
+  ],
+  "verified_environment": {
+    "base_python_path": "C:/Users/cg/AppData/Local/Programs/Python/Python311/python.exe",
+    "base_python_sha256": "5f7b89a612c9b8af1d6456cdfcd1dbe5ca630849e79aebced9bee9a6694952ec",
+    "base_python_authenticode": "VALID_PYTHON_SOFTWARE_FOUNDATION",
+    "venv_python_path": "C:/Users/cg/AppData/Local/venvs/high-dividend-bond-py311/Scripts/python.exe",
+    "venv_python_sha256": "21bb438c0d4a6f1f164b9a646f6ee000340185e5871180aec06db8d3f07c0082",
+    "python_version": "3.11.9",
+    "akshare_version": "1.18.94",
+    "pandas_version": "3.0.5",
+    "pyarrow_version": "25.0.1",
+    "synthetic_tests": "PASS_31_OF_31",
+    "frozen_formal_l2_output_validation": "PASS",
+    "stage11_manifest_validation": "PASS_6_STAGE11_BINDINGS_AND_47_PRIOR_MANIFEST_MEMBERS"
+  },
+  "root_cause": "SANDBOX_EXECUTION_DENIED_WAS_MISINTERPRETED_AS_A_MISSING_BASE_INTERPRETER",
+  "environment_repair_required": false,
+  "formal_backtest_run_count_increment": 0,
+  "performance_calculation_count_increment": 0,
+  "historical_pseudo_lock_open_count_increment": 0,
+  "evidence_ceiling": "L2_RETROSPECTIVE"
+}

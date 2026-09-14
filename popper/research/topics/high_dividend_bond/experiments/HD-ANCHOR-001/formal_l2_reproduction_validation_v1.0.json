@@ -1,0 +1,87 @@
+{
+  "statement_type": "计算结果",
+  "experiment_id": "HD-ANCHOR-001",
+  "artifact_version": "HD-STAGE8-FORMAL-L2-REPRODUCTION-VALIDATION-1.0",
+  "status": "PASS_INDEPENDENT_EXACT_VALUE_REPRODUCTION_VALIDATION",
+  "checks_passed": 34,
+  "registered_paths": 96,
+  "completed_paths": 92,
+  "not_run_paths": 4,
+  "daily_account_rows": 77640,
+  "p00_session_observations": 852,
+  "maximum_authorized_date": "2025-09-09",
+  "all_json_values_equal": true,
+  "all_parquet_table_values_equal": true,
+  "all_parquet_file_hashes_equal": true,
+  "normalized_run_ledger_equal": true,
+  "raw_result_fields_equal": true,
+  "daily_reconciliation": "PASS_ALL_COMPLETED_PATHS_WITHIN_CNY_0.01",
+  "p00_initial_nav_cny": "60000.0000",
+  "p00_final_nav_cny": "70119.1800",
+  "historical_pseudo_lock": "NOT_OPENED_NOT_READ",
+  "formal_backtest_run_count": 2,
+  "performance_calculation_count": 2,
+  "evidence_ceiling": "L2_RETROSPECTIVE",
+  "output_hashes": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_plan_v1.0_pre_results.json",
+      "sha256": "033923a4b43afd7de0fed8984fdb87bae6793191e45c87902a1a3c803f4a6738",
+      "size_bytes": 4702
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/FORMAL_L2_REPRODUCTION_AUTHORIZATION_2026-09-14.json",
+      "sha256": "a3fd537b777d3ceaec344b25317224bb17a0c084cfd7229e911d893a8119635f",
+      "size_bytes": 2155
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_attempt_v1.0.json",
+      "sha256": "940376dfcd8a230aaae6e0bce9bcc41ae10999838dae46b4fb8ea821b45801f9",
+      "size_bytes": 636
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_raw_result_v1.0.json",
+      "sha256": "8f7b3cb64bbb0a2ea0fa55dca5b5e5a4ff19b748645256362534da8eff14662a",
+      "size_bytes": 12184
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_result_v1.0.json",
+      "sha256": "e5ed9443379cbd4aba63518a749e95f4715d12bd0bf5ae89f9ededbdfb320067",
+      "size_bytes": 6805
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/auction_outcomes_daily_close_lagged.parquet",
+      "sha256": "89fb67a7aa9344af90aaba2e39bc9d96f2fb2a42db0561bec83ecf8c3f9bb4a9",
+      "size_bytes": 9125
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/bootstrap_intervals.json",
+      "sha256": "e810c8f303b4daa69caf139f3091d12e70c4561a277fe583ec27fcc8eb12c533",
+      "size_bytes": 87287
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/daily_accounts.parquet",
+      "sha256": "acb313eaffec00af9885861f9a237626dab448cbf1d3d53d2c2476915236c930",
+      "size_bytes": 1460496
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/daily_close_signal_and_lagged_orders.parquet",
+      "sha256": "4743ece023d313ae148ab2047c244b1e85b0c97f195957e3e9ce3df049ba84e7",
+      "size_bytes": 26678
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/profile_results.json",
+      "sha256": "bf855df05115bcd3fcb4a0521042a1c34e6e122b3dd8f1ba401ca2c3a7e3b7fd",
+      "size_bytes": 423786
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/run_ledger.json",
+      "sha256": "eba02420290cb148803ce35a6a29f34796b057a7d2ae37432e88f0aa6f48c244",
+      "size_bytes": 149595
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/formal_l2_reproduction_v1.0/window_results.json",
+      "sha256": "1bff4fe6b27698123ae7f2868124c348927925423ae01620325209f551721254",
+      "size_bytes": 193335
+    }
+  ]
+}

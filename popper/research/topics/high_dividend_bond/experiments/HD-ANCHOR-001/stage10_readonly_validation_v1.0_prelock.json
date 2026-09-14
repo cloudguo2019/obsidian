@@ -1,0 +1,64 @@
+{
+  "statement_type": "计算结果",
+  "experiment_id": "HD-ANCHOR-001",
+  "artifact_version": "HD-STAGE10-READONLY-VALIDATION-1.0-PRELOCK",
+  "status": "PASS_STAGE10_READONLY_ATTRIBUTION_OUTPUT_INTEGRITY",
+  "checks_passed": 24,
+  "daily_attribution_rows": 2556,
+  "account_summary_rows": 4,
+  "relative_summary_rows": 3,
+  "annual_rows": 12,
+  "inventory_segment_rows": 30,
+  "dynamic_batch_rows": 5,
+  "maximum_authorized_date": "2025-09-09",
+  "absolute_account_identities_reconciled": true,
+  "relative_benchmark_identities_reconciled": true,
+  "annual_and_inventory_partitions_reconciled": true,
+  "dynamic_overlay_batches_reconciled": true,
+  "fee_breakdown_reconciled": true,
+  "cash_yield_confirmed_zero": true,
+  "historical_pseudo_lock": "NOT_OPENED_NOT_READ",
+  "output_hashes": [
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_v1.0_prelock/account_component_summary.csv",
+      "sha256": "2859bb18267ab85066b88b2bdf6bf28aa35c8be80f120994b9a7f4963757f86f",
+      "size_bytes": 1267
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_v1.0_prelock/annual_relative_attribution.csv",
+      "sha256": "6ec106439c0de7cef26f01bfba405559029ac831be08aacdf5169e88b16c856f",
+      "size_bytes": 1259
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_v1.0_prelock/daily_attribution.parquet",
+      "sha256": "4864a55305e4a08891a9b8bd935b3c135139e295ab381322e3b1d6a4d197455e",
+      "size_bytes": 45066
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_v1.0_prelock/dynamic_batch_attribution.csv",
+      "sha256": "401ef4245272863a27b21c9de5d4eba7caeb467534313e3bdbb17fd09f3fec5b",
+      "size_bytes": 1516
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_v1.0_prelock/fee_breakdown.csv",
+      "sha256": "bf5a008f13bf64653936dd131ff3cd05b0cd4cdb86fca05bc0a06a843e8adfc4",
+      "size_bytes": 929
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_v1.0_prelock/inventory_opportunity_segments.csv",
+      "sha256": "a46d5019e31aaee2dc4693f464607d40fbe8c8edf995039071cf77993e47e9ab",
+      "size_bytes": 4873
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_v1.0_prelock/relative_component_summary.csv",
+      "sha256": "f35606af5bc133dde25045f9061a66fcd5b232ccdd55d9e9ccebdce2cb897e94",
+      "size_bytes": 986
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage10_readonly_v1.0_prelock/stage10_details.json",
+      "sha256": "8992224482b68c3a8a819811f3b3e6265146c1c13aa76d760f9507979dc4d5dd",
+      "size_bytes": 5472
+    }
+  ],
+  "stage10_result_sha256": "0148208df494d9c56ec50f0cb74a447f23b92553fe349b9725932c9cf00e0d75"
+}

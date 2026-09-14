@@ -1,0 +1,48 @@
+{
+  "statement_type": "方法选择",
+  "experiment_id": "HD-ANCHOR-001",
+  "artifact_version": "HD-STAGE9-READONLY-ANALYSIS-PLAN-1.0-PRE-RESULTS",
+  "frozen_at": "2026-09-13T22:05:19+08:00",
+  "timezone": "Asia/Shanghai",
+  "status": "FROZEN_BEFORE_STAGE9_REGIME_AND_MECHANISM_OUTCOMES",
+  "authorization_path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/STAGE9_READONLY_AUTHORIZATION_2026-09-13.md",
+  "scope": {
+    "start_inclusive": "2022-03-10",
+    "end_exclusive": "2025-09-10",
+    "source": "frozen_stage8_prelock_ledgers_and_registered_results_only",
+    "strategy_rerun": false,
+    "parameter_change": false,
+    "risk_matched_share_change": false,
+    "historical_pseudo_lock_open": false,
+    "paper_or_live_trading": false,
+    "dry_run": true
+  },
+  "protocol_binding": {
+    "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/preregistration.yaml",
+    "sha256": "775e0bb63fa2ffe94cd477a53f0eb68eb5f598b6c92242a6760a3a3d1159be66",
+    "market_state_rule": "For decision session t, use only audited underlying total-return information through the immediately preceding TRADING session. Trailing 126-session total return >=10% is UP, <=-10% is DOWN, otherwise SIDEWAYS. Trailing 21 one-session total-return volatility annualized by sqrt(252) >=30% is HIGH_VOL and may overlap the trend state."
+  },
+  "operational_definitions": {
+    "underlying_total_return": "On each TRADING session, gross return=(unadjusted close plus ordinary-share cash entitlement recognized on ex-date)/previous TRADING close. Differential action groups use the Stage8 ordinary/participating-row selection rule. The index is chained from these returns.",
+    "trailing_126_return": "TRI[t-1]/TRI[t-127]-1, exactly 126 one-session returns and no information from decision session t.",
+    "trailing_21_volatility": "Sample standard deviation (ddof=1) of the 21 one-session total returns ending at t-1, multiplied by sqrt(252).",
+    "trend_episode": "A maximal consecutive sequence of classified TRADING sessions with the same UP/DOWN/SIDEWAYS label; non-trading sessions do not create a new episode.",
+    "state_performance": "Compound each account's frozen daily returns on sessions carrying the label. Annualized equivalent uses 252/labelled-return-count and is descriptive, not calendar CAGR. Sharpe is sqrt(252)*arithmetic mean daily return/sample standard deviation with zero daily hurdle.",
+    "state_drawdown": "Report both the worst full-account drawdown observed on labelled sessions and the worst within-episode drawdown after rebasing each episode to 1. The latter resets at episode boundaries and is not the account's continuous maximum drawdown.",
+    "state_uncertainty": "No new confirmatory interval is created. Sparse episode results are case-study attribution and cannot replace the preregistered paired stationary bootstrap.",
+    "anchor_repair": "For each P00 ADJACENT_BUY decision, compare decision close, selected PIT DPS, fixed 3.5% anchor Dhat/0.035 and underlying total-return index with the value 63 later TRADING sessions. Insufficient horizon is right-censored; another buy within the horizon marks overlap.",
+    "dividend_reliability": "Within the authorized interval report PIT level changes, percentage revisions, effective life and expiries; flag any available downward revision within 180 calendar days after a P00 buy fill without changing the historical signal.",
+    "trade_batch_contribution": "Match P00 dynamic buy lots FIFO to later P00 dynamic sells. Batch net contribution equals sale or terminal marked value plus ordinary-share gross cash entitlements while held minus buy cost and allocated buy/sell fees and deferred tax paid. Subtract the largest positive dynamic batch contribution from the frozen P00-vs-RM terminal asset increment while holding all other paths fixed. This is an attribution stress, not a rerun.",
+    "signal_to_fill_adverse_bps": "For buys, (fill/decision_close-1)*10000; for sells, (decision_close/fill-1)*10000. Positive means adverse."
+  },
+  "required_outputs": [
+    "all_24_profile_status_and_registered_robustness_gates",
+    "predefined_market_state_coverage_episodes_and_account_performance",
+    "M1_dividend_reliability",
+    "M2_anchor_repair",
+    "exclude_best_year_and_best_trade_diagnostics",
+    "P00_signal_fill_and_execution_failure_diagnostics",
+    "stage9_gate_evaluation_and_remaining_falsifiers"
+  ],
+  "decision_constraint": "Stage9 may retain or strengthen 修改/观察 but cannot produce 接受 or 淘汰 because the historical pseudo-lock remains unopened, prospective L3 is unavailable, risk matching failed and event sufficiency failed."
+}
