@@ -218,6 +218,8 @@
 
 [已观察事实｜A] 阶段12授权记录、最终决策和清单分别为`STAGE12_FINAL_DECISION_AUTHORIZATION_2026-09-14.md`、`PHASE12_FINAL_RESEARCH_DECISION_2026-09-14.md`和`stage12_final_research_decision_manifest_v1.0.json`；最终清单SHA-256为`dc1606b03a30029e1989da1f6e3f8b352147d71daaba85838b3a0aa11784cfcf`，其8个协议、证据与决策文件绑定均已核验。
 
+[已观察事实｜A] 2026-09-14新增只读派生交易—时间图：`scripts/plot_p00_trade_timeline.py`复用阶段8的PIT选择语义，以冻结清洁未复权价格、PIT分红表和阶段9成交诊断绘制五条股息率价格分档、9笔实际成交及持仓阶梯；图为`experiments/HD-ANCHOR-001/readonly_visualizations/p00_trade_timeline_dividend_anchor_bands_v1.0.png`，输入与脚本哈希见同目录清单。图覆盖852个会话、851个有效PIT锚会话、5买4卖、期末1100股；未重跑策略、未重算绩效、未开启锁定，证据上限和下一门禁不变。
+
 [待办事项｜C] 下一门禁由研究者另行选择：保持当前规则不变并按阶段6冻结方案只追加24个月前向数据、再封存12个月；或授权为回撤、修复期和敞口问题建立结果暴露后的新版本预注册。当前不得新增正式回测、使用现有历史调参、重选`q_RM`、打开历史/未来锁定、仿真或实盘；历史伪锁定继续保持`NOT_OPENED_NOT_READ`。
 
 ## 十三、记忆维护规则

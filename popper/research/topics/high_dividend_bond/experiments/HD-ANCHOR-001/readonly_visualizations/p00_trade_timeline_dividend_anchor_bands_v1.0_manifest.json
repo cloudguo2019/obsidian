@@ -1,0 +1,44 @@
+{
+  "statement_type": "已观察事实",
+  "artifact_version": "P00-TRADE-TIMELINE-DIVIDEND-ANCHOR-BANDS-1.0",
+  "generated_at": "2026-09-14T21:58:59+08:00",
+  "scope": "READONLY_VISUALIZATION_FROM_FROZEN_INPUTS_NO_STRATEGY_RERUN_NO_PERFORMANCE_RECALCULATION",
+  "window": "[2022-03-10,2025-09-10)",
+  "inputs": [
+    {
+      "path": "research/topics/high_dividend_bond/datasets/cleaned/cleaned_price.csv",
+      "sha256": "31bdc266b8d022c67bed3b1b271dee04195942142f598ffc91c819f73758e7bd",
+      "size_bytes": 3019568
+    },
+    {
+      "path": "research/topics/high_dividend_bond/datasets/cleaned/point_in_time_dividend_estimates.csv",
+      "sha256": "73cd1faf9e3aa097d82685ed801ed32a60448ee436528e34f943374a2ef4d679",
+      "size_bytes": 13937
+    },
+    {
+      "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/stage9_readonly_v1.0_prelock/signal_fill_diagnostics.csv",
+      "sha256": "8718b08e5e300ec3cb14016e4d7ab517a3f2ec6197ae782f29666e5696f3927f",
+      "size_bytes": 1426
+    }
+  ],
+  "script": {
+    "path": "research/topics/high_dividend_bond/scripts/plot_p00_trade_timeline.py",
+    "sha256": "9931b5582e8615f6755faad0d11b745daabc7aebda012287f1c9905f4412ec55"
+  },
+  "output": {
+    "path": "research/topics/high_dividend_bond/experiments/HD-ANCHOR-001/readonly_visualizations/p00_trade_timeline_dividend_anchor_bands_v1.0.png",
+    "sha256": "e546ae7485e36206e668322d25822169b4aad9fa4594e154839dee8f592a958f",
+    "size_bytes": 129409
+  },
+  "statistics": {
+    "sessions": 852,
+    "valid_anchor_sessions": 851,
+    "trades": 9,
+    "buys": 5,
+    "sells": 4,
+    "final_shares": 1100
+  },
+  "interpretation_guard": "Raw dividend-yield price bands are not identical to hysteresis-state buy/sell boundaries, ideal inventory, adjacent state, or executable target.",
+  "evidence_ceiling": "L2_RETROSPECTIVE_UNCHANGED",
+  "dry_run": true
+}
