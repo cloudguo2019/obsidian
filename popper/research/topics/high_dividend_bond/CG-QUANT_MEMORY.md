@@ -1,4 +1,4 @@
-# CG-QUANT 项目记忆：HD-ANCHOR-001
+# CG High-Dividend Bond 项目记忆：HD-ANCHOR-001
 
 > [已观察事实｜A] 记忆快照：2026-09-14（Asia/Shanghai）。项目根目录为`C:/Users/cg/Desktop/Nietzsche/obsidian/popper`，数据截止2026-09-09。
 >
@@ -6,7 +6,7 @@
 >
 > [已知限制｜A] 当前最高证据为回顾性L2，不是干净L3。P00相对900股基准的点估计为正，但主区间跨零、风险匹配失败、修复期和相对回撤个人护栏失败、转换事件不足；不能据此接受或淘汰。`[2025-09-10,2026-09-10)`历史伪锁定保持`NOT_OPENED_NOT_READ`，干净L3仍等待未来36个月前向样本。
 
-[已观察事实] 个人技能已安装为`C:/Users/cg/.codex/skills/cg-quant/`，界面名称为`CG-QUANT`，显式调用写作`$cg-quant`；同时允许在明确提到本项目或阶段研究时自动发现。
+[已观察事实] 个人技能已安装为`C:/Users/cg/.codex/skills/cg-high-dividend-bond/`，界面名称为`CG High-Dividend Bond`，显式调用写作`$cg-high-dividend-bond`；同时允许在明确提到本项目或阶段研究时自动发现。
 
 本文是新对话的冷启动索引，不是独立证据。若本文与其引用的代码、数据、协议或清单冲突，以引用文件为准，先核验差异再更新本文。
 
