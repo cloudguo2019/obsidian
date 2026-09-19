@@ -1,0 +1,20 @@
+{
+  "identity": "ETF-PHASE1-EXECUTION-L0-20260916-v1.0",
+  "evidence_ceiling": "L0",
+  "formal_backtests": 0,
+  "tests_run": 15,
+  "passed": 11,
+  "retained_contract_failures": [
+    "__main__.PipelineTests.test_charter_full_account_caps_hold_during_unfilled_replacement",
+    "__main__.PipelineTests.test_confirmed_price_information_set_rejects_future_quote",
+    "__main__.ShadowLifecycleTests.test_execution_sizing_reserves_commission_when_cash_exactly_matches_lot",
+    "__main__.ShadowLifecycleTests.test_t1_does_not_unlock_on_nontrading_calendar_day"
+  ],
+  "unexpected_failures": [],
+  "errors": [],
+  "unexpected_successes": [],
+  "seconds": 0.095975,
+  "script_sha256": "0B732412CF082AB08877348209E3EEE914267DC8E8CCA87D4E6FE55EDB8B9218",
+  "fixture_scope": "Real core, per-symbol context/sync, risk, closing-auction pipeline/request and SingleSubmitPolicy; offline broker states and router handoff; shadow-account tests use temporary files only",
+  "charter_gate_passed": false
+}

@@ -1,0 +1,75 @@
+{
+  "identity": "ETF-PHASE1-EVIDENCE-MANIFEST-20260916-v1.0",
+  "validated_at_utc": "2026-09-16T14:25:44.788002+00:00",
+  "validation_script_sha256": "2D2B6624E16BAEF50C5DE3D1D367E964AD00CD4C1A53E647DC54C059B6A4FE92",
+  "raw_inputs_hashes_verified": 51,
+  "engineering_hashes_verified": 12,
+  "linked_local_artifacts_verified": 16,
+  "python_sources_compiled_without_writing": 6,
+  "artifacts": {
+    "research/topics/etf_rotation_macd/baselines/ETF-BASE-001_SPEC_v0.3.md": "266055A3A3597D9442EF6B4305B85514B9A5FAC9A92E65B096C3410CE82CEA1E",
+    "research/topics/etf_rotation_macd/baselines/ETF-BASE-001_EXECUTION_CONTRACT_DRAFT_v0.4.md": "F4B36F4762E1E72BDD40CE34A55ECA2C637EEC9C892380822EF16115AB3BD649",
+    "research/topics/etf_rotation_macd/decisions/PHASE1_REVIEW_2026-09-16_v1.0.md": "91B0277F7F052E81A57C6C5144E56B593E4D7FA022921A22AC21C3AF8BEF9CF0",
+    "research/topics/etf_rotation_macd/decisions/PHASE1_EXECUTION_L0_v1.0_2026-09-16_attempt1.json": "F3C2CB31EBD7227AA057E26CAD8670B3CDB595FB2B193B312855C2DD9B442AEE",
+    "research/topics/etf_rotation_macd/decisions/PHASE1_CAPTURE_CLOCK_L0_v1.0_2026-09-16.json": "5B8BDE66EF20871512252BA315AF1FE8106188D5455E6F4EEE3028CCFBAFDA88",
+    "research/topics/etf_rotation_macd/datasets/PHASE1_READONLY_AUDIT_v1.0_2026-09-16.json": "5D26254BA277DF596AA73525AC468CCC697B309ADD233E2E5627E6AB804753EA",
+    "research/topics/etf_rotation_macd/datasets/PHASE1_READONLY_PLAN_v1.0_2026-09-16.json": "A9768D59A93BB0DA61A032494DF824C370D5084A3DAA67C26F8C35C8D168A5D7",
+    "research/topics/etf_rotation_macd/datasets/PHASE1_TIMESTAMP_AMENDMENT_v1.0_2026-09-16.json": "A500476AF5F95A8EF92D7DFFCD4F1B87DC6CDAB178AD6FB6BADBF18AF29A273C",
+    "research/topics/etf_rotation_macd/datasets/PHASE1_TIMESTAMP_AMENDMENT_v1.1_2026-09-16.json": "C740E8EFA83834D36A19D318B34347F7D3E2586365EC6A1730EAC644A70E557B",
+    "research/topics/etf_rotation_macd/scripts/audit_phase1_readonly_v1.py": "743B6032BDD3F14D0783E3FF7C825ACC5BDE79585DC5A59CB7A026B88974029F",
+    "research/topics/etf_rotation_macd/scripts/finalize_phase1_clock_semantics_v1.py": "6075E99135F571CDD55070F99C20800D01F0C98230BAB2B1CCF0595C0FCA8CB8",
+    "research/topics/etf_rotation_macd/scripts/refine_phase1_timestamps_v1.py": "0684C45F3580989595DCB3B64A7B435F3E7D45213EDDAD3D48DD9C4071DC8523",
+    "research/topics/etf_rotation_macd/scripts/validate_phase1_artifacts_v1.py": "2D2B6624E16BAEF50C5DE3D1D367E964AD00CD4C1A53E647DC54C059B6A4FE92",
+    "research/topics/etf_rotation_macd/tests/run_phase1_capture_clock_l0_v1.py": "E9DE16884FF3D977514FC76383CB1A6635B1BD4144421E1E4E4496C5338B12D5",
+    "research/topics/etf_rotation_macd/tests/run_phase1_execution_l0_v1.py": "0B732412CF082AB08877348209E3EEE914267DC8E8CCA87D4E6FE55EDB8B9218"
+  },
+  "frozen_protocol_identities": {
+    "research/topics/etf_rotation_macd/hypotheses/research_charter_v1.2.md": "742005F2EBA757A370B5DDA680719BAFE79914DA500BD54AC67844625587C38D",
+    "research/topics/etf_rotation_macd/baselines/ETF-PRICE-001_CONTRACT_v1.0.md": "D88DD006B692D994B6C9CE518AD57D8F260EA810DD520C12936A0733FB08577B"
+  },
+  "legacy_regression_observed_in_this_turn": {
+    "engineering_passed": 17,
+    "price_passed": 12,
+    "source_hashes": {
+      "tests/run_etf_base_001_l0.py": "CFA03C12E8E2E581FA7B07555EFC218074E04E35C077BF50B177DFFC41F977D4",
+      "tests/test_etf_price_contract_v1.py": "AFEFD20BFEF9F91FB41156548E0378EE46577777458EFEDE94D42B187F7F9B4B"
+    }
+  },
+  "combined_l0": {
+    "checks": 46,
+    "passed": 41,
+    "retained_contract_failures": 5,
+    "unexplained_errors": 0
+  },
+  "synthetic_counterexample": {
+    "positive_symbols": 4,
+    "cash": 1099.9,
+    "unadjusted_market_value": 3900,
+    "equity": 4999.9,
+    "exposure": 0.7800156003120063,
+    "orders": [
+      [
+        "510004.SH",
+        "BUY",
+        900,
+        1.1
+      ],
+      [
+        "510001.SH",
+        "SELL",
+        1000,
+        0.9
+      ]
+    ],
+    "scope": "offline synthetic broker fixture; not archived actual trades"
+  },
+  "phase1_gate_passed": false,
+  "decision": "修改",
+  "evidence_ceiling": "L0",
+  "authorizations": {
+    "formal_backtests": 0,
+    "lock_open": 0,
+    "simulation": 0,
+    "live": 0
+  }
+}

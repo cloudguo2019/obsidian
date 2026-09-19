@@ -1,0 +1,107 @@
+{
+  "identity": "ETF-PHASE1-THREE-REPAIRS-L0-20260917-v1.0",
+  "evidence_ceiling": "L0",
+  "tests_run": 39,
+  "passed": 31,
+  "passed_tests": [
+    "__main__.GuardRepairTests.test_900_cash_buys_800_with_reserved_minimum_commission",
+    "__main__.GuardRepairTests.test_broker_frozen_cash_is_not_reserved_twice",
+    "__main__.GuardRepairTests.test_capital_cap_and_actual_lower_equity",
+    "__main__.GuardRepairTests.test_cash_exactly_gross_plus_fee_allows_900",
+    "__main__.GuardRepairTests.test_duplicate_order_and_missing_raw_valuation_rejected",
+    "__main__.GuardRepairTests.test_fee_one_cent_cash_boundary",
+    "__main__.GuardRepairTests.test_fees_are_in_post_cost_exposure_denominator",
+    "__main__.GuardRepairTests.test_group_and_category_overlap_reject_buy",
+    "__main__.GuardRepairTests.test_incomplete_account_and_missing_product_metadata_reject",
+    "__main__.GuardRepairTests.test_larger_explicit_minimum_fee_changes_sizing",
+    "__main__.GuardRepairTests.test_no_blanket_pause_for_an_unfilled_exit_when_capacity_exists",
+    "__main__.GuardRepairTests.test_odd_existing_shares_buy_increment_remains_lot_sized",
+    "__main__.GuardRepairTests.test_pending_buy_same_symbol_counted_once_and_not_reordered",
+    "__main__.GuardRepairTests.test_pending_unknown_buy_counts_toward_symbols",
+    "__main__.GuardRepairTests.test_pending_value_and_fees_consume_exposure",
+    "__main__.GuardRepairTests.test_rounding_reserve_is_upper_bound_on_actual_fee",
+    "__main__.GuardRepairTests.test_total_exposure_uses_all_old_positions",
+    "__main__.LedgerRepairTests.test_calendar_missing_and_next_session_missing_fail_without_mutation",
+    "__main__.LedgerRepairTests.test_cash_rejection_does_not_mutate_state",
+    "__main__.LedgerRepairTests.test_existing_available_shares_and_new_cohorts_separate",
+    "__main__.LedgerRepairTests.test_friday_buy_not_sellable_saturday_and_sellable_monday",
+    "__main__.LedgerRepairTests.test_holiday_and_product_specific_calendar_used",
+    "__main__.LedgerRepairTests.test_mixed_t0_t1_same_account",
+    "__main__.LedgerRepairTests.test_out_of_coverage_advance_rejects_before_any_unlock",
+    "__main__.LedgerRepairTests.test_raw_marks_fees_cash_and_equity_reconcile",
+    "__main__.LedgerRepairTests.test_unknown_product_rule_rejects_and_does_not_guess_t1",
+    "__main__.LedgerRepairTests.test_weekend_buy_and_backward_date_rejected",
+    "__main__.PipelineRepairTests.test_original_replacement_counterexample_now_respects_caps",
+    "__main__.PipelineRepairTests.test_partial_exit_still_occupies_symbol_slot",
+    "__main__.PipelineRepairTests.test_pipeline_repeat_keeps_single_submit_and_no_wait_cancel",
+    "__main__.PipelineRepairTests.test_sell_first_unfilled_does_not_release_capacity"
+  ],
+  "failures": [
+    {
+      "test": "__main__.GuardRepairTests.test_off_broker_and_partial_broker_reservations_reduce_cash (frozen='200.10')",
+      "trace": "Traceback (most recent call last):\n  File \"C:\\Users\\cg\\Desktop\\Nietzsche\\obsidian\\popper\\research\\topics\\etf_rotation_macd\\tests\\run_phase1_repairs_l0_v1.py\", line 225, in test_off_broker_and_partial_broker_reservations_reduce_cash\n    self.assertEqual(plan.delta, expected)\nAssertionError: 500 != 600\n"
+    }
+  ],
+  "errors": [
+    {
+      "test": "__main__.GuardRepairTests.test_authoritative_buy_limit_not_price_cage_drives_reserve",
+      "trace": "Traceback (most recent call last):\n  File \"C:\\Users\\cg\\Desktop\\Nietzsche\\obsidian\\popper\\research\\topics\\etf_rotation_macd\\tests\\run_phase1_repairs_l0_v1.py\", line 262, in test_authoritative_buy_limit_not_price_cage_drives_reserve\n    old.StrategyContext(total_asset=5000), old.MarketSnapshot(D, last_price=1))\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: StrategyContext.__init__() missing 2 required positional arguments: 'cash' and 'available_cash'\n"
+    },
+    {
+      "test": "__main__.LedgerRepairTests.test_original_fee_counterexample_now_guarded_and_executable",
+      "trace": "Traceback (most recent call last):\n  File \"C:\\Users\\cg\\Desktop\\Nietzsche\\obsidian\\popper\\research\\topics\\etf_rotation_macd\\tests\\run_phase1_repairs_l0_v1.py\", line 278, in test_original_fee_counterexample_now_guarded_and_executable\n    old.StrategyContext(total_asset=5000, date=old.NOW))\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: StrategyContext.__init__() missing 2 required positional arguments: 'cash' and 'available_cash'\n"
+    },
+    {
+      "test": "__main__.PipelineRepairTests.test_bridge_refreshes_even_when_original_context_is_incomplete",
+      "trace": "Traceback (most recent call last):\n  File \"C:\\Users\\cg\\Desktop\\Nietzsche\\obsidian\\popper\\research\\topics\\etf_rotation_macd\\tests\\run_phase1_repairs_l0_v1.py\", line 126, in test_bridge_refreshes_even_when_original_context_is_incomplete\n    context = old.PipelineFixture.query_context(adapter, D, \"sim\")\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\cg\\Desktop\\Nietzsche\\obsidian\\popper\\research\\topics\\etf_rotation_macd\\tests\\run_phase1_execution_l0_v1.py\", line 139, in query_context\n    context = super().query_context(symbol, env)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\cg\\Desktop\\Nietzsche\\FINITUDE-1.4.2\\sartre\\sartre_core\\adapters\\miniqmt_market_account_mixin.py\", line 495, in query_context\n    env=env.value,\n        ^^^^^^^^^\nAttributeError: 'str' object has no attribute 'value'\n"
+    },
+    {
+      "test": "__main__.PipelineRepairTests.test_confirmed_full_exit_allows_new_symbol",
+      "trace": "Traceback (most recent call last):\n  File \"C:\\Users\\cg\\Desktop\\Nietzsche\\obsidian\\popper\\research\\topics\\etf_rotation_macd\\tests\\run_phase1_repairs_l0_v1.py\", line 108, in test_confirmed_full_exit_allows_new_symbol\n    adapter._run_closing_auction_pipeline()\n  File \"C:\\Users\\cg\\Desktop\\Nietzsche\\FINITUDE-1.4.2\\sartre\\sartre_core\\adapters\\miniqmt_closing_auction_mixin.py\", line 476, in _run_closing_auction_pipeline\n    context = self.query_context(symbol, self.config.execution.env)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\cg\\Desktop\\Nietzsche\\obsidian\\popper\\research\\topics\\etf_rotation_macd\\tests\\run_phase1_repairs_l0_v1.py\", line 76, in query_context\n    for p in self.full_snapshot().positions}\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\cg\\Desktop\\Nietzsche\\obsidian\\popper\\research\\topics\\etf_rotation_macd\\tests\\run_phase1_repairs_l0_v1.py\", line 67, in full_snapshot\n    if side == \"BUY\" and state.remaining_volume:\n                         ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'OrderState' object has no attribute 'remaining_volume'\n"
+    },
+    {
+      "test": "__main__.PipelineRepairTests.test_full_context_not_single_symbol",
+      "trace": "Traceback (most recent call last):\n  File \"C:\\Users\\cg\\Desktop\\Nietzsche\\obsidian\\popper\\research\\topics\\etf_rotation_macd\\tests\\run_phase1_repairs_l0_v1.py\", line 122, in test_full_context_not_single_symbol\n    self.assertEqual(set(adapter.query_context(A, \"sim\").positions), {A, B, C})\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\cg\\Desktop\\Nietzsche\\obsidian\\popper\\research\\topics\\etf_rotation_macd\\tests\\run_phase1_repairs_l0_v1.py\", line 73, in query_context\n    context = super().query_context(symbol, env)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\cg\\Desktop\\Nietzsche\\obsidian\\popper\\research\\topics\\etf_rotation_macd\\tests\\run_phase1_execution_l0_v1.py\", line 139, in query_context\n    context = super().query_context(symbol, env)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\cg\\Desktop\\Nietzsche\\FINITUDE-1.4.2\\sartre\\sartre_core\\adapters\\miniqmt_market_account_mixin.py\", line 495, in query_context\n    env=env.value,\n        ^^^^^^^^^\nAttributeError: 'str' object has no attribute 'value'\n"
+    },
+    {
+      "test": "__main__.PipelineRepairTests.test_over_cap_account_still_permits_reducing_sell",
+      "trace": "Traceback (most recent call last):\n  File \"C:\\Users\\cg\\Desktop\\Nietzsche\\obsidian\\popper\\research\\topics\\etf_rotation_macd\\tests\\run_phase1_repairs_l0_v1.py\", line 139, in test_over_cap_account_still_permits_reducing_sell\n    old.SignalAction.SELL, target_volume=0, price=1), adapter.query_context(A, \"sim\"))\n                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\cg\\Desktop\\Nietzsche\\obsidian\\popper\\research\\topics\\etf_rotation_macd\\tests\\run_phase1_repairs_l0_v1.py\", line 73, in query_context\n    context = super().query_context(symbol, env)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\cg\\Desktop\\Nietzsche\\obsidian\\popper\\research\\topics\\etf_rotation_macd\\tests\\run_phase1_execution_l0_v1.py\", line 139, in query_context\n    context = super().query_context(symbol, env)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\cg\\Desktop\\Nietzsche\\FINITUDE-1.4.2\\sartre\\sartre_core\\adapters\\miniqmt_market_account_mixin.py\", line 495, in query_context\n    env=env.value,\n        ^^^^^^^^^\nAttributeError: 'str' object has no attribute 'value'\n"
+    },
+    {
+      "test": "__main__.PipelineRepairTests.test_snapshot_loader_failure_blocks_buy",
+      "trace": "Traceback (most recent call last):\n  File \"C:\\Users\\cg\\Desktop\\Nietzsche\\obsidian\\popper\\research\\topics\\etf_rotation_macd\\tests\\run_phase1_repairs_l0_v1.py\", line 149, in test_snapshot_loader_failure_blocks_buy\n    old.SignalAction.BUY, target_pct=.2, price=1), old.StrategyContext(total_asset=5000))\n                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: StrategyContext.__init__() missing 2 required positional arguments: 'cash' and 'available_cash'\n"
+    }
+  ],
+  "expected_failures": 0,
+  "seconds": 0.03341,
+  "sources": [
+    {
+      "path": "tests/run_phase1_repairs_l0_v1.py",
+      "sha256": "D4F318C59E4D96BDDCF50174CF5CF2174E0A3CFB58CCC39746B44DBE1D4BC9AC"
+    },
+    {
+      "path": "tests/run_phase1_execution_l0_v1.py",
+      "sha256": "0B732412CF082AB08877348209E3EEE914267DC8E8CCA87D4E6FE55EDB8B9218"
+    },
+    {
+      "path": "baselines/etf_execution_repairs_v1.py",
+      "sha256": "3C88E5B5123E99D9AB04EB93F8A669F8D321ED56755F1B5BC84DB4BD25ACD33D"
+    },
+    {
+      "path": "baselines/etf_execution_bridge_v1.py",
+      "sha256": "CE0FA019BDEA5B0AA28413AEA4E41FCDE1011C5DFEC5486AA2E9D02C60B249BD"
+    }
+  ],
+  "fixture_scope": "Original indexed closing-auction/core/risk/request/SingleSubmitPolicy with offline broker; new research guard/ledger; all fees/product rules/calendars SYNTHETIC",
+  "three_repair_gate_passed": false,
+  "phase1_gate_passed": false,
+  "unrepaired_clock_contracts": [
+    "quote_future_tolerance_vs_request_start",
+    "captured_at_is_request_start_not_received_at"
+  ],
+  "formal_backtests": 0,
+  "locked_results_opened": 0,
+  "simulation_authorizations": 0,
+  "live_trading_authorizations": 0,
+  "application_modified": false
+}

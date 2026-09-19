@@ -1,0 +1,22 @@
+{
+  "identity": "ETF-PHASE1-CAPTURE-CLOCK-L0-20260916-v1.0",
+  "tests_run": 2,
+  "passed": 1,
+  "retained_contract_failures": [
+    {
+      "test": "__main__.CaptureClockTests.test_captured_at_can_be_used_as_price_contract_received_at",
+      "assertion": "AssertionError: datetime.datetime(2026, 9, 9, 14, 57, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800))) not greater than or equal to datetime.datetime(2026, 9, 9, 14, 57, 2, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800)))"
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "unexpected_successes": [],
+  "script_sha256": "E9DE16884FF3D977514FC76383CB1A6635B1BD4144421E1E4E4496C5338B12D5",
+  "fixture": {
+    "logged_captured_at": "2026-09-09T14:57:00.000+08:00",
+    "quote_time": "2026-09-09T14:57:02.000+08:00",
+    "fetch_completed_at": "2026-09-09T14:57:02+08:00"
+  },
+  "evidence_ceiling": "L0",
+  "formal_backtests": 0
+}

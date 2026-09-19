@@ -1,0 +1,2326 @@
+{
+  "identity": "ETF-PHASE1-READONLY-20260916-v1.0",
+  "evidence_ceiling": "L0",
+  "formal_backtests": 0,
+  "plan_sha256": "A9768D59A93BB0DA61A032494DF824C370D5084A3DAA67C26F8C35C8D168A5D7",
+  "script_sha256": "743B6032BDD3F14D0783E3FF7C825ACC5BDE79585DC5A59CB7A026B88974029F",
+  "engineering_root": "C:/Users/cg/Desktop/Nietzsche/FINITUDE-1.4.2/sartre",
+  "engineering_hashes": {
+    "sartre_core/strategies/etf_rotation_core.py": "1F7006FC7240157840E928DD6EE1DFDC50868331F26A16506A31A1EE38884317",
+    "sartre_core/strategies/macd_core.py": "C2199714C1DD3C848F72E6E05A67BB8F1788C8442AC5188CCBCFC4E84E8155E7",
+    "sartre_core/config/etf_rotation_config.json": "8E14BC5BFEA0429158740E93308A6261BD2530429B4B697D8683770E2F6F355D",
+    "sartre_core/adapters/miniqmt_closing_auction_mixin.py": "2D6E57FDC1C600815CD767B0F079689A65F20947F247A37A9129D680DC403F9E",
+    "sartre_core/adapters/miniqmt_market_account_mixin.py": "17EF7A04077B95ADA961A512D5049B491FBD3CE760CE86935A78C9F79C1B5653",
+    "sartre_core/adapters/miniqmt_portfolio_mixin.py": "2197504AA74AD074B054A7F5D09447346CD95D8AE6516C0D2C296EA1C1BA4D64",
+    "sartre_core/adapters/miniqmt_stock_execution_mixin.py": "667F801AFB5E0F14B8E5F083C807D067A3B48D7362DB9E72F7BCED035293BAFD",
+    "sartre_core/adapters/miniqmt_order_policy_gateway.py": "EED197ACCA46272707632012FD6FB47ACB5AC1113B7656299EF5BFF08951845B",
+    "sartre_core/engine/order_policies.py": "69BD7A7E3361641700CF81CA772B873693AB72DECD98936AE90EAE95F952CDCA",
+    "sartre_core/engine/execution_modules.py": "9AA8761532ADB7F6EC842563B9291F91DE6AF11E7592B17D5E6B3AA7EEB2F627",
+    "sartre_core/simulate/shadow_account.py": "F3CFF2040472212C0A2861E0E30AFA4112DC8C657450DBBA335FBE63D799B569",
+    "sartre_risk/risk_manager.py": "6AFE2D1F897576AD883B4CEC6AD0FEA849341B7E80257FC505A4D45FD18B4C26"
+  },
+  "sdk_visibility": {
+    "runtime": "bundled Python only; no claim about other installations",
+    "xtquant_spec_found": false
+  },
+  "raw_dayline_inventory": {
+    "research/QMTData/data/market_kline/csv/1d/none": [
+      "600900.SH.csv"
+    ],
+    "research/QMTData/data/market_kline/parquet/1d/none": []
+  },
+  "derived_event_or_factor_files": "Not located by targeted filename searches in QMTData/data; absence is not a global filesystem proof.",
+  "selection": {
+    "dates": [
+      "2026-08-31",
+      "2026-09-01",
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04",
+      "2026-09-07",
+      "2026-09-08",
+      "2026-09-09"
+    ],
+    "tick_symbols": [
+      "159201.SZ",
+      "510300.SH",
+      "510500.SH"
+    ],
+    "tick_case_count": 24
+  },
+  "totals": {
+    "captured_rows": 516,
+    "future_quote": 261,
+    "quote_age_over_5s": 0,
+    "quote_before_145730": 0,
+    "event_outside_submit_window": 0,
+    "status_not_18": 0,
+    "invalid_price": 0,
+    "order_rows": 10,
+    "broker_fill_rows": 0
+  },
+  "log_diagnostics": [
+    {
+      "date": "2026-08-31",
+      "files": {
+        "etf_tick_capture.csv": {
+          "exists": true,
+          "rows": 130,
+          "columns": [
+            "timestamp",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "stage",
+            "capture_date",
+            "expected_count",
+            "actual_count",
+            "valid_count",
+            "empty_count",
+            "error_count",
+            "invalid_count",
+            "missing_count",
+            "missing_slots",
+            "stale_count",
+            "max_lag_ms",
+            "data_path",
+            "message"
+          ],
+          "summary_symbols": 65,
+          "capture_counts": {
+            "expected_count": 42900.0,
+            "actual_count": 42900.0,
+            "valid_count": 42900.0,
+            "missing_count": 0,
+            "stale_count": 40359.0,
+            "error_count": 0,
+            "invalid_count": 0
+          }
+        },
+        "etf_closing_auction.csv": {
+          "exists": true,
+          "rows": 231,
+          "columns": [
+            "as_of_date",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "stage",
+            "event_time",
+            "execution_pipeline",
+            "last_price",
+            "bid1",
+            "ask1",
+            "market_status",
+            "expected_market_status",
+            "quote_time",
+            "proxy_close_price",
+            "decision_bar_type",
+            "decision_price_source",
+            "is_proxy_daily_bar",
+            "limit_up",
+            "limit_down",
+            "action",
+            "current_volume",
+            "target_volume",
+            "trigger_price",
+            "limit_price",
+            "outcome",
+            "order_id",
+            "request_id",
+            "order_status",
+            "order_price",
+            "traded_price",
+            "order_volume",
+            "traded_volume",
+            "reason",
+            "error_msg",
+            "generated_at"
+          ],
+          "stages": {
+            "proxy_close_captured": 64,
+            "candidate_built": 64,
+            "quote_wait": 38,
+            "daily_summary": 65
+          },
+          "daily_outcomes": {
+            "no_trade_signal": 64,
+            "deadline_skipped_no_fresh_closing_auction_tick": 1
+          },
+          "execution_capture_checks": {
+            "captured_rows": 64,
+            "future_quote": 60,
+            "quote_age_over_5s": 0,
+            "quote_before_145730": 0,
+            "event_outside_submit_window": 0,
+            "status_not_18": 0,
+            "invalid_price": 0
+          },
+          "quote_age_seconds_min_max": [
+            -3.0,
+            0.0
+          ]
+        },
+        "etf_order.csv": {
+          "exists": false
+        },
+        "etf_context.csv": {
+          "exists": false
+        }
+      },
+      "tick_inventory_count": 66
+    },
+    {
+      "date": "2026-09-01",
+      "files": {
+        "etf_tick_capture.csv": {
+          "exists": true,
+          "rows": 130,
+          "columns": [
+            "timestamp",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "stage",
+            "capture_date",
+            "expected_count",
+            "actual_count",
+            "valid_count",
+            "empty_count",
+            "error_count",
+            "invalid_count",
+            "missing_count",
+            "missing_slots",
+            "stale_count",
+            "max_lag_ms",
+            "data_path",
+            "message"
+          ],
+          "summary_symbols": 65,
+          "capture_counts": {
+            "expected_count": 42900.0,
+            "actual_count": 42900.0,
+            "valid_count": 42900.0,
+            "missing_count": 0,
+            "stale_count": 40426.0,
+            "error_count": 0,
+            "invalid_count": 0
+          }
+        },
+        "etf_closing_auction.csv": {
+          "exists": true,
+          "rows": 233,
+          "columns": [
+            "as_of_date",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "stage",
+            "event_time",
+            "execution_pipeline",
+            "last_price",
+            "bid1",
+            "ask1",
+            "market_status",
+            "expected_market_status",
+            "quote_time",
+            "proxy_close_price",
+            "decision_bar_type",
+            "decision_price_source",
+            "is_proxy_daily_bar",
+            "limit_up",
+            "limit_down",
+            "action",
+            "current_volume",
+            "target_volume",
+            "trigger_price",
+            "limit_price",
+            "outcome",
+            "order_id",
+            "request_id",
+            "order_status",
+            "order_price",
+            "traded_price",
+            "order_volume",
+            "traded_volume",
+            "reason",
+            "error_msg",
+            "generated_at"
+          ],
+          "stages": {
+            "proxy_close_captured": 64,
+            "candidate_built": 64,
+            "order_result": 2,
+            "quote_wait": 38,
+            "daily_summary": 65
+          },
+          "daily_outcomes": {
+            "order_simulated_filled": 2,
+            "no_trade_signal": 62,
+            "deadline_skipped_no_fresh_closing_auction_tick": 1
+          },
+          "execution_capture_checks": {
+            "captured_rows": 64,
+            "future_quote": 16,
+            "quote_age_over_5s": 0,
+            "quote_before_145730": 0,
+            "event_outside_submit_window": 0,
+            "status_not_18": 0,
+            "invalid_price": 0
+          },
+          "quote_age_seconds_min_max": [
+            -2.0,
+            0.0
+          ]
+        },
+        "etf_order.csv": {
+          "exists": true,
+          "rows": 4,
+          "columns": [
+            "as_of_date",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "action",
+            "execution_pipeline",
+            "order_id",
+            "request_id",
+            "status",
+            "order_price",
+            "traded_price",
+            "order_volume",
+            "traded_volume",
+            "backtest_trade_detail",
+            "error_msg",
+            "generated_at",
+            "execution_module",
+            "order_policy",
+            "attempt_no",
+            "idempotency_key",
+            "parent_order_id",
+            "order_remark"
+          ],
+          "statuses": {
+            "SUBMITTED": 2,
+            "SIMULATED_FILLED": 2
+          },
+          "environments": {
+            "simulate": 4
+          },
+          "filled_rows": 2,
+          "broker_fill_rows": 0
+        },
+        "etf_context.csv": {
+          "exists": true,
+          "rows": 2,
+          "columns": [
+            "as_of_date",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "cash",
+            "available_cash",
+            "total_asset",
+            "current_pct",
+            "positions",
+            "generated_at"
+          ],
+          "position_maps_sizes": {
+            "1": 2
+          },
+          "has_frozen_cash_field": false,
+          "has_full_account_market_value_field": false
+        }
+      },
+      "tick_inventory_count": 66
+    },
+    {
+      "date": "2026-09-02",
+      "files": {
+        "etf_tick_capture.csv": {
+          "exists": true,
+          "rows": 130,
+          "columns": [
+            "timestamp",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "stage",
+            "capture_date",
+            "expected_count",
+            "actual_count",
+            "valid_count",
+            "empty_count",
+            "error_count",
+            "invalid_count",
+            "missing_count",
+            "missing_slots",
+            "stale_count",
+            "max_lag_ms",
+            "data_path",
+            "message"
+          ],
+          "summary_symbols": 65,
+          "capture_counts": {
+            "expected_count": 42900.0,
+            "actual_count": 42900.0,
+            "valid_count": 42900.0,
+            "missing_count": 0,
+            "stale_count": 40417.0,
+            "error_count": 0,
+            "invalid_count": 0
+          }
+        },
+        "etf_closing_auction.csv": {
+          "exists": true,
+          "rows": 231,
+          "columns": [
+            "as_of_date",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "stage",
+            "event_time",
+            "execution_pipeline",
+            "last_price",
+            "bid1",
+            "ask1",
+            "market_status",
+            "expected_market_status",
+            "quote_time",
+            "proxy_close_price",
+            "decision_bar_type",
+            "decision_price_source",
+            "is_proxy_daily_bar",
+            "limit_up",
+            "limit_down",
+            "action",
+            "current_volume",
+            "target_volume",
+            "trigger_price",
+            "limit_price",
+            "outcome",
+            "order_id",
+            "request_id",
+            "order_status",
+            "order_price",
+            "traded_price",
+            "order_volume",
+            "traded_volume",
+            "reason",
+            "error_msg",
+            "generated_at"
+          ],
+          "stages": {
+            "proxy_close_captured": 65,
+            "candidate_built": 65,
+            "risk_rejected": 2,
+            "quote_wait": 34,
+            "daily_summary": 65
+          },
+          "daily_outcomes": {
+            "no_trade_signal": 63,
+            "risk_rejected": 2
+          },
+          "execution_capture_checks": {
+            "captured_rows": 65,
+            "future_quote": 58,
+            "quote_age_over_5s": 0,
+            "quote_before_145730": 0,
+            "event_outside_submit_window": 0,
+            "status_not_18": 0,
+            "invalid_price": 0
+          },
+          "quote_age_seconds_min_max": [
+            -3.0,
+            0.0
+          ]
+        },
+        "etf_order.csv": {
+          "exists": false
+        },
+        "etf_context.csv": {
+          "exists": true,
+          "rows": 2,
+          "columns": [
+            "as_of_date",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "cash",
+            "available_cash",
+            "total_asset",
+            "current_pct",
+            "positions",
+            "generated_at"
+          ],
+          "position_maps_sizes": {
+            "1": 2
+          },
+          "has_frozen_cash_field": false,
+          "has_full_account_market_value_field": false
+        }
+      },
+      "tick_inventory_count": 66
+    },
+    {
+      "date": "2026-09-03",
+      "files": {
+        "etf_tick_capture.csv": {
+          "exists": true,
+          "rows": 130,
+          "columns": [
+            "timestamp",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "stage",
+            "capture_date",
+            "expected_count",
+            "actual_count",
+            "valid_count",
+            "empty_count",
+            "error_count",
+            "invalid_count",
+            "missing_count",
+            "missing_slots",
+            "stale_count",
+            "max_lag_ms",
+            "data_path",
+            "message"
+          ],
+          "summary_symbols": 65,
+          "capture_counts": {
+            "expected_count": 42900.0,
+            "actual_count": 42900.0,
+            "valid_count": 42900.0,
+            "missing_count": 0,
+            "stale_count": 40524.0,
+            "error_count": 0,
+            "invalid_count": 0
+          }
+        },
+        "etf_closing_auction.csv": {
+          "exists": true,
+          "rows": 244,
+          "columns": [
+            "as_of_date",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "stage",
+            "event_time",
+            "execution_pipeline",
+            "last_price",
+            "bid1",
+            "ask1",
+            "market_status",
+            "expected_market_status",
+            "quote_time",
+            "proxy_close_price",
+            "decision_bar_type",
+            "decision_price_source",
+            "is_proxy_daily_bar",
+            "limit_up",
+            "limit_down",
+            "action",
+            "current_volume",
+            "target_volume",
+            "trigger_price",
+            "limit_price",
+            "outcome",
+            "order_id",
+            "request_id",
+            "order_status",
+            "order_price",
+            "traded_price",
+            "order_volume",
+            "traded_volume",
+            "reason",
+            "error_msg",
+            "generated_at"
+          ],
+          "stages": {
+            "proxy_close_captured": 64,
+            "candidate_built": 64,
+            "quote_wait": 49,
+            "risk_rejected": 2,
+            "daily_summary": 65
+          },
+          "daily_outcomes": {
+            "no_trade_signal": 62,
+            "risk_rejected": 2,
+            "deadline_skipped_no_fresh_closing_auction_tick": 1
+          },
+          "execution_capture_checks": {
+            "captured_rows": 64,
+            "future_quote": 16,
+            "quote_age_over_5s": 0,
+            "quote_before_145730": 0,
+            "event_outside_submit_window": 0,
+            "status_not_18": 0,
+            "invalid_price": 0
+          },
+          "quote_age_seconds_min_max": [
+            -1.0,
+            0.0
+          ]
+        },
+        "etf_order.csv": {
+          "exists": false
+        },
+        "etf_context.csv": {
+          "exists": true,
+          "rows": 2,
+          "columns": [
+            "as_of_date",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "cash",
+            "available_cash",
+            "total_asset",
+            "current_pct",
+            "positions",
+            "generated_at"
+          ],
+          "position_maps_sizes": {
+            "1": 2
+          },
+          "has_frozen_cash_field": false,
+          "has_full_account_market_value_field": false
+        }
+      },
+      "tick_inventory_count": 66
+    },
+    {
+      "date": "2026-09-04",
+      "files": {
+        "etf_tick_capture.csv": {
+          "exists": true,
+          "rows": 130,
+          "columns": [
+            "timestamp",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "stage",
+            "capture_date",
+            "expected_count",
+            "actual_count",
+            "valid_count",
+            "empty_count",
+            "error_count",
+            "invalid_count",
+            "missing_count",
+            "missing_slots",
+            "stale_count",
+            "max_lag_ms",
+            "data_path",
+            "message"
+          ],
+          "summary_symbols": 65,
+          "capture_counts": {
+            "expected_count": 42900.0,
+            "actual_count": 42900.0,
+            "valid_count": 42900.0,
+            "missing_count": 0,
+            "stale_count": 40340.0,
+            "error_count": 0,
+            "invalid_count": 0
+          }
+        },
+        "etf_closing_auction.csv": {
+          "exists": true,
+          "rows": 230,
+          "columns": [
+            "as_of_date",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "stage",
+            "event_time",
+            "execution_pipeline",
+            "last_price",
+            "bid1",
+            "ask1",
+            "market_status",
+            "expected_market_status",
+            "quote_time",
+            "proxy_close_price",
+            "decision_bar_type",
+            "decision_price_source",
+            "is_proxy_daily_bar",
+            "limit_up",
+            "limit_down",
+            "action",
+            "current_volume",
+            "target_volume",
+            "trigger_price",
+            "limit_price",
+            "outcome",
+            "order_id",
+            "request_id",
+            "order_status",
+            "order_price",
+            "traded_price",
+            "order_volume",
+            "traded_volume",
+            "reason",
+            "error_msg",
+            "generated_at"
+          ],
+          "stages": {
+            "proxy_close_captured": 65,
+            "candidate_built": 65,
+            "risk_rejected": 2,
+            "quote_wait": 33,
+            "daily_summary": 65
+          },
+          "daily_outcomes": {
+            "no_trade_signal": 63,
+            "risk_rejected": 2
+          },
+          "execution_capture_checks": {
+            "captured_rows": 65,
+            "future_quote": 54,
+            "quote_age_over_5s": 0,
+            "quote_before_145730": 0,
+            "event_outside_submit_window": 0,
+            "status_not_18": 0,
+            "invalid_price": 0
+          },
+          "quote_age_seconds_min_max": [
+            -3.0,
+            0.0
+          ]
+        },
+        "etf_order.csv": {
+          "exists": false
+        },
+        "etf_context.csv": {
+          "exists": true,
+          "rows": 2,
+          "columns": [
+            "as_of_date",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "cash",
+            "available_cash",
+            "total_asset",
+            "current_pct",
+            "positions",
+            "generated_at"
+          ],
+          "position_maps_sizes": {
+            "1": 2
+          },
+          "has_frozen_cash_field": false,
+          "has_full_account_market_value_field": false
+        }
+      },
+      "tick_inventory_count": 66
+    },
+    {
+      "date": "2026-09-07",
+      "files": {
+        "etf_tick_capture.csv": {
+          "exists": true,
+          "rows": 130,
+          "columns": [
+            "timestamp",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "stage",
+            "capture_date",
+            "expected_count",
+            "actual_count",
+            "valid_count",
+            "empty_count",
+            "error_count",
+            "invalid_count",
+            "missing_count",
+            "missing_slots",
+            "stale_count",
+            "max_lag_ms",
+            "data_path",
+            "message"
+          ],
+          "summary_symbols": 65,
+          "capture_counts": {
+            "expected_count": 42900.0,
+            "actual_count": 42900.0,
+            "valid_count": 42900.0,
+            "missing_count": 0,
+            "stale_count": 40383.0,
+            "error_count": 0,
+            "invalid_count": 0
+          }
+        },
+        "etf_closing_auction.csv": {
+          "exists": true,
+          "rows": 253,
+          "columns": [
+            "as_of_date",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "stage",
+            "event_time",
+            "execution_pipeline",
+            "last_price",
+            "bid1",
+            "ask1",
+            "market_status",
+            "expected_market_status",
+            "quote_time",
+            "proxy_close_price",
+            "decision_bar_type",
+            "decision_price_source",
+            "is_proxy_daily_bar",
+            "limit_up",
+            "limit_down",
+            "action",
+            "current_volume",
+            "target_volume",
+            "trigger_price",
+            "limit_price",
+            "outcome",
+            "order_id",
+            "request_id",
+            "order_status",
+            "order_price",
+            "traded_price",
+            "order_volume",
+            "traded_volume",
+            "reason",
+            "error_msg",
+            "generated_at"
+          ],
+          "stages": {
+            "quote_wait": 55,
+            "proxy_close_captured": 65,
+            "candidate_built": 65,
+            "order_result": 3,
+            "daily_summary": 65
+          },
+          "daily_outcomes": {
+            "order_simulated_filled": 3,
+            "no_trade_signal": 62
+          },
+          "execution_capture_checks": {
+            "captured_rows": 65,
+            "future_quote": 3,
+            "quote_age_over_5s": 0,
+            "quote_before_145730": 0,
+            "event_outside_submit_window": 0,
+            "status_not_18": 0,
+            "invalid_price": 0
+          },
+          "quote_age_seconds_min_max": [
+            -1.0,
+            1.0
+          ]
+        },
+        "etf_order.csv": {
+          "exists": true,
+          "rows": 6,
+          "columns": [
+            "as_of_date",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "action",
+            "execution_pipeline",
+            "order_id",
+            "request_id",
+            "status",
+            "order_price",
+            "traded_price",
+            "order_volume",
+            "traded_volume",
+            "backtest_trade_detail",
+            "error_msg",
+            "generated_at",
+            "execution_module",
+            "order_policy",
+            "attempt_no",
+            "idempotency_key",
+            "parent_order_id",
+            "order_remark"
+          ],
+          "statuses": {
+            "SUBMITTED": 3,
+            "SIMULATED_FILLED": 3
+          },
+          "environments": {
+            "simulate": 6
+          },
+          "filled_rows": 3,
+          "broker_fill_rows": 0
+        },
+        "etf_context.csv": {
+          "exists": true,
+          "rows": 3,
+          "columns": [
+            "as_of_date",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "cash",
+            "available_cash",
+            "total_asset",
+            "current_pct",
+            "positions",
+            "generated_at"
+          ],
+          "position_maps_sizes": {
+            "1": 3
+          },
+          "has_frozen_cash_field": false,
+          "has_full_account_market_value_field": false
+        }
+      },
+      "tick_inventory_count": 66
+    },
+    {
+      "date": "2026-09-08",
+      "files": {
+        "etf_tick_capture.csv": {
+          "exists": true,
+          "rows": 130,
+          "columns": [
+            "timestamp",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "stage",
+            "capture_date",
+            "expected_count",
+            "actual_count",
+            "valid_count",
+            "empty_count",
+            "error_count",
+            "invalid_count",
+            "missing_count",
+            "missing_slots",
+            "stale_count",
+            "max_lag_ms",
+            "data_path",
+            "message"
+          ],
+          "summary_symbols": 65,
+          "capture_counts": {
+            "expected_count": 42900.0,
+            "actual_count": 42900.0,
+            "valid_count": 42900.0,
+            "missing_count": 0,
+            "stale_count": 40395.0,
+            "error_count": 0,
+            "invalid_count": 0
+          }
+        },
+        "etf_closing_auction.csv": {
+          "exists": true,
+          "rows": 237,
+          "columns": [
+            "as_of_date",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "stage",
+            "event_time",
+            "execution_pipeline",
+            "last_price",
+            "bid1",
+            "ask1",
+            "market_status",
+            "expected_market_status",
+            "quote_time",
+            "proxy_close_price",
+            "decision_bar_type",
+            "decision_price_source",
+            "is_proxy_daily_bar",
+            "limit_up",
+            "limit_down",
+            "action",
+            "current_volume",
+            "target_volume",
+            "trigger_price",
+            "limit_price",
+            "outcome",
+            "order_id",
+            "request_id",
+            "order_status",
+            "order_price",
+            "traded_price",
+            "order_volume",
+            "traded_volume",
+            "reason",
+            "error_msg",
+            "generated_at"
+          ],
+          "stages": {
+            "quote_wait": 43,
+            "proxy_close_captured": 64,
+            "candidate_built": 64,
+            "risk_rejected": 1,
+            "daily_summary": 65
+          },
+          "daily_outcomes": {
+            "risk_rejected": 1,
+            "no_trade_signal": 63,
+            "deadline_skipped_no_fresh_closing_auction_tick": 1
+          },
+          "execution_capture_checks": {
+            "captured_rows": 64,
+            "future_quote": 52,
+            "quote_age_over_5s": 0,
+            "quote_before_145730": 0,
+            "event_outside_submit_window": 0,
+            "status_not_18": 0,
+            "invalid_price": 0
+          },
+          "quote_age_seconds_min_max": [
+            -1.0,
+            0.0
+          ]
+        },
+        "etf_order.csv": {
+          "exists": false
+        },
+        "etf_context.csv": {
+          "exists": true,
+          "rows": 1,
+          "columns": [
+            "as_of_date",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "cash",
+            "available_cash",
+            "total_asset",
+            "current_pct",
+            "positions",
+            "generated_at"
+          ],
+          "position_maps_sizes": {
+            "1": 1
+          },
+          "has_frozen_cash_field": false,
+          "has_full_account_market_value_field": false
+        }
+      },
+      "tick_inventory_count": 66
+    },
+    {
+      "date": "2026-09-09",
+      "files": {
+        "etf_tick_capture.csv": {
+          "exists": true,
+          "rows": 130,
+          "columns": [
+            "timestamp",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "stage",
+            "capture_date",
+            "expected_count",
+            "actual_count",
+            "valid_count",
+            "empty_count",
+            "error_count",
+            "invalid_count",
+            "missing_count",
+            "missing_slots",
+            "stale_count",
+            "max_lag_ms",
+            "data_path",
+            "message"
+          ],
+          "summary_symbols": 65,
+          "capture_counts": {
+            "expected_count": 42900.0,
+            "actual_count": 42900.0,
+            "valid_count": 42900.0,
+            "missing_count": 0,
+            "stale_count": 40408.0,
+            "error_count": 0,
+            "invalid_count": 0
+          }
+        },
+        "etf_closing_auction.csv": {
+          "exists": true,
+          "rows": 249,
+          "columns": [
+            "as_of_date",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "stage",
+            "event_time",
+            "execution_pipeline",
+            "last_price",
+            "bid1",
+            "ask1",
+            "market_status",
+            "expected_market_status",
+            "quote_time",
+            "proxy_close_price",
+            "decision_bar_type",
+            "decision_price_source",
+            "is_proxy_daily_bar",
+            "limit_up",
+            "limit_down",
+            "action",
+            "current_volume",
+            "target_volume",
+            "trigger_price",
+            "limit_price",
+            "outcome",
+            "order_id",
+            "request_id",
+            "order_status",
+            "order_price",
+            "traded_price",
+            "order_volume",
+            "traded_volume",
+            "reason",
+            "error_msg",
+            "generated_at"
+          ],
+          "stages": {
+            "quote_wait": 53,
+            "proxy_close_captured": 65,
+            "candidate_built": 65,
+            "risk_rejected": 1,
+            "daily_summary": 65
+          },
+          "daily_outcomes": {
+            "risk_rejected": 1,
+            "no_trade_signal": 64
+          },
+          "execution_capture_checks": {
+            "captured_rows": 65,
+            "future_quote": 2,
+            "quote_age_over_5s": 0,
+            "quote_before_145730": 0,
+            "event_outside_submit_window": 0,
+            "status_not_18": 0,
+            "invalid_price": 0
+          },
+          "quote_age_seconds_min_max": [
+            -1.0,
+            1.0
+          ]
+        },
+        "etf_order.csv": {
+          "exists": false
+        },
+        "etf_context.csv": {
+          "exists": true,
+          "rows": 1,
+          "columns": [
+            "as_of_date",
+            "env",
+            "asset_type",
+            "strategy_id",
+            "symbol",
+            "cash",
+            "available_cash",
+            "total_asset",
+            "current_pct",
+            "positions",
+            "generated_at"
+          ],
+          "position_maps_sizes": {
+            "1": 1
+          },
+          "has_frozen_cash_field": false,
+          "has_full_account_market_value_field": false
+        }
+      },
+      "tick_inventory_count": 66
+    }
+  ],
+  "tick_case_studies": [
+    {
+      "date": "2026-08-31",
+      "symbol": "159201.SZ",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 2,
+        "fetch_ok": 660,
+        "flagged_stale": 641,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-08-31T14:57:03.011+08:00"
+    },
+    {
+      "date": "2026-08-31",
+      "symbol": "510300.SH",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 63,
+        "fetch_ok": 660,
+        "flagged_stale": 597,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": null
+    },
+    {
+      "date": "2026-08-31",
+      "symbol": "510500.SH",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 5,
+        "fetch_ok": 660,
+        "flagged_stale": 597,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-08-31T14:57:03.011+08:00"
+    },
+    {
+      "date": "2026-09-01",
+      "symbol": "159201.SZ",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 1,
+        "fetch_ok": 660,
+        "flagged_stale": 637,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-09-01T14:57:00.174+08:00"
+    },
+    {
+      "date": "2026-09-01",
+      "symbol": "510300.SH",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 0,
+        "fetch_ok": 660,
+        "flagged_stale": 597,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-09-01T14:57:03.002+08:00"
+    },
+    {
+      "date": "2026-09-01",
+      "symbol": "510500.SH",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 3,
+        "fetch_ok": 660,
+        "flagged_stale": 598,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-09-01T14:57:00.174+08:00"
+    },
+    {
+      "date": "2026-09-02",
+      "symbol": "159201.SZ",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 1,
+        "fetch_ok": 660,
+        "flagged_stale": 636,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-09-02T14:57:00.155+08:00"
+    },
+    {
+      "date": "2026-09-02",
+      "symbol": "510300.SH",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 38,
+        "fetch_ok": 660,
+        "flagged_stale": 612,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-09-02T14:57:06.000+08:00"
+    },
+    {
+      "date": "2026-09-02",
+      "symbol": "510500.SH",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 64,
+        "fetch_ok": 660,
+        "flagged_stale": 596,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": null
+    },
+    {
+      "date": "2026-09-03",
+      "symbol": "159201.SZ",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 2,
+        "fetch_ok": 660,
+        "flagged_stale": 640,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-09-03T14:57:01.192+08:00"
+    },
+    {
+      "date": "2026-09-03",
+      "symbol": "510300.SH",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 0,
+        "fetch_ok": 660,
+        "flagged_stale": 596,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-09-03T14:57:03.021+08:00"
+    },
+    {
+      "date": "2026-09-03",
+      "symbol": "510500.SH",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 0,
+        "fetch_ok": 660,
+        "flagged_stale": 599,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-09-03T14:57:01.192+08:00"
+    },
+    {
+      "date": "2026-09-04",
+      "symbol": "159201.SZ",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 5,
+        "fetch_ok": 660,
+        "flagged_stale": 640,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-09-04T14:57:00.160+08:00"
+    },
+    {
+      "date": "2026-09-04",
+      "symbol": "510300.SH",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 65,
+        "fetch_ok": 660,
+        "flagged_stale": 595,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": null
+    },
+    {
+      "date": "2026-09-04",
+      "symbol": "510500.SH",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 4,
+        "fetch_ok": 660,
+        "flagged_stale": 596,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-09-04T14:57:03.010+08:00"
+    },
+    {
+      "date": "2026-09-07",
+      "symbol": "159201.SZ",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 0,
+        "fetch_ok": 660,
+        "flagged_stale": 637,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-09-07T14:57:01.168+08:00"
+    },
+    {
+      "date": "2026-09-07",
+      "symbol": "510300.SH",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 0,
+        "fetch_ok": 660,
+        "flagged_stale": 597,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-09-07T14:57:03.014+08:00"
+    },
+    {
+      "date": "2026-09-07",
+      "symbol": "510500.SH",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 0,
+        "fetch_ok": 660,
+        "flagged_stale": 598,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-09-07T14:57:01.168+08:00"
+    },
+    {
+      "date": "2026-09-08",
+      "symbol": "159201.SZ",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 2,
+        "fetch_ok": 660,
+        "flagged_stale": 637,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-09-08T14:57:00.134+08:00"
+    },
+    {
+      "date": "2026-09-08",
+      "symbol": "510300.SH",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 0,
+        "fetch_ok": 660,
+        "flagged_stale": 595,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-09-08T14:57:03.015+08:00"
+    },
+    {
+      "date": "2026-09-08",
+      "symbol": "510500.SH",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 41,
+        "fetch_ok": 660,
+        "flagged_stale": 608,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-09-08T14:57:03.015+08:00"
+    },
+    {
+      "date": "2026-09-09",
+      "symbol": "159201.SZ",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 0,
+        "fetch_ok": 660,
+        "flagged_stale": 638,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-09-09T14:57:02.220+08:00"
+    },
+    {
+      "date": "2026-09-09",
+      "symbol": "510300.SH",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 0,
+        "fetch_ok": 660,
+        "flagged_stale": 594,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-09-09T14:57:02.220+08:00"
+    },
+    {
+      "date": "2026-09-09",
+      "symbol": "510500.SH",
+      "exists": true,
+      "columns": [
+        "symbol",
+        "slot_time",
+        "slot_index",
+        "captured_at",
+        "quote_time",
+        "last_price",
+        "open",
+        "high",
+        "low",
+        "last_close",
+        "volume",
+        "amount",
+        "transaction_num",
+        "stock_status",
+        "bid_price",
+        "ask_price",
+        "bid_vol",
+        "ask_vol",
+        "capture_lag_ms",
+        "is_stale",
+        "fetch_status"
+      ],
+      "checks": {
+        "rows": 660,
+        "duplicate_slot": 0,
+        "future_quote": 8,
+        "fetch_ok": 660,
+        "flagged_stale": 601,
+        "received_by_exact_145700": 0
+      },
+      "first_usable_capture_time": "2026-09-09T14:57:03.009+08:00"
+    }
+  ],
+  "limitations": [
+    "capture rows are polling observations; not proof of the exact ranking input or last-trade timestamp",
+    "execution audit event times have limited precision; subsecond age signs require care",
+    "sim fills cannot replace broker lifecycle or distributions",
+    "no historical raw ETF dayline or validated factor mapping",
+    "current pool and archived logs do not provide point-in-time universe"
+  ],
+  "inputs": [
+    {
+      "path": "research/topics/etf_rotation_macd/datasets/PHASE1_READONLY_PLAN_v1.0_2026-09-16.json",
+      "sha256": "A9768D59A93BB0DA61A032494DF824C370D5084A3DAA67C26F8C35C8D168A5D7"
+    },
+    {
+      "path": "research/QMTData/data/etf_universe/interest_etf.csv",
+      "sha256": "6285EEFD43C39D8D3B084F81843A27B6E1D3E69790F9EFC4ABD759A3FA09ECE9",
+      "bytes": 9875
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-08-31/etf_tick_capture.csv",
+      "sha256": "02D11160A424EB0248532BED465C114B001B14A1DA8CF3CE55EFF789DDBB4F81",
+      "bytes": 18674
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-08-31/etf_closing_auction.csv",
+      "sha256": "C77921F758CD5202A31869130655FF9328E2384E4FBD9E719DB3C48490D182C8",
+      "bytes": 64600
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260831/159201.SZ.csv",
+      "sha256": "EBDCDF66BC6DA52AA18E88D5B7EE46A7A95753728C9287B7559F7A40660CDFDA",
+      "bytes": 191209
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260831/510300.SH.csv",
+      "sha256": "BFA9F47F4233F883D57CDF904CE8685429FBAF8598DD6D771EEEF0D0D32F02B5",
+      "bytes": 191999
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260831/510500.SH.csv",
+      "sha256": "7CC85992AAD8AAD886B93F3093E1DC3BD135275733BE053EEE645B4E84234EC4",
+      "bytes": 212153
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-01/etf_tick_capture.csv",
+      "sha256": "238C47035B793BB57BD79B25EB94535B73F39601A1557031C6652DE8429DE5CC",
+      "bytes": 18674
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-01/etf_closing_auction.csv",
+      "sha256": "A7C16BECC15C2F0226102DAAD5AB9F371CD866239C4103E43B116D3F44116FDA",
+      "bytes": 65300
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-01/etf_order.csv",
+      "sha256": "B0D906280EEF7BE6F86B653D6D55E8A914D5FAE6C62099AE31412F9468510B12",
+      "bytes": 1403
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-01/etf_context.csv",
+      "sha256": "FDDF293003804916704BFC634FA36C0D5E7FA62F95FF257A3DA4CE127C82B3AC",
+      "bytes": 548
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260901/159201.SZ.csv",
+      "sha256": "9FE052453E4C9F2A1AD64D6DC7D799D13D082964E6E056BE7477A92497668720",
+      "bytes": 189536
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260901/510300.SH.csv",
+      "sha256": "A5A55700118FAF07618DD0B66B1B65657429B6AA1B1E418D3717931939A25181",
+      "bytes": 191439
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260901/510500.SH.csv",
+      "sha256": "FD1DD2B2AD12B4AAEF220114A39057E91CEB90F0A9B02C6A0F95A176C0156644",
+      "bytes": 210069
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-02/etf_tick_capture.csv",
+      "sha256": "BD1618D10E8E60D61C6BC8CDA5E8E061F54ED7D3E999E8FCAF8C2DDD919522DA",
+      "bytes": 18674
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-02/etf_closing_auction.csv",
+      "sha256": "7F4C06466ABFE5EC1781D1A286BB292A2DB2F9B9F98A0CA2AEC0B641B70BB2FF",
+      "bytes": 64788
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-02/etf_context.csv",
+      "sha256": "0915EBA316B224FAEE1BEAE13211E922BAB601E29DE201BA194F428879BF0DFD",
+      "bytes": 581
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260902/159201.SZ.csv",
+      "sha256": "2908FD4AFC188B59846C32F25381AFEFB0FBF4A5FD9C5DCCB074A69D3471CA9A",
+      "bytes": 189346
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260902/510300.SH.csv",
+      "sha256": "39944834622D6201764E4A23270E8DA40797CDA97CABFDCCEA13EFD1DD07FAAF",
+      "bytes": 190208
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260902/510500.SH.csv",
+      "sha256": "E8F44011354FA48ECE19FE3CB950BF67789D0B327579B40409476D870A2AEB68",
+      "bytes": 195585
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-03/etf_tick_capture.csv",
+      "sha256": "97F005A014C669E0A4B0226BAA299C4B212E16384E1BEE69678272457CEAE2B9",
+      "bytes": 18739
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-03/etf_closing_auction.csv",
+      "sha256": "D73D7D3324114BB852F07DA5AF94BDDD70328816E32B42F79EE05F244BA51CD6",
+      "bytes": 67418
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-03/etf_context.csv",
+      "sha256": "EBA6069EDDDFE6FC128ECEFCB7CC9600F88C06409B4163689BF15C51A34C9E53",
+      "bytes": 569
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260903/159201.SZ.csv",
+      "sha256": "31F20CF4186C799B16A3D73A58A21C37AC3DF25F988278DA3077CB4112CB8506",
+      "bytes": 192946
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260903/510300.SH.csv",
+      "sha256": "54079CE836B91297309B3D194C7ED5409BF98345A23E1BCF86F0FEB469E57447",
+      "bytes": 189484
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260903/510500.SH.csv",
+      "sha256": "2B01C16B7C3030B3726BB7CFF0AD08FF8822ED430ACA799B2D1C70E05052CEF3",
+      "bytes": 200305
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-04/etf_tick_capture.csv",
+      "sha256": "5C728631744B3CDF3353D6EA93898440BDB7E29E6C9970EB30CE274A5CC12B23",
+      "bytes": 18674
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-04/etf_closing_auction.csv",
+      "sha256": "B81A6187FE38467C28B7A25CBB170713C282DA87A3FFDA480195EA9CF8FDD324",
+      "bytes": 64705
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-04/etf_context.csv",
+      "sha256": "4A215120B94F8F4E6718C670E23F81CF5C212781490CF6687CFEE57EC4061F8C",
+      "bytes": 581
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260904/159201.SZ.csv",
+      "sha256": "67E52E7C1857F92F38CC57DC57462B4F6301F0494A420D47100602BD70A8C431",
+      "bytes": 190464
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260904/510300.SH.csv",
+      "sha256": "E46608393120375DEB2B9E772A464CDE65E2096B86A94EE86E1F2D798CDBD423",
+      "bytes": 191348
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260904/510500.SH.csv",
+      "sha256": "33CBAC64156A35E26A135BC801A527805AC68E1293D1686801548D5F80DA89CE",
+      "bytes": 200326
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-07/etf_tick_capture.csv",
+      "sha256": "4F81C63119619C8AD2F445CEAF48C75935622D524F3DFB817498B25FB6372D68",
+      "bytes": 18739
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-07/etf_closing_auction.csv",
+      "sha256": "99E6D5A7A1B8A1AE57AB10D1FF8BC740FD47C57C179D89ECDAD62E846DC3FC5B",
+      "bytes": 70016
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-07/etf_order.csv",
+      "sha256": "A87EFA476FE9AC93329E5E56E73451A5D23BEB19F26410DD223D3A5E7A375E00",
+      "bytes": 1968
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-07/etf_context.csv",
+      "sha256": "552C2625B6BFB4A4EDEB6A56C9305B788C588B737FA572625790FBA4C60738DC",
+      "bytes": 784
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260907/159201.SZ.csv",
+      "sha256": "C5DA60FA4CABAB6FC25583C5C78F3453E6938DE156CBA23C9332F4ACF44FC036",
+      "bytes": 191136
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260907/510300.SH.csv",
+      "sha256": "975D43EE446D08200D58A1B081627A63986125A8610BE70FD3511A7DF207400D",
+      "bytes": 190215
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260907/510500.SH.csv",
+      "sha256": "DAA5F4E3430157D9E60CF6B99E8EFC979E25E4C2C7268E64E0200BC0DEA62560",
+      "bytes": 189880
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-08/etf_tick_capture.csv",
+      "sha256": "A7E44B10EC1F71A18B25997E5E07EC7CAE3E592F7BD4B650CD0E231D061A7DDC",
+      "bytes": 18674
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-08/etf_closing_auction.csv",
+      "sha256": "8874C328BD7D5496A7FF7555420F02DA1E2B803F9F9913DBC3522C5244F490AF",
+      "bytes": 65712
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-08/etf_context.csv",
+      "sha256": "FC449921C1D800B16F14C813100E4DF1B480DE4A18E1533DA2A31854EF43EC2E",
+      "bytes": 343
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260908/159201.SZ.csv",
+      "sha256": "3B5B4C509A4172A4602975429ADF9AF5CAF452E37F9F757AE856B3252E69DCA6",
+      "bytes": 191504
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260908/510300.SH.csv",
+      "sha256": "39919BEA84EF161C54D9F14E055D9BC9E7FA899E84CC04F529CAAFC94247FC72",
+      "bytes": 191353
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260908/510500.SH.csv",
+      "sha256": "CE583AB9C4291149B865EF8873C08C2021E86255EBB94E9B81740E711A0940B5",
+      "bytes": 191100
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-09/etf_tick_capture.csv",
+      "sha256": "613450D038E82D9BCDCF1926EE76A9453AB0E29F8F79433A9EFD5FFB7A5E89DE",
+      "bytes": 18739
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-09/etf_closing_auction.csv",
+      "sha256": "44C04C71072EBFFD3AAA9474C161BD89DCB3D8FAB6E92D64B04C196772BFA863",
+      "bytes": 68723
+    },
+    {
+      "path": "research/QMTData/logs/simulate/2026-09-09/etf_context.csv",
+      "sha256": "C21C34E877B5487A4250FBEE12AD3595A12A6A79E797F8977BE4BDE0EF55D7BE",
+      "bytes": 356
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260909/159201.SZ.csv",
+      "sha256": "F429C62AB440CF59A4C19EBDA1F4333A30C015E617B0280E0EBE0EBACBA4B3FF",
+      "bytes": 190481
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260909/510300.SH.csv",
+      "sha256": "8AF2575176DA14F1106D167BB3C4849BB1F4899A45894A6399FD2134DB7BE4F1",
+      "bytes": 192534
+    },
+    {
+      "path": "research/QMTData/data/market_tick/csv/20260909/510500.SH.csv",
+      "sha256": "D352FBD0EA19094FA0A42785EB3EE7182CA7D17F6470CE4ED830DD669137FF16",
+      "bytes": 200827
+    }
+  ]
+}

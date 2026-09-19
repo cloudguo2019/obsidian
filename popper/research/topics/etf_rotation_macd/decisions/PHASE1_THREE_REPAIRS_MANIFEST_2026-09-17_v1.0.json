@@ -1,0 +1,61 @@
+{
+  "identity": "ETF-PHASE1-THREE-REPAIRS-MANIFEST-20260917-v1.0",
+  "artifacts": {
+    "baselines/ETF-EXECUTION-REPAIRS-001_v1.0.md": "7C6C2F9CB35E845A5E264991F525ED1F13398493B26E04ED3456611F206CFD83",
+    "decisions/PHASE1_THREE_REPAIRS_ACCEPTANCE_2026-09-17_v1.0.md": "FFD7FB9BDD39129FFE6E81D1D1B1611C8EA303F609D691A12171C4193F823B27",
+    "tests/run_phase1_repairs_l0_v1.py": "1F7698FA499EB499610EEBD59AD0034546884B80382B454075F742DEDD9C61FC",
+    "tests/run_phase1_execution_l0_v1.py": "0B732412CF082AB08877348209E3EEE914267DC8E8CCA87D4E6FE55EDB8B9218",
+    "baselines/etf_execution_repairs_v1.py": "3C88E5B5123E99D9AB04EB93F8A669F8D321ED56755F1B5BC84DB4BD25ACD33D",
+    "baselines/etf_execution_bridge_v1.py": "CE0FA019BDEA5B0AA28413AEA4E41FCDE1011C5DFEC5486AA2E9D02C60B249BD",
+    "decisions/PHASE1_THREE_REPAIRS_L0_v1.0_2026-09-17_attempt1.json": "DD54EAAF07C6AC9AAEAB032FF147C2E699400DE94501024F8E9D610E73FA0EA7",
+    "decisions/PHASE1_THREE_REPAIRS_L0_v1.0_2026-09-17_attempt1_sources.json": "FE7349715BD8DE848DF8680C16F5C94E35F46E8DB0B6E19FCB5CEE26E78CE919",
+    "decisions/PHASE1_THREE_REPAIRS_L0_v1.0_2026-09-17_attempt2.json": "1D942140DEF7A6D8613E645C4A8C384A83B98CE246C56BD2D7BFCF5091E84D2E",
+    "scripts/validate_phase1_repairs_v1.py": "5A3345B6BDCFE7FB54249E3632F107C1912927A848FC270FD4204461FDC4D043"
+  },
+  "historic_manifest_sha256": "AC9D3DB36701BABECE368E675BC7E30FA3B6DAA3B35C32F6C834A29C9650852A",
+  "historic_artifacts_and_protocols_verified": 17,
+  "raw_inputs_verified": 51,
+  "engineering_sources_verified": 12,
+  "engineering_hashes": {
+    "sartre_core/strategies/etf_rotation_core.py": "1F7006FC7240157840E928DD6EE1DFDC50868331F26A16506A31A1EE38884317",
+    "sartre_core/strategies/macd_core.py": "C2199714C1DD3C848F72E6E05A67BB8F1788C8442AC5188CCBCFC4E84E8155E7",
+    "sartre_core/config/etf_rotation_config.json": "8E14BC5BFEA0429158740E93308A6261BD2530429B4B697D8683770E2F6F355D",
+    "sartre_core/adapters/miniqmt_closing_auction_mixin.py": "2D6E57FDC1C600815CD767B0F079689A65F20947F247A37A9129D680DC403F9E",
+    "sartre_core/adapters/miniqmt_market_account_mixin.py": "17EF7A04077B95ADA961A512D5049B491FBD3CE760CE86935A78C9F79C1B5653",
+    "sartre_core/adapters/miniqmt_portfolio_mixin.py": "2197504AA74AD074B054A7F5D09447346CD95D8AE6516C0D2C296EA1C1BA4D64",
+    "sartre_core/adapters/miniqmt_stock_execution_mixin.py": "667F801AFB5E0F14B8E5F083C807D067A3B48D7362DB9E72F7BCED035293BAFD",
+    "sartre_core/adapters/miniqmt_order_policy_gateway.py": "EED197ACCA46272707632012FD6FB47ACB5AC1113B7656299EF5BFF08951845B",
+    "sartre_core/engine/order_policies.py": "69BD7A7E3361641700CF81CA772B873693AB72DECD98936AE90EAE95F952CDCA",
+    "sartre_core/engine/execution_modules.py": "9AA8761532ADB7F6EC842563B9291F91DE6AF11E7592B17D5E6B3AA7EEB2F627",
+    "sartre_core/simulate/shadow_account.py": "F3CFF2040472212C0A2861E0E30AFA4112DC8C657450DBBA335FBE63D799B569",
+    "sartre_risk/risk_manager.py": "6AFE2D1F897576AD883B4CEC6AD0FEA849341B7E80257FC505A4D45FD18B4C26"
+  },
+  "local_links_verified": 16,
+  "repair_checks": {
+    "tests": 39,
+    "passed": 39,
+    "expected_failures": 0
+  },
+  "legacy_regression_observed_from_completed_commands": {
+    "engine_tests": 17,
+    "engine_passed": 17,
+    "price_tests": 12,
+    "price_passed": 12,
+    "note": "Passed in this repair turn; identity validator does not repeat the tests",
+    "source_hashes": {
+      "tests/run_etf_base_001_l0.py": "CFA03C12E8E2E581FA7B07555EFC218074E04E35C077BF50B177DFFC41F977D4",
+      "tests/test_etf_price_contract_v1.py": "AFEFD20BFEF9F91FB41156548E0378EE46577777458EFEDE94D42B187F7F9B4B"
+    }
+  },
+  "scope": "Isolated research guard/ledger and offline legacy pipeline bridge; synthetic costs/rules/calendars",
+  "three_repair_gate_passed": true,
+  "phase1_gate_passed": false,
+  "remaining_clock_contract_failures": 2,
+  "evidence_ceiling": "L0",
+  "authorizations": {
+    "formal_backtests": 0,
+    "lock_open": 0,
+    "simulation": 0,
+    "live": 0
+  }
+}

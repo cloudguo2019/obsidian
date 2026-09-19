@@ -1,0 +1,581 @@
+{
+  "identity": "ETF-PHASE1-TIMESTAMP-AMENDMENT-20260916-v1.1",
+  "parent_audit": "research/topics/etf_rotation_macd/datasets/PHASE1_READONLY_AUDIT_v1.0_2026-09-16.json",
+  "parent_sha256": "5D26254BA277DF596AA73525AC468CCC697B309ADD233E2E5627E6AB804753EA",
+  "script_sha256": "6075E99135F571CDD55070F99C20800D01F0C98230BAB2B1CCF0595C0FCA8CB8",
+  "logger_sha256": "A6830CDC60662F4833A800D63EEDB4BEA5F5BDBB359D39FBD1B0D91295AD59A5",
+  "sample_selection_unchanged": {
+    "dates": [
+      "2026-08-31",
+      "2026-09-01",
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04",
+      "2026-09-07",
+      "2026-09-08",
+      "2026-09-09"
+    ],
+    "tick_symbols": [
+      "159201.SZ",
+      "510300.SH",
+      "510500.SH"
+    ],
+    "tick_case_count": 24
+  },
+  "input_hashes_revalidated": 51,
+  "execution_event_vs_quote": {
+    "rows": 516,
+    "quote_later_than_logged_event": 261,
+    "quote_at_least_1s_later_than_logged_event": 261,
+    "subsecond_order_ambiguous": 0
+  },
+  "execution_logged_age_seconds_min_max": [
+    -3.0,
+    1.0
+  ],
+  "tick_capture_vs_quote_by_window": {
+    "before_1500": {
+      "rows": 1440,
+      "flagged_stale": 356,
+      "quote_after_host_capture": 285,
+      "quote_more_than_1s_after_host_capture": 115
+    },
+    "at_or_after_1500": {
+      "rows": 14400,
+      "flagged_stale": 14326,
+      "quote_after_host_capture": 19,
+      "quote_more_than_1s_after_host_capture": 7
+    }
+  },
+  "tick_before_1500_cases": [
+    {
+      "date": "2026-08-31",
+      "symbol": "159201.SZ",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 2,
+        "flagged_stale": 42
+      },
+      "before_1500_statuses": {
+        "18": 60
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        -2.214,
+        24.001
+      ]
+    },
+    {
+      "date": "2026-08-31",
+      "symbol": "510300.SH",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 60,
+        "flagged_stale": 0
+      },
+      "before_1500_statuses": {
+        "18": 60
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        -2.009,
+        -1.214
+      ]
+    },
+    {
+      "date": "2026-08-31",
+      "symbol": "510500.SH",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 4,
+        "flagged_stale": 1
+      },
+      "before_1500_statuses": {
+        "18": 60
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        -2.214,
+        0.029
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "symbol": "159201.SZ",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 1,
+        "flagged_stale": 38
+      },
+      "before_1500_statuses": {
+        "18": 60
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        -0.005,
+        6.032
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "symbol": "510300.SH",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 0,
+        "flagged_stale": 0
+      },
+      "before_1500_statuses": {
+        "13": 1,
+        "18": 59
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        0.995,
+        1.174
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "symbol": "510500.SH",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 2,
+        "flagged_stale": 1
+      },
+      "before_1500_statuses": {
+        "18": 60
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        -0.991,
+        3.01
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "symbol": "159201.SZ",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 1,
+        "flagged_stale": 37
+      },
+      "before_1500_statuses": {
+        "18": 60
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        -0.002,
+        6.029
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "symbol": "510300.SH",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 34,
+        "flagged_stale": 16
+      },
+      "before_1500_statuses": {
+        "13": 1,
+        "18": 59
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        -2.008,
+        1.155
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "symbol": "510500.SH",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 60,
+        "flagged_stale": 0
+      },
+      "before_1500_statuses": {
+        "18": 60
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        -1.008,
+        -0.845
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "symbol": "159201.SZ",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 2,
+        "flagged_stale": 41
+      },
+      "before_1500_statuses": {
+        "18": 60
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        -0.002,
+        15.001
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "symbol": "510300.SH",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 0,
+        "flagged_stale": 0
+      },
+      "before_1500_statuses": {
+        "13": 1,
+        "18": 59
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        0.997,
+        2.192
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "symbol": "510500.SH",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 0,
+        "flagged_stale": 2
+      },
+      "before_1500_statuses": {
+        "18": 60
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        0.192,
+        5.01
+      ]
+    },
+    {
+      "date": "2026-09-04",
+      "symbol": "159201.SZ",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 5,
+        "flagged_stale": 41
+      },
+      "before_1500_statuses": {
+        "18": 60
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        -0.004,
+        15.006
+      ]
+    },
+    {
+      "date": "2026-09-04",
+      "symbol": "510300.SH",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 60,
+        "flagged_stale": 0
+      },
+      "before_1500_statuses": {
+        "18": 60
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        -1.004,
+        -0.84
+      ]
+    },
+    {
+      "date": "2026-09-04",
+      "symbol": "510500.SH",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 4,
+        "flagged_stale": 0
+      },
+      "before_1500_statuses": {
+        "13": 1,
+        "18": 59
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        -0.003,
+        1.16
+      ]
+    },
+    {
+      "date": "2026-09-07",
+      "symbol": "159201.SZ",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 0,
+        "flagged_stale": 38
+      },
+      "before_1500_statuses": {
+        "18": 60
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        1.168,
+        18.021
+      ]
+    },
+    {
+      "date": "2026-09-07",
+      "symbol": "510300.SH",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 0,
+        "flagged_stale": 0
+      },
+      "before_1500_statuses": {
+        "13": 1,
+        "18": 59
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        1.998,
+        3.168
+      ]
+    },
+    {
+      "date": "2026-09-07",
+      "symbol": "510500.SH",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 0,
+        "flagged_stale": 3
+      },
+      "before_1500_statuses": {
+        "18": 60
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        1.168,
+        6.013
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "symbol": "159201.SZ",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 2,
+        "flagged_stale": 38
+      },
+      "before_1500_statuses": {
+        "18": 60
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        -0.003,
+        6.023
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "symbol": "510300.SH",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 0,
+        "flagged_stale": 0
+      },
+      "before_1500_statuses": {
+        "13": 1,
+        "18": 59
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        0.997,
+        1.134
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "symbol": "510500.SH",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 40,
+        "flagged_stale": 12
+      },
+      "before_1500_statuses": {
+        "18": 60
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        -1.003,
+        2.027
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "symbol": "159201.SZ",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 0,
+        "flagged_stale": 39
+      },
+      "before_1500_statuses": {
+        "18": 60
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        2.22,
+        18.022
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "symbol": "510300.SH",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 0,
+        "flagged_stale": 1
+      },
+      "before_1500_statuses": {
+        "18": 60
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        1.22,
+        2.033
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "symbol": "510500.SH",
+      "before_1500": {
+        "rows": 60,
+        "quote_after_host_capture": 8,
+        "flagged_stale": 6
+      },
+      "before_1500_statuses": {
+        "13": 1,
+        "18": 59
+      },
+      "before_1500_quote_age_seconds_min_max": [
+        -0.007,
+        3.021
+      ]
+    }
+  ],
+  "tick_filename_inventory": [
+    {
+      "date_directory": "20260805",
+      "csv_count": 6
+    },
+    {
+      "date_directory": "20260806",
+      "csv_count": 7
+    },
+    {
+      "date_directory": "20260807",
+      "csv_count": 7
+    },
+    {
+      "date_directory": "20260813",
+      "csv_count": 66
+    },
+    {
+      "date_directory": "20260814",
+      "csv_count": 65
+    },
+    {
+      "date_directory": "20260817",
+      "csv_count": 65
+    },
+    {
+      "date_directory": "20260818",
+      "csv_count": 66
+    },
+    {
+      "date_directory": "20260819",
+      "csv_count": 66
+    },
+    {
+      "date_directory": "20260820",
+      "csv_count": 66
+    },
+    {
+      "date_directory": "20260821",
+      "csv_count": 66
+    },
+    {
+      "date_directory": "20260824",
+      "csv_count": 66
+    },
+    {
+      "date_directory": "20260825",
+      "csv_count": 66
+    },
+    {
+      "date_directory": "20260826",
+      "csv_count": 66
+    },
+    {
+      "date_directory": "20260827",
+      "csv_count": 66
+    },
+    {
+      "date_directory": "20260828",
+      "csv_count": 66
+    },
+    {
+      "date_directory": "20260831",
+      "csv_count": 66
+    },
+    {
+      "date_directory": "20260901",
+      "csv_count": 66
+    },
+    {
+      "date_directory": "20260902",
+      "csv_count": 66
+    },
+    {
+      "date_directory": "20260903",
+      "csv_count": 66
+    },
+    {
+      "date_directory": "20260904",
+      "csv_count": 66
+    },
+    {
+      "date_directory": "20260907",
+      "csv_count": 66
+    },
+    {
+      "date_directory": "20260908",
+      "csv_count": 66
+    },
+    {
+      "date_directory": "20260909",
+      "csv_count": 66
+    }
+  ],
+  "interpretation": [
+    "Verified capture_slot records captured_at before _fetch(); _run_session supplies its pre-query now. It is a polling request-start marker, not a post-query receipt timestamp.",
+    "A vendor quote after captured_at may arrive normally during query latency. The synthetic two-second-latency L0 fixture proves this possibility without clock skew or future market access.",
+    "The closing-auction pipeline also samples now once before its sequential loop. event_time therefore predates later per-symbol query completions and is truncated to seconds.",
+    "261/516 execution quotes lead logged event_time by one to three seconds; 285/1440 selected pre-15:00 quotes lead polling-start captured_at. These are incompatible clock-field semantics, not proven future-information leakage.",
+    "Existing captured_at cannot be substituted into ETF-PRICE-001 ProxyTick.received_at, and first_usable_capture_time in the parent audit is only a start-marker diagnostic, not validated decision cutoff tau.",
+    "A new request_started_at, received_at after query return, quote_at, target_generated_at and submission/acknowledgement clock contract is required; old fields must not be relabeled or repaired by inventing receive times.",
+    "285/1440 is specific to the unchanged three-symbol eight-date case-study sample; it is not a rate estimated for the whole ETF universe.",
+    "Stale flags over 14:57-15:30 include post-close repeats; the pre-15:00 sample has 356/1440 stale flags, including repeated quotes, which do not automatically prove unusable lastPrice."
+  ],
+  "evidence_ceiling": "L0",
+  "formal_backtests": 0,
+  "supersedes_clock_interpretation": "research/topics/etf_rotation_macd/datasets/PHASE1_TIMESTAMP_AMENDMENT_v1.0_2026-09-16.json",
+  "superseded_sha256": "A500476AF5F95A8EF92D7DFFCD4F1B87DC6CDAB178AD6FB6BADBF18AF29A273C",
+  "tick_source_sha256": "D759598103A46DE55CF13268FF863576D81401B870E98C1BDE1F543FE098DE1F",
+  "archived_tick_source_sha256": "D759598103A46DE55CF13268FF863576D81401B870E98C1BDE1F543FE098DE1F",
+  "source_files_equal": true,
+  "base_config_sha256": "249F2E4DA362BBCDB42E6DD0032FAF2D751BA1228E223225DA737AE2EB5C6234",
+  "configured_sdk_path_checks": [
+    {
+      "name": "base",
+      "sdk_root": "C:/ QMT/bin.x64/Lib/site-packages",
+      "root_exists": false,
+      "xtdata_source_exists": false
+    },
+    {
+      "name": "huatai_live",
+      "sdk_root": "C:/quant/迅投极速策略交易系统交易终端 华泰证券QMT实盘/bin.x64/Lib/site-packages",
+      "root_exists": false,
+      "xtdata_source_exists": false
+    },
+    {
+      "name": "dongguan_simulate",
+      "sdk_root": "C:/东莞证券QMT模拟交易端/bin.x64/Lib/site-packages",
+      "root_exists": false,
+      "xtdata_source_exists": false
+    },
+    {
+      "name": "huatai_simulate",
+      "sdk_root": "C:/迅投极速策略交易系统交易终端 华泰证券QMT模拟/bin.x64/Lib/site-packages",
+      "root_exists": false,
+      "xtdata_source_exists": false
+    }
+  ]
+}

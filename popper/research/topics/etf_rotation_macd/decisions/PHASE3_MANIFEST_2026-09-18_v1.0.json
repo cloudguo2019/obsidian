@@ -1,0 +1,96 @@
+{
+  "identity": "ETF-PHASE3-DRAFT-MANIFEST-20260918-v1.0",
+  "snapshot_date": "2026-09-18",
+  "timezone": "Asia/Shanghai",
+  "status": "DRAFT_AWAITING_USER_SIGNATURE",
+  "phase3_closed": false,
+  "draft_structure_validated": true,
+  "draft_choices_adopted": false,
+  "empirical_evidence_ceiling": "L0",
+  "market_inventory_cutoff": "2026-09-09",
+  "user_instruction": "继续etf轮动策略阶段3",
+  "single_next_gate": "User signs the exact phase3 draft v1.0 before any freeze",
+  "outputs": {
+    "experiments/ETF-REGIME-001/preregistration_draft_v1.0.json": "AC4C4F7025FEBDE8AA15B6B8C290DF9538BAE33B7A0F0F1B7B642D0ACC0E302D",
+    "scripts/validate_phase3_draft_v1.py": "0DD28341BD471CFD9DB2E04BF656E7EDA5FB3A225809F63DA86754BBEA31CB26",
+    "experiments/ETF-REGIME-001/PHASE3_PREREGISTRATION_REVIEW_v1.0.md": "452A8E555C6413E94FCE84FE21FE82213F0E6F53ABBC386071838FFDACF8B1EC",
+    "decisions/PHASE3_REVIEW_2026-09-18_v1.0.md": "E99EDE5541E11A846FC6E550506F6C6E9E7D8B427BC9CF4B5C217D0E5E714473"
+  },
+  "inputs": {
+    "PERSONAL_STRATEGY_RESEARCH_FRAMEWORK.md": "4973B2B1A100CDE3C0FCBA8A2C68E48BFF77A8D6A427872E805D98D352376BDA",
+    "research/topics/etf_rotation_macd/decisions/PHASE2_MANIFEST_2026-09-17_v1.0.json": "623BD2EC0A0459D47A9469ED2DC43370ABC744546A18AFB1213B355ED0B24079",
+    "research/topics/etf_rotation_macd/datasets/PHASE1_READONLY_PLAN_v1.0_2026-09-16.json": "A9768D59A93BB0DA61A032494DF824C370D5084A3DAA67C26F8C35C8D168A5D7",
+    "research/topics/etf_rotation_macd/decisions/PHASE1_CLOSURE_MANIFEST_2026-09-17_v1.0.json": "86D342F585E7B29AB0D03BD65C6298500801ACD90F52DB71332061E84AEF4783",
+    "research/topics/etf_rotation_macd/hypotheses/research_charter_v1.2.md": "742005F2EBA757A370B5DDA680719BAFE79914DA500BD54AC67844625587C38D",
+    "research/topics/etf_rotation_macd/baselines/ETF-BASE-001_PHASE1_BASELINE_v1.0.md": "5905A9D85B369D18E10F798621CC91F409513B501AB0D9AA45BE8A342324729B",
+    "research/topics/etf_rotation_macd/baselines/ETF-PRICE-001_CONTRACT_v1.0.md": "D88DD006B692D994B6C9CE518AD57D8F260EA810DD520C12936A0733FB08577B",
+    "research/topics/etf_rotation_macd/baselines/ETF-EXECUTION-REPAIRS-001_v1.0.md": "7C6C2F9CB35E845A5E264991F525ED1F13398493B26E04ED3456611F206CFD83",
+    "research/topics/etf_rotation_macd/hypotheses/ETF-ROTATION-THEORY_v1.0.md": "3567443B50903AE335B4212F880DF010731E86249E144633D2494786A8415028",
+    "research/topics/etf_rotation_macd/decisions/PHASE2_CLOSURE_2026-09-17_v1.0.md": "9BE9446DF62361469F66EC9E65738A7D0A5F31C6E0A792B4510CD8BB844635E5"
+  },
+  "skill": {
+    "path": "C:/Users/cg/.codex/skills/cg-etf-rotation/SKILL.md",
+    "sha256": "75A8CBF8FEF999BC450091D96532C242ECCA0B745A72A1A511A0F5590121995A"
+  },
+  "skill_protocol": {
+    "path": "C:/Users/cg/.codex/skills/cg-etf-rotation/references/research-protocol.md",
+    "sha256": "8F989F2789AE831C15A394A79EB72175149085A2F29831F5014BEA672D6C3E48"
+  },
+  "engineering_hashes": {
+    "sartre_core/strategies/etf_rotation_core.py": "1F7006FC7240157840E928DD6EE1DFDC50868331F26A16506A31A1EE38884317",
+    "sartre_core/strategies/macd_core.py": "C2199714C1DD3C848F72E6E05A67BB8F1788C8442AC5188CCBCFC4E84E8155E7",
+    "sartre_core/config/etf_rotation_config.json": "8E14BC5BFEA0429158740E93308A6261BD2530429B4B697D8683770E2F6F355D"
+  },
+  "identity_verification": {
+    "phase1_raw_inputs": 51,
+    "phase1_engineering_sources": 12,
+    "phase2_local_artifacts": 11
+  },
+  "local_links_checked": 31,
+  "draft_accounts": 5,
+  "draft_candidates": 2,
+  "draft_primary_hypotheses": 1,
+  "draft_scenarios": 7,
+  "draft_cells_per_sample_batch": 35,
+  "run_binding_dependencies_unresolved": 15,
+  "actual_sample_or_lock_identity_created": false,
+  "diagnostic_dates_already_viewed": [
+    "2026-08-31",
+    "2026-09-01",
+    "2026-09-02",
+    "2026-09-03",
+    "2026-09-04",
+    "2026-09-07",
+    "2026-09-08",
+    "2026-09-09"
+  ],
+  "new_strategy_tests": 0,
+  "inherited_passed_L0": 68,
+  "formal_results_read_this_turn": 0,
+  "locked_results_opened_this_turn": 0,
+  "new_sample_contamination_this_turn": false,
+  "application_modified": false,
+  "raw_data_modified": false,
+  "historical_frozen_identities_modified": false,
+  "authorizations": {
+    "formal_backtests": 0,
+    "lock_open": 0,
+    "simulation": 0,
+    "live": 0
+  },
+  "actions_this_turn": {
+    "formal_backtests": 0,
+    "lock_open": 0,
+    "simulation": 0,
+    "live": 0
+  },
+  "external_method_source": {
+    "url": "https://www.tandfonline.com/doi/abs/10.1080/01621459.1994.10476870",
+    "read_scope": "primary-paper search abstract only; direct open 403; fixed bootstrap numbers are project choices, not literature-derived optimal values",
+    "evidence_grade": "B"
+  },
+  "mutable_indexes_excluded": [
+    "README.md",
+    "CG-ETF-ROTATION_MEMORY.md"
+  ]
+}

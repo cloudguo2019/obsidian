@@ -1,0 +1,92 @@
+{
+  "identity": "ETF-PHASE1-CLOSURE-20260917-v1.0",
+  "decision": "接受",
+  "phase1_gate_passed": true,
+  "phase1_closed": true,
+  "accepted_object": "Research engineering formalization with two user-accepted clock limitations",
+  "evidence_ceiling": "L0",
+  "data_cutoff": "2026-09-09",
+  "user_instruction": "第二项和第五项中的时间可以忽略，因为我使用的是tick数据，3秒一个快照，同时策略是日线策略，这点不影响。把阶段1闭环",
+  "user_stated_tick_snapshot_seconds": 3,
+  "original_code_future_quote_tolerance_seconds_unchanged": 5,
+  "clock_impact_empirically_verified": false,
+  "historical_failures_preserved": 5,
+  "dispositions": [
+    {
+      "original_item": 1,
+      "test": "__main__.PipelineTests.test_charter_full_account_caps_hold_during_unfilled_replacement",
+      "status": "repaired_in_research_L0"
+    },
+    {
+      "original_item": 2,
+      "test": "__main__.PipelineTests.test_confirmed_price_information_set_rejects_future_quote",
+      "status": "accepted_limitation_for_phase1"
+    },
+    {
+      "original_item": 3,
+      "test": "__main__.ShadowLifecycleTests.test_execution_sizing_reserves_commission_when_cash_exactly_matches_lot",
+      "status": "repaired_in_research_L0"
+    },
+    {
+      "original_item": 4,
+      "test": "__main__.ShadowLifecycleTests.test_t1_does_not_unlock_on_nontrading_calendar_day",
+      "status": "repaired_in_research_L0"
+    },
+    {
+      "original_item": 5,
+      "test": "__main__.CaptureClockTests.test_captured_at_can_be_used_as_price_contract_received_at",
+      "status": "accepted_limitation_for_phase1"
+    }
+  ],
+  "repaired_in_research_L0": 3,
+  "clock_limitations_accepted_for_phase1": 2,
+  "blocking_items_within_adopted_phase1_scope": 0,
+  "latest_completed_l0_tests": {
+    "engine": 17,
+    "price": 12,
+    "repairs": 39,
+    "passed": 68,
+    "note": "Inherited completed runs authenticated by prior manifests; no test reruns in this closure turn"
+  },
+  "raw_inputs_hashes_reverified": 51,
+  "engineering_sources_reverified": 12,
+  "sources": {
+    "baselines/ETF-BASE-001_PHASE1_BASELINE_v1.0.md": "5905A9D85B369D18E10F798621CC91F409513B501AB0D9AA45BE8A342324729B",
+    "decisions/PHASE1_CLOSURE_2026-09-17_v1.0.md": "1E7FB887F46CC8B1217A4975EBFAA8C7504FEF9450B09127AAE5C2243AF37374",
+    "scripts/validate_phase1_closure_v1.py": "3A5F7246EAFF5FE89BED5FA0A771A084A323DB0EA63E63C324E4A39D28B66AD8",
+    "decisions/PHASE1_THREE_REPAIRS_MANIFEST_2026-09-17_v1.0.json": "3BF8285E6C8CB326E0407DA0A1BE65B63AB5EEA2D88140B3C1289D80E1902B30",
+    "hypotheses/research_charter_v1.2.md": "742005F2EBA757A370B5DDA680719BAFE79914DA500BD54AC67844625587C38D",
+    "baselines/ETF-PRICE-001_CONTRACT_v1.0.md": "D88DD006B692D994B6C9CE518AD57D8F260EA810DD520C12936A0733FB08577B",
+    "baselines/ETF-BASE-001_SPEC.md": "A046C002E3A1BC690F9F7EFD77F5B7D6819838C844ECD96194FC199C51AAB23C",
+    "baselines/ETF-BASE-001_SPEC_v0.2.md": "67492AC9385B5A13D594713D331D2CB4A67C542856B3470A54603977DE0C66F7",
+    "baselines/ETF-BASE-001_SPEC_v0.3.md": "266055A3A3597D9442EF6B4305B85514B9A5FAC9A92E65B096C3410CE82CEA1E",
+    "baselines/ETF-EXECUTION-REPAIRS-001_v1.0.md": "7C6C2F9CB35E845A5E264991F525ED1F13398493B26E04ED3456611F206CFD83",
+    "datasets/PHASE1_TIMESTAMP_AMENDMENT_v1.1_2026-09-16.json": "C740E8EFA83834D36A19D318B34347F7D3E2586365EC6A1730EAC644A70E557B",
+    "decisions/PHASE1_EXECUTION_L0_v1.0_2026-09-16_attempt1.json": "F3C2CB31EBD7227AA057E26CAD8670B3CDB595FB2B193B312855C2DD9B442AEE",
+    "decisions/PHASE1_CAPTURE_CLOCK_L0_v1.0_2026-09-16.json": "5B8BDE66EF20871512252BA315AF1FE8106188D5455E6F4EEE3028CCFBAFDA88",
+    "decisions/PHASE1_THREE_REPAIRS_L0_v1.0_2026-09-17_attempt2.json": "1D942140DEF7A6D8613E645C4A8C384A83B98CE246C56BD2D7BFCF5091E84D2E"
+  },
+  "deferred_dependencies": [
+    "PIT universe",
+    "provider front_ratio/factor reconciliation",
+    "long-history raw prices and distributions",
+    "actual broker fees/product rules/calendars",
+    "complete broker and pending-order state",
+    "formal implementation and economic fill model"
+  ],
+  "deferred_gate": "Phase 4-5 data contract/audit and before any formal experiment",
+  "phase2_permitted": true,
+  "phase2_started": false,
+  "next_work": "Phase 2 theory, alternative explanations and falsification conditions",
+  "implementation_changed_in_closure_turn": false,
+  "application_modified": false,
+  "authorizations": {
+    "formal_backtests": 0,
+    "lock_open": 0,
+    "simulation": 0,
+    "live": 0
+  },
+  "locked_results_opened": 0,
+  "formal_sample_contamination": false,
+  "closure_validator_first_attempt": "TypeError from treating the prior clock failure record object as a test-id string; parser corrected before manifest creation; no strategy/data/test change"
+}

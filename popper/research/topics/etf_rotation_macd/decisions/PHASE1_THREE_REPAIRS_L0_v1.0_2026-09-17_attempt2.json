@@ -1,0 +1,81 @@
+{
+  "identity": "ETF-PHASE1-THREE-REPAIRS-L0-20260917-v1.0",
+  "evidence_ceiling": "L0",
+  "tests_run": 39,
+  "passed": 39,
+  "passed_tests": [
+    "__main__.GuardRepairTests.test_900_cash_buys_800_with_reserved_minimum_commission",
+    "__main__.GuardRepairTests.test_authoritative_buy_limit_not_price_cage_drives_reserve",
+    "__main__.GuardRepairTests.test_broker_frozen_cash_is_not_reserved_twice",
+    "__main__.GuardRepairTests.test_capital_cap_and_actual_lower_equity",
+    "__main__.GuardRepairTests.test_cash_exactly_gross_plus_fee_allows_900",
+    "__main__.GuardRepairTests.test_duplicate_order_and_missing_raw_valuation_rejected",
+    "__main__.GuardRepairTests.test_fee_one_cent_cash_boundary",
+    "__main__.GuardRepairTests.test_fees_are_in_post_cost_exposure_denominator",
+    "__main__.GuardRepairTests.test_group_and_category_overlap_reject_buy",
+    "__main__.GuardRepairTests.test_incomplete_account_and_missing_product_metadata_reject",
+    "__main__.GuardRepairTests.test_larger_explicit_minimum_fee_changes_sizing",
+    "__main__.GuardRepairTests.test_no_blanket_pause_for_an_unfilled_exit_when_capacity_exists",
+    "__main__.GuardRepairTests.test_odd_existing_shares_buy_increment_remains_lot_sized",
+    "__main__.GuardRepairTests.test_off_broker_and_partial_broker_reservations_reduce_cash",
+    "__main__.GuardRepairTests.test_pending_buy_same_symbol_counted_once_and_not_reordered",
+    "__main__.GuardRepairTests.test_pending_unknown_buy_counts_toward_symbols",
+    "__main__.GuardRepairTests.test_pending_value_and_fees_consume_exposure",
+    "__main__.GuardRepairTests.test_rounding_reserve_is_upper_bound_on_actual_fee",
+    "__main__.GuardRepairTests.test_total_exposure_uses_all_old_positions",
+    "__main__.LedgerRepairTests.test_calendar_missing_and_next_session_missing_fail_without_mutation",
+    "__main__.LedgerRepairTests.test_cash_rejection_does_not_mutate_state",
+    "__main__.LedgerRepairTests.test_existing_available_shares_and_new_cohorts_separate",
+    "__main__.LedgerRepairTests.test_friday_buy_not_sellable_saturday_and_sellable_monday",
+    "__main__.LedgerRepairTests.test_holiday_and_product_specific_calendar_used",
+    "__main__.LedgerRepairTests.test_mixed_t0_t1_same_account",
+    "__main__.LedgerRepairTests.test_original_fee_counterexample_now_guarded_and_executable",
+    "__main__.LedgerRepairTests.test_out_of_coverage_advance_rejects_before_any_unlock",
+    "__main__.LedgerRepairTests.test_raw_marks_fees_cash_and_equity_reconcile",
+    "__main__.LedgerRepairTests.test_unknown_product_rule_rejects_and_does_not_guess_t1",
+    "__main__.LedgerRepairTests.test_weekend_buy_and_backward_date_rejected",
+    "__main__.PipelineRepairTests.test_bridge_refreshes_even_when_original_context_is_incomplete",
+    "__main__.PipelineRepairTests.test_confirmed_full_exit_allows_new_symbol",
+    "__main__.PipelineRepairTests.test_full_context_not_single_symbol",
+    "__main__.PipelineRepairTests.test_original_replacement_counterexample_now_respects_caps",
+    "__main__.PipelineRepairTests.test_over_cap_account_still_permits_reducing_sell",
+    "__main__.PipelineRepairTests.test_partial_exit_still_occupies_symbol_slot",
+    "__main__.PipelineRepairTests.test_pipeline_repeat_keeps_single_submit_and_no_wait_cancel",
+    "__main__.PipelineRepairTests.test_sell_first_unfilled_does_not_release_capacity",
+    "__main__.PipelineRepairTests.test_snapshot_loader_failure_blocks_buy"
+  ],
+  "failures": [],
+  "errors": [],
+  "expected_failures": 0,
+  "seconds": 0.022873,
+  "sources": [
+    {
+      "path": "tests/run_phase1_repairs_l0_v1.py",
+      "sha256": "1F7698FA499EB499610EEBD59AD0034546884B80382B454075F742DEDD9C61FC"
+    },
+    {
+      "path": "tests/run_phase1_execution_l0_v1.py",
+      "sha256": "0B732412CF082AB08877348209E3EEE914267DC8E8CCA87D4E6FE55EDB8B9218"
+    },
+    {
+      "path": "baselines/etf_execution_repairs_v1.py",
+      "sha256": "3C88E5B5123E99D9AB04EB93F8A669F8D321ED56755F1B5BC84DB4BD25ACD33D"
+    },
+    {
+      "path": "baselines/etf_execution_bridge_v1.py",
+      "sha256": "CE0FA019BDEA5B0AA28413AEA4E41FCDE1011C5DFEC5486AA2E9D02C60B249BD"
+    }
+  ],
+  "fixture_scope": "Original indexed closing-auction/core/risk/request/SingleSubmitPolicy with offline broker; new research guard/ledger; all fees/product rules/calendars SYNTHETIC",
+  "three_repair_gate_passed": true,
+  "phase1_gate_passed": false,
+  "unrepaired_clock_contracts": [
+    "quote_future_tolerance_vs_request_start",
+    "captured_at_is_request_start_not_received_at"
+  ],
+  "formal_backtests": 0,
+  "locked_results_opened": 0,
+  "simulation_authorizations": 0,
+  "live_trading_authorizations": 0,
+  "application_modified": false
+}

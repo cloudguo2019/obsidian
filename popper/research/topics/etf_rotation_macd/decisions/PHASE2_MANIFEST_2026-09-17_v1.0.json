@@ -1,0 +1,117 @@
+{
+  "identity": "ETF-PHASE2-THEORY-20260917-v1.0",
+  "snapshot_date": "2026-09-17",
+  "timezone": "Asia/Shanghai",
+  "user_instruction": "继续etf轮动策略阶段2",
+  "decision": "接受",
+  "accepted_object": "Completeness of phase-2 theory and falsification design; not strategy validity",
+  "phase2_closed": true,
+  "phase3_drafting_permitted": true,
+  "phase3_started": false,
+  "next_gate": "User signs a concrete phase-3 preregistration version; formal runs also require completed data/sample/baseline identities and exact batch authorization",
+  "project_empirical_evidence_ceiling": "L0",
+  "market_inventory_cutoff": "2026-09-09",
+  "registered_formal_experiments_created": 0,
+  "new_strategy_tests": 0,
+  "inherited_l0_passed": 68,
+  "phase1_identity_validation": {
+    "status": "passed",
+    "raw_inputs": 51,
+    "engineering_sources": 12,
+    "rerun_strategy_tests": false
+  },
+  "theory_hypotheses": [
+    "H1 ranking",
+    "H2 trend defence",
+    "H3 MACD-state versus MA-state matched-exposure net OOS Calmar",
+    "H4 persistent-state versus fresh-cross entry"
+  ],
+  "alternative_explanation_classes": 12,
+  "formula_logic_examples_are_empirical_results": false,
+  "engineering_root": "C:\\Users\\cg\\Desktop\\Nietzsche\\FINITUDE-1.4.2\\sartre",
+  "engineering_hashes": {
+    "sartre_core/strategies/etf_rotation_core.py": "1F7006FC7240157840E928DD6EE1DFDC50868331F26A16506A31A1EE38884317",
+    "sartre_core/strategies/macd_core.py": "C2199714C1DD3C848F72E6E05A67BB8F1788C8442AC5188CCBCFC4E84E8155E7",
+    "sartre_core/config/etf_rotation_config.json": "8E14BC5BFEA0429158740E93308A6261BD2530429B4B697D8683770E2F6F355D"
+  },
+  "local_inputs": {
+    "hypotheses/research_charter_v1.2.md": "742005F2EBA757A370B5DDA680719BAFE79914DA500BD54AC67844625587C38D",
+    "baselines/ETF-BASE-001_PHASE1_BASELINE_v1.0.md": "5905A9D85B369D18E10F798621CC91F409513B501AB0D9AA45BE8A342324729B",
+    "baselines/ETF-BASE-001_SPEC.md": "A046C002E3A1BC690F9F7EFD77F5B7D6819838C844ECD96194FC199C51AAB23C",
+    "baselines/ETF-BASE-001_SPEC_v0.2.md": "67492AC9385B5A13D594713D331D2CB4A67C542856B3470A54603977DE0C66F7",
+    "decisions/PHASE1_CLOSURE_2026-09-17_v1.0.md": "1E7FB887F46CC8B1217A4975EBFAA8C7504FEF9450B09127AAE5C2243AF37374",
+    "decisions/PHASE1_CLOSURE_MANIFEST_2026-09-17_v1.0.json": "86D342F585E7B29AB0D03BD65C6298500801ACD90F52DB71332061E84AEF4783",
+    "datasets/INITIAL_DATA_INVENTORY_2026-09-15.md": "A55E9DC8CC750431AB5AC5732BA9C001AEBF346677D94E9FC53BEA7481CD9C47",
+    "../../../PERSONAL_STRATEGY_RESEARCH_FRAMEWORK.md": "4973B2B1A100CDE3C0FCBA8A2C68E48BFF77A8D6A427872E805D98D352376BDA"
+  },
+  "reading_scope": {
+    "framework": "Sections 20-26 only; full-file hash records identity, not full-file reading",
+    "inventory": "First 115 lines only; cutoff inherited, no new market inventory scan",
+    "engineering": "MACD core read; three core/config files hashed; prior phase1 targeted identities validated"
+  },
+  "skill_protocol": {
+    "path": "C:/Users/cg/.codex/skills/cg-etf-rotation/references/research-protocol.md",
+    "sha256": "8F989F2789AE831C15A394A79EB72175149085A2F29831F5014BEA672D6C3E48"
+  },
+  "outputs": {
+    "hypotheses/ETF-ROTATION-THEORY_v1.0.md": "3567443B50903AE335B4212F880DF010731E86249E144633D2494786A8415028",
+    "hypotheses/ETF-ROTATION-SOURCES_2026-09-17_v1.0.md": "C0D8C90B4B0DD48889FE83D06D8FF14E002BCB4258095380F790A98822747E74",
+    "decisions/PHASE2_CLOSURE_2026-09-17_v1.0.md": "9BE9446DF62361469F66EC9E65738A7D0A5F31C6E0A792B4510CD8BB844635E5"
+  },
+  "mutable_indexes_excluded_from_frozen_hashes": [
+    "README.md",
+    "CG-ETF-ROTATION_MEMORY.md"
+  ],
+  "external_sources": [
+    {
+      "id": "S1",
+      "url": "https://www.nber.org/papers/w7159",
+      "read_scope": "Primary-source search abstract; direct open failed"
+    },
+    {
+      "id": "S2",
+      "url": "https://www.aqr.com/Insights/Research/Journal-Article/Time-Series-Momentum",
+      "read_scope": "Primary research page; open succeeded"
+    },
+    {
+      "id": "S3",
+      "url": "https://www.nber.org/papers/w6553",
+      "read_scope": "Primary-source search abstract; direct open failed"
+    },
+    {
+      "id": "S4",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=65140",
+      "read_scope": "Author-paper search abstract; direct open returned 403"
+    }
+  ],
+  "proposals_not_adopted": [
+    "Common warm-up/support and EMA initialization/prefix",
+    "ENTRY-001 new-position-only cross versus persistent state with same exits",
+    "Exposure-matching method and tolerances",
+    "Economic threshold, uncertainty, minimum episodes, stress-test pass rules"
+  ],
+  "application_modified": false,
+  "raw_data_modified": false,
+  "historical_frozen_artifacts_modified": false,
+  "formal_results_read_this_turn": 0,
+  "locked_results_opened_this_turn": 0,
+  "new_sample_contamination": false,
+  "authorizations": {
+    "formal_backtests": 0,
+    "lock_open": 0,
+    "simulation": 0,
+    "live": 0
+  },
+  "actions_this_turn": {
+    "formal_backtests": 0,
+    "lock_open": 0,
+    "simulation": 0,
+    "live": 0
+  },
+  "local_link_validation": {
+    "status": "passed",
+    "links_checked": 22,
+    "files_checked": 5,
+    "external_urls_checked_for_identity_not_availability": true
+  }
+}

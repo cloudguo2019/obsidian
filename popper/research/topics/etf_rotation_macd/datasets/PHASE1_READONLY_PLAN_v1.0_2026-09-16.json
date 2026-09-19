@@ -1,0 +1,15 @@
+{
+  "identity": "ETF-PHASE1-READONLY-20260916-v1.0",
+  "phase": 1,
+  "kind": "engineering diagnostics, not a formal backtest",
+  "selection_rule": "All eight dates with closing-auction capture in the indexed snapshot; tick case studies choose the first two SH and first SZ symbols by ascending symbol in the current interest pool, independently of returns.",
+  "dates": ["2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-07", "2026-09-08", "2026-09-09"],
+  "log_files_per_date": ["etf_tick_capture.csv", "etf_closing_auction.csv", "etf_order.csv", "etf_context.csv"],
+  "tick_files": "Only the three predetermined symbols on the eight dates; inventory other filenames without reading their content.",
+  "questions": ["Does archived raw tick data exist and preserve capture time?", "Do captured execution quotes respect submission-window, age and availability constraints?", "Are any archived order rows actual broker fills?", "Does current per-symbol execution enforce full-account position caps?", "Does sizing include fees and does the shadow account settle by product-specific exchange calendar?"],
+  "forbidden_outputs": ["performance ranking", "strategy returns", "optimization", "account identifiers", "raw account logs"],
+  "formal_backtest_count": 0,
+  "lock_open_count": 0,
+  "simulation_started": false,
+  "live_orders": false
+}
