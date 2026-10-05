@@ -1,0 +1,48 @@
+{
+  "identity": "ETF-PHASE4-FREEZE-20260930-v1.0",
+  "status": "FROZEN_SIGNED_DESIGN_CLOSED_DATA_NOT_READY",
+  "date": "2026-09-30",
+  "timezone": "Asia/Shanghai",
+  "signature": {
+    "user_text": "签署",
+    "scope": [
+      "ETF-PHASE4_DATA_CONTRACT_REVIEW_v0.3.md",
+      "PHASE3_SESSION_AMENDMENT_REVIEW_v1.1.md"
+    ]
+  },
+  "files_sha256": {
+    "datasets/ETF-PHASE4_DATA_CONTRACT_REVIEW_v0.3.md": "8536059D18D9047F1E68ED046740E71C9DA57960199ABB6C435FE625480E0D5F",
+    "datasets/ETF-PHASE4_DATA_CONTRACT_v1.0.md": "81C9C981D7FBC7EFB719AD93F8EF8CB7813306E153125F9ABDB2F1E6FF1C59D5",
+    "experiments/ETF-REGIME-001/PHASE3_SESSION_AMENDMENT_REVIEW_v1.1.md": "8DE1B4CB88ECCEC2C46066916CC50CA10DB571C32A550CD752A2E9FB1A0A8450",
+    "experiments/ETF-REGIME-001/PHASE3_SESSION_AMENDMENT_v1.1.json": "7ECD8E36B7430AB72BB1FA543B07069EA44D89AD38D1CDDBA89B5852B2A2C8FC",
+    "experiments/ETF-REGIME-001/preregistration_v1.0.json": "75156CD05A757EB2FC872EAE9725EDB77C1C2937C4E3EC7BAFBA9BB3B79A3266",
+    "decisions/PHASE4_CLOSURE_REVIEW_2026-09-29_v0.1.md": "1C13195C64903836675A40FB2FBDEB3BF711C0FE52D6A008B20A587477CD4EE7",
+    "decisions/PHASE4_SIGNATURE_AND_CLOSURE_2026-09-30_v1.0.md": "1CD74AA6747EE873EA1194BC234588217D5D2D8731C98970796199F6AEF23AE0"
+  },
+  "gate": {
+    "phase4_contract_design": "ACCEPTED_CLOSED",
+    "economic_data_ready": false,
+    "evidence_ceiling": "L0",
+    "market_inventory_cutoff": "2026-09-09",
+    "next_phase": "phase5_source_inventory_and_quality_audit",
+    "formal_backtests_authorized": 0,
+    "formal_backtests_executed": 0,
+    "locked_results_open_authorized": 0,
+    "locked_results_opened": 0,
+    "simulation_authorized": 0,
+    "simulation_executed": 0,
+    "live_trading_authorized": 0,
+    "live_trading_executed": 0
+  },
+  "unresolved_economic_bindings": [
+    "historical_point_in_time_universe",
+    "2020_to_2025_1457_tick_or_equivalent_asof_quotes",
+    "raw_prices_distributions_and_front_ratio_mapping",
+    "broker_fees_cash_yield_and_nonzero_base_adverse_slippage_version",
+    "effective_product_rules_and_calendars",
+    "order_fills_and_account_reconciliation"
+  ],
+  "parent_protocol_unchanged": true,
+  "formal_batch_authorization": null,
+  "locked_sample_identity": null
+}

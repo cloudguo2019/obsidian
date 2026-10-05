@@ -1,0 +1,81 @@
+{
+  "identity": "ETF-PHASE3-FREEZE-MANIFEST-20260925-v1.0",
+  "snapshot_date": "2026-09-25",
+  "timezone": "Asia/Shanghai",
+  "decision": "接受",
+  "accepted_object": "Signed phase-3 design and new thresholds",
+  "phase3_closed": true,
+  "phase4_data_contract_drafting_permitted": true,
+  "empirical_evidence_ceiling": "L0",
+  "market_inventory_cutoff": "2026-09-09",
+  "user_signature": "签署 v1.0，采用其中设计与新增门槛",
+  "signed_draft_sha256": "AC4C4F7025FEBDE8AA15B6B8C290DF9538BAE33B7A0F0F1B7B642D0ACC0E302D",
+  "draft_manifest_sha256": "6705474AC38E83270F431569AAE75EBE10EAF15DD1026778C5BD377CB0036E69",
+  "frozen_protocol_sha256": "75156CD05A757EB2FC872EAE9725EDB77C1C2937C4E3EC7BAFBA9BB3B79A3266",
+  "substantive_design_equal_to_signed_draft": true,
+  "outputs": {
+    "experiments/ETF-REGIME-001/preregistration_v1.0.json": "75156CD05A757EB2FC872EAE9725EDB77C1C2937C4E3EC7BAFBA9BB3B79A3266",
+    "decisions/PHASE3_SIGNATURE_AND_CLOSURE_2026-09-25_v1.0.md": "911CAB2C4149FA5D7DA94A5D54486F3C1B9B1E7FEE18D5FE7CDEF083480223D2",
+    "scripts/validate_phase3_freeze_v1.py": "CE05330A5759F41FB73E51C0AE3C62604C3C50212C3701DAD0F69C0B688BCFF9"
+  },
+  "inherited_draft_identity_counts": {
+    "phase1_raw_inputs": 51,
+    "phase1_engineering_sources": 12,
+    "phase2_local_artifacts": 11
+  },
+  "registered_account_scenario_cells_per_sample_batch": 35,
+  "run_binding_dependencies_unresolved": [
+    "research_implementation_hash",
+    "research_config_hash",
+    "universe_event_manifest",
+    "clean_data_manifest",
+    "data_contract_version",
+    "sample_split_manifest",
+    "lock_manifest",
+    "exchange_product_calendar_manifest",
+    "actual_cost_model",
+    "cash_yield_model",
+    "auction_fill_and_queue_contract",
+    "execution_reconciliation_report",
+    "baseline_acceptance_manifest",
+    "exact_batch_authorization",
+    "result_paths_and_expected_cell_ledger"
+  ],
+  "historical_diagnostic_dates_already_viewed": [
+    "2026-08-31",
+    "2026-09-01",
+    "2026-09-02",
+    "2026-09-03",
+    "2026-09-04",
+    "2026-09-07",
+    "2026-09-08",
+    "2026-09-09"
+  ],
+  "actual_sample_or_lock_identity_created": false,
+  "new_strategy_tests": 0,
+  "inherited_passed_L0": 68,
+  "local_links_checked": 28,
+  "formal_results_read_this_turn": 0,
+  "locked_results_opened_this_turn": 0,
+  "new_sample_contamination_this_turn": false,
+  "application_modified": false,
+  "raw_data_modified": false,
+  "historical_frozen_identities_modified": false,
+  "authorizations": {
+    "formal_backtests": 0,
+    "lock_open": 0,
+    "simulation": 0,
+    "live": 0
+  },
+  "actions_this_turn": {
+    "formal_backtests": 0,
+    "lock_open": 0,
+    "simulation": 0,
+    "live": 0
+  },
+  "next_work_gate": "Phase-4 data contract with PIT universe, prices, distributions, availability, costs, cash return, calendars and fills",
+  "mutable_indexes_excluded": [
+    "README.md",
+    "CG-ETF-ROTATION_MEMORY.md"
+  ]
+}

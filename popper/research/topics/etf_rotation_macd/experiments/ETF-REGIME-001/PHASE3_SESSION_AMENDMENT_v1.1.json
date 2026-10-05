@@ -1,0 +1,52 @@
+{
+  "identity": "ETF-REGIME-001-PHASE3-SESSION-AMENDMENT-v1.1",
+  "status": "FROZEN_SIGNED",
+  "signed_date": "2026-09-30",
+  "timezone": "Asia/Shanghai",
+  "user_signature_text": "签署",
+  "signature_context": "用户回复前一轮对阶段4数据契约审阅稿v0.3与阶段3尾盘时段修订审阅稿v1.1的共同签署请求",
+  "parent_protocol": {
+    "path": "experiments/ETF-REGIME-001/preregistration_v1.0.json",
+    "sha256": "75156CD05A757EB2FC872EAE9725EDB77C1C2937C4E3EC7BAFBA9BB3B79A3266"
+  },
+  "review_source": {
+    "path": "experiments/ETF-REGIME-001/PHASE3_SESSION_AMENDMENT_REVIEW_v1.1.md",
+    "sha256": "8DE1B4CB88ECCEC2C46066916CC50CA10DB571C32A550CD752A2E9FB1A0A8450"
+  },
+  "companion_data_contract": {
+    "path": "datasets/ETF-PHASE4_DATA_CONTRACT_v1.0.md",
+    "sha256": "81C9C981D7FBC7EFB719AD93F8EF8CB7813306E153125F9ABDB2F1E6FF1C59D5"
+  },
+  "scope": "仅修订DELAY1和DELAY2的下一合法收盘提交机会及其逐产品、逐日期成交机制；父协议其余字段保持不变",
+  "replacement": {
+    "order_window": "[14:57:30,15:00:00)",
+    "rank_nominal_time": "14:57:00",
+    "opportunity_definition": "该ETF在适用交易所及日期的下一合法收盘提交窗口；按该产品可交易日历计数，不按自然日计数",
+    "DELAY1": "生成时的目标排队至下一次合法收盘提交机会；后续信息不得重新生成该目标；处理时重新核验账户及风险资格",
+    "DELAY2": "同一排队目标延迟至其后第二次合法收盘提交机会；其它处理同DELAY1",
+    "session_rule": {
+      "SZSE_historical_general_ETF": "本项目2020—2025历史段按适用收盘集合竞价规则；逐产品例外仍须核验",
+      "SSE_before_2026_07_06": "14:57—15:00连续竞价",
+      "SSE_from_2026_07_06": "14:57—15:00收盘集合竞价",
+      "exceptions": "特殊品种、停复牌及规则修订按有生效日期的逐产品清单覆盖；缺清单时不可发布精确成交结果"
+    },
+    "queued_target": "保留生成时的信号与池版本；不重新排名或重算趋势；按symbol先进先出；处理时重新检查账户、资格、交易状态、结算、费用、价格限制",
+    "fill_evidence": "连续竞价需当时可得盘口或成交流及时间顺序；收盘集合竞价需当次有效申报、竞价价格和参与约束；两种机制均不以完整日收盘价自动成交",
+    "failure_states": "窗口错过、队列冲突、接收不明、拒绝、部分成交、跨日未成交均须记录生命周期与失效原因"
+  },
+  "unchanged": [
+    "H3与单一主检验",
+    "五账户与七场景、每样本批次35单元",
+    "共同78根、2020—2025样本、初始5000元",
+    "风险、敞口、Calmar门槛、锁定规则及其它父协议字段"
+  ],
+  "gate": {
+    "evidence_ceiling": "L0",
+    "data_ready": false,
+    "formal_backtests_authorized": 0,
+    "locked_results_open_authorized": 0,
+    "simulation_authorized": 0,
+    "live_trading_authorized": 0,
+    "exact_batch_authorization": null
+  }
+}
