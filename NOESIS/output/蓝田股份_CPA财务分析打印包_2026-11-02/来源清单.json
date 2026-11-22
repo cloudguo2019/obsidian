@@ -1,0 +1,215 @@
+[
+  {
+    "id": "S01",
+    "title": "2001年中期报告_巨潮原PDF",
+    "url": "https://static.cninfo.com.cn/finalpage/2001-08-20/516153.PDF",
+    "file": "原始资料\\S01_2001年中期报告_巨潮原PDF.pdf",
+    "grade": "原始披露",
+    "bytes": 113664,
+    "sha256": "1a9ecea4dc8142b4aee955bcad4fcc40cc57ba7b6d486dc1397e9a0e375938f8",
+    "retrieved": "2026-11-02"
+  },
+  {
+    "id": "S02",
+    "title": "2001年年度报告_巨潮原PDF",
+    "url": "https://static.cninfo.com.cn/finalpage/2002-04-29/587536.PDF",
+    "file": "原始资料\\S02_2001年年度报告_巨潮原PDF.pdf",
+    "grade": "原始披露",
+    "bytes": 176128,
+    "sha256": "7352dfaae9f598af9cce3b4d361a8908ec69fd056564ba33e369aa3719d5e618",
+    "retrieved": "2026-11-02"
+  },
+  {
+    "id": "S03",
+    "title": "2002年年度报告_巨潮原PDF",
+    "url": "https://static.cninfo.com.cn/finalpage/2003-04-29/10670936.PDF",
+    "file": "原始资料\\S03_2002年年度报告_巨潮原PDF.pdf",
+    "grade": "原始披露",
+    "bytes": 194566,
+    "sha256": "507544e73f5da17bbfc4fc20cf331b91605bb209f24d1f98a3acf215f7e5ac9c",
+    "retrieved": "2026-11-02"
+  },
+  {
+    "id": "S04",
+    "title": "1996招股说明书概要_巨潮",
+    "url": "https://static.cninfo.com.cn/finalpage/1996-05-23/148811.html",
+    "file": "原始资料\\S04_1996招股说明书概要_巨潮.html",
+    "grade": "原始披露_概要",
+    "bytes": 31115,
+    "sha256": "f8abdaf4187467a6af39ee9512280847924667b5e54ad32792a79aee8547a11d",
+    "retrieved": "2026-11-02",
+    "title_tag": [
+      "巨潮资讯"
+    ]
+  },
+  {
+    "id": "S05",
+    "title": "1996股票上市公告书_巨潮",
+    "url": "https://static.cninfo.com.cn/finalpage/1996-06-18/148936.html",
+    "file": "原始资料\\S05_1996股票上市公告书_巨潮.html",
+    "grade": "原始披露",
+    "bytes": 38265,
+    "sha256": "9831b1df8912f42b4e3533650c0b36aaff1ed9c68beaabbf6a552040677d2c2c",
+    "retrieved": "2026-11-02",
+    "title_tag": [
+      "巨潮资讯"
+    ]
+  },
+  {
+    "id": "S06",
+    "title": "2001中期报告补充说明_巨潮",
+    "url": "https://static.cninfo.com.cn/finalpage/2001-08-29/509343.html",
+    "file": "原始资料\\S06_2001中期报告补充说明_巨潮.html",
+    "grade": "原始披露",
+    "bytes": 12576,
+    "sha256": "95827fd4f2641f0c88394ff4d2e4fe182b3c96d7507c1b198b1202632e4f1aaa",
+    "retrieved": "2026-11-02",
+    "title_tag": []
+  },
+  {
+    "id": "S07",
+    "title": "2000中报摘要_上交所供稿新浪转载",
+    "url": "https://finance.sina.com.cn/2000-08-01/2612.html",
+    "file": "原始资料\\S07_2000中报摘要_上交所供稿新浪转载.html",
+    "grade": "披露转载_摘要",
+    "bytes": 35506,
+    "sha256": "ff5ee77390eb85b29c59b10bd53de47790f934dc01008c8ee9132a69e7cc9473",
+    "retrieved": "2026-11-02",
+    "title_tag": []
+  },
+  {
+    "id": "S08",
+    "title": "1999关联披露及处罚主要内容_公司大事记",
+    "url": "https://finance.sina.com.cn/stock/company/600709/7.html",
+    "file": "原始资料\\S08_1999关联披露及处罚主要内容_公司大事记.html",
+    "grade": "披露转载_非处罚书原件",
+    "bytes": 45083,
+    "sha256": "c252473480d98b570730ee8b9a318ef7f72dd2657695355efd6ea1f358f879dc",
+    "retrieved": "2026-11-02",
+    "title_tag": [
+      "财经行情_财经纵横_新浪网"
+    ]
+  },
+  {
+    "id": "S09",
+    "title": "1999审计师处罚决定_法规库转载",
+    "url": "https://law1.110.com/law_79493.html",
+    "file": "原始资料\\S09_1999审计师处罚决定_法规库转载.html",
+    "grade": "处罚文书转载_非官网原件",
+    "bytes": 1032,
+    "sha256": "ce48ce910f2ef451bf91b52a6a3dc9f1e9bbca35b3ee68856c2f0570a89c8253",
+    "retrieved": "2026-11-02",
+    "title_tag": [],
+    "download_status": "原网页空壳；正文另从检索可读页面恢复为摘录",
+    "usable_as_original": false,
+    "recovered_file": "原始资料\\S09_审计师处罚文书正文恢复摘录.txt",
+    "recovered_sha256": "1edff15a3cde369670c84b72bb33d162f5583bda9fc5236a9ddbb15c2e12b379"
+  },
+  {
+    "id": "S10",
+    "title": "刘姝威蓝田之谜_北京青年报新浪原网页",
+    "url": "https://finance.sina.com.cn/t/20020211/172261.html",
+    "file": "原始资料\\S10_刘姝威蓝田之谜_北京青年报新浪原网页.html",
+    "grade": "作者观点_媒体转载",
+    "bytes": 58765,
+    "sha256": "e25c27d27a976d3ce1caecf4877c1a0a0c843d871b84fe76e5cbec2534430d7a",
+    "retrieved": "2026-11-02",
+    "title_tag": []
+  },
+  {
+    "id": "S11",
+    "title": "优秀业绩引出五大疑问_全景",
+    "url": "https://www.p5w.net/zt/dissertation/finance/201012/t3353487.htm",
+    "file": "原始资料\\S11_优秀业绩引出五大疑问_全景.html",
+    "grade": "独立评论_历史转载",
+    "bytes": 28407,
+    "sha256": "8015b14bb5c1bb13a64e2367fd45e7271ad81f0ea6161029a9f9f54c2a2031ca",
+    "retrieved": "2026-11-02",
+    "title_tag": [
+      "蓝田股份：优秀业绩引出了五大疑问 ::全景网络"
+    ]
+  },
+  {
+    "id": "S12",
+    "title": "刑事终审日期与案号_第一财经日报",
+    "url": "https://finance.sina.com.cn/stock/t/20060906/0552907166.shtml",
+    "file": "原始资料\\S12_刑事终审日期与案号_第一财经日报.html",
+    "grade": "媒体_未取得原判决",
+    "bytes": 87978,
+    "sha256": "dd5d64b518ea1efe093186908140ed1e009c287641275fd8c1c748a7aeb78ee9",
+    "retrieved": "2026-11-02",
+    "title_tag": []
+  },
+  {
+    "id": "S13",
+    "title": "1312函证准则_中注协",
+    "url": "https://www.cicpa.org.cn/ztzl1/Professional_standards/xxzztx/zyzz/sjzz/202105/P020210507610919165177.pdf",
+    "file": "原始资料\\S13_1312函证准则_中注协.pdf",
+    "grade": "官方准则_现代方法",
+    "bytes": 300430,
+    "sha256": "6ebd1800e9f1d846a814cc5914f04f1efc6731367588548288d6d558eeb42905",
+    "retrieved": "2026-11-02"
+  },
+  {
+    "id": "S14",
+    "title": "1313分析程序准则_中注协",
+    "url": "https://www.cicpa.org.cn/ztzl1/Professional_standards/xxzztx/zyzz/sjzz/202105/P020240412542529330962.pdf",
+    "file": "原始资料\\S14_1313分析程序准则_中注协.pdf",
+    "grade": "官方准则_现代方法",
+    "bytes": 242213,
+    "sha256": "55703c6a7c1e2b91b424024f9464b88a85581f72f3072b4535783ebf1153081d",
+    "retrieved": "2026-11-02"
+  },
+  {
+    "id": "S15",
+    "title": "2001民生银行年报_银行官网",
+    "url": "https://ir.cmbc.com.cn/media/qgeg23oq/%E4%B8%AD%E5%9B%BD%E6%B0%91%E7%94%9F%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B82001%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf",
+    "file": "原始资料\\S15_2001民生银行年报_银行官网.pdf",
+    "grade": "独立交易对手原始披露",
+    "bytes": 365839,
+    "sha256": "9e51fc84b6ddd0debe254b85004a00777d2fa1ac7e0f90da338f7e28b9c07820",
+    "retrieved": "2026-11-02"
+  },
+  {
+    "id": "S16",
+    "title": "2000资产负债表_新浪结构化转录",
+    "url": "https://money.finance.sina.com.cn/corp/go.php/vFD_BalanceSheet/stockid/600709/ctrl/2000/displaytype/4.phtml",
+    "file": "原始资料\\S16_2000资产负债表_新浪结构化转录.html",
+    "grade": "平台财务表_非年报全文",
+    "bytes": 72746,
+    "sha256": "48faff96fc59dfbfde05afdc35df1fe7c1e20d9094486ce6682945f015f10819",
+    "retrieved": "2026-11-02",
+    "title_tag": [
+      "ST生态(600709)资产负债表_新浪财经_新浪网"
+    ],
+    "usage": "数据质量反例；不与其他版本自动拼接"
+  },
+  {
+    "id": "S17",
+    "title": "2000利润表_新浪结构化转录",
+    "url": "https://money.finance.sina.com.cn/corp/go.php/vFD_ProfitStatement/stockid/600709/ctrl/2000/displaytype/4.phtml",
+    "file": "原始资料\\S17_2000利润表_新浪结构化转录.html",
+    "grade": "平台财务表_非年报全文",
+    "bytes": 56523,
+    "sha256": "1439ddafd51de18388a86e6068e6cbf86ce366dc0e0b306e222c69e55529fe73",
+    "retrieved": "2026-11-02",
+    "title_tag": [
+      "ST生态(600709)利润表_新浪财经_新浪网"
+    ],
+    "usage": "数据质量反例；不与其他版本自动拼接"
+  },
+  {
+    "id": "S18",
+    "title": "2000现金流量表_新浪结构化转录",
+    "url": "https://money.finance.sina.com.cn/corp/go.php/vFD_CashFlow/stockid/600709/ctrl/2000/displaytype/4.phtml",
+    "file": "原始资料\\S18_2000现金流量表_新浪结构化转录.html",
+    "grade": "平台财务表_非年报全文",
+    "bytes": 69520,
+    "sha256": "8f07ddd00a77c70523532dfd2a3244d87d7555dfb046e8bdb54ee566f2babdba",
+    "retrieved": "2026-11-02",
+    "title_tag": [
+      "ST生态(600709)现金流量表_新浪财经_新浪网"
+    ],
+    "usage": "数据质量反例；不与其他版本自动拼接"
+  }
+]

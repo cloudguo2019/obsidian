@@ -1,0 +1,18 @@
+﻿{
+    "Status":  "passed",
+    "Method":  "Authenticated SMB using the dedicated non-administrator account",
+    "UncPath":  "\\\\192.168.2.217\\Nietzsche",
+    "Account":  "DESKTOP-S30CLNN\\NietzscheLAN",
+    "VerifiedActions":  [
+                            "authenticate",
+                            "list",
+                            "create_directory",
+                            "create_file",
+                            "read",
+                            "edit",
+                            "copy",
+                            "rename",
+                            "delete_test_files"
+                        ],
+    "CheckedAt":  "2026-11-03T21:06:50.6626456+08:00"
+}

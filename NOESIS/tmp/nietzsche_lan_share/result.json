@@ -1,0 +1,28 @@
+﻿{
+    "Status":  "configured",
+    "ShareName":  "Nietzsche",
+    "Path":  "C:\\Users\\cg\\Desktop\\Nietzsche",
+    "Server":  "DESKTOP-S30CLNN",
+    "IP":  "192.168.2.217",
+    "Subnet":  "192.168.2.0/24",
+    "UncPath":  "\\\\192.168.2.217\\Nietzsche",
+    "Username":  "DESKTOP-S30CLNN\\NietzscheLAN",
+    "AccountSid":  "S-1-5-21-2849183271-1029361264-3288617175-1005",
+    "LocalAndRemoteDesktopLogon":  "Denied for the dedicated account",
+    "NetworkCategory":  "Private",
+    "ShareAccess":  [
+                        {
+                            "AccountName":  "DESKTOP-S30CLNN\\cg",
+                            "AccessControlType":  0,
+                            "AccessRight":  0
+                        },
+                        {
+                            "AccountName":  "DESKTOP-S30CLNN\\NietzscheLAN",
+                            "AccessControlType":  0,
+                            "AccessRight":  1
+                        }
+                    ],
+    "Smb1Enabled":  false,
+    "Smb2Enabled":  true,
+    "CompletedAt":  "2026-11-03T21:05:07.2968309+08:00"
+}
